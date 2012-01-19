@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Gsoc report: 10th week | fantasticsid</title>
+    <meta name="author" content="fantasticsid">
+    <meta name="description" content="$description$">
+    <meta name="keywords" content="$keywords$">
+
+    <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+<!-- >
+  <script type="text/javascript" src="http://use.typekit.com/wgr7imz.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<! -->
+    <link rel="alternate" type="application/rss+xml" title="The blog - fantasticsid" href="http://feeds.feedburner.com/fantasticsidtheblog">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+  </head>
+
+  <body class="post">
+    <header class="home">
+      <h1><a href="/" title="Go back to the homepage">The blog</a></h1>
+    </header>
+    <div class="container">
+    <article>
+  <header>
+    <p class="meta"><time class="timeago" datetime="2010-08-02" pubdate>2010-08-02</time>, tagged <a href="/tags/gajim.html">gajim</a>, <a href="/tags/gsoc.html">gsoc</a>.</p>
+    <h1>Gsoc report: 10th week</h1>
+    </header>
+  <section>
+    <p>After several days’ efforts, gajim is now capable of transferring files using TLS encrypted channels. It turned out using openssl for writing ssl/tls enabled applications is really easy. In order not to block the GUI during ssl/tls negotiation, we need to use non-blocking I/O. With the introduction of  openssl, the non-blocking read or write on sockets might throw exceptions indicating that the peer wants a tls authentication. This could happen any time during the session. But you really don’t have to care about those details, the only thing you need to do is retrying the I/O operations that triggered the exceptions, and they should succeed, the openssl library will do the rehandshake for you behind the scene.</p>
+<p>The other thing I should mention is that we don’t have key exchange mechanisms yet, so all the tests were conducted with certificates manually generated stored on disk. So the next step I shall implement those features:</p>
+<ol type="1">
+<li><p>generate certificates if they do not exist</p></li>
+<li><p>exchange user certificates during TLS enabled file transfer if the peer’s certificate is not present (<a href="http://xmpp.org/extensions/xep-0189.html">XEP–0189</a>)</p></li>
+</ol>
+  </section>
+  <section id="comment">
+    <p>Want to contact me about this post? You can reach me at
+    <a href="http://twitter.com/#!/fantasticsid" title="Send me a tweet">@fantasticsid</a>.</p>
+  </section>
+</article>
+
+    <footer>
+      <p><a href="/about.html" title="About">About</a> &middot;
+      <a href="http://twitter.com/fantasticsid" title="My Twitter">Twitter</a> &middot;
+      <a href="https://github.com/fantasticsid" title="My Github profile">Github</a> &middot;
+      <a href="/rss.xml" title="Feed">RSS</a> &middot;
+    </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.ui.totop.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="/javascripts/wunki.ui.js"></script>
+  </body>
+</html>

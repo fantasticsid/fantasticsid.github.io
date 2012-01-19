@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Dvorak键盘 | fantasticsid</title>
+    <meta name="author" content="fantasticsid">
+    <meta name="description" content="$description$">
+    <meta name="keywords" content="$keywords$">
+
+    <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+<!-- >
+  <script type="text/javascript" src="http://use.typekit.com/wgr7imz.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<! -->
+    <link rel="alternate" type="application/rss+xml" title="The blog - fantasticsid" href="http://feeds.feedburner.com/fantasticsidtheblog">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+  </head>
+
+  <body class="post">
+    <header class="home">
+      <h1><a href="/" title="Go back to the homepage">The blog</a></h1>
+    </header>
+    <div class="container">
+    <article>
+  <header>
+    <p class="meta"><time class="timeago" datetime="2009-07-18" pubdate>2009-07-18</time>, tagged <a href="/tags/Dvorak.html">Dvorak</a>, <a href="/tags/QWERTY.html">QWERTY</a>, <a href="/tags/keyboard.html">keyboard</a>.</p>
+    <h1>Dvorak键盘</h1>
+    </header>
+  <section>
+    <p>我曾经想过现在我们的键盘排列是不是最科学的, 是否最有利于我们打字. 所谓科学的键盘, 应该尽可能减少我们打字的移动, 并且按照手的结构, 让中间的三根手指承担最最重要的责任. 这就如哈夫曼编码一样, 中间的三根手指在中间一排键盘的输入是码字比较短的, 只有让它们代表频率最高的字母时才比较有效. 键盘排列的设计还需要考虑字母在各种语言中的频率, 以及常见的字母组合. 我们常见的QWERTY键盘, 把A, S, D, F, G, H, J, K, L这几个字母放在了中间, 说实话, G, J, K, L这样的几个字母并不是使用频率较高的. 有的字母比如I, O, E, T明显出现频率更加高. 如果我们把这些字母位置调换一下, 应该能够在手移动更少的前提下, 造出更好更科学的键盘. 这种键盘原来真的存在, 它就是Dvorak键盘, 而且这种键盘早在上世纪30年代就已经发明了. 原先的QWERTY键盘的设计没有考虑到键盘输入的速度, 只是为了减少打字机的打印条互相卡住的情况. 因此它的效率并没有最优. 而Dvorak设计的键盘排列是他考察了语言中字母的出现频率后设计的键盘排列方式, 我们可以从图中看出, 这种键盘将A,O,E,U,I,D,H,T,N,S这几个字母放在了中间一排, 于是很多的词语都不用离开手的原位就能够输入了.</p>
+<div>
+<img src="/images/dvorakkeyboardlayout.gif" title="Dvorak&#38190;&#30424;" />
+</div>
+
+<p>我们来做一个统计, 统计一下英语单词里面有多少是分别用两种键盘不离开原位就能够输入的. 用如下的程序测试words.txt文件里面的词语</p>
+<pre class="sourceCode"><code class="sourceCode python">dvo = <span class="st">'aoeuidhtnsAOEUIDHTNS'</span><br />qwe = <span class="st">'asdfghjklASDFGHJKL'</span><br /><br />dvon = <span class="dv">0</span><br />qwen = <span class="dv">0</span><br /><br /><span class="kw">def</span> dvorak(word):<br />	<span class="kw">for</span> l in word:<br />		<span class="kw">if</span> not l in dvo:<br />			<span class="kw">return</span> <span class="ot">False</span><br />	<span class="kw">return</span> <span class="ot">True</span><br /><br /><span class="kw">def</span> qwerty(word):<br />	<span class="kw">for</span> l in word:<br />		<span class="kw">if</span> not l in qwe:<br />			<span class="kw">return</span> <span class="ot">False</span><br />	<span class="kw">return</span> <span class="ot">True</span><br /><br />f = <span class="dt">open</span>(<span class="st">'./words.txt'</span>, <span class="st">'r'</span>)<br /><span class="kw">for</span> w in f.readlines():<br /><br />	<span class="kw">if</span> dvorak(w[:-<span class="dv">1</span>]):<br />		dvon = dvon + <span class="dv">1</span><br />	<span class="kw">if</span> qwerty(w[:-<span class="dv">1</span>]):<br />		qwen = qwen + <span class="dv">1</span><br /><br /><span class="kw">print</span> <span class="st">'dvorak:'</span>, dvon<br /><span class="kw">print</span> <span class="st">'qwerty:'</span>, qwen</code></pre>
+<p>程序的输出如下 :</p>
+<pre class="numberLines"><code>dvorak: 3481
+qwerty: 220
+</code></pre>
+<p>差别是非常明显的, 如果用Dvorak键盘, 我们能够在不移动的情况下就直接输入3000多的词语. 很多词语比如, the, that都可以在手指不移动到其他键位的情况下输入.</p>
+<p>可惜的是Dvorak键盘并没有很好的推广, 使用的范围很小. 也找不到哪里有卖, 淘宝都没有. 不过我们可以用键盘的贴膜改造QWERTY键盘, 然后再系统中设定一下. 现在的操作系统都有键盘排列的设定. 开始的时候肯定不适应的, 目前我也在学习过程中,很汗颜, 在<a href="http://play.typeracer.com/" target="_blank">typeracer这个游戏</a>里我现在用QWERTY键盘的速度是60–70WPM, 而用Dvorak键盘只有10WPM左右. 但是相信等到小脑的突触连接形成之后, 就能享受手指的飞舞了. 到时候, 西瓜进, 代码出.</p>
+  </section>
+  <section id="comment">
+    <p>Want to contact me about this post? You can reach me at
+    <a href="http://twitter.com/#!/fantasticsid" title="Send me a tweet">@fantasticsid</a>.</p>
+  </section>
+</article>
+
+    <footer>
+      <p><a href="/about.html" title="About">About</a> &middot;
+      <a href="http://twitter.com/fantasticsid" title="My Twitter">Twitter</a> &middot;
+      <a href="https://github.com/fantasticsid" title="My Github profile">Github</a> &middot;
+      <a href="/rss.xml" title="Feed">RSS</a> &middot;
+    </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.ui.totop.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="/javascripts/wunki.ui.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Gsoc report: 2nd week | fantasticsid</title>
+    <meta name="author" content="fantasticsid">
+    <meta name="description" content="$description$">
+    <meta name="keywords" content="$keywords$">
+
+    <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+<!-- >
+  <script type="text/javascript" src="http://use.typekit.com/wgr7imz.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<! -->
+    <link rel="alternate" type="application/rss+xml" title="The blog - fantasticsid" href="http://feeds.feedburner.com/fantasticsidtheblog">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+  </head>
+
+  <body class="post">
+    <header class="home">
+      <h1><a href="/" title="Go back to the homepage">The blog</a></h1>
+    </header>
+    <div class="container">
+    <article>
+  <header>
+    <p class="meta"><time class="timeago" datetime="2010-06-07" pubdate>2010-06-07</time>, tagged <a href="/tags/gajim.html">gajim</a>, <a href="/tags/gsoc.html">gsoc</a>.</p>
+    <h1>Gsoc report: 2nd week</h1>
+    </header>
+  <section>
+    <p>This week I’ve been adding scaffold code to manage and initiate jingle session for file transfer. I find the most time consuming part to be understanding how the current system manages sessions, especially how events are propagated and dispatched to various connection handlers . Once I’ve got a clear picture of that, adding support for file transfer sessions is actually straightforward.</p>
+<p>In the current jingleFT branch, before file transfer begins, we will see if the contact in question supports jingle file transfer. If it does support jingle file transfer, we initiate a jingle session. If not, we fall back on original SI file transfer mechanism. I’ve also added code to show that gajim supports jingle file transfer feature during disco. The jingle session management process dispatches stanza receive events (and various otheres) to callbacks. Those concerning session commencement, termination and session specific events will be captured and properly implemented in the next step. In particular, the next week (week 3) will see a complete jingle file transfer session management.</p>
+<p>Since I’ve left most methods unimplemented, gajim sometimes throws exceptions when we’re supposed to implement certain methods. The good thing about this is it helps to pinpoint which method I should implement very quickly and efficiently. The bad news is that I dunno if there are things broken just silently and I certainly don’t want to see many exceptions raised in the final product. We will see how it goes.</p>
+  </section>
+  <section id="comment">
+    <p>Want to contact me about this post? You can reach me at
+    <a href="http://twitter.com/#!/fantasticsid" title="Send me a tweet">@fantasticsid</a>.</p>
+  </section>
+</article>
+
+    <footer>
+      <p><a href="/about.html" title="About">About</a> &middot;
+      <a href="http://twitter.com/fantasticsid" title="My Twitter">Twitter</a> &middot;
+      <a href="https://github.com/fantasticsid" title="My Github profile">Github</a> &middot;
+      <a href="/rss.xml" title="Feed">RSS</a> &middot;
+    </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.ui.totop.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="/javascripts/wunki.ui.js"></script>
+  </body>
+</html>

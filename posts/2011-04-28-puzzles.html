@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>几道题目活跃下气氛 | fantasticsid</title>
+    <meta name="author" content="fantasticsid">
+    <meta name="description" content="$description$">
+    <meta name="keywords" content="$keywords$">
+
+    <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+<!-- >
+  <script type="text/javascript" src="http://use.typekit.com/wgr7imz.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<! -->
+    <link rel="alternate" type="application/rss+xml" title="The blog - fantasticsid" href="http://feeds.feedburner.com/fantasticsidtheblog">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+  </head>
+
+  <body class="post">
+    <header class="home">
+      <h1><a href="/" title="Go back to the homepage">The blog</a></h1>
+    </header>
+    <div class="container">
+    <article>
+  <header>
+    <p class="meta"><time class="timeago" datetime="2011-04-28" pubdate>2011-04-28</time>, tagged <a href="/tags/mathematics.html">mathematics</a>, <a href="/tags/hanoi.html">hanoi</a>, <a href="/tags/combinatorics.html">combinatorics</a>, <a href="/tags/brain teaser.html">brain teaser</a>.</p>
+    <h1>几道题目活跃下气氛</h1>
+    </header>
+  <section>
+    <pre><code> 你有n块石头, 然后做如下的事情:
+ 把这堆石头分成2堆, 将这两堆的石头块数相乘后把结果写在黑板上.
+ 对分出的2堆做同样的事情, 直到剩下n堆1块的石头.
+ 然后把黑板上的所有数字相加, 请问结果是多少?
+</code></pre>
+<p>答案: n * (n - 1) / 2</p>
+<pre><code> 大家都知道四色定理. 现在有一副地图, 任何一个国家都不是内陆国家.
+ 证明对这幅地图染色只要3种颜色就可以了.
+</code></pre>
+<p>答案 : 在此地图外围围上一片海洋, 用四种颜色染色新的地图, 去掉海洋的颜色, 则原地图只用了3种颜色, 而且4染色的时候因为没有内陆国家, 所以这些国家都不会用到海洋的颜色.</p>
+<pre><code> 如果汉诺塔问题当中, 盘子只能在柱子（A,B) 或者(B,C)间移动,
+ 而不能再(A,C)间移动, 那么至少用多少步能把盘子从A移动到C?
+</code></pre>
+<p>答案: 3^n - 1步</p>
+<pre><code>以上汉诺塔问题当中, 盘子移动过程是否包含了所有的盘子堆叠状态(小盘仍然要求在大盘之上)?
+</code></pre>
+<p>答案: 是的. 一共只有3^n个状态, 第一个状态不用移动.</p>
+<pre><code> 一般的汉诺塔问题当中, 有没有两个不同的盘子排列方式, 在它们之间转换需要超过2^n-1步?
+</code></pre>
+<p>答案: 没有. 可以通过归纳假设. 归纳的步骤大概是: 比如两种状态最大的盘子分别在A,B柱子上, 则从第一个状态用少于2^(n–1)–1步把其他盘子移动到C上, 然后用1步将最大的盘子移动到B, 然后再用少于2^(n–1)–1步将其余的小盘子移动成第二种状态. 总步骤小于2^n–1.</p>
+<pre><code> 有一排电梯, 请问在直线上的哪里等待能够减小电梯到来时需要移动的平均距离/最远距离?
+</code></pre>
+<p>答案: 站在中间的电梯前/站在两端电梯的中点. (站在所有电梯的几何中心使得距离平方的均值最小)</p>
+<p>来源:</p>
+<p>xkcd</p>
+<p>&lt;&lt;concrete mathematics&gt;&gt;</p>
+  </section>
+  <section id="comment">
+    <p>Want to contact me about this post? You can reach me at
+    <a href="http://twitter.com/#!/fantasticsid" title="Send me a tweet">@fantasticsid</a>.</p>
+  </section>
+</article>
+
+    <footer>
+      <p><a href="/about.html" title="About">About</a> &middot;
+      <a href="http://twitter.com/fantasticsid" title="My Twitter">Twitter</a> &middot;
+      <a href="https://github.com/fantasticsid" title="My Github profile">Github</a> &middot;
+      <a href="/rss.xml" title="Feed">RSS</a> &middot;
+    </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.ui.totop.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="/javascripts/wunki.ui.js"></script>
+  </body>
+</html>

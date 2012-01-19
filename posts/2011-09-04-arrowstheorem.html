@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Arrow定理 - 没有合理的选举! | fantasticsid</title>
+    <meta name="author" content="fantasticsid">
+    <meta name="description" content="$description$">
+    <meta name="keywords" content="$keywords$">
+
+    <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+<!-- >
+  <script type="text/javascript" src="http://use.typekit.com/wgr7imz.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<! -->
+    <link rel="alternate" type="application/rss+xml" title="The blog - fantasticsid" href="http://feeds.feedburner.com/fantasticsidtheblog">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+  </head>
+
+  <body class="post">
+    <header class="home">
+      <h1><a href="/" title="Go back to the homepage">The blog</a></h1>
+    </header>
+    <div class="container">
+    <article>
+  <header>
+    <p class="meta"><time class="timeago" datetime="2011-09-04" pubdate>2011-09-04</time>, tagged <a href="/tags/game theory.html">game theory</a>, <a href="/tags/proof.html">proof</a>.</p>
+    <h1>Arrow定理 - 没有合理的选举!</h1>
+    </header>
+  <section>
+    <p><a href="http://en.wikipedia.org/wiki/Arrow's_impossibility_theorem">Arrow定理</a>可能是博弈论中最著名的定理之一了, 还记得Rudolf在上课时用了整整1节多课证明了这个定理. 同时它的结论绝对能够吸引任何一个人, 难道现存的所有选举制度都是不合理的吗? 当然, 定理是有条件的, arrow定理也不例外, 但是arrow定理的条件让人觉得再自然不过了:</p>
+<p>首先设想, 一个选举中有多于3个候选人, {A, B, C…}, N个选民. 每一个选民对候选人给出一个排名(两两可比, 传递), 例如, B &gt; A &gt; C . 而一个选举制度是一个函数F, 它把N个选民对候选人的排名映射到一个“全社会”的排名.</p>
+<p>Arrow定理的条件:</p>
+<pre><code> 1.  Unanimity(全票通过),
+ 就是说, 如果所有选民觉得A &gt; B, 那么对选举的结果也有A &gt; B
+
+ 2.  Independence of irrelevant alternatives(IIA, 不相关候选者独立性),
+ 就是, 选举结果中, A和B的相对次序只和A, B在所有选民的排名中的次序相关, 而和C的排名是无关的
+
+ 3.  No dictatorship(没有独裁),
+ 就是, 不存在一个选民i, 他的排名决定了任何一对候选人A, B在选举结果中的排名.
+</code></pre>
+<p>以上条件我们通常都认为是一个公平选举制度所必须具有的性质, 但是arrow定理告诉我们, 同时满足这3个条件的选举制度是不存在的! 或者说, 如果要满足条件1, 2, 那么这个选举中就存在一个独裁的选民.</p>
+<p>首先我们来看一个结论: 如果每一个选民都把候选人B排列在最前, 或者最后面, 那么选举结果也将会把B放在排名最前或者最后, 而不是中间的某一个位置.</p>
+<p>其实这个结论就已经让我们觉得这个选举是不公平的, 因为假如有一半的选民认为B是最好的, 另外一半认为B是最差的, 那么理想的选举似乎应该把B放在排名中间某个位置, 而不是放在最好或者最差的排名上.</p>
+<p>证明:</p>
+<p>假设选举结果中B不是在最好或者最差的位置上, 即存在A, C, 使得A &gt; B &gt; C, 那么假设我们现在在每一个选民的排名中, 将C移动到A之前.</p>
+<pre><code> 根据条件Unanimity, 选举结果应该有C &gt; A.
+
+ 但是注意在每个选民的排名中, 由于B是在排名两端之一的,
+ 所以这个移动并不会影响BC, AB之间的排名,
+
+ 于是根据条件IIA, 选举结果中BC, AB的排名应该不受影响,
+ 于是A &gt; B, B &gt; C仍然应该成立. 由于选举结果是两两可比并且传递的, 于是有A &gt; C.
+</code></pre>
+<p>这是个矛盾, 因此就证明了, 选举结果中, B一定也是在排名的最前或者最后, 而不是中间某个位置. 待续…</p>
+  </section>
+  <section id="comment">
+    <p>Want to contact me about this post? You can reach me at
+    <a href="http://twitter.com/#!/fantasticsid" title="Send me a tweet">@fantasticsid</a>.</p>
+  </section>
+</article>
+
+    <footer>
+      <p><a href="/about.html" title="About">About</a> &middot;
+      <a href="http://twitter.com/fantasticsid" title="My Twitter">Twitter</a> &middot;
+      <a href="https://github.com/fantasticsid" title="My Github profile">Github</a> &middot;
+      <a href="/rss.xml" title="Feed">RSS</a> &middot;
+    </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.ui.totop.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="/javascripts/wunki.ui.js"></script>
+  </body>
+</html>

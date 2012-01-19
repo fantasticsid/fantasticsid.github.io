@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>3人打网球--趣题一则 | fantasticsid</title>
+    <meta name="author" content="fantasticsid">
+    <meta name="description" content="$description$">
+    <meta name="keywords" content="$keywords$">
+
+    <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+<!-- >
+  <script type="text/javascript" src="http://use.typekit.com/wgr7imz.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<! -->
+    <link rel="alternate" type="application/rss+xml" title="The blog - fantasticsid" href="http://feeds.feedburner.com/fantasticsidtheblog">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+  </head>
+
+  <body class="post">
+    <header class="home">
+      <h1><a href="/" title="Go back to the homepage">The blog</a></h1>
+    </header>
+    <div class="container">
+    <article>
+  <header>
+    <p class="meta"><time class="timeago" datetime="2010-09-21" pubdate>2010-09-21</time>, tagged <a href="/tags/graph.html">graph</a>, <a href="/tags/combinatorics.html">combinatorics</a>, <a href="/tags/brain teaser.html">brain teaser</a>, <a href="/tags/interview.html">interview</a>.</p>
+    <h1>3人打网球--趣题一则</h1>
+    </header>
+  <section>
+    <p>这是来自Stan Wagon主持的problem of the week的最新的第1131题. 题目是这样的:</p>
+<pre><code> Alice, Bob, and Charlie play tennis matches consisting of one set only:
+ two of them play a set and the winner stays on the court for the next set,
+ with the loser replaced by the player who was idle.
+ At the end of the day
+ Alice played 15 sets,
+ Bob played 14 sets, and
+ Charlie played 9 sets.
+ Who played in the 13th set?
+</code></pre>
+<p>这里引用一下原题的描述, 通常我们看到的题目中, 如果有两个主角我们都用Alice和Bob来表示, 这里出现第三个人可以看到是用了Charlie这个名字, 看到规律了吗? 他们的名字首字母分别是A, B, C. 以后自己编东西的时候可以参考一下. 好了, 回归正题. 在我们国家通常打乒乓比较多, 的确有时候会出现3个人轮流打的情况, 即所谓打擂台的情况, 输了的人下台换刚才休息的人. 现在三个人A, B, C分别打了15, 14, 9局, 问, 第13局是哪两个人在比赛?</p>
+<p>答案: 显然, Charlie的球技不太行. 构造一个有三个顶点A, B, C的多重边无向图, 一条边代表一场比赛. 容易看到, A-B边共10条, B-C边4条, A-C边5条. 现在要将这19条边收集起来, 但是有一个限制是, 同一对顶点的边不能被紧接着一起被收集, 就是说, 一场比赛之后, 必定会进行不同对手的下一场比赛. 显然, A-B边每两场比赛就被收集一次, 当中夹杂着B-C边和A-C边, 且第一条和最后一条被收集的边都是A-B边, 而在B-C边以及A-C边两者中则是A-C边多一次. 这样, 用c代表A-B边, b代表A-C边, a代表B-C边, 那么边收集的顺序就是cbcacbcacbcacbcacbc第13条边为c, 即A-B, 也就是Alice和Bob的比赛. 并且我们可以看到Charlie的确很菜, 输掉了所有的比赛.</p>
+  </section>
+  <section id="comment">
+    <p>Want to contact me about this post? You can reach me at
+    <a href="http://twitter.com/#!/fantasticsid" title="Send me a tweet">@fantasticsid</a>.</p>
+  </section>
+</article>
+
+    <footer>
+      <p><a href="/about.html" title="About">About</a> &middot;
+      <a href="http://twitter.com/fantasticsid" title="My Twitter">Twitter</a> &middot;
+      <a href="https://github.com/fantasticsid" title="My Github profile">Github</a> &middot;
+      <a href="/rss.xml" title="Feed">RSS</a> &middot;
+    </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.ui.totop.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="/javascripts/wunki.ui.js"></script>
+  </body>
+</html>

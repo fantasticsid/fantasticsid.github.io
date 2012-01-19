@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>一个图与其补图染色数之和的上界 | fantasticsid</title>
+    <meta name="author" content="fantasticsid">
+    <meta name="description" content="$description$">
+    <meta name="keywords" content="$keywords$">
+
+    <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+<!-- >
+  <script type="text/javascript" src="http://use.typekit.com/wgr7imz.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<! -->
+    <link rel="alternate" type="application/rss+xml" title="The blog - fantasticsid" href="http://feeds.feedburner.com/fantasticsidtheblog">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+  </head>
+
+  <body class="post">
+    <header class="home">
+      <h1><a href="/" title="Go back to the homepage">The blog</a></h1>
+    </header>
+    <div class="container">
+    <article>
+  <header>
+    <p class="meta"><time class="timeago" datetime="2010-01-26" pubdate>2010-01-26</time>, tagged <a href="/tags/graph.html">graph</a>, <a href="/tags/chromatic.html">chromatic</a>, <a href="/tags/proof.html">proof</a>.</p>
+    <h1>一个图与其补图染色数之和的上界</h1>
+    </header>
+  <section>
+    <p>我们来证明对一个图<span class="math"><em>G</em></span>以及它的补图<span class="math"><em>Ḡ</em></span>进行染色, 两张图的染色数之和小于图<span class="math"><em>G</em></span>的阶加1. 也就是说, 对于一张完全图K, 需要使用<span class="math"><em>n</em> = ∣<em>K</em>∣</span>种颜色进行染色所, 而无论如何选取<span class="math"><em>K</em></span>的一个子图, 剩下的边形成的图与这张子图染色数之和最多只需要额外多一种颜色.</p>
+<p>命题: <span class="math"><em>χ</em>(<em>G</em>) + <em>χ</em>(<em>Ḡ</em>) ≤ <em>n</em>(<em>G</em>) + 1</span></p>
+<p>对于图<span class="math"><em>G</em></span>, 我们将顶点度数从大到小排序, 然后对顶点逐个染色. 显然这样的染色方法能够得到一个图的染色数至多为图中最大度数加1这样的结论. 更好一点的结论是</p>
+<p><span class="math"><em>χ</em>(<em>G</em>) ≤ <em>m</em><em>a</em><em>x</em><em>m</em><em>i</em><em>n</em><sub><em>i</em></sub>(<em>d</em><sub><em>i</em></sub>, <em>i</em>) + 1, <em>i</em> = 0, 1, . . . , <em>n</em>(<em>G</em>) − 1</span></p>
+<p>其实, 后一结论能够直接得到我们所需要证明的命题. 因为对于一个图<span class="math"><em>G</em></span>和它的补图<span class="math"><em>Ḡ</em></span>来说, 这两个值之和一定是不大于<span class="math"><em>n</em>(<em>G</em>) + 1</span>的. 如下图.</p>
+<div>
+<img src="/images/G.png" title="G" />
+</div>
+
+<p>对于这样的一个图G, 我们画出顶点度数以及<span class="math"><em>y</em> = <em>i</em></span>这两个序列的图像:</p>
+<div>
+<img src="/images/plotG.png" title="G" />
+</div>
+
+<p>我们发现, 这两个序列在(3,3)处有相交, 这个即是上面得到结论中的值, 即这个图可以用至多4种颜色进行着色. 我们发现, 其实将此图旋转180度, 得到的图像和<span class="math"><em>Ḡ</em></span>的图像是一样的:</p>
+<div>
+<img src="/images/plotGbar.png" title="&#22270;G&#30340;&#34917;&#22270;&#39030;&#28857;&#30340;&#24230;&#25968;" />
+</div>
+
+<p>对于任意一个图<span class="math"><em>G</em></span>, 这个结论始终是成立的(实际上仔细考虑, 可能取得最大值的点不是同一个, 但是我们可以想象这两个值之和始终是不大于<span class="math"><em>n</em>(<em>G</em>) − 1</span>的. ) 这样, 我们就得到<span class="math"><em>χ</em>(<em>G</em>) + <em>χ</em>(<em>Ḡ</em>) ≤ <em>n</em>(<em>G</em>) − 1 + 1 + 1 = <em>n</em>(<em>G</em>) + 1</span></p>
+<p>来源: 图论考试</p>
+  </section>
+  <section id="comment">
+    <p>Want to contact me about this post? You can reach me at
+    <a href="http://twitter.com/#!/fantasticsid" title="Send me a tweet">@fantasticsid</a>.</p>
+  </section>
+</article>
+
+    <footer>
+      <p><a href="/about.html" title="About">About</a> &middot;
+      <a href="http://twitter.com/fantasticsid" title="My Twitter">Twitter</a> &middot;
+      <a href="https://github.com/fantasticsid" title="My Github profile">Github</a> &middot;
+      <a href="/rss.xml" title="Feed">RSS</a> &middot;
+    </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.ui.totop.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="/javascripts/wunki.ui.js"></script>
+  </body>
+</html>

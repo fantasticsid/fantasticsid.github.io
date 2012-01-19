@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>一图胜万言: fibonacci数列的一些结论的有趣证明 | fantasticsid</title>
+    <meta name="author" content="fantasticsid">
+    <meta name="description" content="$description$">
+    <meta name="keywords" content="$keywords$">
+
+    <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+<!-- >
+  <script type="text/javascript" src="http://use.typekit.com/wgr7imz.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<! -->
+    <link rel="alternate" type="application/rss+xml" title="The blog - fantasticsid" href="http://feeds.feedburner.com/fantasticsidtheblog">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+  </head>
+
+  <body class="post">
+    <header class="home">
+      <h1><a href="/" title="Go back to the homepage">The blog</a></h1>
+    </header>
+    <div class="container">
+    <article>
+  <header>
+    <p class="meta"><time class="timeago" datetime="2011-07-07" pubdate>2011-07-07</time>, tagged <a href="/tags/fibonacci.html">fibonacci</a>, <a href="/tags/proof.html">proof</a>.</p>
+    <h1>一图胜万言: fibonacci数列的一些结论的有趣证明</h1>
+    </header>
+  <section>
+    <p>看到一篇有趣的文章, 作者举了一个简单的出现了fibonacci数列的例子, 然后用这个例子证明了一系列关于fibonacci数列的结论. 这种巧妙的构造总是让人惊叹如果生活中处处都存在这样的“捷径”那该是多么精彩!</p>
+<div>
+<img src="/images/Screen-shot-2011-07-02-at-11.24.18-PM.png" title="&#34562;&#24034;&#29366;&#36335;" />
+</div>
+
+
+<pre><code> 试想有两排蜂巢形状的路径, 假设现在你要从左上S处开始行走到达右下E处,
+ 每次只能向右走, 或者从上面的一格走到其右下的一格(从下面的一格走到其右上的一格),
+ 那么一共有多少不同的路径呢?
+</code></pre>
+<p>容易证明, 这个路径数是一个fibonacci数, 作者给出了这个图清楚地表示了从S走到每一个格子不同的路径数.</p>
+<div>
+<img src="/images/Screen-shot-2011-07-02-at-11.32.48-PM.png" title="&#21040;&#36798;&#27599;&#19968;&#20010;&#26684;&#23376;&#30340;&#19981;&#21516;&#36335;&#24452;&#25968;" />
+</div>
+
+<p>容易证明, 路径数序列与fibonacci数列的初始值以及递归形式都是一样的, 这里走到第一个格子S只有F(1) = 1条路径.</p>
+<p>现在可以开始证明一些关于fibonacci数列的结论了, 这些结论用其他方法当然也能够比较容易地得到, 但是用作者给出的这个例子, 我们将看到这些结论是多么的“显然”.</p>
+<p>首先作者把这些蜂巢简化成了一些互联的点, 下面说明</p>
+<blockquote>
+<p>F(a) * F(b) + F(a+1) * F(b+1) = F(a+b+1)</p>
+</blockquote>
+<div>
+<img src="/images/Screen-shot-2011-07-02-at-11.39.22-PM.png" title="&#31532;&#19968;&#31181;&#24773;&#20917;, &#36890;&#36807;&#31532;a+1&#20010;" />
+</div>
+
+
+
+<div>
+<img src="/images/Screen-shot-2011-07-02-at-11.48.00-PM.png" title="&#31532;&#20108;&#31181;&#24773;&#20917;, &#19981;&#36890;&#36807;&#31532;a+1&#20010;&#28857;" />
+</div>
+
+<p>如图, 一个包含a+b+1个点的路, 总共有F(a+b+1)种不同的路径. 而这些路径可以分成两部分: 通过第a+1个点的以及没有通过第a+1个点的. 前者一共有: F(a+1) * F(b+1)条, 而后者则有F(a) * F(b)条.</p>
+<p>于是, 结论不证自明.</p>
+<p>如果这种方法只能证明一个结论, 那么也并不算神奇. 此文神奇之处正在于, 这种fibonacci数列的呈现方式帮助作者直观地证明了一系列命题, 比如:</p>
+<p>记P(N)为将整数N表示为1和2的有序数列之和, 证明P(N) = F(N+1)</p>
+<p>当然, 这个结论用归纳法也是很容易证明的, 那么作者的这种表示方法是如何证明这个结论的呢?</p>
+<div>
+<img src="/images/Screen-shot-2011-07-07-at-4.43.15-PM.png" title="P(N) = F(N+1)" />
+</div>
+
+
+<p>如图, 可以发现12表示成的1和2之和, 每一种方式都一一对应了一种S-&gt;E的路径, 于是, 结论自然又不证自明.</p>
+<p>还有一些诸如降N表示为1和2之和, 不考虑顺序有多少种方式? (不需要用文章的方法..) 用1x2的多米诺平铺2*n的地板有多少种方式等等的问题, 都是不错的等菜题.</p>
+<p>有兴趣的话可以通读<a href="http://www.jamestanton.com/images/2011/06/Fibonacci-Surprises.pdf" target="_blank">全文</a>, 看看作者如何证明其他有趣结论.</p>
+  </section>
+  <section id="comment">
+    <p>Want to contact me about this post? You can reach me at
+    <a href="http://twitter.com/#!/fantasticsid" title="Send me a tweet">@fantasticsid</a>.</p>
+  </section>
+</article>
+
+    <footer>
+      <p><a href="/about.html" title="About">About</a> &middot;
+      <a href="http://twitter.com/fantasticsid" title="My Twitter">Twitter</a> &middot;
+      <a href="https://github.com/fantasticsid" title="My Github profile">Github</a> &middot;
+      <a href="/rss.xml" title="Feed">RSS</a> &middot;
+    </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.ui.totop.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="/javascripts/wunki.ui.js"></script>
+  </body>
+</html>

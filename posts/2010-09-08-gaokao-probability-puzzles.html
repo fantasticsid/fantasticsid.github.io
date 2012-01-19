@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>你还会做这道高考题吗? | fantasticsid</title>
+    <meta name="author" content="fantasticsid">
+    <meta name="description" content="$description$">
+    <meta name="keywords" content="$keywords$">
+
+    <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+<!-- >
+  <script type="text/javascript" src="http://use.typekit.com/wgr7imz.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<! -->
+    <link rel="alternate" type="application/rss+xml" title="The blog - fantasticsid" href="http://feeds.feedburner.com/fantasticsidtheblog">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+  </head>
+
+  <body class="post">
+    <header class="home">
+      <h1><a href="/" title="Go back to the homepage">The blog</a></h1>
+    </header>
+    <div class="container">
+    <article>
+  <header>
+    <p class="meta"><time class="timeago" datetime="2010-09-08" pubdate>2010-09-08</time>, tagged <a href="/tags/probability.html">probability</a>, <a href="/tags/combinatorics.html">combinatorics</a>, <a href="/tags/interview.html">interview</a>.</p>
+    <h1>你还会做这道高考题吗?</h1>
+    </header>
+  <section>
+    <pre><code>用铅笔在一根木棍上的任意两处分别作下记号,
+然后把木棍平均分成k份, 问这两个记号在同一段的概率是多少?
+</code></pre>
+<p>答案: 1/k. 两种解释:</p>
+<p>从k段中选1个记号B所在的段, 它正好是记号A所在的段的概率是1/k. 或者, 更“高级”的解释:</p>
+<p>把木棍看成是坐标轴, 不妨设它长为1. 分别用横坐标, 纵坐标表示记号A, B所在的位置, 那么它们所有可能的位置在空间中形成了一个边长为1的正方形, 而他们在同一段的情况下所有位置形成了k个边长为1/k的正方形, 这些正方形的面积之和为1/k, 就是这两个记号在同一段的概率.</p>
+<div>
+<img src="/images/area-k.png" title="k=4&#30340;&#24773;&#20917;" />
+</div>
+
+<pre><code>还是这根木棍, 在木棍上任意两处分别作下记号,
+然后, 随机地将木棍分成k份, 问这两个记号在同一段的概率是多少?
+</code></pre>
+<p>答案: 2/(k+1). 如果试图用上面第二种方法来解决问题就麻烦了, 因为这题可以是一题高考填空题. 解释如下: 一共有2 + (k–1)个“随机点”, 包括了记号和断开的位置. 从这k+1个点中取2个点, 它们相邻的概率为 k / C(k+1, 2) = 2/(k+1) .</p>
+  </section>
+  <section id="comment">
+    <p>Want to contact me about this post? You can reach me at
+    <a href="http://twitter.com/#!/fantasticsid" title="Send me a tweet">@fantasticsid</a>.</p>
+  </section>
+</article>
+
+    <footer>
+      <p><a href="/about.html" title="About">About</a> &middot;
+      <a href="http://twitter.com/fantasticsid" title="My Twitter">Twitter</a> &middot;
+      <a href="https://github.com/fantasticsid" title="My Github profile">Github</a> &middot;
+      <a href="/rss.xml" title="Feed">RSS</a> &middot;
+    </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.ui.totop.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="/javascripts/wunki.ui.js"></script>
+  </body>
+</html>
