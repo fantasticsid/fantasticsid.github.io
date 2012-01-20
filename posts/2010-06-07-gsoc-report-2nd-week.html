@@ -35,10 +35,6 @@
 <p>In the current jingleFT branch, before file transfer begins, we will see if the contact in question supports jingle file transfer. If it does support jingle file transfer, we initiate a jingle session. If not, we fall back on original SI file transfer mechanism. I’ve also added code to show that gajim supports jingle file transfer feature during disco. The jingle session management process dispatches stanza receive events (and various otheres) to callbacks. Those concerning session commencement, termination and session specific events will be captured and properly implemented in the next step. In particular, the next week (week 3) will see a complete jingle file transfer session management.</p>
 <p>Since I’ve left most methods unimplemented, gajim sometimes throws exceptions when we’re supposed to implement certain methods. The good thing about this is it helps to pinpoint which method I should implement very quickly and efficiently. The bad news is that I dunno if there are things broken just silently and I certainly don’t want to see many exceptions raised in the final product. We will see how it goes.</p>
   </section>
-  <section id="comment">
-    <p>Want to contact me about this post? You can reach me at
-    <a href="http://twitter.com/#!/fantasticsid" title="Send me a tweet">@fantasticsid</a>.</p>
-  </section>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
