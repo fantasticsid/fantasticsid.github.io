@@ -34,22 +34,23 @@
     <p>Last week I was playing around with pyopenssl. Whilst doing this I am getting more and more convinced that to be able to transfer files using secured channel is really a nice feature. The problem is that as mentioned in my last post, we need a reliable way to exchange certificates. <a href="http://xmpp.org/extensions/xep-0247.html">Jingle xml streams</a>, which is documented in the XTLS specification as the way to exchange certificates on first communication, turned out to be deferred already.</p>
 <p>So after talking to Yann, we have decided that we will implement secured trasnfer method on the assumption that certificates are already on hard drive, which eliminates much uncertainty we are facing. The X509 encryption method, which I shall implement first, seems to be a mixture of RSA public key cryptography algorithm and some sort of authentication of identity algorithm (Not sure). But with the openssl library these should be easy. The difficult part is incorporating these into the existing socks5  transport method, which I am sure involves a lot of probing and debugging. So, no more words, off I go then, reading, probing, debugging, coding…</p>
   </section>
+  <section id="comment">
 
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
 </article>
 
     <footer>
