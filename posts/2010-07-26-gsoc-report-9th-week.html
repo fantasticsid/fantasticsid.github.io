@@ -34,6 +34,10 @@
     <p>Last week I was playing around with pyopenssl. Whilst doing this I am getting more and more convinced that to be able to transfer files using secured channel is really a nice feature. The problem is that as mentioned in my last post, we need a reliable way to exchange certificates. <a href="http://xmpp.org/extensions/xep-0247.html">Jingle xml streams</a>, which is documented in the XTLS specification as the way to exchange certificates on first communication, turned out to be deferred already.</p>
 <p>So after talking to Yann, we have decided that we will implement secured trasnfer method on the assumption that certificates are already on hard drive, which eliminates much uncertainty we are facing. The X509 encryption method, which I shall implement first, seems to be a mixture of RSA public key cryptography algorithm and some sort of authentication of identity algorithm (Not sure). But with the openssl library these should be easy. The difficult part is incorporating these into the existing socks5  transport method, which I am sure involves a lot of probing and debugging. So, no more words, off I go then, reading, probing, debugging, coding…</p>
   </section>
+
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="fantasticsid">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
   <section id="comment">
 
     <div id="disqus_thread"></div>
