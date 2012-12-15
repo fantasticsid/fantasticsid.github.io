@@ -441,13 +441,6 @@
     <pubDate>Tue, 03 Apr 2012 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2012-04-03-unitask.html</guid>
 </item>
-<item>
-    <title>Understanding reader monad, writer monad and state monad</title>
-    <link>http://blog.fantasticsid.com/posts/2012-10-01-understanding-monad.html</link>
-    <description><![CDATA[Understanding reader monad, writer monad and state monad]]></description>
-    <pubDate>Mon, 01 Oct 2012 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2012-10-01-understanding-monad.html</guid>
-</item>
 
     </channel> 
 </rss>
