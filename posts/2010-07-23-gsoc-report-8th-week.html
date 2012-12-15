@@ -31,7 +31,7 @@
     </header>
   <section>
     <p>Last week I’ve been reading documentations on XTLS. Meanwhile, several bugs have been fixed. First, file transfer over proxy has been enabled. The peer is informed of proxy activation after the initiator has received activate stanza from proxy. Also I’ve fixed a bug that has existed since the start of implementation, that is, the incorrect use of jid where the account is required. .This is due to the fact that I named every account after the jid of that account, thus the bug was not revealed until I tested the implementation on another machine.</p>
-<p>the XTLS protocol seems to be quite straight forward, but it requires a secure connection for exchanging certificate when bootstrapping trust on first communication, which gajim has not implemented yet (XEP–0189, XEP–0247).</p>
+<p>the XTLS protocol seems to be quite straight forward, but it requires a secure connection for exchanging certificate when bootstrapping trust on first communication, which gajim has not implemented yet (XEP-0189, XEP-0247).</p>
 <p>So for the rest of gsoc, I shall implement TLS connection so gajim will be able to transfer data over the secured tunnel without much re-factoring of the code.</p>
   </section>
 

@@ -3,7 +3,7 @@
     <channel>
         <title>fantasticsid</title>
         <link>http://blog.fantasticsid.com</link>
-        <description><![CDATA[mathematics, computer science, startup, haskell, clojure, python, music]]></description>
+        <description><![CDATA[mathematics, computer science, haskell, clojure, C++, python, music]]></description>
         <atom:link href="http://blog.fantasticsid.com/rss.xml" rel="self"
                    type="application/rss+xml" />
         <lastBuildDate>Sat, 16 Sep 2006 00:00:00 UT</lastBuildDate>
@@ -440,6 +440,13 @@
     <description><![CDATA[App idea - Unitask]]></description>
     <pubDate>Tue, 03 Apr 2012 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2012-04-03-unitask.html</guid>
+</item>
+<item>
+    <title>Understanding reader monad, writer monad and state monad</title>
+    <link>http://blog.fantasticsid.com/posts/2012-10-01-understanding-monad.html</link>
+    <description><![CDATA[Understanding reader monad, writer monad and state monad]]></description>
+    <pubDate>Mon, 01 Oct 2012 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2012-10-01-understanding-monad.html</guid>
 </item>
 
     </channel> 

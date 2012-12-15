@@ -31,14 +31,14 @@
     </header>
   <section>
     <p>For the past week I haven’t really written much code yet. The major reason for this is I underestimated the amount of work I had to finish in school. Luckily the first week is largely spent on reading code and documentation. I’ve been reading Oreilly’s &lt;<XMPP : The definitive guide>&gt; by Peter Saint-Andre, Kevin Smith and Remko Troncon. The book is excellent in explaining the workings of XMPP to novice users or developers. For those who are interested I suggest taking a look at it through google book. For me the book is definitely worth reading because it covers the basics of XMPP as well as topics on jingle, in-band data transfer and file transfer through bytestream.</p>
-<p>I’ve started a branch for jingle file transfer in the Gajim repository. The current file transfer in Gajim is based on “bytestream” protocol. To get a clear picture on how file transfer is triggered in Gajim, I have drawn some sketch explaining briefly the call stack. The first one shows what happens when you click the file transfer button in chat window. The second one shows from where the common.connection.Connection class gets the send_file_request method.</p>
+<p>I’ve started a branch for jingle file transfer in the Gajim repository. The current file transfer in Gajim is based on <q>bytestream</q> protocol. To get a clear picture on how file transfer is triggered in Gajim, I have drawn some sketch explaining briefly the call stack. The first one shows what happens when you click the file transfer button in chat window. The second one shows from where the common.connection.Connection class gets the send_file_request method.</p>
 <div>
-<img src="/images/gajim_FT11-231x300.png" />
+<img src="/images/gajim_FT11-231x300.png">
 </div>
 
 
 <div>
-<img src="/images/gajim_FT21-231x300.png" />
+<img src="/images/gajim_FT21-231x300.png">
 </div>
 
 <p>So for the following 3 weeks I will be implementing jingle file transfer. The current default behaviour of transferring file with bytestream will be replaced with jingle file transfer as first choice (if possible, i.e the other side supports jingle FT as well, otherwise we fall back on original FT method). The original socks5bytestream transport method will be reused and incorporated into the mechanism.</p>
