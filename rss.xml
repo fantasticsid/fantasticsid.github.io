@@ -3,7 +3,7 @@
     <channel>
         <title>fantasticsid</title>
         <link>http://blog.fantasticsid.com</link>
-        <description><![CDATA[mathematics, computer science, haskell, clojure, C++, python, music]]></description>
+        <description><![CDATA[mathematics, computer science, haskell, clojure, scala, C++, python, music]]></description>
         <atom:link href="http://blog.fantasticsid.com/rss.xml" rel="self"
                    type="application/rss+xml" />
         <lastBuildDate>Sat, 16 Sep 2006 00:00:00 UT</lastBuildDate>
