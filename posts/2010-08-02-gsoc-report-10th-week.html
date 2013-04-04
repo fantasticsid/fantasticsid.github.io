@@ -5,14 +5,14 @@
     <title>Gsoc report: 10th week | fantasticsid</title>
     <meta name="author" content="fantasticsid">
     <meta name="description" content="Gsoc report: 10th week">
-    <meta name="keywords" content="$keywords$">
+    <meta name="keywords" content="mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music">
 
-    <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/screen.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" media="all" href="../stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
 
-    <link href='http://fonts.googleapis.com/css?family=Oxygen&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Oxygen&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
   </head>
 
   <body class="post">
@@ -23,15 +23,15 @@
   <header>
     <div class="content">
       <div class="nav">
-        <a href="/posts.html">← All posts</a>
+        <a href="../posts.html">← All posts</a>
       </div>
-    <p class="meta"><time class="timeago" datetime="2010-08-02" pubdate>2010-08-02</time>, tagged <a href="/tags/gajim.html">gajim</a>, <a href="/tags/gsoc.html">gsoc</a>.</p>
+    <p class="meta"><time class="timeago" datetime="2010-08-02" pubdate>2010-08-02</time></p>
     <h1>Gsoc report: 10th week</h1>
     </header>
   <section>
     <p>After several days’ efforts, gajim is now capable of transferring files using TLS encrypted channels. It turned out using openssl for writing ssl/tls enabled applications is really easy. In order not to block the GUI during ssl/tls negotiation, we need to use non-blocking I/O. With the introduction of  openssl, the non-blocking read or write on sockets might throw exceptions indicating that the peer wants a tls authentication. This could happen any time during the session. But you really don’t have to care about those details, the only thing you need to do is retrying the I/O operations that triggered the exceptions, and they should succeed, the openssl library will do the rehandshake for you behind the scene.</p>
 <p>The other thing I should mention is that we don’t have key exchange mechanisms yet, so all the tests were conducted with certificates manually generated stored on disk. So the next step I shall implement those features:</p>
-<ol type="1">
+<ol style="list-style-type: decimal">
 <li><p>generate certificates if they do not exist</p></li>
 <li><p>exchange user certificates during TLS enabled file transfer if the peer’s certificate is not present (<a href="http://xmpp.org/extensions/xep-0189.html">XEP-0189</a>)</p></li>
 </ol>
@@ -60,22 +60,22 @@
 
       <footer>
           <div class="contact">
-            <a href="/" title="home">home</a>
-            <a href="/about.html" title="about fantasticsid">about</a>
-            <a href="/apps.html" title="my apps">apps</a>
-            <a href="/files/resume.pdf" title="my resume">résumé</a>
+            <a href="../" title="home">home</a>
+            <a href="../about.html" title="about fantasticsid">about</a>
+            <a href="../apps.html" title="my apps">apps</a>
+            <a href="../files/resume.pdf" title="my resume">résumé</a>
             <a href="http://github.com/fantasticsid/" title="my github">github</a>
             <a href="http://twitter.com/fantasticsid" title="my twitter">twitter</a>
-            <a href="/rss.xml" title="subscribe">rss</a>
+            <a href="../rss.xml" title="subscribe">rss</a>
           </div>
       </footer>
 
     </div>
 
-    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.timeago.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.easing.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.anchorscroll.js"></script>
-    <script type="text/javascript" src="/javascripts/blog.ui.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
   </body>
 </html>

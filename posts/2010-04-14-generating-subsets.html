@@ -5,14 +5,14 @@
     <title>经典重访: 如何按序生成集合的所有子集 | fantasticsid</title>
     <meta name="author" content="fantasticsid">
     <meta name="description" content="经典重访: 如何按序生成集合的所有子集">
-    <meta name="keywords" content="$keywords$">
+    <meta name="keywords" content="mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music">
 
-    <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/screen.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" media="all" href="../stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
 
-    <link href='http://fonts.googleapis.com/css?family=Oxygen&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Oxygen&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
   </head>
 
   <body class="post">
@@ -23,14 +23,14 @@
   <header>
     <div class="content">
       <div class="nav">
-        <a href="/posts.html">← All posts</a>
+        <a href="../posts.html">← All posts</a>
       </div>
-    <p class="meta"><time class="timeago" datetime="2010-04-14" pubdate>2010-04-14</time>, tagged <a href="/tags/subset.html">subset</a>, <a href="/tags/algorithm.html">algorithm</a>, <a href="/tags/combinatorics.html">combinatorics</a>.</p>
+    <p class="meta"><time class="timeago" datetime="2010-04-14" pubdate>2010-04-14</time></p>
     <h1>经典重访: 如何按序生成集合的所有子集</h1>
     </header>
   <section>
     <p>如何列举一个集合的所有子集呢? 可能最先想到的是模拟二进制从0累加到111….111, 表示一个元素是否出现在子集中吧. 但是这种方法生成的子集序列的规律不那么明显, 如果要求生成的子集序列拥有一些良好的性质, 该怎么生成呢?</p>
-<ol type="1">
+<ol style="list-style-type: decimal">
 <li>Gray Code</li>
 </ol>
 <p>如果要求生成的子集序列相邻两个子集之间只相差一个元素, 那么这种序列对应的二进制编码就是gray编码. 例如含有两个元素的集合A={a, b}, 按照这个方法就应该生成{}, {a}, {a, b}, {b}, 这样的子集序列. 对应的二进制编码为00, 10, 11, 01.</p>
@@ -43,7 +43,7 @@
 1111 0111
 0101 1101
 1001 0001</code></pre>
-<ol start="2" type="1">
+<ol start="2" style="list-style-type: decimal">
 <li>Lexicographical Order</li>
 </ol>
 <p>生成的子集按照字典顺序排列, 这也是常用的排列顺序. 而且生成的方法也很简单. 这里既然要以字典的顺序, 就应该认为集合中的元素是有全序的. 我们从空集开始, 每次在最后一个元素后面加上仅大于它的最小元素作为下一个子集. 如果不存在这样的元素, 我们删除这个最后元素, 将前一个元素增加为它的后继, 然后作为下一个子集返回.</p>
@@ -55,7 +55,7 @@ ac
 b
 bc
 c</code></pre>
-<ol start="3" type="1">
+<ol start="3" style="list-style-type: decimal">
 <li>Banker’s Sequence</li>
 </ol>
 <p>以上两种子集顺序中, 子集的大小都不是递增的. 如果要求得到满足某个性质的最小的子集, 那么用以上两种方法都会在得到答案前枚举很多没有用的, 比较大的子集. 在&lt;<Efficiently Enumerating the Subsets of a Set>&gt;这篇文章中, 作者提出了将子集按照元素个数进行枚举的算法. 其实生成的方法非常简单, 简单地说, 就是将最后一个能够向右移位的1向右移, 如果不存在这样的位, 就在首位增加1. 然后将改变的位之后的所有1连续排列在这个位之后.</p>
@@ -104,22 +104,22 @@ c</code></pre>
 
       <footer>
           <div class="contact">
-            <a href="/" title="home">home</a>
-            <a href="/about.html" title="about fantasticsid">about</a>
-            <a href="/apps.html" title="my apps">apps</a>
-            <a href="/files/resume.pdf" title="my resume">résumé</a>
+            <a href="../" title="home">home</a>
+            <a href="../about.html" title="about fantasticsid">about</a>
+            <a href="../apps.html" title="my apps">apps</a>
+            <a href="../files/resume.pdf" title="my resume">résumé</a>
             <a href="http://github.com/fantasticsid/" title="my github">github</a>
             <a href="http://twitter.com/fantasticsid" title="my twitter">twitter</a>
-            <a href="/rss.xml" title="subscribe">rss</a>
+            <a href="../rss.xml" title="subscribe">rss</a>
           </div>
       </footer>
 
     </div>
 
-    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.timeago.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.easing.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.anchorscroll.js"></script>
-    <script type="text/javascript" src="/javascripts/blog.ui.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
   </body>
 </html>

@@ -5,14 +5,14 @@
     <title>一图胜万言: fibonacci数列的一些结论的有趣证明 | fantasticsid</title>
     <meta name="author" content="fantasticsid">
     <meta name="description" content="一图胜万言: fibonacci数列的一些结论的有趣证明">
-    <meta name="keywords" content="$keywords$">
+    <meta name="keywords" content="mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music">
 
-    <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/screen.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" media="all" href="../stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
 
-    <link href='http://fonts.googleapis.com/css?family=Oxygen&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Oxygen&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
   </head>
 
   <body class="post">
@@ -23,15 +23,15 @@
   <header>
     <div class="content">
       <div class="nav">
-        <a href="/posts.html">← All posts</a>
+        <a href="../posts.html">← All posts</a>
       </div>
-    <p class="meta"><time class="timeago" datetime="2011-07-07" pubdate>2011-07-07</time>, tagged <a href="/tags/fibonacci.html">fibonacci</a>, <a href="/tags/proof.html">proof</a>.</p>
+    <p class="meta"><time class="timeago" datetime="2011-07-07" pubdate>2011-07-07</time></p>
     <h1>一图胜万言: fibonacci数列的一些结论的有趣证明</h1>
     </header>
   <section>
-    <p>看到一篇有趣的文章, 作者举了一个简单的出现了fibonacci数列的例子, 然后用这个例子证明了一系列关于fibonacci数列的结论. 这种巧妙的构造总是让人惊叹如果生活中处处都存在这样的<q>捷径</q>那该是多么精彩!</p>
+    <p>看到一篇有趣的文章, 作者举了一个简单的出现了fibonacci数列的例子, 然后用这个例子证明了一系列关于fibonacci数列的结论. 这种巧妙的构造总是让人惊叹如果生活中处处都存在这样的“捷径”那该是多么精彩!</p>
 <div>
-<img src="/images/Screen-shot-2011-07-02-at-11.24.18-PM.png" title="蜂巢状路">
+<img src="../images/Screen-shot-2011-07-02-at-11.24.18-PM.png" title="蜂巢状路" />
 </div>
 
 
@@ -40,23 +40,23 @@
  那么一共有多少不同的路径呢?</code></pre>
 <p>容易证明, 这个路径数是一个fibonacci数, 作者给出了这个图清楚地表示了从S走到每一个格子不同的路径数.</p>
 <div>
-<img src="/images/Screen-shot-2011-07-02-at-11.32.48-PM.png" title="到达每一个格子的不同路径数">
+<img src="../images/Screen-shot-2011-07-02-at-11.32.48-PM.png" title="到达每一个格子的不同路径数" />
 </div>
 
 <p>容易证明, 路径数序列与fibonacci数列的初始值以及递归形式都是一样的, 这里走到第一个格子S只有F(1) = 1条路径.</p>
-<p>现在可以开始证明一些关于fibonacci数列的结论了, 这些结论用其他方法当然也能够比较容易地得到, 但是用作者给出的这个例子, 我们将看到这些结论是多么的<q>显然</q>.</p>
+<p>现在可以开始证明一些关于fibonacci数列的结论了, 这些结论用其他方法当然也能够比较容易地得到, 但是用作者给出的这个例子, 我们将看到这些结论是多么的“显然”.</p>
 <p>首先作者把这些蜂巢简化成了一些互联的点, 下面说明</p>
 <blockquote>
 <p>F(a) * F(b) + F(a+1) * F(b+1) = F(a+b+1)</p>
 </blockquote>
 <div>
-<img src="/images/Screen-shot-2011-07-02-at-11.39.22-PM.png" title="第一种情况, 通过第a+1个">
+<img src="../images/Screen-shot-2011-07-02-at-11.39.22-PM.png" title="第一种情况, 通过第a+1个" />
 </div>
 
 
 
 <div>
-<img src="/images/Screen-shot-2011-07-02-at-11.48.00-PM.png" title="第二种情况, 不通过第a+1个点">
+<img src="../images/Screen-shot-2011-07-02-at-11.48.00-PM.png" title="第二种情况, 不通过第a+1个点" />
 </div>
 
 <p>如图, 一个包含a+b+1个点的路, 总共有F(a+b+1)种不同的路径. 而这些路径可以分成两部分: 通过第a+1个点的以及没有通过第a+1个点的. 前者一共有: F(a+1) * F(b+1)条, 而后者则有F(a) * F(b)条.</p>
@@ -65,7 +65,7 @@
 <p>记P(N)为将整数N表示为1和2的有序数列之和, 证明P(N) = F(N+1)</p>
 <p>当然, 这个结论用归纳法也是很容易证明的, 那么作者的这种表示方法是如何证明这个结论的呢?</p>
 <div>
-<img src="/images/Screen-shot-2011-07-07-at-4.43.15-PM.png" title="P(N) = F(N+1)">
+<img src="../images/Screen-shot-2011-07-07-at-4.43.15-PM.png" title="P(N) = F(N+1)" />
 </div>
 
 
@@ -97,22 +97,22 @@
 
       <footer>
           <div class="contact">
-            <a href="/" title="home">home</a>
-            <a href="/about.html" title="about fantasticsid">about</a>
-            <a href="/apps.html" title="my apps">apps</a>
-            <a href="/files/resume.pdf" title="my resume">résumé</a>
+            <a href="../" title="home">home</a>
+            <a href="../about.html" title="about fantasticsid">about</a>
+            <a href="../apps.html" title="my apps">apps</a>
+            <a href="../files/resume.pdf" title="my resume">résumé</a>
             <a href="http://github.com/fantasticsid/" title="my github">github</a>
             <a href="http://twitter.com/fantasticsid" title="my twitter">twitter</a>
-            <a href="/rss.xml" title="subscribe">rss</a>
+            <a href="../rss.xml" title="subscribe">rss</a>
           </div>
       </footer>
 
     </div>
 
-    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.timeago.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.easing.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.anchorscroll.js"></script>
-    <script type="text/javascript" src="/javascripts/blog.ui.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
   </body>
 </html>

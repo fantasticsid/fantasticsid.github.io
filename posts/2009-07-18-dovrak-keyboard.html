@@ -5,14 +5,14 @@
     <title>Dvorak键盘 | fantasticsid</title>
     <meta name="author" content="fantasticsid">
     <meta name="description" content="Dvorak键盘">
-    <meta name="keywords" content="$keywords$">
+    <meta name="keywords" content="mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music">
 
-    <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/screen.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" media="all" href="../stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
 
-    <link href='http://fonts.googleapis.com/css?family=Oxygen&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Oxygen&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
   </head>
 
   <body class="post">
@@ -23,20 +23,20 @@
   <header>
     <div class="content">
       <div class="nav">
-        <a href="/posts.html">← All posts</a>
+        <a href="../posts.html">← All posts</a>
       </div>
-    <p class="meta"><time class="timeago" datetime="2009-07-18" pubdate>2009-07-18</time>, tagged <a href="/tags/Dvorak.html">Dvorak</a>, <a href="/tags/QWERTY.html">QWERTY</a>, <a href="/tags/keyboard.html">keyboard</a>.</p>
+    <p class="meta"><time class="timeago" datetime="2009-07-18" pubdate>2009-07-18</time></p>
     <h1>Dvorak键盘</h1>
     </header>
   <section>
     <p>我曾经想过现在我们的键盘排列是不是最科学的, 是否最有利于我们打字. 所谓科学的键盘, 应该尽可能减少我们打字的移动, 并且按照手的结构, 让中间的三根手指承担最最重要的责任. 这就如哈夫曼编码一样, 中间的三根手指在中间一排键盘的输入是码字比较短的, 只有让它们代表频率最高的字母时才比较有效. 键盘排列的设计还需要考虑字母在各种语言中的频率, 以及常见的字母组合. 我们常见的QWERTY键盘, 把A, S, D, F, G, H, J, K, L这几个字母放在了中间, 说实话, G, J, K, L这样的几个字母并不是使用频率较高的. 有的字母比如I, O, E, T明显出现频率更加高. 如果我们把这些字母位置调换一下, 应该能够在手移动更少的前提下, 造出更好更科学的键盘. 这种键盘原来真的存在, 它就是Dvorak键盘, 而且这种键盘早在上世纪30年代就已经发明了. 原先的QWERTY键盘的设计没有考虑到键盘输入的速度, 只是为了减少打字机的打印条互相卡住的情况. 因此它的效率并没有最优. 而Dvorak设计的键盘排列是他考察了语言中字母的出现频率后设计的键盘排列方式, 我们可以从图中看出, 这种键盘将A,O,E,U,I,D,H,T,N,S这几个字母放在了中间一排, 于是很多的词语都不用离开手的原位就能够输入了.</p>
 <div>
-<img src="/images/dvorakkeyboardlayout.gif" title="Dvorak键盘">
+<img src="../images/dvorakkeyboardlayout.gif" title="Dvorak键盘" />
 </div>
 
 <p>我们来做一个统计, 统计一下英语单词里面有多少是分别用两种键盘不离开原位就能够输入的. 用如下的程序测试words.txt文件里面的词语</p>
-<pre class="sourceCode python"><code class="sourceCode python">dvo = <span class="st">&#39;aoeuidhtnsAOEUIDHTNS&#39;</span>
-qwe = <span class="st">&#39;asdfghjklASDFGHJKL&#39;</span>
+<pre class="sourceCode python"><code class="sourceCode python">dvo = <span class="st">'aoeuidhtnsAOEUIDHTNS'</span>
+qwe = <span class="st">'asdfghjklASDFGHJKL'</span>
 
 dvon = <span class="dv">0</span>
 qwen = <span class="dv">0</span>
@@ -53,7 +53,7 @@ qwen = <span class="dv">0</span>
 			<span class="kw">return</span> <span class="ot">False</span>
 	<span class="kw">return</span> <span class="ot">True</span>
 
-f = <span class="dt">open</span>(<span class="st">&#39;./words.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)
+f = <span class="dt">open</span>(<span class="st">'./words.txt'</span>, <span class="st">'r'</span>)
 <span class="kw">for</span> w in f.readlines():
 
 	<span class="kw">if</span> dvorak(w[:-<span class="dv">1</span>]):
@@ -61,8 +61,8 @@ f = <span class="dt">open</span>(<span class="st">&#39;./words.txt&#39;</span>, 
 	<span class="kw">if</span> qwerty(w[:-<span class="dv">1</span>]):
 		qwen = qwen + <span class="dv">1</span>
 
-<span class="kw">print</span> <span class="st">&#39;dvorak:&#39;</span>, dvon
-<span class="kw">print</span> <span class="st">&#39;qwerty:&#39;</span>, qwen</code></pre>
+<span class="kw">print</span> <span class="st">'dvorak:'</span>, dvon
+<span class="kw">print</span> <span class="st">'qwerty:'</span>, qwen</code></pre>
 <p>程序的输出如下 :</p>
 <pre class="numberLines"><code>dvorak: 3481
 qwerty: 220</code></pre>
@@ -93,22 +93,22 @@ qwerty: 220</code></pre>
 
       <footer>
           <div class="contact">
-            <a href="/" title="home">home</a>
-            <a href="/about.html" title="about fantasticsid">about</a>
-            <a href="/apps.html" title="my apps">apps</a>
-            <a href="/files/resume.pdf" title="my resume">résumé</a>
+            <a href="../" title="home">home</a>
+            <a href="../about.html" title="about fantasticsid">about</a>
+            <a href="../apps.html" title="my apps">apps</a>
+            <a href="../files/resume.pdf" title="my resume">résumé</a>
             <a href="http://github.com/fantasticsid/" title="my github">github</a>
             <a href="http://twitter.com/fantasticsid" title="my twitter">twitter</a>
-            <a href="/rss.xml" title="subscribe">rss</a>
+            <a href="../rss.xml" title="subscribe">rss</a>
           </div>
       </footer>
 
     </div>
 
-    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.timeago.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.easing.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.anchorscroll.js"></script>
-    <script type="text/javascript" src="/javascripts/blog.ui.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
   </body>
 </html>

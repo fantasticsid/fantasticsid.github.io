@@ -5,14 +5,14 @@
     <title>一个图与其补图染色数之和的上界 | fantasticsid</title>
     <meta name="author" content="fantasticsid">
     <meta name="description" content="一个图与其补图染色数之和的上界">
-    <meta name="keywords" content="$keywords$">
+    <meta name="keywords" content="mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music">
 
-    <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/screen.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" media="all" href="../stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
 
-    <link href='http://fonts.googleapis.com/css?family=Oxygen&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Oxygen&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
   </head>
 
   <body class="post">
@@ -23,9 +23,9 @@
   <header>
     <div class="content">
       <div class="nav">
-        <a href="/posts.html">← All posts</a>
+        <a href="../posts.html">← All posts</a>
       </div>
-    <p class="meta"><time class="timeago" datetime="2010-01-26" pubdate>2010-01-26</time>, tagged <a href="/tags/graph.html">graph</a>, <a href="/tags/chromatic.html">chromatic</a>, <a href="/tags/proof.html">proof</a>.</p>
+    <p class="meta"><time class="timeago" datetime="2010-01-26" pubdate>2010-01-26</time></p>
     <h1>一个图与其补图染色数之和的上界</h1>
     </header>
   <section>
@@ -35,17 +35,17 @@
 <p><span class="math"><em>χ</em>(<em>G</em>) ≤ <em>m</em><em>a</em><em>x</em><em>m</em><em>i</em><em>n</em><sub><em>i</em></sub>(<em>d</em><sub><em>i</em></sub>, <em>i</em>) + 1, <em>i</em> = 0, 1, . . . , <em>n</em>(<em>G</em>) − 1</span></p>
 <p>其实, 后一结论能够直接得到我们所需要证明的命题. 因为对于一个图<span class="math"><em>G</em></span>和它的补图<span class="math"><em>Ḡ</em></span>来说, 这两个值之和一定是不大于<span class="math"><em>n</em>(<em>G</em>) + 1</span>的. 如下图.</p>
 <div>
-<img src="/images/G.png" title="G">
+<img src="../images/G.png" title="G" />
 </div>
 
 <p>对于这样的一个图G, 我们画出顶点度数以及<span class="math"><em>y</em> = <em>i</em></span>这两个序列的图像:</p>
 <div>
-<img src="/images/plotG.png" title="G">
+<img src="../images/plotG.png" title="G" />
 </div>
 
 <p>我们发现, 这两个序列在(3,3)处有相交, 这个即是上面得到结论中的值, 即这个图可以用至多4种颜色进行着色. 我们发现, 其实将此图旋转180度, 得到的图像和<span class="math"><em>Ḡ</em></span>的图像是一样的:</p>
 <div>
-<img src="/images/plotGbar.png" title="图G的补图顶点的度数">
+<img src="../images/plotGbar.png" title="图G的补图顶点的度数" />
 </div>
 
 <p>对于任意一个图<span class="math"><em>G</em></span>, 这个结论始终是成立的(实际上仔细考虑, 可能取得最大值的点不是同一个, 但是我们可以想象这两个值之和始终是不大于<span class="math"><em>n</em>(<em>G</em>) − 1</span>的. ) 这样, 我们就得到<span class="math"><em>χ</em>(<em>G</em>) + <em>χ</em>(<em>Ḡ</em>) ≤ <em>n</em>(<em>G</em>) − 1 + 1 + 1 = <em>n</em>(<em>G</em>) + 1</span></p>
@@ -75,22 +75,22 @@
 
       <footer>
           <div class="contact">
-            <a href="/" title="home">home</a>
-            <a href="/about.html" title="about fantasticsid">about</a>
-            <a href="/apps.html" title="my apps">apps</a>
-            <a href="/files/resume.pdf" title="my resume">résumé</a>
+            <a href="../" title="home">home</a>
+            <a href="../about.html" title="about fantasticsid">about</a>
+            <a href="../apps.html" title="my apps">apps</a>
+            <a href="../files/resume.pdf" title="my resume">résumé</a>
             <a href="http://github.com/fantasticsid/" title="my github">github</a>
             <a href="http://twitter.com/fantasticsid" title="my twitter">twitter</a>
-            <a href="/rss.xml" title="subscribe">rss</a>
+            <a href="../rss.xml" title="subscribe">rss</a>
           </div>
       </footer>
 
     </div>
 
-    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.timeago.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.easing.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.anchorscroll.js"></script>
-    <script type="text/javascript" src="/javascripts/blog.ui.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
   </body>
 </html>

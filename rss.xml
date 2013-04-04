@@ -6,447 +6,683 @@
         <description><![CDATA[mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music]]></description>
         <atom:link href="http://blog.fantasticsid.com/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sat, 16 Sep 2006 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Tue, 01 Jan 2013 00:00:00 UT</lastBuildDate>
         <item>
-    <title>真的要和LIUS告别了</title>
-    <link>http://blog.fantasticsid.com/posts/2006-09-16-lius.html</link>
-    <description><![CDATA[真的要和LIUS告别了]]></description>
-    <pubDate>Sat, 16 Sep 2006 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2006-09-16-lius.html</guid>
-</item>
-<item>
-    <title>coldplayism</title>
-    <link>http://blog.fantasticsid.com/posts/2006-09-30-coldplayism.html</link>
-    <description><![CDATA[coldplayism]]></description>
-    <pubDate>Sat, 30 Sep 2006 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2006-09-30-coldplayism.html</guid>
-</item>
-<item>
-    <title>就这么一写</title>
-    <link>http://blog.fantasticsid.com/posts/2006-11-18-randompost.html</link>
-    <description><![CDATA[就这么一写]]></description>
-    <pubDate>Sat, 18 Nov 2006 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2006-11-18-randompost.html</guid>
-</item>
-<item>
-    <title>在学校,与阿姨为伴</title>
-    <link>http://blog.fantasticsid.com/posts/2006-12-22-atschool.html</link>
-    <description><![CDATA[在学校,与阿姨为伴]]></description>
-    <pubDate>Fri, 22 Dec 2006 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2006-12-22-atschool.html</guid>
-</item>
-<item>
-    <title>RECAP</title>
-    <link>http://blog.fantasticsid.com/posts/2007-01-23-recap.html</link>
-    <description><![CDATA[RECAP]]></description>
-    <pubDate>Tue, 23 Jan 2007 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2007-01-23-recap.html</guid>
-</item>
-<item>
-    <title>明明有标题</title>
-    <link>http://blog.fantasticsid.com/posts/2007-02-03-there-is-a-title.html</link>
-    <description><![CDATA[明明有标题]]></description>
-    <pubDate>Sat, 03 Feb 2007 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2007-02-03-there-is-a-title.html</guid>
-</item>
-<item>
-    <title>三</title>
-    <link>http://blog.fantasticsid.com/posts/2007-02-24-three.html</link>
-    <description><![CDATA[三]]></description>
-    <pubDate>Sat, 24 Feb 2007 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2007-02-24-three.html</guid>
-</item>
-<item>
-    <title>IT’S HAR TO EMARGINE…</title>
-    <link>http://blog.fantasticsid.com/posts/2007-05-03-har-to-emargine.html</link>
-    <description><![CDATA[IT’S HAR TO EMARGINE…]]></description>
-    <pubDate>Thu, 03 May 2007 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2007-05-03-har-to-emargine.html</guid>
-</item>
-<item>
-    <title>right kerfuffle</title>
-    <link>http://blog.fantasticsid.com/posts/2007-06-01-right-kerfuffle.html</link>
-    <description><![CDATA[right kerfuffle]]></description>
-    <pubDate>Fri, 01 Jun 2007 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2007-06-01-right-kerfuffle.html</guid>
-</item>
-<item>
-    <title>李查得.福来兮曼</title>
-    <link>http://blog.fantasticsid.com/posts/2007-06-09-play.html</link>
-    <description><![CDATA[李查得.福来兮曼]]></description>
-    <pubDate>Sat, 09 Jun 2007 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2007-06-09-play.html</guid>
-</item>
-<item>
-    <title>果实</title>
-    <link>http://blog.fantasticsid.com/posts/2007-06-16-fruit.html</link>
-    <description><![CDATA[果实]]></description>
-    <pubDate>Sat, 16 Jun 2007 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2007-06-16-fruit.html</guid>
-</item>
-<item>
-    <title>Yesterday All my troubles seemed so far away…</title>
-    <link>http://blog.fantasticsid.com/posts/2007-07-05-yesterday.html</link>
-    <description><![CDATA[Yesterday All my troubles seemed so far away…]]></description>
-    <pubDate>Thu, 05 Jul 2007 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2007-07-05-yesterday.html</guid>
-</item>
-<item>
-    <title>夏天走了</title>
-    <link>http://blog.fantasticsid.com/posts/2007-08-09-summer-is-yutou.html</link>
-    <description><![CDATA[夏天走了]]></description>
-    <pubDate>Thu, 09 Aug 2007 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2007-08-09-summer-is-yutou.html</guid>
-</item>
-<item>
-    <title>HP…MATRIX</title>
-    <link>http://blog.fantasticsid.com/posts/2007-09-23-hp-matrix.html</link>
-    <description><![CDATA[HP…MATRIX]]></description>
-    <pubDate>Sun, 23 Sep 2007 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2007-09-23-hp-matrix.html</guid>
-</item>
-<item>
-    <title>ms i c it song</title>
-    <link>http://blog.fantasticsid.com/posts/2007-10-21-msicitsong.html</link>
-    <description><![CDATA[ms i c it song]]></description>
-    <pubDate>Sun, 21 Oct 2007 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2007-10-21-msicitsong.html</guid>
-</item>
-<item>
-    <title>_/</title>
-    <link>http://blog.fantasticsid.com/posts/2007-11-04-rant.html</link>
-    <description><![CDATA[_/]]></description>
-    <pubDate>Sun, 04 Nov 2007 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2007-11-04-rant.html</guid>
-</item>
-<item>
-    <title>1011df/du还好fourfivefire</title>
-    <link>http://blog.fantasticsid.com/posts/2007-12-16-1011dfdufourfivefire.html</link>
-    <description><![CDATA[1011df/du还好fourfivefire]]></description>
-    <pubDate>Sun, 16 Dec 2007 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2007-12-16-1011dfdufourfivefire.html</guid>
-</item>
-<item>
-    <title>Khoomei</title>
-    <link>http://blog.fantasticsid.com/posts/2009-03-09-khoomei.html</link>
-    <description><![CDATA[khoomei]]></description>
-    <pubDate>Mon, 09 Mar 2009 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2009-03-09-khoomei.html</guid>
-</item>
-<item>
-    <title>42</title>
-    <link>http://blog.fantasticsid.com/posts/2009-04-16-fourty-two.html</link>
-    <description><![CDATA[42]]></description>
-    <pubDate>Thu, 16 Apr 2009 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2009-04-16-fourty-two.html</guid>
-</item>
-<item>
-    <title>独立日</title>
-    <link>http://blog.fantasticsid.com/posts/2009-04-23-independence-day.html</link>
-    <description><![CDATA[独立日]]></description>
-    <pubDate>Thu, 23 Apr 2009 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2009-04-23-independence-day.html</guid>
-</item>
-<item>
-    <title>Dvorak键盘</title>
-    <link>http://blog.fantasticsid.com/posts/2009-07-18-dovrak-keyboard.html</link>
-    <description><![CDATA[Dvorak键盘]]></description>
-    <pubDate>Sat, 18 Jul 2009 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2009-07-18-dovrak-keyboard.html</guid>
-</item>
-<item>
-    <title>Haiku</title>
-    <link>http://blog.fantasticsid.com/posts/2009-09-04-haiku.html</link>
-    <description><![CDATA[Haiku]]></description>
-    <pubDate>Fri, 04 Sep 2009 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2009-09-04-haiku.html</guid>
-</item>
-<item>
-    <title>Doctor Who卡通造型</title>
-    <link>http://blog.fantasticsid.com/posts/2009-12-28-doctor-who-cartoon.html</link>
-    <description><![CDATA[Doctor Who卡通造型]]></description>
-    <pubDate>Mon, 28 Dec 2009 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2009-12-28-doctor-who-cartoon.html</guid>
-</item>
-<item>
-    <title>一个图与其补图染色数之和的上界</title>
-    <link>http://blog.fantasticsid.com/posts/2010-01-26-upper-bound-chromatic-complement-graph.html</link>
-    <description><![CDATA[一个图与其补图染色数之和的上界]]></description>
-    <pubDate>Tue, 26 Jan 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-01-26-upper-bound-chromatic-complement-graph.html</guid>
-</item>
-<item>
-    <title>Kungfu VS Cowboy</title>
-    <link>http://blog.fantasticsid.com/posts/2010-02-08-kungfu-vs-cowboy.html</link>
-    <description><![CDATA[Kungfu VS Cowboy]]></description>
-    <pubDate>Mon, 08 Feb 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-02-08-kungfu-vs-cowboy.html</guid>
-</item>
-<item>
-    <title>瞎猜也有道理: 信封悖论</title>
-    <link>http://blog.fantasticsid.com/posts/2010-02-22-envelopes-paradox.html</link>
-    <description><![CDATA[瞎猜也有道理: 信封悖论]]></description>
-    <pubDate>Mon, 22 Feb 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-02-22-envelopes-paradox.html</guid>
-</item>
-<item>
-    <title>Collatz猜想</title>
-    <link>http://blog.fantasticsid.com/posts/2010-03-07-collatz-conjecture.html</link>
-    <description><![CDATA[Collatz猜想]]></description>
-    <pubDate>Sun, 07 Mar 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-03-07-collatz-conjecture.html</guid>
-</item>
-<item>
-    <title>经典重访: 如何按序生成集合的所有子集</title>
-    <link>http://blog.fantasticsid.com/posts/2010-04-14-generating-subsets.html</link>
-    <description><![CDATA[经典重访: 如何按序生成集合的所有子集]]></description>
-    <pubDate>Wed, 14 Apr 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-04-14-generating-subsets.html</guid>
-</item>
-<item>
-    <title>Accepted as a gsoc2010 student</title>
-    <link>http://blog.fantasticsid.com/posts/2010-04-27-accepted-as-a-gsoc2010-student.html</link>
-    <description><![CDATA[Accepted as a gsoc2010 student]]></description>
-    <pubDate>Tue, 27 Apr 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-04-27-accepted-as-a-gsoc2010-student.html</guid>
-</item>
-<item>
-    <title>Gsoc report: 1st week</title>
-    <link>http://blog.fantasticsid.com/posts/2010-05-30-gsoc-report-1st-week.html</link>
-    <description><![CDATA[Gsoc report: 1st week]]></description>
-    <pubDate>Sun, 30 May 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-05-30-gsoc-report-1st-week.html</guid>
-</item>
-<item>
-    <title>经典重访: 找出频繁字符</title>
-    <link>http://blog.fantasticsid.com/posts/2010-06-01-frequent-elements.html</link>
-    <description><![CDATA[经典重访: 找出频繁字符]]></description>
-    <pubDate>Tue, 01 Jun 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-06-01-frequent-elements.html</guid>
-</item>
-<item>
-    <title>Gsoc report: 2nd week</title>
-    <link>http://blog.fantasticsid.com/posts/2010-06-07-gsoc-report-2nd-week.html</link>
-    <description><![CDATA[Gsoc report: 2nd week]]></description>
-    <pubDate>Mon, 07 Jun 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-06-07-gsoc-report-2nd-week.html</guid>
-</item>
-<item>
-    <title>Gsoc report: 3rd week</title>
-    <link>http://blog.fantasticsid.com/posts/2010-06-14-gsoc-report-3rd-week.html</link>
-    <description><![CDATA[Gsoc report: 3rd week]]></description>
-    <pubDate>Mon, 14 Jun 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-06-14-gsoc-report-3rd-week.html</guid>
-</item>
-<item>
-    <title>Gsoc report: 4th week</title>
-    <link>http://blog.fantasticsid.com/posts/2010-06-21-gsoc-report-4th-week.html</link>
-    <description><![CDATA[Gsoc report: 4th week]]></description>
-    <pubDate>Mon, 21 Jun 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-06-21-gsoc-report-4th-week.html</guid>
-</item>
-<item>
-    <title>Gsoc report: 5th week</title>
-    <link>http://blog.fantasticsid.com/posts/2010-06-29-gsoc-report-5th-week-2.html</link>
-    <description><![CDATA[Gsoc report: 5th week]]></description>
-    <pubDate>Tue, 29 Jun 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-06-29-gsoc-report-5th-week-2.html</guid>
-</item>
-<item>
-    <title>Gsoc report: 6th week</title>
-    <link>http://blog.fantasticsid.com/posts/2010-07-05-gsoc-report-6th-week.html</link>
-    <description><![CDATA[Gsoc report: 6th week]]></description>
-    <pubDate>Mon, 05 Jul 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-07-05-gsoc-report-6th-week.html</guid>
-</item>
-<item>
-    <title>Gsoc report: 7th week</title>
-    <link>http://blog.fantasticsid.com/posts/2010-07-12-gsoc-report-7th-week.html</link>
-    <description><![CDATA[Gsoc report: 7th week]]></description>
-    <pubDate>Mon, 12 Jul 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-07-12-gsoc-report-7th-week.html</guid>
-</item>
-<item>
-    <title>大自然中的数字</title>
-    <link>http://blog.fantasticsid.com/posts/2010-07-17-numbers.html</link>
-    <description><![CDATA[大自然中的数字]]></description>
-    <pubDate>Sat, 17 Jul 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-07-17-numbers.html</guid>
-</item>
-<item>
-    <title>Gsoc report: 8th week</title>
-    <link>http://blog.fantasticsid.com/posts/2010-07-23-gsoc-report-8th-week.html</link>
-    <description><![CDATA[Gsoc report: 8th week]]></description>
-    <pubDate>Fri, 23 Jul 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-07-23-gsoc-report-8th-week.html</guid>
-</item>
-<item>
-    <title>Gsoc report: 9th week</title>
-    <link>http://blog.fantasticsid.com/posts/2010-07-26-gsoc-report-9th-week.html</link>
-    <description><![CDATA[Gsoc report: 9th week]]></description>
-    <pubDate>Mon, 26 Jul 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-07-26-gsoc-report-9th-week.html</guid>
-</item>
-<item>
-    <title>Gsoc report: 10th week</title>
-    <link>http://blog.fantasticsid.com/posts/2010-08-02-gsoc-report-10th-week.html</link>
-    <description><![CDATA[Gsoc report: 10th week]]></description>
-    <pubDate>Mon, 02 Aug 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-08-02-gsoc-report-10th-week.html</guid>
-</item>
-<item>
-    <title>Gsoc report: 11th week</title>
-    <link>http://blog.fantasticsid.com/posts/2010-08-09-gsoc-report-11th-week.html</link>
-    <description><![CDATA[Gsoc report: 11th week]]></description>
-    <pubDate>Mon, 09 Aug 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-08-09-gsoc-report-11th-week.html</guid>
-</item>
-<item>
-    <title>P = NP问题最新进展</title>
-    <link>http://blog.fantasticsid.com/posts/2010-08-10-npc-proof.html</link>
-    <description><![CDATA[P = NP问题最新进展]]></description>
-    <pubDate>Tue, 10 Aug 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-08-10-npc-proof.html</guid>
-</item>
-<item>
-    <title>Gsoc report: Pencils down</title>
-    <link>http://blog.fantasticsid.com/posts/2010-08-17-gsoc-report-pencils.html</link>
-    <description><![CDATA[Gsoc report: Pencils down]]></description>
-    <pubDate>Tue, 17 Aug 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-08-17-gsoc-report-pencils.html</guid>
-</item>
-<item>
-    <title>你还会做这道高考题吗?</title>
-    <link>http://blog.fantasticsid.com/posts/2010-09-08-gaokao-probability-puzzles.html</link>
-    <description><![CDATA[你还会做这道高考题吗?]]></description>
-    <pubDate>Wed, 08 Sep 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-09-08-gaokao-probability-puzzles.html</guid>
-</item>
-<item>
-    <title>3人打网球--趣题一则</title>
-    <link>http://blog.fantasticsid.com/posts/2010-09-21-pow-tennis.html</link>
-    <description><![CDATA[3人打网球--趣题一则]]></description>
-    <pubDate>Tue, 21 Sep 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-09-21-pow-tennis.html</guid>
-</item>
-<item>
-    <title>有n个1的递增二进制序列 - 一道简单的面试题</title>
-    <link>http://blog.fantasticsid.com/posts/2010-09-25-binary-sequence-with-n-ones.html</link>
-    <description><![CDATA[有n个1的递增二进制序列 - 一道简单的面试题]]></description>
-    <pubDate>Sat, 25 Sep 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-09-25-binary-sequence-with-n-ones.html</guid>
-</item>
-<item>
-    <title>给格子染色 - 趣题两则</title>
-    <link>http://blog.fantasticsid.com/posts/2010-11-11-colouring-puzzles.html</link>
-    <description><![CDATA[给格子染色 - 趣题两则]]></description>
-    <pubDate>Thu, 11 Nov 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-11-11-colouring-puzzles.html</guid>
-</item>
-<item>
-    <title>blog还活着</title>
-    <link>http://blog.fantasticsid.com/posts/2010-12-20-must-blog-harder.html</link>
-    <description><![CDATA[blog还活着]]></description>
-    <pubDate>Mon, 20 Dec 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-12-20-must-blog-harder.html</guid>
-</item>
-<item>
-    <title>几个类似的概率趣题</title>
-    <link>http://blog.fantasticsid.com/posts/2010-12-20-probability-puzzles.html</link>
-    <description><![CDATA[几个类似的概率趣题]]></description>
-    <pubDate>Mon, 20 Dec 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-12-20-probability-puzzles.html</guid>
-</item>
-<item>
-    <title>最少要种多少棵菜</title>
-    <link>http://blog.fantasticsid.com/posts/2010-12-23-planting-vegetables.html</link>
-    <description><![CDATA[最少要种多少棵菜]]></description>
-    <pubDate>Thu, 23 Dec 2010 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2010-12-23-planting-vegetables.html</guid>
-</item>
-<item>
-    <title>那些你知我知的帽子游戏</title>
-    <link>http://blog.fantasticsid.com/posts/2011-01-18-hat-puzzles.html</link>
-    <description><![CDATA[那些你知我知的帽子游戏]]></description>
-    <pubDate>Tue, 18 Jan 2011 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2011-01-18-hat-puzzles.html</guid>
-</item>
-<item>
-    <title>Mobius奇遇记</title>
-    <link>http://blog.fantasticsid.com/posts/2011-02-13-mobius.html</link>
-    <description><![CDATA[Mobius奇遇记]]></description>
-    <pubDate>Sun, 13 Feb 2011 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2011-02-13-mobius.html</guid>
-</item>
-<item>
-    <title>几道题目活跃下气氛</title>
-    <link>http://blog.fantasticsid.com/posts/2011-04-28-puzzles.html</link>
-    <description><![CDATA[几道题目活跃下气氛]]></description>
-    <pubDate>Thu, 28 Apr 2011 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2011-04-28-puzzles.html</guid>
-</item>
-<item>
-    <title>一图胜万言: fibonacci数列的一些结论的有趣证明</title>
-    <link>http://blog.fantasticsid.com/posts/2011-07-07-fibonacci.html</link>
-    <description><![CDATA[一图胜万言: fibonacci数列的一些结论的有趣证明]]></description>
-    <pubDate>Thu, 07 Jul 2011 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2011-07-07-fibonacci.html</guid>
-</item>
-<item>
-    <title>一点博弈论趣题</title>
-    <link>http://blog.fantasticsid.com/posts/2011-08-06-game-theory.html</link>
-    <description><![CDATA[一点博弈论趣题]]></description>
-    <pubDate>Sat, 06 Aug 2011 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2011-08-06-game-theory.html</guid>
-</item>
-<item>
-    <title>Arrow定理 - 没有合理的选举!</title>
-    <link>http://blog.fantasticsid.com/posts/2011-09-04-arrowstheorem.html</link>
-    <description><![CDATA[Arrow定理 - 没有合理的选举!]]></description>
-    <pubDate>Sun, 04 Sep 2011 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2011-09-04-arrowstheorem.html</guid>
-</item>
-<item>
-    <title>2012新年计划</title>
-    <link>http://blog.fantasticsid.com/posts/2011-12-30-2012-resolutions.html</link>
-    <description><![CDATA[2012新年计划]]></description>
-    <pubDate>Fri, 30 Dec 2011 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2011-12-30-2012-resolutions.html</guid>
-</item>
-<item>
-    <title>IELTS Quizme</title>
-    <link>http://blog.fantasticsid.com/posts/2012-01-08-ielts-quizme.html</link>
-    <description><![CDATA[IELTS Quizme]]></description>
-    <pubDate>Sun, 08 Jan 2012 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2012-01-08-ielts-quizme.html</guid>
-</item>
-<item>
-    <title>App idea - Motivated</title>
-    <link>http://blog.fantasticsid.com/posts/2012-02-02-app-idea.html</link>
-    <description><![CDATA[App idea - Motivated]]></description>
-    <pubDate>Thu, 02 Feb 2012 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2012-02-02-app-idea.html</guid>
-</item>
-<item>
-    <title>iPad上的画图软件: paper</title>
-    <link>http://blog.fantasticsid.com/posts/2012-04-02-paper-ipad.html</link>
-    <description><![CDATA[iPad上的画图软件: paper]]></description>
-    <pubDate>Mon, 02 Apr 2012 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2012-04-02-paper-ipad.html</guid>
+    <title>2013新年计划</title>
+    <link>http://blog.fantasticsid.com/posts/2013-01-01-2013-resolutions.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+      <div class="nav">
+        <a href="/posts.html">← All posts</a>
+      </div>
+    <p class="meta"><time class="timeago" datetime="2013-01-01" pubdate>2013-01-01</time></p>
+    <h1>2013新年计划</h1>
+    </header>
+  <section>
+    <pre><code>
+定义新自己
+
+发布几个iOS应用
+
+看完Haskell的几本书, 写一个解释器/比较大的应用
+
+做机器学习的应用
+
+概率论, 组合数学, 分析, 线性代数各书习题重新做一遍
+
+搞个小提琴学
+
+练耳不靠谱
+
+要看的书:
+
+&lt;&lt;Learn you a haskell for great good&gt;&gt;
+
+&lt;&lt;Real world haskell&gt;&gt;
+
+&lt;&lt;Programming in haskell&gt;&gt;
+
+&lt;&lt;The Haskell Road to Logic, Math and Programming&gt;&gt;
+
+&lt;&lt;Purely functional data structures&gt;&gt;
+
+&lt;&lt;Pearls of functional algorithm design&gt;&gt;
+
+&lt;&lt;Introduction to algorithms&gt;&gt;
+
+&lt;&lt;Algorithms&gt;&gt;
+
+&lt;&lt;Structure and interpretation of computer programs&gt;&gt;
+
+&lt;&lt;Jazz theory book&gt;&gt;
+
+&lt;&lt;Javascript the good parts&gt;&gt;
+
+&lt;&lt;Clojure in action&gt;&gt;
+
+&lt;&lt;The joy of clojure&gt;&gt;
+
+&lt;&lt;Practical clojure&gt;&gt;
+
+&lt;&lt;Programming clojure&gt;&gt;
+
+&lt;&lt;Godel Escher Bach - an Eternal Golden Braid&gt;&gt;
+</code></pre>
+<p>今年简单一点</p>
+<pre><code>深入研究Haskell, wiki上的页面基本都要有个了解, 能用Haskell写高效后台应用.
+
+深入研究C++, 熟练应用模版, C++ 11的高级特性.
+
+看CLRS, PFDS刷一下各种OJ, interviewstreet什么的.
+</code></pre>
+<p>去年的完成情况, 按照0-5完成进度打分:</p>
+<pre><code>定义新自己 2
+
+发布几个iOS应用 3
+
+看完Haskell的几本书, 写一个解释器/比较大的应用 1
+
+做机器学习的应用 0
+
+概率论, 组合数学, 分析, 线性代数各书习题重新做一遍 0
+
+搞个小提琴学 4
+
+练耳不靠谱 2
+
+要看的书:
+
+&lt;&lt;Learn you a haskell for great good&gt;&gt; 5
+
+&lt;&lt;Real world haskell&gt;&gt; 4
+
+&lt;&lt;Programming in haskell&gt;&gt; 0
+
+&lt;&lt;The Haskell Road to Logic, Math and Programming&gt;&gt; 0
+
+&lt;&lt;Purely functional data structures&gt;&gt; 2
+
+&lt;&lt;Pearls of functional algorithm design&gt;&gt; 0
+
+&lt;&lt;Introduction to algorithms&gt;&gt; 0
+
+&lt;&lt;Algorithms&gt;&gt; 0
+
+&lt;&lt;Structure and interpretation of computer programs&gt;&gt; 1
+
+&lt;&lt;Jazz theory book&gt;&gt; 0
+
+&lt;&lt;Javascript the good parts&gt;&gt; 4
+
+&lt;&lt;Clojure in action&gt;&gt; 0
+
+&lt;&lt;The joy of clojure&gt;&gt; 4
+
+&lt;&lt;Practical clojure&gt;&gt; 1
+
+&lt;&lt;Programming clojure&gt;&gt; 1
+
+&lt;&lt;Godel Escher Bach - an Eternal Golden Braid&gt;&gt; 0
+</code></pre>
+<p>发现去年又不知道活在哪个次元了.</p>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Tue, 01 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2013-01-01-2013-resolutions.html</guid>
 </item>
 <item>
     <title>App idea - Unitask</title>
     <link>http://blog.fantasticsid.com/posts/2012-04-03-unitask.html</link>
-    <description><![CDATA[App idea - Unitask]]></description>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+      <div class="nav">
+        <a href="/posts.html">← All posts</a>
+      </div>
+    <p class="meta"><time class="timeago" datetime="2012-04-03" pubdate>2012-04-03</time></p>
+    <h1>App idea - Unitask</h1>
+    </header>
+  <section>
+    <p>这个和前面一篇<a href="/posts/2012-02-02-app-idea.html">Motivated App</a>的想法有点类似.</p>
+<div>
+<img src="/images/unitask1.jpeg" title="Unitask" />
+</div>
+
+<div>
+<img src="/images/unitask2.jpeg" title="Unitask" />
+</div>
+
+<div>
+<img src="/images/unitask3.jpeg" title="Unitask" />
+</div>
+
+
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
     <pubDate>Tue, 03 Apr 2012 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2012-04-03-unitask.html</guid>
 </item>
 <item>
-    <title>2013新年计划</title>
-    <link>http://blog.fantasticsid.com/posts/2013-01-01-2013-resolutions.html</link>
-    <description><![CDATA[2013新年计划]]></description>
-    <pubDate>Tue, 01 Jan 2013 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2013-01-01-2013-resolutions.html</guid>
+    <title>iPad上的画图软件: paper</title>
+    <link>http://blog.fantasticsid.com/posts/2012-04-02-paper-ipad.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+      <div class="nav">
+        <a href="/posts.html">← All posts</a>
+      </div>
+    <p class="meta"><time class="timeago" datetime="2012-04-02" pubdate>2012-04-02</time></p>
+    <h1>iPad上的画图软件: paper</h1>
+    </header>
+  <section>
+    <p>我一直对有些blog上的涂鸦很感兴趣. 很多blog如xkcd中的图都是画在纸上然后扫描进电脑里的, 这个对于我来说又显得太麻烦了, 而且画画从来对我就是一件难事, 如何选颜色, 风格都是很难的问题.</p>
+<p>其实我对涂鸦的要求很低, 只要能够起到说明问题, 让人一目了然就可以. 昨天发现了这个app: paper by fiftythree</p>
+<p>这个app我想了下, 吸引我的原因主要是:</p>
+<pre><code>
+1. 选择少, 有几种画笔但是画笔不能选择粗细, 颜色只有固定的几种.
+
+2. 这些选择的效果都不错. 不同画笔风格互相弥补, 仅有的几种颜色搭配很协调.
+</code></pre>
+<p>看来对我这样的业余用户来说, 在简洁性和功能性上选择前者更具有吸引力.</p>
+<div>
+<img src="/images/expopiano.jpg" title="exponential piano" />
+</div>
+
+
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Mon, 02 Apr 2012 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2012-04-02-paper-ipad.html</guid>
+</item>
+<item>
+    <title>App idea - Motivated</title>
+    <link>http://blog.fantasticsid.com/posts/2012-02-02-app-idea.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+      <div class="nav">
+        <a href="/posts.html">← All posts</a>
+      </div>
+    <p class="meta"><time class="timeago" datetime="2012-02-02" pubdate>2012-02-02</time></p>
+    <h1>App idea - Motivated</h1>
+    </header>
+  <section>
+    <p>Admit it, you are simply not as good a multitasker as a computer, and sometimes you’ve got moods that keep you distracted and unable to finish even one task at hand. Your productivity plumets and as soon as you realize this the negative feeling only adds to the problem you already have.</p>
+<p>Enter Motivated, an iphone app that reminds you of the most important task you are supposed to finish.</p>
+<p>Features:</p>
+<ul>
+<li>Only one task allowed at a time</li>
+<li>Make commitment to your goal publicly</li>
+<li>Schedule notifications, useful for example, to get yourself motivated at the start of day</li>
+</ul>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Thu, 02 Feb 2012 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2012-02-02-app-idea.html</guid>
+</item>
+<item>
+    <title>IELTS Quizme</title>
+    <link>http://blog.fantasticsid.com/posts/2012-01-08-ielts-quizme.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+      <div class="nav">
+        <a href="/posts.html">← All posts</a>
+      </div>
+    <p class="meta"><time class="timeago" datetime="2012-01-08" pubdate>2012-01-08</time></p>
+    <h1>IELTS Quizme</h1>
+    </header>
+  <section>
+    <p>发布了第一个iOS app, IELTS Quizme. 帮助准备考雅思的同学复习词汇, 对希望增加词汇的同学也有帮助.</p>
+<p><a href="http://itunes.apple.com/us/app/ielts-quizme/id488641011">IELTS Quizme</a></p>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Sun, 08 Jan 2012 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2012-01-08-ielts-quizme.html</guid>
+</item>
+<item>
+    <title>2012新年计划</title>
+    <link>http://blog.fantasticsid.com/posts/2011-12-30-2012-resolutions.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+      <div class="nav">
+        <a href="/posts.html">← All posts</a>
+      </div>
+    <p class="meta"><time class="timeago" datetime="2011-12-30" pubdate>2011-12-30</time></p>
+    <h1>2012新年计划</h1>
+    </header>
+  <section>
+    <pre><code>
+定义新自己
+
+发布几个iOS应用
+
+看完Haskell的几本书, 写一个解释器/比较大的应用
+
+做机器学习的应用
+
+概率论, 组合数学, 分析, 线性代数各书习题重新做一遍
+
+搞个小提琴学
+
+练耳不靠谱
+
+要看的书:
+
+&lt;&lt;Learn you a haskell for great good&gt;&gt;
+
+&lt;&lt;Real world haskell&gt;&gt;
+
+&lt;&lt;Programming in haskell&gt;&gt;
+
+&lt;&lt;The Haskell Road to Logic, Math and Programming&gt;&gt;
+
+&lt;&lt;Purely functional data structures&gt;&gt;
+
+&lt;&lt;Pearls of functional algorithm design&gt;&gt;
+
+&lt;&lt;Introduction to algorithms&gt;&gt;
+
+&lt;&lt;Algorithms&gt;&gt;
+
+&lt;&lt;Structure and interpretation of computer programs&gt;&gt;
+
+&lt;&lt;Jazz theory book&gt;&gt;
+
+&lt;&lt;Javascript the good parts&gt;&gt;
+
+&lt;&lt;Clojure in action&gt;&gt;
+
+&lt;&lt;The joy of clojure&gt;&gt;
+
+&lt;&lt;Practical clojure&gt;&gt;
+
+&lt;&lt;Programming clojure&gt;&gt;
+
+&lt;&lt;Godel Escher Bach - an Eternal Golden Braid&gt;&gt;
+</code></pre>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Fri, 30 Dec 2011 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2011-12-30-2012-resolutions.html</guid>
+</item>
+<item>
+    <title>Arrow定理 - 没有合理的选举!</title>
+    <link>http://blog.fantasticsid.com/posts/2011-09-04-arrowstheorem.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+      <div class="nav">
+        <a href="/posts.html">← All posts</a>
+      </div>
+    <p class="meta"><time class="timeago" datetime="2011-09-04" pubdate>2011-09-04</time></p>
+    <h1>Arrow定理 - 没有合理的选举!</h1>
+    </header>
+  <section>
+    <p><a href="http://en.wikipedia.org/wiki/Arrow's_impossibility_theorem">Arrow定理</a>可能是博弈论中最著名的定理之一了, 还记得Rudolf在上课时用了整整1节多课证明了这个定理. 同时它的结论绝对能够吸引任何一个人, 难道现存的所有选举制度都是不合理的吗? 当然, 定理是有条件的, arrow定理也不例外, 但是arrow定理的条件让人觉得再自然不过了:</p>
+<p>首先设想, 一个选举中有多于3个候选人, {A, B, C…}, N个选民. 每一个选民对候选人给出一个排名(两两可比, 传递), 例如, B &gt; A &gt; C . 而一个选举制度是一个函数F, 它把N个选民对候选人的排名映射到一个“全社会”的排名.</p>
+<p>Arrow定理的条件:</p>
+<pre><code> 1.  Unanimity(全票通过),
+ 就是说, 如果所有选民觉得A &gt; B, 那么对选举的结果也有A &gt; B
+
+ 2.  Independence of irrelevant alternatives(IIA, 不相关候选者独立性),
+ 就是, 选举结果中, A和B的相对次序只和A, B在所有选民的排名中的次序相关, 而和C的排名是无关的
+
+ 3.  No dictatorship(没有独裁),
+ 就是, 不存在一个选民i, 他的排名决定了任何一对候选人A, B在选举结果中的排名.</code></pre>
+<p>以上条件我们通常都认为是一个公平选举制度所必须具有的性质, 但是arrow定理告诉我们, 同时满足这3个条件的选举制度是不存在的! 或者说, 如果要满足条件1, 2, 那么这个选举中就存在一个独裁的选民.</p>
+<p>首先我们来看一个结论: 如果每一个选民都把候选人B排列在最前, 或者最后面, 那么选举结果也将会把B放在排名最前或者最后, 而不是中间的某一个位置.</p>
+<p>其实这个结论就已经让我们觉得这个选举是不公平的, 因为假如有一半的选民认为B是最好的, 另外一半认为B是最差的, 那么理想的选举似乎应该把B放在排名中间某个位置, 而不是放在最好或者最差的排名上.</p>
+<p>证明:</p>
+<p>假设选举结果中B不是在最好或者最差的位置上, 即存在A, C, 使得A &gt; B &gt; C, 那么假设我们现在在每一个选民的排名中, 将C移动到A之前.</p>
+<pre><code> 根据条件Unanimity, 选举结果应该有C &gt; A.
+
+ 但是注意在每个选民的排名中, 由于B是在排名两端之一的,
+ 所以这个移动并不会影响BC, AB之间的排名,
+
+ 于是根据条件IIA, 选举结果中BC, AB的排名应该不受影响,
+ 于是A &gt; B, B &gt; C仍然应该成立. 由于选举结果是两两可比并且传递的, 于是有A &gt; C.</code></pre>
+<p>这是个矛盾, 因此就证明了, 选举结果中, B一定也是在排名的最前或者最后, 而不是中间某个位置. 待续…</p>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Sun, 04 Sep 2011 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2011-09-04-arrowstheorem.html</guid>
+</item>
+<item>
+    <title>一点博弈论趣题</title>
+    <link>http://blog.fantasticsid.com/posts/2011-08-06-game-theory.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+      <div class="nav">
+        <a href="/posts.html">← All posts</a>
+      </div>
+    <p class="meta"><time class="timeago" datetime="2011-08-06" pubdate>2011-08-06</time></p>
+    <h1>一点博弈论趣题</h1>
+    </header>
+  <section>
+    <p>回顾快要结束的研究生生活, 发现真正带给我学习快乐的并不是研究. 虽然机器学习, 计算机视觉都是非常有趣的方向, 可是由于自己积累太少, 要想真正体会到研究的快乐还是比较难, 尤其是作学术讲究求新立异, 现在看来一年的确是不够的. 事实上我向来觉得, 如果我们普通人能够掌握到19世纪初左右的数学, 科学知识, 那么也已经相当牛了. 而推进人类认知的任务, 就交给PHD先生/女士们了. 而我本来就没有一颗献身科学的心, 当然如果有的话, 也不会选择计算机科学, 一定是数学或者物理. 所以说学术这条路, 事实上已经在6年前被我亲手斩断了.</p>
+<p>总而言之, 自己创新能力还是不够, 更善于接受一些别人做出的成果然后去评判是否有趣有用值得读. 比如说, 研究生阶段80%的课程都是断然的水课. 剩下的不水的课中, 掐指一算, 也就只有Rudolf Fleischer老师的算法博弈论和阚海斌老师的图论课属于有趣的了. 这几天觉得应该把这些内容整理一下积累起来才不算浪费. 这应该是一系列关于博弈论或者图论的文章之一, 记录一些有趣的, 有启示的结论, 证明等等.</p>
+<p>相信很多人听说博弈论都是从囚徒困境开始的. 用最简单的话来说, 囚徒A, B分别有承认他们的犯罪或者抵赖两种选择, 而这个“游戏”的设计使得他们中任何一个人, 无论另外一个囚徒的选择是如何的, 对于自己来说, 选择承认犯罪总是更好的选择. 因此这个游戏的最终结果就是, A, B都承认犯罪, 双双入狱坐牢2年, 而如果他们知道合作都不承认犯罪, 那么最好的结果是他们只需坐牢1年.</p>
+<pre><code>        A承认    A抵赖
+
+
+ B承认 都坐牢2年 A坐牢5年
+
+
+ B抵赖 B坐牢5年 都坐牢1年</code></pre>
+<p>事实上, 一种更好的说法是, A,B同时抵赖在这个游戏中并不是一个纳什均衡点, 即在没有合作的情况下, 有参与者会从这个“大家都抵赖”的点选择其他的做法, 因此游戏最终没有停留在这个点上. 而且在囚徒困境中, 每一个参与者都有一个<a href="http://en.wikipedia.org/wiki/Dominant_strategy">“主导策略”</a>, 也就是说无论对手如何选择, 选择抵赖总是最好的策略. 这种情况下游戏很容易就会到达一个纳什均衡点.</p>
+<p>关于纳什均衡点有很多有趣的性质准备在后续的文章中详细说说. 我们再来看一些有趣的博弈论例子.</p>
+<p>Braess悖论</p>
+<p>考虑A, B两座城市之间的高速公路:</p>
+<div>
+<img src="/images/braess.png" title="braess" />
+</div>
+
+<p>假定走A-X以及Y-B这2条路消耗的时间是T/100 , 其中T是路上的车辆数, 而A-Y和X-B上消耗的时间为常数45分钟. 现在如果有4000辆车, 那么容易得到, 在2条路径A-X-B和A-Y-B上分别有2000辆车时, 这个游戏达到了平衡, 大家都会花费65分钟在路上.</p>
+<p>现在我们试图建造一条超高速高架, 连接X-Y, 而且从X到Y的时间可以忽略不计.</p>
+<div>
+<img src="/images/braess2.png" title="braess" />
+</div>
+
+<p>这时, 由于司机考虑到, T/100最多为40, 因此他们会毫不犹豫得选择A-X, 而同样的道理, 由于X-Y的时间消耗为0, 他们在到达X之后会选择由超高速高架到达Y, 继而再花40分钟到达B. 因为每一个司机都是如此考虑的, 所以在这种添加了一条超高速公路的情况下, 游戏最终会稳定在所有人都选择A-X-Y-B的路径, 花费80分钟从A到达B. 而我们之前看到, 在没有超高速公路的情况下, 最佳路径花费只需65分钟. 悖论出现了, 额外花钱建造的超高速公路反而使得大家花费在路上的时间增加了!</p>
+<p>事实上博弈论出现得比我们想象的更加频繁, 比如google adwords的第二价格竞标, 比如近两年很火的HFT, 股票市场的博弈, 顺便提一下, 计算纳什平衡是非常难的问题(PPAD), 所以这可能也是即使有了计算机, 市场仍然难以把握的原因之一.</p>
+<p>关于博弈论的书, &lt;&lt;Algorithmic game theory&gt;&gt;这本书写得的确不错, 内容也适合非数学/经济的同学读.</p>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Sat, 06 Aug 2011 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2011-08-06-game-theory.html</guid>
+</item>
+<item>
+    <title>一图胜万言: fibonacci数列的一些结论的有趣证明</title>
+    <link>http://blog.fantasticsid.com/posts/2011-07-07-fibonacci.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+      <div class="nav">
+        <a href="/posts.html">← All posts</a>
+      </div>
+    <p class="meta"><time class="timeago" datetime="2011-07-07" pubdate>2011-07-07</time></p>
+    <h1>一图胜万言: fibonacci数列的一些结论的有趣证明</h1>
+    </header>
+  <section>
+    <p>看到一篇有趣的文章, 作者举了一个简单的出现了fibonacci数列的例子, 然后用这个例子证明了一系列关于fibonacci数列的结论. 这种巧妙的构造总是让人惊叹如果生活中处处都存在这样的“捷径”那该是多么精彩!</p>
+<div>
+<img src="/images/Screen-shot-2011-07-02-at-11.24.18-PM.png" title="蜂巢状路" />
+</div>
+
+
+<pre><code> 试想有两排蜂巢形状的路径, 假设现在你要从左上S处开始行走到达右下E处,
+ 每次只能向右走, 或者从上面的一格走到其右下的一格(从下面的一格走到其右上的一格),
+ 那么一共有多少不同的路径呢?</code></pre>
+<p>容易证明, 这个路径数是一个fibonacci数, 作者给出了这个图清楚地表示了从S走到每一个格子不同的路径数.</p>
+<div>
+<img src="/images/Screen-shot-2011-07-02-at-11.32.48-PM.png" title="到达每一个格子的不同路径数" />
+</div>
+
+<p>容易证明, 路径数序列与fibonacci数列的初始值以及递归形式都是一样的, 这里走到第一个格子S只有F(1) = 1条路径.</p>
+<p>现在可以开始证明一些关于fibonacci数列的结论了, 这些结论用其他方法当然也能够比较容易地得到, 但是用作者给出的这个例子, 我们将看到这些结论是多么的“显然”.</p>
+<p>首先作者把这些蜂巢简化成了一些互联的点, 下面说明</p>
+<blockquote>
+<p>F(a) * F(b) + F(a+1) * F(b+1) = F(a+b+1)</p>
+</blockquote>
+<div>
+<img src="/images/Screen-shot-2011-07-02-at-11.39.22-PM.png" title="第一种情况, 通过第a+1个" />
+</div>
+
+
+
+<div>
+<img src="/images/Screen-shot-2011-07-02-at-11.48.00-PM.png" title="第二种情况, 不通过第a+1个点" />
+</div>
+
+<p>如图, 一个包含a+b+1个点的路, 总共有F(a+b+1)种不同的路径. 而这些路径可以分成两部分: 通过第a+1个点的以及没有通过第a+1个点的. 前者一共有: F(a+1) * F(b+1)条, 而后者则有F(a) * F(b)条.</p>
+<p>于是, 结论不证自明.</p>
+<p>如果这种方法只能证明一个结论, 那么也并不算神奇. 此文神奇之处正在于, 这种fibonacci数列的呈现方式帮助作者直观地证明了一系列命题, 比如:</p>
+<p>记P(N)为将整数N表示为1和2的有序数列之和, 证明P(N) = F(N+1)</p>
+<p>当然, 这个结论用归纳法也是很容易证明的, 那么作者的这种表示方法是如何证明这个结论的呢?</p>
+<div>
+<img src="/images/Screen-shot-2011-07-07-at-4.43.15-PM.png" title="P(N) = F(N+1)" />
+</div>
+
+
+<p>如图, 可以发现12表示成的1和2之和, 每一种方式都一一对应了一种S-&gt;E的路径, 于是, 结论自然又不证自明.</p>
+<p>还有一些诸如降N表示为1和2之和, 不考虑顺序有多少种方式? (不需要用文章的方法..) 用1x2的多米诺平铺2*n的地板有多少种方式等等的问题, 都是不错的等菜题.</p>
+<p>有兴趣的话可以通读<a href="http://www.jamestanton.com/images/2011/06/Fibonacci-Surprises.pdf" target="_blank">全文</a>, 看看作者如何证明其他有趣结论.</p>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Thu, 07 Jul 2011 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2011-07-07-fibonacci.html</guid>
+</item>
+<item>
+    <title>几道题目活跃下气氛</title>
+    <link>http://blog.fantasticsid.com/posts/2011-04-28-puzzles.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+      <div class="nav">
+        <a href="/posts.html">← All posts</a>
+      </div>
+    <p class="meta"><time class="timeago" datetime="2011-04-28" pubdate>2011-04-28</time></p>
+    <h1>几道题目活跃下气氛</h1>
+    </header>
+  <section>
+    <pre><code> 你有n块石头, 然后做如下的事情:
+ 把这堆石头分成2堆, 将这两堆的石头块数相乘后把结果写在黑板上.
+ 对分出的2堆做同样的事情, 直到剩下n堆1块的石头.
+ 然后把黑板上的所有数字相加, 请问结果是多少?</code></pre>
+<p>答案: n * (n - 1) / 2</p>
+<pre><code> 大家都知道四色定理. 现在有一副地图, 任何一个国家都不是内陆国家.
+ 证明对这幅地图染色只要3种颜色就可以了.</code></pre>
+<p>答案 : 在此地图外围围上一片海洋, 用四种颜色染色新的地图, 去掉海洋的颜色, 则原地图只用了3种颜色, 而且4染色的时候因为没有内陆国家, 所以这些国家都不会用到海洋的颜色.</p>
+<pre><code> 如果汉诺塔问题当中, 盘子只能在柱子（A,B) 或者(B,C)间移动,
+ 而不能再(A,C)间移动, 那么至少用多少步能把盘子从A移动到C?</code></pre>
+<p>答案: 3^n - 1步</p>
+<pre><code>以上汉诺塔问题当中, 盘子移动过程是否包含了所有的盘子堆叠状态(小盘仍然要求在大盘之上)?</code></pre>
+<p>答案: 是的. 一共只有3^n个状态, 第一个状态不用移动.</p>
+<pre><code> 一般的汉诺塔问题当中, 有没有两个不同的盘子排列方式, 在它们之间转换需要超过2^n-1步?</code></pre>
+<p>答案: 没有. 可以通过归纳假设. 归纳的步骤大概是: 比如两种状态最大的盘子分别在A,B柱子上, 则从第一个状态用少于2^(n-1)-1步把其他盘子移动到C上, 然后用1步将最大的盘子移动到B, 然后再用少于2^(n-1)-1步将其余的小盘子移动成第二种状态. 总步骤小于2^n-1.</p>
+<pre><code> 有一排电梯, 请问在直线上的哪里等待能够减小电梯到来时需要移动的平均距离/最远距离?</code></pre>
+<p>答案: 站在中间的电梯前/站在两端电梯的中点. (站在所有电梯的几何中心使得距离平方的均值最小)</p>
+<p>来源:</p>
+<p>xkcd</p>
+<p>&lt;&lt;concrete mathematics&gt;&gt;</p>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Thu, 28 Apr 2011 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2011-04-28-puzzles.html</guid>
 </item>
 
     </channel> 

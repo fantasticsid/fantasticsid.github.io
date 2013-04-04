@@ -5,14 +5,14 @@
     <title>你还会做这道高考题吗? | fantasticsid</title>
     <meta name="author" content="fantasticsid">
     <meta name="description" content="你还会做这道高考题吗?">
-    <meta name="keywords" content="$keywords$">
+    <meta name="keywords" content="mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music">
 
-    <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/screen.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" media="all" href="../stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
 
-    <link href='http://fonts.googleapis.com/css?family=Oxygen&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Oxygen&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
   </head>
 
   <body class="post">
@@ -23,24 +23,24 @@
   <header>
     <div class="content">
       <div class="nav">
-        <a href="/posts.html">← All posts</a>
+        <a href="../posts.html">← All posts</a>
       </div>
-    <p class="meta"><time class="timeago" datetime="2010-09-08" pubdate>2010-09-08</time>, tagged <a href="/tags/probability.html">probability</a>, <a href="/tags/combinatorics.html">combinatorics</a>, <a href="/tags/interview.html">interview</a>.</p>
+    <p class="meta"><time class="timeago" datetime="2010-09-08" pubdate>2010-09-08</time></p>
     <h1>你还会做这道高考题吗?</h1>
     </header>
   <section>
     <pre><code>用铅笔在一根木棍上的任意两处分别作下记号,
 然后把木棍平均分成k份, 问这两个记号在同一段的概率是多少?</code></pre>
 <p>答案: 1/k. 两种解释:</p>
-<p>从k段中选1个记号B所在的段, 它正好是记号A所在的段的概率是1/k. 或者, 更<q>高级</q>的解释:</p>
+<p>从k段中选1个记号B所在的段, 它正好是记号A所在的段的概率是1/k. 或者, 更“高级”的解释:</p>
 <p>把木棍看成是坐标轴, 不妨设它长为1. 分别用横坐标, 纵坐标表示记号A, B所在的位置, 那么它们所有可能的位置在空间中形成了一个边长为1的正方形, 而他们在同一段的情况下所有位置形成了k个边长为1/k的正方形, 这些正方形的面积之和为1/k, 就是这两个记号在同一段的概率.</p>
 <div>
-<img src="/images/area-k.png" title="k=4的情况">
+<img src="../images/area-k.png" title="k=4的情况" />
 </div>
 
 <pre><code>还是这根木棍, 在木棍上任意两处分别作下记号,
 然后, 随机地将木棍分成k份, 问这两个记号在同一段的概率是多少?</code></pre>
-<p>答案: 2/(k+1). 如果试图用上面第二种方法来解决问题就麻烦了, 因为这题可以是一题高考填空题. 解释如下: 一共有2 + (k-1)个<q>随机点</q>, 包括了记号和断开的位置. 从这k+1个点中取2个点, 它们相邻的概率为 k / C(k+1, 2) = 2/(k+1) .</p>
+<p>答案: 2/(k+1). 如果试图用上面第二种方法来解决问题就麻烦了, 因为这题可以是一题高考填空题. 解释如下: 一共有2 + (k-1)个“随机点”, 包括了记号和断开的位置. 从这k+1个点中取2个点, 它们相邻的概率为 k / C(k+1, 2) = 2/(k+1) .</p>
   </section>
 
   <section id="comment">
@@ -66,22 +66,22 @@
 
       <footer>
           <div class="contact">
-            <a href="/" title="home">home</a>
-            <a href="/about.html" title="about fantasticsid">about</a>
-            <a href="/apps.html" title="my apps">apps</a>
-            <a href="/files/resume.pdf" title="my resume">résumé</a>
+            <a href="../" title="home">home</a>
+            <a href="../about.html" title="about fantasticsid">about</a>
+            <a href="../apps.html" title="my apps">apps</a>
+            <a href="../files/resume.pdf" title="my resume">résumé</a>
             <a href="http://github.com/fantasticsid/" title="my github">github</a>
             <a href="http://twitter.com/fantasticsid" title="my twitter">twitter</a>
-            <a href="/rss.xml" title="subscribe">rss</a>
+            <a href="../rss.xml" title="subscribe">rss</a>
           </div>
       </footer>
 
     </div>
 
-    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.timeago.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.easing.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.anchorscroll.js"></script>
-    <script type="text/javascript" src="/javascripts/blog.ui.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
   </body>
 </html>

@@ -5,14 +5,14 @@
     <title>Gsoc report: 6th week | fantasticsid</title>
     <meta name="author" content="fantasticsid">
     <meta name="description" content="Gsoc report: 6th week">
-    <meta name="keywords" content="$keywords$">
+    <meta name="keywords" content="mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music">
 
-    <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/screen.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" media="all" href="../stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
 
-    <link href='http://fonts.googleapis.com/css?family=Oxygen&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Oxygen&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
   </head>
 
   <body class="post">
@@ -23,16 +23,16 @@
   <header>
     <div class="content">
       <div class="nav">
-        <a href="/posts.html">← All posts</a>
+        <a href="../posts.html">← All posts</a>
       </div>
-    <p class="meta"><time class="timeago" datetime="2010-07-05" pubdate>2010-07-05</time>, tagged <a href="/tags/gajim.html">gajim</a>, <a href="/tags/gsoc.html">gsoc</a>.</p>
+    <p class="meta"><time class="timeago" datetime="2010-07-05" pubdate>2010-07-05</time></p>
     <h1>Gsoc report: 6th week</h1>
     </header>
   <section>
     <p>Last week I was trying to get jingle file transfer work at least using socks5 transport. It turned out to be more complicated than it sounds.</p>
 <p>First, there is no easy way to reuse the A: existing socks5 bytestream implementation in B: jingle FT session management. Currently what I do is generate stanza with A and process callbacks in B. This seems a bit ugly, but it helps me to see if things are working as soon as possible.</p>
 <p>Second, when sending a file, this is the correct order senders and receivers should follow:</p>
-<ol type="1">
+<ol style="list-style-type: decimal">
 <li><p>the server side starts a listener first</p></li>
 <li><p>the client connects to the server</p></li>
 <li><p>the server creates a sender object and do some authentications</p></li>
@@ -66,22 +66,22 @@
 
       <footer>
           <div class="contact">
-            <a href="/" title="home">home</a>
-            <a href="/about.html" title="about fantasticsid">about</a>
-            <a href="/apps.html" title="my apps">apps</a>
-            <a href="/files/resume.pdf" title="my resume">résumé</a>
+            <a href="../" title="home">home</a>
+            <a href="../about.html" title="about fantasticsid">about</a>
+            <a href="../apps.html" title="my apps">apps</a>
+            <a href="../files/resume.pdf" title="my resume">résumé</a>
             <a href="http://github.com/fantasticsid/" title="my github">github</a>
             <a href="http://twitter.com/fantasticsid" title="my twitter">twitter</a>
-            <a href="/rss.xml" title="subscribe">rss</a>
+            <a href="../rss.xml" title="subscribe">rss</a>
           </div>
       </footer>
 
     </div>
 
-    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.timeago.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.easing.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.anchorscroll.js"></script>
-    <script type="text/javascript" src="/javascripts/blog.ui.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
   </body>
 </html>
