@@ -52,8 +52,27 @@
 <ul>
 <li>template声明中使用typename较常用</li>
 <li>对于一个类型, 如果实例化函数模板后使用到了不支持的操作符, 会产生编译错误</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+T lt(T <span class="dt">const</span>&amp; a, T <span class="dt">const</span>&amp; b)
+{
+  <span class="kw">return</span> a * b;
+}
+
+lt(<span class="st">&quot;hi&quot;</span>, <span class="st">&quot;ya&quot;</span>); <span class="co">// error</span></code></pre>
+<ul>
 <li>函数模板的编译经过至少2层, 模板本身的语法, 以及实例化之后的语义检查</li>
 <li>模板函数参数的自动推导中不允许类型转化, 类型必须完全匹配. 解决的方法是转化实参的类型或者显示实例化模板参数</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+T lt(T <span class="dt">const</span>&amp; a, T <span class="dt">const</span>&amp; b)
+{
+  <span class="kw">return</span> a &lt; b;
+}
+
+lt(<span class="dv">4</span>, <span class="fl">5.0</span>); <span class="co">// error</span>
+lt&lt;<span class="dt">float</span>&gt;(<span class="dv">4</span>, <span class="fl">5.0</span>); <span class="co">// correct</span></code></pre>
+<ul>
 <li>函数模板不能有默认参数</li>
 <li>函数模板可以重载(参数个数不同), 可以进行特例化, 可以与非函数模板共存. 后者在选择时有更高的优先权</li>
 </ul>
@@ -65,6 +84,8 @@
 <li>类模板特例化, 可以部分特例化</li>
 <li>类模板参数可以有默认值, 并且可以引用之前的模板参数</li>
 </ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt; <span class="kw">typename</span> T, <span class="kw">typename</span> CONT = vector&lt;T&gt; &gt;
+<span class="kw">class</span> A;</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>非类型的模板参数 (dependent types)</li>
 </ol>
@@ -81,7 +102,65 @@
 <li>通常类内的typedef在别处使用时要用typename作修饰, 以免被编译器认为是静态类成员变量</li>
 <li>模板成员函数使用时如果进行了显示的特例化, 需要在“.”, “-&gt;”之后加上template以免编译器把“&lt;”认为是小于操作符</li>
 <li>模板类继承之后, 调用成员函数需要用“this-&gt;memfn()”</li>
-<li>模板本身也可以成为模板的实参, 使用时不能利用默认参数</li>
+<li>模板本身也可以成为模板的实参 (template template arguments), 使用时不能利用默认参数</li>
+</ul>
+<ol start="6" style="list-style-type: decimal">
+<li>模板文件包含模式</li>
+</ol>
+<ul>
+<li>由于模板的实例化发生在编译期, 所以如果使用的模板定义在另外一个编译单元中, 则需要确保有恰当的实例化发生</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// template.hpp</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> print(T <span class="dt">const</span>&amp;);
+
+<span class="co">// template.cpp</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> print(T <span class="dt">const</span>&amp; x)
+{
+<span class="co">// implementation</span>
+}
+
+<span class="co">// prog.cpp</span>
+<span class="ot">#include &quot;template.hpp&quot;</span>
+<span class="dt">int</span> main()
+{
+<span class="dt">double</span> v = <span class="fl">1.0</span>;
+print(v);
+<span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre>
+<p>这里由于模板定义在另外一个编译单元(template.cpp), 而在其中并没有对double类型进行实例化的需要, 因此编译结果中并没有 print<double>(double const&amp; x) 这个函数. 而对prog.cpp的编译能够通过是因为其中包含了template.hpp中的print模板函数的声明. 这样就导致了编译能够通过, 但是链接阶段会发生错误.</p>
+<p>解决方法:</p>
+<ol style="list-style-type: decimal">
+<li><p>把模板实现放在模板声明中 (Inclusion model)</p></li>
+<li><p>显示实例化</p></li>
+</ol>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// template.cpp</span>
+<span class="kw">template</span> <span class="dt">void</span> print&lt;<span class="dt">double</span>&gt;(<span class="dt">double</span> <span class="dt">const</span> &amp;);</code></pre>
+<p>这样template.cpp编译单元中就会实例化相应的函数, 缺点是难以管理</p>
+<ol start="3" style="list-style-type: decimal">
+<li>结合上面两种方法, 提供额外的编译单元专门提供特例化声明</li>
+</ol>
+<ul>
+<li>使用export (Separation model)</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">export</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> print(T <span class="dt">const</span>&amp;);</code></pre>
+<p>缺点是编译器实现支持较少</p>
+<ul>
+<li><p>预编译头文件 - 编译器的优化可以保存前n行代码编译之后的状态, 这使得开头一样的编译单元(都包含了相同的头文件)的编译速度得以提高.</p></li>
+<li><p>模板编译错误的找错: 找到模板实例化处</p></li>
+<li><p>Archetypes: 模板库编写者提供的满足模板最小要求的类示例</p></li>
+</ul>
+<ol start="7" style="list-style-type: decimal">
+<li>模板术语</li>
+</ol>
+<ul>
+<li><p>Class template</p></li>
+<li><p>Instantiation and specialization</p></li>
+<li><p>Declaration vs definition</p></li>
+<li><p>Template arguments vs template parameters</p></li>
 </ul>
   </section>
 
