@@ -162,6 +162,125 @@ print(v);
 <li><p>Declaration vs definition</p></li>
 <li><p>Template arguments vs template parameters</p></li>
 </ul>
+<ol start="8" style="list-style-type: decimal">
+<li>模板参数限制</li>
+</ol>
+<ul>
+<li><p>模板定义分为类模板和函数模板, 其中还包括了类模板的成员函数, 类模板的嵌套类(nested class)定义和成员定义, 模板类的静态变量的模板定义</p></li>
+<li><p>模板成员函数不能被定义为虚函数, 因为虚表通常是用固定大小的表实现的. 而“模板虚函数”的个数只有到最后整个程序构建玩才能确定, 所以实现这个特性需要编译器, 连接器的支持</p></li>
+<li><p>主模板定义</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// primary template</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Box;
+
+<span class="co">// non-primary template</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Box&lt;T&gt;;</code></pre>
+<ul>
+<li><p>模板参数分为: 类型参数, 非类型参数(non-type parameters), 模板参数</p></li>
+<li><p>非类型参数包括整形/枚举, 指针, 引用</p></li>
+<li><p>模板参中的默认值可以在模板定义内使用, 但是模板显式实例化时模板类参数的参数个数(kind)必须与形参声明一样</p></li>
+<li>模板实参
+<ul>
+<li>只有模板类声明时可以有默认参数</li>
+<li>template-id: 显式模板参数T&lt;P1, P2, P3&gt;</li>
+<li>模板类定义作用域之内, 对类名的引用相当于tempate-id</li>
+<li>默认模板参数可省略, 但是“&lt;&gt;”仍然是必要的</li>
+<li>模板函数参数类型推导</li>
+</ul></li>
+<li><p>substitution-failure-is-not-an-error (SFINAE)</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+RT1 test(<span class="kw">typename</span> T::X <span class="dt">const</span>*);
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+RT2 test(...);
+
+<span class="kw">typedef</span> <span class="dt">char</span> RT1;
+<span class="kw">typedef</span> <span class="kw">struct</span> { <span class="dt">char</span> a[<span class="dv">2</span>]; } RT2;
+
+<span class="ot">#define type_has_member_type_X(T) (sizeof(test&lt;T&gt;(0)) == 1)</span></code></pre>
+<p>对没有定义成员X的类来说, 第一个模板函数定义应该产生编译错误, 但是因为SFINAE原则编译器选择继续从下一个模板定义来实例化test这个函数的调用</p>
+<p>SFINAE只能处理产生非法类型的错误, 别的错误(除零错误等)则不适用.</p>
+<ul>
+<li><p>局部类定义不能用作模板参数, 无名类型/枚举也不行(除非用typedef指定一个名字)</p></li>
+<li><p>成员函数模板的实例化不重载虚函数</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="ot">#include &lt;iostream&gt;</span>
+
+<span class="kw">class</span> A
+{
+<span class="kw">public</span>:
+  <span class="kw">virtual</span> <span class="dt">void</span> fun(<span class="dt">int</span> a)
+  {
+    std::cout &lt;&lt; <span class="st">&quot;A &quot;</span> &lt;&lt; a &lt;&lt; std::endl;
+  }
+
+  <span class="kw">virtual</span> ~A() {}
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> B: <span class="kw">public</span> A
+{
+<span class="kw">public</span>:
+  <span class="kw">template</span> &lt;<span class="kw">typename</span> T2&gt;
+  <span class="dt">void</span> fun(T2 a)
+  {
+    std::cout &lt;&lt; <span class="st">&quot;B &quot;</span> &lt;&lt; a &lt;&lt; std::endl;
+  }
+
+  <span class="kw">virtual</span> ~B() {}
+};
+
+<span class="kw">class</span> C: <span class="kw">public</span> A
+{
+<span class="kw">public</span>:
+  <span class="dt">void</span> fun(<span class="dt">int</span> a)
+  {
+    std::cout &lt;&lt; <span class="st">&quot;C &quot;</span> &lt;&lt; a &lt;&lt; std::endl;
+  }
+};
+
+<span class="dt">int</span> main(<span class="dt">int</span> argc, <span class="dt">char</span> *argv[])
+{
+  A *pa = <span class="kw">new</span> B&lt;<span class="dt">int</span>&gt;();
+  pa-&gt;fun(<span class="dv">2</span>);
+  <span class="kw">delete</span> pa;
+
+  B&lt;<span class="dt">int</span>&gt; b;
+  b.fun(<span class="dv">2</span>);
+
+  pa = <span class="kw">new</span> C();
+  pa-&gt;fun(<span class="dv">2</span>);
+  <span class="kw">delete</span> pa;
+
+  <span class="kw">return</span> <span class="dv">0</span>;
+}
+</code></pre>
+<p>输出为:</p>
+<pre><code>A 2
+B 2
+C 2</code></pre>
+<ul>
+<li><p>模板友类的声明处必须可见友类本身的定义, 一般类没有这个限制</p></li>
+<li><p>友函数声明可以是定义, 因此如果实例化若干模板类, 会重复定义此函数, 解决办法是让函数依赖于模板参数</p></li>
+<li><p>友模板: 声明一个模板的所有实例化都是友函数/类</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> Manager {
+  <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+    <span class="kw">friend</span> <span class="kw">class</span> Task;
+
+  <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+    <span class="kw">friend</span> <span class="dt">void</span> Schedule&lt;T&gt;::dispatch(Task&lt;T&gt;*);
+
+  <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+    <span class="kw">friend</span> <span class="dt">int</span> ticket() {
+      <span class="kw">return</span> ++Manager::counter;
+    }
+
+  <span class="dt">static</span> <span class="dt">int</span> counter;
+};</code></pre>
   </section>
 
   <section id="comment">
