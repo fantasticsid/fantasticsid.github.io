@@ -272,6 +272,62 @@ C 2</code></pre>
 
   <span class="dt">static</span> <span class="dt">int</span> counter;
 };</code></pre>
+<ol start="8" style="list-style-type: decimal">
+<li>模板中的命名</li>
+</ol>
+<ul>
+<li>C++语法并不是上下文无关的</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">
+x * y;</code></pre>
+<p>以上代码可以是一个乘法表达式, 也可能是一个指针声明. 这要视x的定义而定.</p>
+<ul>
+<li><p>Template-id: 模板与模板参数的组合, 如List<T, int, 0></p></li>
+<li><p>qualifed name的查找, unqualified name的查找(类作用域, 基类作用域, … , 嵌套的外层作用域), 这种查找是最普通的. C++中还有一个规则: Argument dependent lookup, 又称koenig lookup</p></li>
+<li><p>对于一个class, ADL规则会检查类本身, 包含类定义的外层类, 基类这些类声明处的namespace.</p></li>
+<li><p>对于函数调用, 函数参数以及返回值的类型关联的名称空间是ADL的查找范围.</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="ot">#include &lt;iostream&gt;</span>
+
+<span class="kw">namespace</span> X {
+  <span class="kw">template</span>&lt;<span class="kw">typename</span> T&gt; <span class="dt">void</span> f(T);
+}
+
+<span class="kw">namespace</span> N {
+  <span class="kw">using</span> <span class="kw">namespace</span> X; <span class="co">// ADL查找时, 此处没有引入X::f</span>
+  <span class="kw">enum</span> E{ e };
+  <span class="dt">void</span> f(E) {
+    std::cout &lt;&lt; <span class="st">&quot;N::f&quot;</span> &lt;&lt; std::endl;
+  }
+}
+
+<span class="dt">void</span> f(<span class="dt">int</span>)
+{
+  std::cout &lt;&lt; <span class="st">&quot;::f&quot;</span> &lt;&lt; std::endl;
+}
+
+<span class="dt">int</span> main(<span class="dt">int</span> argc, <span class="dt">char</span> *argv[])
+{
+  ::f(N::e); <span class="co">// ::f</span>
+  f(N::e); <span class="co">// N::f</span>
+}</code></pre>
+<ul>
+<li>类定义内可以引用类名本身, 模板类中可以引用模板类名并加上模板参数. 但是如果只用模板类名, 则代表着和当前instantiation相对应的template-id, 而不是一个类模板</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">template</span>&lt;<span class="kw">typename</span>&gt; <span class="kw">class</span> TT&gt;
+<span class="kw">class</span> X
+{
+}
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> C
+{
+  C a; <span class="co">// 代表C&lt;T&gt; a;</span>
+  C&lt;<span class="dt">void</span>&gt; b;
+  X&lt;C&gt; c; <span class="co">// 这里不行, C不代表一个模板类的名称</span>
+  X&lt;::C&gt; d; <span class="co">// &lt;: 是特殊字符序列, 代表 [</span>
+  X&lt; ::C&gt; e; <span class="co">// 总算行了这里</span>
+}</code></pre>
   </section>
 
   <section id="comment">
