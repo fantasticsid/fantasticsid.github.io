@@ -376,7 +376,6 @@ x * y;</code></pre>
   <span class="kw">typename</span> X&lt;<span class="dt">int</span>&gt;::C * pc;
 };</code></pre>
 <pre><code>* 这个例子当中typename X&lt;T&gt;::Base中的typename是多余的, 因为他们不满足第3条规则.
-
 * 但是紧接着的typename X&lt;T&gt;::Base(0)中typename是必须的, 因为这里构造了一个对象.
 * 下面的typename X&lt;T&gt;中typename又是多余的, 这里没有限定名称(qualified name).
 * typename X&lt;T&gt;::C * p中typename是必须的, 否则就如下一行编译器认为其是一个乘法表达式.
