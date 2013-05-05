@@ -328,6 +328,86 @@ x * y;</code></pre>
   X&lt;::C&gt; d; <span class="co">// &lt;: 是特殊字符序列, 代表 [</span>
   X&lt; ::C&gt; e; <span class="co">// 总算行了这里</span>
 }</code></pre>
+<ul>
+<li><p>为了处理C++这样的上下文相关文法, 编译器有一个符号表记录各种声明. 这样就能区分比如x*究竟是一个声明还是乘法表达式的一部分了. 类似的例子还有X&lt;1&gt;(0)等(视X是否为模板类)</p></li>
+<li><p>Tokenizer也会有类似问题, 最常见的问题是模板实例作为模板参数: List<List<int>&gt;, 这里&gt;&gt;会被解释为一个右移运算符. 有的编译器为这个问题作了特殊处理, 并給予警告.</p></li>
+<li><p>Dependent names: 模板定义中对另外一个模板类定义的名称引用是不合适的, 因为很可能显示模板化会改变这个名称的定义</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Trap {
+<span class="kw">public</span>:
+  <span class="kw">enum</span> {x};
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Victim {
+<span class="kw">public</span>:
+  <span class="dt">int</span> y;
+  <span class="dt">void</span> poof() {
+    Trap&lt;T&gt;::x * y; <span class="co">// 这里是声明还是乘法表达式?</span>
+  }
+};
+
+<span class="kw">template</span> &lt;&gt;
+<span class="kw">class</span> Trap&lt;<span class="dt">void</span>&gt; {
+<span class="kw">public</span>:
+  <span class="kw">typedef</span> <span class="dt">int</span> x;
+}
+
+<span class="dt">void</span> <span class="dt">bool</span>(Victim&lt;<span class="dt">void</span>&gt;&amp; bomb) <span class="co">// 书上这里是Trap&lt;void&gt;&amp;</span>
+{
+  bomb.poof()
+}</code></pre>
+<p>如果在Victim模板定义内部查找x的定义, 则认为x是一个enum值, 但是后面Trap对void的显示化却对覆盖了x的定义.</p>
+<p>C++的解决方法是: 默认情况下不认为一个dependent name是一个type, 除非用typename作声明.</p>
+<p>当一个名称 1. 出现在模板定义内 2. 是被限定的(qualified) 3. 不作为基类声明/成员初始化列表中作为类型 4. 依赖于模板参数</p>
+<p>则必须对之进行typename修饰. 看到这里感觉要吐了, 的确C++的template是非常的复杂, 需要知道的细节太多.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">struct</span> S: <span class="kw">typename</span> X&lt;T&gt;::Base {
+  S(): <span class="kw">typename</span> X&lt;T&gt;::Base(<span class="kw">typename</span> X&lt;T&gt;::Base(<span class="dv">0</span>)) {}
+  <span class="kw">typename</span> X&lt;T&gt; f() {
+    <span class="kw">typename</span> X&lt;T&gt;::C * p; <span class="co">// 声明</span>
+    X&lt;T&gt;::D * q; <span class="co">// 乘法表达式</span>
+  }
+  <span class="kw">typename</span> X&lt;<span class="dt">int</span>&gt;::C * s;
+};
+
+<span class="kw">struct</span> U {
+  <span class="kw">typename</span> X&lt;<span class="dt">int</span>&gt;::C * pc;
+};</code></pre>
+<pre><code>* 这个例子当中typename X&lt;T&gt;::Base中的typename是多余的, 因为他们不满足第3条规则.
+
+* 但是紧接着的typename X&lt;T&gt;::Base(0)中typename是必须的, 因为这里构造了一个对象.
+* 下面的typename X&lt;T&gt;中typename又是多余的, 这里没有限定名称(qualified name).
+* typename X&lt;T&gt;::C * p中typename是必须的, 否则就如下一行编译器认为其是一个乘法表达式.
+* 最后的typename X&lt;int&gt;::C * s说明了即使不满足第4条规则, 依然可以加上typename修饰, 反过来说, 前三条对typename的使用也是必要的.</code></pre>
+<ul>
+<li>类似的, 如果一个template定义也是有依赖的, 则必须告诉编译器.</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Shell {
+<span class="kw">public</span>:
+  <span class="kw">template</span> &lt;<span class="dt">int</span> N&gt;
+  <span class="kw">class</span> In {
+  <span class="kw">public</span>:
+    <span class="kw">template</span> &lt;<span class="dt">int</span> M&gt;
+    <span class="kw">class</span> Deep {
+    <span class="kw">public</span>:
+      <span class="kw">virtual</span> <span class="dt">void</span> f();
+    };
+  };
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T, <span class="dt">int</span> N&gt;
+<span class="kw">class</span> Weird {
+<span class="kw">public</span>:
+  <span class="dt">void</span> case1(Shell&lt;T&gt;::<span class="kw">template</span> In&lt;N&gt;::<span class="kw">template</span> Deep&lt;N&gt; * p) {
+    p-&gt;<span class="kw">template</span> Deep&lt;N&gt;::f();
+  }
+  <span class="dt">void</span> case2(Shell&lt;T&gt;::<span class="kw">template</span> In&lt;T&gt;::<span class="kw">template</span> Deep&lt;T&gt;&amp; p) {
+    p.<span class="kw">template</span> Deep&lt;N&gt;::f();
+  }
+};</code></pre>
   </section>
 
   <section id="comment">
