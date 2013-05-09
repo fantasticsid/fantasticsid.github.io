@@ -407,6 +407,17 @@ x * y;</code></pre>
     p.<span class="kw">template</span> Deep&lt;N&gt;::f();
   }
 };</code></pre>
+<ol start="14" style="list-style-type: decimal">
+<li>模板多态</li>
+</ol>
+<ul>
+<li><p>C++中的多态不单单指OO的virtual function, 模板也是实现多态的一种手段(一种表达, 多种行为)</p></li>
+<li><p>virtual function的多态处理比如异构(heterogeneous)集合中元素的多态行为比较适合. 模板有更好的类型安全性.</p></li>
+<li><p>模板是非侵入式的. 就是说OO的多态行为通常需要一个类继承一个基类, 而模板没有这样的要求. 只要类实现了对应的方法即可, 并且如果有些方法如果实例化过程中没有用到, 则不必实现.</p></li>
+<li><p>模板的多态运行时开销小很多, 但是可能生成的代码更大, 编译更久.</p></li>
+<li><p>C++的标准库中的iterator就是一个很好的模板设计. 容器通过定义各自的iterator来实现与generic算法的交互.</p></li>
+<li><p>同样的也可以用OO来实现类似iterator的功能, 但是性能较低(内存开销, 运行时效率). 并且对于内置类型需要wrapper class. (OO侵入式的后遗症). 然而模板多态与OO多态也是能共存的.</p></li>
+</ul>
   </section>
 
   <section id="comment">
