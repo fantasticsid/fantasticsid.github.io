@@ -427,6 +427,39 @@ x * y;</code></pre>
 <li><p>C++的标准库中的iterator就是一个很好的模板设计. 容器通过定义各自的iterator来实现与generic算法的交互.</p></li>
 <li><p>同样的也可以用OO来实现类似iterator的功能, 但是性能较低(内存开销, 运行时效率). 并且对于内置类型需要wrapper class. (OO侵入式的后遗症). 然而模板多态与OO多态也是能共存的.</p></li>
 </ul>
+<ol start="15" style="list-style-type: decimal">
+<li>Traits, Policy Classes</li>
+</ol>
+<ul>
+<li><p>Traits是一种模板类, 它将类型和类型相关的信息联系起来, 比如int类型的范围, 最大最小值等等. 常用的方法是对要修饰的类型进行特例化.</p></li>
+<li><p>Traits中定义类型相关的类型比较容易(typedef), 定义相关常量值时可能遇到非整形量的常量而不能inline定义在类中. 这种情况通常将常量改为返回这个常量的函数.</p></li>
+<li><p>Traits模板也可以作为一个模板参数, 使得模板使用者能够重载一些Traits.</p></li>
+<li><p>Policy classes: 书上这里举了一个Accumulate的例子:</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt; <span class="kw">typename</span> T,
+           <span class="kw">typename</span> Policy = SumPolicy,
+           <span class="kw">typename</span> AT = AccumuationTraits&lt;T&gt; &gt;
+<span class="kw">class</span> Accum {
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> <span class="kw">typename</span> Traits::AccT Acct;
+    <span class="dt">static</span> AccT accum(T <span class="dt">const</span>* beg, T <span class="dt">const</span>* end) {
+      AccT total = Traits::zero();
+      <span class="kw">while</span> (beg != end) {
+        Policy::accumulate(total, *beg);
+        ++beg;
+      }
+      <span class="kw">return</span> total;
+    }
+};
+
+<span class="kw">class</span> SumPolicy {
+  <span class="kw">public</span>:
+    <span class="kw">template</span>&lt;<span class="kw">typename</span> T1, <span class="kw">typename</span> T2&gt;
+    <span class="dt">static</span> <span class="dt">void</span> accumulate(T1&amp; total, T2 <span class="dt">const</span>&amp; value) {
+      total += value;
+    }
+};</code></pre>
+<p>当然, 这里为了能够让乘法的例子产生正确的结果, 必须将zero()的定义放入Policy class中. (<a href="http://www.haskell.org/ghc/docs/latest/html/libraries/base/Data-Monoid.html">Monoid</a> 中的identity)</p>
   </section>
 
   <section id="comment">
