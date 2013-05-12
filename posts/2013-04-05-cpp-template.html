@@ -460,6 +460,127 @@ x * y;</code></pre>
     }
 };</code></pre>
 <p>当然, 这里为了能够让乘法的例子产生正确的结果, 必须将zero()的定义放入Policy class中. (<a href="http://www.haskell.org/ghc/docs/latest/html/libraries/base/Data-Monoid.html">Monoid</a> 中的identity)</p>
+<ul>
+<li><p>Traits可以实现sizeof类似的功能(type function), 这个想想好像是类型系统中很强大的功能.</p></li>
+<li><p>一个用到了SFINAE的判断一个类型是否是class的traits class例子:</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> IsClassT {
+  <span class="kw">private</span>:
+    <span class="kw">typedef</span> <span class="dt">char</span> One;
+    <span class="kw">typedef</span> <span class="kw">struct</span> { <span class="dt">char</span> a[<span class="dv">2</span>]; } Two;
+    <span class="kw">template</span> &lt;<span class="kw">typename</span> C&gt; <span class="dt">static</span> One test(<span class="dt">int</span> C::*);
+    <span class="kw">template</span> &lt;<span class="kw">typename</span> C&gt; <span class="dt">static</span> Two test(...);
+  <span class="kw">public</span>:
+    <span class="kw">enum</span> { Yes = <span class="kw">sizeof</span>(IsClass&lt;T&gt;::test&lt;T&gt;(<span class="dv">0</span>)) == <span class="dv">1</span> };
+    <span class="kw">enum</span> { No = !Yes };
+};</code></pre>
+<p>这里用到了class类型可以有pointer to member function的事实来判断一个类型是不是class类型.</p>
+<ul>
+<li>利用Traits的partial specialisation可以对类型的const, reference进行剥离. (15.2.3)</li>
+</ul>
+<p>在以下例子中, 实现了一个apply函数的模板. 但是在处理引用的时候, 却会发生将T &amp;&amp;类型传给函数的情况</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> apply(T&amp; arg, <span class="dt">void</span> (*func)(T))
+{
+  func(arg);
+}
+
+<span class="dt">void</span> incr(<span class="dt">int</span>&amp; a)
+{
+  ++a;
+}
+
+<span class="dt">int</span> main(<span class="dt">int</span> argc, <span class="dt">char</span> *argv[])
+{
+  <span class="dt">int</span> x = <span class="dv">1</span>;
+  apply(x, incr);
+}</code></pre>
+<p>当然, C++标准中允许将模板参数T&amp;中的T替换为int&amp;时处理为int&amp;, 同样的, 在T const中如果T是int const, 将可以替换为int const.</p>
+<p>但是这里的解决方法是, 利用对traits class的partial specialisation进行const以及reference的“剥离”:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> TypeOp {
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> T ArgT;
+    <span class="kw">typedef</span> T BareT;
+    <span class="kw">typedef</span> T <span class="dt">const</span> ConstT;
+    <span class="kw">typedef</span> T &amp; RefT;
+    <span class="kw">typedef</span> T &amp; RefBareT;
+    <span class="kw">typedef</span> T <span class="dt">const</span> &amp; RefConstT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> TypeOp &lt;T <span class="dt">const</span>&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> T <span class="dt">const</span> ArgT;
+    <span class="kw">typedef</span> T BareT;
+    <span class="kw">typedef</span> T <span class="dt">const</span> ConstT;
+    <span class="kw">typedef</span> T <span class="dt">const</span> &amp; RefT;
+    <span class="kw">typedef</span> T &amp; RefBareT;
+    <span class="kw">typedef</span> T <span class="dt">const</span> &amp; RefConstT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> TypeOp &lt;T&amp;&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> T &amp; ArgT;
+    <span class="kw">typedef</span> <span class="kw">typename</span> TypeOp&lt;T&gt;::BareT BareT; <span class="co">//递归调用</span>
+    <span class="kw">typedef</span> T <span class="dt">const</span> ConstT;
+    <span class="kw">typedef</span> T &amp; RefT;
+    <span class="kw">typedef</span> <span class="kw">typename</span> TypeOp&lt;T&gt;::BareT &amp; RefBareT;
+    <span class="kw">typedef</span> T <span class="dt">const</span> &amp; RefConstT;
+};</code></pre>
+<p>这样, 前面的apply例子就可以重新写成:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> apply(<span class="kw">typename</span> TypeOp&lt;T&gt;::RefT arg, <span class="dt">void</span> (*func)(T))
+{
+  func(arg);
+}</code></pre>
+<ul>
+<li>类型提升traits将两种类型提升到更加“强大”的类型, 手段还是specialisation</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// 这里是不是有点像Haskell的declarative定义</span>
+
+<span class="kw">template</span> &lt;<span class="dt">bool</span> C, <span class="kw">typename</span> Ta, <span class="kw">typename</span> Tb&gt;
+<span class="kw">class</span> IfThenElse;
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> Ta, <span class="kw">typename</span> Tb&gt;
+<span class="kw">class</span> IfThenElse &lt;<span class="kw">true</span>, Ta, Tb&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> Ta ResultT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> Ta, <span class="kw">typename</span> Tb&gt;
+<span class="kw">class</span> IfThenElse&lt;<span class="kw">false</span>, Ta, Tb&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> Tb ResultT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T1, <span class="kw">typename</span> T2&gt;
+<span class="kw">class</span> Promotion; <span class="co">//没有默认定义</span>
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T1, <span class="kw">typename</span> T2&gt;
+<span class="kw">class</span> Promotion
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> <span class="kw">typename</span> IfThenElse&lt;(<span class="kw">sizeof</span>(T1) &gt; <span class="kw">sizeof</span>(T2)),
+                                T1,
+                                <span class="kw">typename</span> IfThenElse&lt;(<span class="kw">sizeof</span>(T1) &lt; <span class="kw">sizeof</span>(T2)),
+                                                    T2,
+                                                    <span class="dt">void</span>&gt;::ResultT
+                               &gt;::ResultT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Promotion &lt;T, T&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> T ResultT;
+};</code></pre>
   </section>
 
   <section id="comment">
