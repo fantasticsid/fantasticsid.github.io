@@ -612,7 +612,7 @@ x * y;</code></pre>
 <li>Tuple</li>
 </ol>
 <ul>
-<li>感觉是在编译期用cons cell构建list差不多的性质. 用到了meta programming来实现静态的获取第N个元素的类型和值</li>
+<li>感觉是在编译期用cons cell构建list差不多的性质. 用到了meta programming来实现静态的获取第N个元素的类型和值.</li>
 </ul>
   </section>
 
