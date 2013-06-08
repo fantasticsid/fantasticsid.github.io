@@ -581,6 +581,48 @@ x * y;</code></pre>
   <span class="kw">public</span>:
     <span class="kw">typedef</span> T ResultT;
 };</code></pre>
+<ol start="16" style="list-style-type: decimal">
+<li>模板以及继承</li>
+</ol>
+<ul>
+<li><p>Empty base class optimisation</p></li>
+<li><p>curiously recurring template pattern: 父类的具体类型是一个模板类对子类的实例化. 可以实现诸如某个类型的对象计数器之类的功能, 重点是从此以后父类可以在实现时知道子类的类型了. 因此可以在父类中实现一个返回子类类型的clone方法. 这个见 <a href="http://en.wikipedia.org/wiki/Curiously_recurring_template_pattern">维基百科上CRTP的解释</a></p></li>
+</ul>
+<ol start="17" style="list-style-type: decimal">
+<li>元编程</li>
+</ol>
+<ul>
+<li><p>C++模板是图灵完备的, 意味着在编译器能够模拟出任何图灵等价的计算.</p></li>
+<li><p>比如计算幂函数</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="dt">int</span> N&gt;
+<span class="kw">class</span> Power2 {
+ <span class="kw">public</span>:
+  <span class="kw">enum</span> { result = <span class="dv">2</span> * Power2&lt;N<span class="dv">-1</span>&gt;::result };
+};
+
+<span class="kw">template</span> &lt;&gt;
+<span class="kw">class</span> Power2 {
+ <span class="kw">public</span>:
+  <span class="kw">enum</span> { result = <span class="dv">1</span> };
+};</code></pre>
+<ol start="20" style="list-style-type: decimal">
+<li>智能指针</li>
+</ol>
+<ul>
+<li><p>这里只讨论了模板在实现智能指针时的应用, 并没有深入讨论智能指针的实现细节(同步, 原子操作, 效率..)</p></li>
+<li><p>C++中以对象管理资源, 利用RAII是很常见的idiom.</p></li>
+<li><p>智能指针最少要实现初始化, 释放资源, 重载-&gt;, *操作符.</p></li>
+<li><p>引用计数: 话说虽然不能解决循环引用, 并且也需要同步操作以致降低效率, 这些貌似jvm没有. 但是好的是对资源掌控更加细致, 而jvm这方面反过来讲gc会对系统的延时性产生压力, 即使有很多对gc进行调整的途径和机会..</p></li>
+<li><p>智能指针也是policy based design. 计数器如何分配如何消亡, 资源如何删除 ( delete vs delete [] ) 都作为模板参数传递.</p></li>
+<li><p>智能指针也实现了父类子类转化的特性, 通过模板化的构造函数和conversion operator来实现.</p></li>
+</ul>
+<ol start="21" style="list-style-type: decimal">
+<li>Tuple</li>
+</ol>
+<ul>
+<li>感觉是在编译期用cons cell构建list差不多的性质. 用到了meta programming来实现静态的获取第N个元素的类型和值</li>
+</ul>
   </section>
 
   <section id="comment">
