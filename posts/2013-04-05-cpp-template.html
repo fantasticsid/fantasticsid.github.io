@@ -623,6 +623,25 @@ x * y;</code></pre>
 <ul>
 <li>感觉是在编译期用cons cell构建list差不多的性质. 用到了meta programming来实现静态的获取第N个元素的类型和值.</li>
 </ul>
+<ol start="22" style="list-style-type: decimal">
+<li>函数对象</li>
+</ol>
+<ul>
+<li><p>函数调用分为direct call, indirect call. 前者的函数地址是指令的一部分. 后者的函数地址在寄存器或者内存中.</p></li>
+<li><p>通常编译器会试图产生direct call, 对于不同编译单元的函数, 只要知道函数名字, 编译器会预留地址, 等待链接器补全地址. 但是对于函数指针, 则只能产生indirect call</p></li>
+<li><p>成员函数指针需要记录相对对象的偏移.</p></li>
+<li><p>函数对象的使用, 可以作为模板参数, 也可以作为函数参数传递, 后者可以有状态. 另外一种方式是将两者结合起来:</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> F&gt;
+<span class="dt">void</span> my_sort(..., F cmp = F())
+{
+  <span class="kw">if</span> (cmp(x, y)) {
+  }
+}
+
+my_sort&lt;std::less&lt;..&gt;&gt;(...);
+my_sort&lt;..., std::less&lt;..&gt;());
+my_sort(..., mycriterion);</code></pre>
   </section>
 
   <section id="comment">
