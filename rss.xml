@@ -13,9 +13,6 @@
     <description><![CDATA[<article>
   <header>
     <div class="content">
-      <div class="nav">
-        <a href="/posts.html">← All posts</a>
-      </div>
     <p class="meta"><time class="timeago" datetime="2013-04-05" pubdate>2013-04-05</time></p>
     <h1>C++ Templates: The Complete Guide 笔记</h1>
     </header>
@@ -663,9 +660,6 @@ my_sort(..., mycriterion);</code></pre>
     <description><![CDATA[<article>
   <header>
     <div class="content">
-      <div class="nav">
-        <a href="/posts.html">← All posts</a>
-      </div>
     <p class="meta"><time class="timeago" datetime="2013-01-01" pubdate>2013-01-01</time></p>
     <h1>2013新年计划</h1>
     </header>
@@ -757,9 +751,6 @@ my_sort(..., mycriterion);</code></pre>
     <description><![CDATA[<article>
   <header>
     <div class="content">
-      <div class="nav">
-        <a href="/posts.html">← All posts</a>
-      </div>
     <p class="meta"><time class="timeago" datetime="2012-04-03" pubdate>2012-04-03</time></p>
     <h1>App idea - Unitask</h1>
     </header>
@@ -808,9 +799,6 @@ my_sort(..., mycriterion);</code></pre>
     <description><![CDATA[<article>
   <header>
     <div class="content">
-      <div class="nav">
-        <a href="/posts.html">← All posts</a>
-      </div>
     <p class="meta"><time class="timeago" datetime="2012-04-02" pubdate>2012-04-02</time></p>
     <h1>iPad上的画图软件: paper</h1>
     </header>
@@ -859,9 +847,6 @@ my_sort(..., mycriterion);</code></pre>
     <description><![CDATA[<article>
   <header>
     <div class="content">
-      <div class="nav">
-        <a href="/posts.html">← All posts</a>
-      </div>
     <p class="meta"><time class="timeago" datetime="2012-02-02" pubdate>2012-02-02</time></p>
     <h1>App idea - Motivated</h1>
     </header>
@@ -904,9 +889,6 @@ my_sort(..., mycriterion);</code></pre>
     <description><![CDATA[<article>
   <header>
     <div class="content">
-      <div class="nav">
-        <a href="/posts.html">← All posts</a>
-      </div>
     <p class="meta"><time class="timeago" datetime="2012-01-08" pubdate>2012-01-08</time></p>
     <h1>IELTS Quizme</h1>
     </header>
@@ -943,9 +925,6 @@ my_sort(..., mycriterion);</code></pre>
     <description><![CDATA[<article>
   <header>
     <div class="content">
-      <div class="nav">
-        <a href="/posts.html">← All posts</a>
-      </div>
     <p class="meta"><time class="timeago" datetime="2011-12-30" pubdate>2011-12-30</time></p>
     <h1>2012新年计划</h1>
     </header>
@@ -1029,9 +1008,6 @@ my_sort(..., mycriterion);</code></pre>
     <description><![CDATA[<article>
   <header>
     <div class="content">
-      <div class="nav">
-        <a href="/posts.html">← All posts</a>
-      </div>
     <p class="meta"><time class="timeago" datetime="2011-09-04" pubdate>2011-09-04</time></p>
     <h1>Arrow定理 - 没有合理的选举!</h1>
     </header>
@@ -1090,9 +1066,6 @@ my_sort(..., mycriterion);</code></pre>
     <description><![CDATA[<article>
   <header>
     <div class="content">
-      <div class="nav">
-        <a href="/posts.html">← All posts</a>
-      </div>
     <p class="meta"><time class="timeago" datetime="2011-08-06" pubdate>2011-08-06</time></p>
     <h1>一点博弈论趣题</h1>
     </header>
@@ -1154,9 +1127,6 @@ my_sort(..., mycriterion);</code></pre>
     <description><![CDATA[<article>
   <header>
     <div class="content">
-      <div class="nav">
-        <a href="/posts.html">← All posts</a>
-      </div>
     <p class="meta"><time class="timeago" datetime="2011-07-07" pubdate>2011-07-07</time></p>
     <h1>一图胜万言: fibonacci数列的一些结论的有趣证明</h1>
     </header>
