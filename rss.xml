@@ -6,8 +6,49 @@
         <description><![CDATA[mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music]]></description>
         <atom:link href="http://blog.fantasticsid.com/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Fri, 05 Apr 2013 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Tue, 02 Jul 2013 00:00:00 UT</lastBuildDate>
         <item>
+    <title>理解Arrows</title>
+    <link>http://blog.fantasticsid.com/posts/2013-07-02-arrows.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+    <p class="meta"><time class="timeago" datetime="2013-07-02" pubdate>2013-07-02</time></p>
+    <h1>理解Arrows</h1>
+    </header>
+  <section>
+    <p>Haskell的一些library用到了Arrow这个概念. 如果能够理解Monad那么相信理解Arrow也并不是非常难, 至少从类型层面上来说并不难理解. 而难点可能正是理解各种combinators以及具体的instance实现的语义. 由于我也刚刚开始接触Arrow, 所以这里的描述都尽量简化了.</p>
+<p>要理解Arrow, 我们首先引入Kleisli这个type synonym:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">Kleisli</span> m a b <span class="fu">=</span> a <span class="ot">-&gt;</span> mb</code></pre>
+<p>这里可以看到, Kleisli这个高阶类型需要三个参数, 其中, 第二个参数m也是一个高阶类型, 可以是Maybe, [], IO等等. 而这个类型代表的是一个函数, 输入类型为a, 输出类型为m b.</p>
+<p>这里多提一句, 我们其实可以把右端改写成:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">Kleisli</span> m a b <span class="fu">=</span> (<span class="ot">-&gt;</span>) a (m b)</code></pre>
+<p>这样是不是就根本没啥神奇了, Kleisli就是对(-&gt;)这个高阶类型的一个别名.</p>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Tue, 02 Jul 2013 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2013-07-02-arrows.html</guid>
+</item>
+<item>
     <title>C++ Templates: The Complete Guide 笔记</title>
     <link>http://blog.fantasticsid.com/posts/2013-04-05-cpp-template.html</link>
     <description><![CDATA[<article>
@@ -327,7 +368,7 @@ x * y;</code></pre>
 }</code></pre>
 <ul>
 <li><p>为了处理C++这样的上下文相关文法, 编译器有一个符号表记录各种声明. 这样就能区分比如x*究竟是一个声明还是乘法表达式的一部分了. 类似的例子还有X&lt;1&gt;(0)等(视X是否为模板类)</p></li>
-<li><p>Tokenizer也会有类似问题, 最常见的问题是模板实例作为模板参数: List<List<int>&gt;, 这里&gt;&gt;会被解释为一个右移运算符. 有的编译器为这个问题作了特殊处理, 并給予警告.</p></li>
+<li><p>Tokenizer也会有类似问题, 最常见的问题是模板实例作为模板参数: List&lt;List&lt;int&gt;&gt;, 这里&gt;&gt;会被解释为一个右移运算符. 有的编译器为这个问题作了特殊处理, 并給予警告.</p></li>
 <li><p>Dependent names: 模板定义中对另外一个模板类定义的名称引用是不合适的, 因为很可能显示模板化会改变这个名称的定义</p></li>
 </ul>
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
@@ -1120,83 +1161,6 @@ my_sort(..., mycriterion);</code></pre>
 ]]></description>
     <pubDate>Sat, 06 Aug 2011 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2011-08-06-game-theory.html</guid>
-</item>
-<item>
-    <title>一图胜万言: fibonacci数列的一些结论的有趣证明</title>
-    <link>http://blog.fantasticsid.com/posts/2011-07-07-fibonacci.html</link>
-    <description><![CDATA[<article>
-  <header>
-    <div class="content">
-    <p class="meta"><time class="timeago" datetime="2011-07-07" pubdate>2011-07-07</time></p>
-    <h1>一图胜万言: fibonacci数列的一些结论的有趣证明</h1>
-    </header>
-  <section>
-    <p>看到一篇有趣的文章, 作者举了一个简单的出现了fibonacci数列的例子, 然后用这个例子证明了一系列关于fibonacci数列的结论. 这种巧妙的构造总是让人惊叹如果生活中处处都存在这样的“捷径”那该是多么精彩!</p>
-<div>
-<img src="/images/Screen-shot-2011-07-02-at-11.24.18-PM.png" title="蜂巢状路" />
-</div>
-
-
-<pre><code> 试想有两排蜂巢形状的路径, 假设现在你要从左上S处开始行走到达右下E处,
- 每次只能向右走, 或者从上面的一格走到其右下的一格(从下面的一格走到其右上的一格),
- 那么一共有多少不同的路径呢?</code></pre>
-<p>容易证明, 这个路径数是一个fibonacci数, 作者给出了这个图清楚地表示了从S走到每一个格子不同的路径数.</p>
-<div>
-<img src="/images/Screen-shot-2011-07-02-at-11.32.48-PM.png" title="到达每一个格子的不同路径数" />
-</div>
-
-<p>容易证明, 路径数序列与fibonacci数列的初始值以及递归形式都是一样的, 这里走到第一个格子S只有F(1) = 1条路径.</p>
-<p>现在可以开始证明一些关于fibonacci数列的结论了, 这些结论用其他方法当然也能够比较容易地得到, 但是用作者给出的这个例子, 我们将看到这些结论是多么的“显然”.</p>
-<p>首先作者把这些蜂巢简化成了一些互联的点, 下面说明</p>
-<blockquote>
-<p>F(a) * F(b) + F(a+1) * F(b+1) = F(a+b+1)</p>
-</blockquote>
-<div>
-<img src="/images/Screen-shot-2011-07-02-at-11.39.22-PM.png" title="第一种情况, 通过第a+1个" />
-</div>
-
-
-
-<div>
-<img src="/images/Screen-shot-2011-07-02-at-11.48.00-PM.png" title="第二种情况, 不通过第a+1个点" />
-</div>
-
-<p>如图, 一个包含a+b+1个点的路, 总共有F(a+b+1)种不同的路径. 而这些路径可以分成两部分: 通过第a+1个点的以及没有通过第a+1个点的. 前者一共有: F(a+1) * F(b+1)条, 而后者则有F(a) * F(b)条.</p>
-<p>于是, 结论不证自明.</p>
-<p>如果这种方法只能证明一个结论, 那么也并不算神奇. 此文神奇之处正在于, 这种fibonacci数列的呈现方式帮助作者直观地证明了一系列命题, 比如:</p>
-<p>记P(N)为将整数N表示为1和2的有序数列之和, 证明P(N) = F(N+1)</p>
-<p>当然, 这个结论用归纳法也是很容易证明的, 那么作者的这种表示方法是如何证明这个结论的呢?</p>
-<div>
-<img src="/images/Screen-shot-2011-07-07-at-4.43.15-PM.png" title="P(N) = F(N+1)" />
-</div>
-
-
-<p>如图, 可以发现12表示成的1和2之和, 每一种方式都一一对应了一种S-&gt;E的路径, 于是, 结论自然又不证自明.</p>
-<p>还有一些诸如降N表示为1和2之和, 不考虑顺序有多少种方式? (不需要用文章的方法..) 用1x2的多米诺平铺2*n的地板有多少种方式等等的问题, 都是不错的等菜题.</p>
-<p>有兴趣的话可以通读<a href="http://www.jamestanton.com/images/2011/06/Fibonacci-Surprises.pdf" target="_blank">全文</a>, 看看作者如何证明其他有趣结论.</p>
-  </section>
-
-  <section id="comment">
-
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-  </section>
-</article>
-]]></description>
-    <pubDate>Thu, 07 Jul 2011 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2011-07-07-fibonacci.html</guid>
 </item>
 
     </channel> 

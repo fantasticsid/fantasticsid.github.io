@@ -336,7 +336,7 @@ x * y;</code></pre>
 }</code></pre>
 <ul>
 <li><p>为了处理C++这样的上下文相关文法, 编译器有一个符号表记录各种声明. 这样就能区分比如x*究竟是一个声明还是乘法表达式的一部分了. 类似的例子还有X&lt;1&gt;(0)等(视X是否为模板类)</p></li>
-<li><p>Tokenizer也会有类似问题, 最常见的问题是模板实例作为模板参数: List<List<int>&gt;, 这里&gt;&gt;会被解释为一个右移运算符. 有的编译器为这个问题作了特殊处理, 并給予警告.</p></li>
+<li><p>Tokenizer也会有类似问题, 最常见的问题是模板实例作为模板参数: List&lt;List&lt;int&gt;&gt;, 这里&gt;&gt;会被解释为一个右移运算符. 有的编译器为这个问题作了特殊处理, 并給予警告.</p></li>
 <li><p>Dependent names: 模板定义中对另外一个模板类定义的名称引用是不合适的, 因为很可能显示模板化会改变这个名称的定义</p></li>
 </ul>
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
