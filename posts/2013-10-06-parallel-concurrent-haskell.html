@@ -60,6 +60,19 @@ xs <span class="fu">=</span> _
 xs <span class="fu">=</span> _ <span class="fu">:</span> _
 <span class="dt">Prelude</span><span class="fu">&gt;</span></code></pre>
 <p>这里表达式xs进行seq求值之后, 只求值到第一个constructor, 也就是(:)</p>
+<p>Eval Monad</p>
+<p>和State Monad等类似, Eval Monad有一些基本的combinator</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">runEval ::</span> <span class="dt">Eval</span> a <span class="ot">-&gt;</span> a
+
+<span class="ot">rpar ::</span> a <span class="ot">-&gt;</span> <span class="dt">Eval</span> a
+<span class="ot">rseq ::</span> a <span class="ot">-&gt;</span> <span class="dt">Eval</span> a</code></pre>
+<p>关于rpar, rseq有一些管用用法, 可以精准控制是否等待表达式求值完成后返回. (rpar表示可以并行, 而rseq等待表达式完成后才返回.) 而最常用的一个用法是:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">runEval <span class="fu">$</span> <span class="kw">do</span>
+  a <span class="ot">&lt;-</span> rpar (f x)
+  b <span class="ot">&lt;-</span> rpar (f y)
+  rseq a
+  rseq b
+  <span class="fu">return</span> (a, b)</code></pre>
   </section>
 
   <section id="comment">
