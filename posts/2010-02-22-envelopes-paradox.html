@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>瞎猜也有道理: 信封悖论 | fantasticsid</title>
+    <meta name="author" content="fantasticsid">
+    <meta name="description" content="瞎猜也有道理: 信封悖论">
+    <meta name="keywords" content="mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music">
+
+    <link rel="stylesheet" type="text/css" media="all" href="../stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
+
+    <link href="http://fonts.googleapis.com/css?family=Oxygen&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+  </head>
+
+  <body class="post">
+    <div id="bodywrapper">
+
+      <div class="container">
+        <article>
+  <header>
+    <div class="content">
+    <p class="meta"><time class="timeago" datetime="2010-02-22" pubdate>2010-02-22</time></p>
+    <h1>瞎猜也有道理: 信封悖论</h1>
+    </header>
+  <section>
+    <p>这是一个非常有趣的问题: 有两个信封中写着两个不同的实数, 某人以相等的概率随机取一个信封给你看其中的那个实数, 设为A, 然后让你猜另外一个信封中的实数是比这个实数A更大还是更小. 问题是, 能否有一个猜测的策略, 使得你猜对的概率大于50%.</p>
+<p>这个问题感觉很另人说不出滋味, 说不出个所以然来, 也就是很另人无语. 因为另外一个实数在这个实数A两侧, 似乎有一样的可能, 因此无论怎么猜都应该不会有50%以上的可能猜对啊. 现在回想, 第一次听到这个问题的时候似乎是在概率论的课上随便提到了一下, 当时竟然以为老师说错了这个问题. 不过今天再次碰到这个问题, 看了答案之后不得不佩服答案的巧妙.</p>
+<p>假设较小的实数为A, 设函数<span class="math"><em>f</em>(<em>x</em>) = (1 + <em>e</em><em>x</em><em>p</em>( − <em>x</em>))<sup> − 1</sup></span> . 注意对于任意实数x, f(x)都在0到1之间, 并且f(x)是单调递增的. 现在请以f(x)的概率猜测另外一个实数比看到的实数更小, 其中x是你看到的实数. 现在我们来计算你的猜测是正确的概率, 假设另外一个较大的实数是B, 那么p = 50% * (1-f(A)) + 50% * f(B), 由于A &lt; B, 因此f(A) &lt; f(B), 所以p &gt; 50%.</p>
+<p>我认为这个解答的巧妙之处在于把“猜测”这个动作也用概率化, 引入了f(x)这样一个单调连续递增的, 值域为(0,1)的函数. 总之, 太奇妙, 太厉害了. 接着可以继续看一下关于<a href="http://en.wikipedia.org/wiki/Two_envelopes_problem" target="_blank">two envelopes problem</a>的一些历史和变形.</p>
+<p>来源: <a href="http://blog.xkcd.com/2010/02/09/math-puzzle/">xkcd</a></p>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+
+      </div>
+
+      <footer>
+          <div class="contact">
+            <a href="../" title="home">home</a>
+            <a href="../code.html" title="code">code</a>
+            <a href="../about.html" title="about fantasticsid">about</a>
+            <a href="../rss.xml" title="subscribe">rss</a>
+          </div>
+      </footer>
+
+    </div>
+
+    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
+  </body>
+</html>

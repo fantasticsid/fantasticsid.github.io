@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Gsoc report: 3rd week | fantasticsid</title>
+    <meta name="author" content="fantasticsid">
+    <meta name="description" content="Gsoc report: 3rd week">
+    <meta name="keywords" content="mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music">
+
+    <link rel="stylesheet" type="text/css" media="all" href="../stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
+
+    <link href="http://fonts.googleapis.com/css?family=Oxygen&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+  </head>
+
+  <body class="post">
+    <div id="bodywrapper">
+
+      <div class="container">
+        <article>
+  <header>
+    <div class="content">
+    <p class="meta"><time class="timeago" datetime="2010-06-14" pubdate>2010-06-14</time></p>
+    <h1>Gsoc report: 3rd week</h1>
+    </header>
+  <section>
+    <p>Last week I’ve been busy with my coursework. The term is approaching its end, I shall have one week off staying at home and then take several tests the week after.</p>
+<p>Two things. First, I’m now using winpdb to follow the execution path of gajim. It fails initially when gajim tries to import a certain moduel in “stanza_session.py”. We can disable that by changing “if gajim.HAVE_PYCRYPTO:” to “if gajim.HAVE_PYCRYPTO and false:”. After that the debugger should work. Second, I don’t know why but for the first two weeks it never occurred me that I could setup a jabber server on my own laptop! Think about just how much time I’ve wasted on logging into the server for the first two weeks : - |</p>
+<p>Marcus, who implemented jingle file transfer for pidgin, has tried my jingleFT branch and it seems gajim already constructs correct session initiate request, but further session interactions need to be implemented.</p>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+
+      </div>
+
+      <footer>
+          <div class="contact">
+            <a href="../" title="home">home</a>
+            <a href="../code.html" title="code">code</a>
+            <a href="../about.html" title="about fantasticsid">about</a>
+            <a href="../rss.xml" title="subscribe">rss</a>
+          </div>
+      </footer>
+
+    </div>
+
+    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
+  </body>
+</html>

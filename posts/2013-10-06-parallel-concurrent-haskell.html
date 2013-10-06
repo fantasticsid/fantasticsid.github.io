@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Parallel and Concurrent Programming in Haskell 笔记 | fantasticsid</title>
+    <meta name="author" content="fantasticsid">
+    <meta name="description" content="Parallel and Concurrent Programming in Haskell 笔记">
+    <meta name="keywords" content="mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music">
+
+    <link rel="stylesheet" type="text/css" media="all" href="../stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
+
+    <link href="http://fonts.googleapis.com/css?family=Oxygen&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+  </head>
+
+  <body class="post">
+    <div id="bodywrapper">
+
+      <div class="container">
+        <article>
+  <header>
+    <div class="content">
+    <p class="meta"><time class="timeago" datetime="2013-10-06" pubdate>2013-10-06</time></p>
+    <h1>Parallel and Concurrent Programming in Haskell 笔记</h1>
+    </header>
+  <section>
+    <ol style="list-style-type: decimal">
+<li>Eval Monad. 既然是Monad, 那么从计算的角度看, 应该是应该是包含了对一个普通计算如何并行的一个Context. 所以构造Eval Monad实例的过程就可以看成是构造并行Context的过程.</li>
+</ol>
+<p>Haskell中的表达式都是惰性求值的, 程序当中的表达式运行时的表示也是通过thunk实现的. 即使是1 + 2这样简单的表达式, 也是惰性的.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> x <span class="fu">=</span> <span class="dv">1</span> <span class="fu">+</span> <span class="dv">2</span>
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint x
+x <span class="fu">=</span> _
+<span class="dt">Prelude</span><span class="fu">&gt;</span></code></pre>
+<p>Haskell的seq函数将一个表达式求值到WHNF, 而WHNF粗略地讲, 就是一个数据结构的constructor.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> swap (x, y) <span class="fu">=</span> (y, x)
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> x <span class="fu">=</span> <span class="dv">1</span> <span class="fu">+</span> <span class="dv">2</span>
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> z <span class="fu">=</span> swap(x, x <span class="fu">+</span> <span class="dv">1</span>)
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint z
+z <span class="fu">=</span> _
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">seq</span> z ()
+()
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint z
+z <span class="fu">=</span> (_,_)
+<span class="dt">Prelude</span><span class="fu">&gt;</span></code></pre>
+<p>这里表达式z在seq之后, 被evaluate到第一个constructor, 也就是(,)</p>
+<p>一个更复杂的例子, 考虑map函数:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="fu">map</span><span class="ot"> ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> [b]
+<span class="fu">map</span> f [] <span class="fu">=</span> []
+<span class="fu">map</span> f (x<span class="fu">:</span>xs) <span class="fu">=</span> f x <span class="fu">:</span> <span class="fu">map</span> f xs</code></pre>
+<p>这里如果有表达式:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> xs <span class="fu">=</span> <span class="fu">map</span> (<span class="fu">+</span> <span class="dv">1</span>) [<span class="dv">1</span><span class="fu">..</span><span class="dv">10</span>]
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint xs
+xs <span class="fu">=</span> _
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">seq</span> xs ()
+()
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint xs
+xs <span class="fu">=</span> _ <span class="fu">:</span> _
+<span class="dt">Prelude</span><span class="fu">&gt;</span></code></pre>
+<p>这里表达式xs进行seq求值之后, 只求值到第一个constructor, 也就是(:)</p>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+
+      </div>
+
+      <footer>
+          <div class="contact">
+            <a href="../" title="home">home</a>
+            <a href="../code.html" title="code">code</a>
+            <a href="../about.html" title="about fantasticsid">about</a>
+            <a href="../rss.xml" title="subscribe">rss</a>
+          </div>
+      </footer>
+
+    </div>
+
+    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
+  </body>
+</html>

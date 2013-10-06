@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>你还会做这道高考题吗? | fantasticsid</title>
+    <meta name="author" content="fantasticsid">
+    <meta name="description" content="你还会做这道高考题吗?">
+    <meta name="keywords" content="mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music">
+
+    <link rel="stylesheet" type="text/css" media="all" href="../stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
+
+    <link href="http://fonts.googleapis.com/css?family=Oxygen&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+  </head>
+
+  <body class="post">
+    <div id="bodywrapper">
+
+      <div class="container">
+        <article>
+  <header>
+    <div class="content">
+    <p class="meta"><time class="timeago" datetime="2010-09-08" pubdate>2010-09-08</time></p>
+    <h1>你还会做这道高考题吗?</h1>
+    </header>
+  <section>
+    <pre><code>用铅笔在一根木棍上的任意两处分别作下记号,
+然后把木棍平均分成k份, 问这两个记号在同一段的概率是多少?</code></pre>
+<p>答案: 1/k. 两种解释:</p>
+<p>从k段中选1个记号B所在的段, 它正好是记号A所在的段的概率是1/k. 或者, 更“高级”的解释:</p>
+<p>把木棍看成是坐标轴, 不妨设它长为1. 分别用横坐标, 纵坐标表示记号A, B所在的位置, 那么它们所有可能的位置在空间中形成了一个边长为1的正方形, 而他们在同一段的情况下所有位置形成了k个边长为1/k的正方形, 这些正方形的面积之和为1/k, 就是这两个记号在同一段的概率.</p>
+<div>
+<img src="../images/area-k.png" title="k=4的情况" />
+</div>
+
+<pre><code>还是这根木棍, 在木棍上任意两处分别作下记号,
+然后, 随机地将木棍分成k份, 问这两个记号在同一段的概率是多少?</code></pre>
+<p>答案: 2/(k+1). 如果试图用上面第二种方法来解决问题就麻烦了, 因为这题可以是一题高考填空题. 解释如下: 一共有2 + (k-1)个“随机点”, 包括了记号和断开的位置. 从这k+1个点中取2个点, 它们相邻的概率为 k / C(k+1, 2) = 2/(k+1) .</p>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+
+      </div>
+
+      <footer>
+          <div class="contact">
+            <a href="../" title="home">home</a>
+            <a href="../code.html" title="code">code</a>
+            <a href="../about.html" title="about fantasticsid">about</a>
+            <a href="../rss.xml" title="subscribe">rss</a>
+          </div>
+      </footer>
+
+    </div>
+
+    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
+    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
+  </body>
+</html>

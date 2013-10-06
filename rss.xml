@@ -1,0 +1,1174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>fantasticsid</title>
+        <link>http://blog.fantasticsid.com</link>
+        <description><![CDATA[mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music]]></description>
+        <atom:link href="http://blog.fantasticsid.com/rss.xml" rel="self"
+                   type="application/rss+xml" />
+        <lastBuildDate>Sun, 06 Oct 2013 00:00:00 UT</lastBuildDate>
+        <item>
+    <title>Parallel and Concurrent Programming in Haskell 笔记</title>
+    <link>http://blog.fantasticsid.com/posts/2013-10-06-parallel-concurrent-haskell.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+    <p class="meta"><time class="timeago" datetime="2013-10-06" pubdate>2013-10-06</time></p>
+    <h1>Parallel and Concurrent Programming in Haskell 笔记</h1>
+    </header>
+  <section>
+    <ol style="list-style-type: decimal">
+<li>Eval Monad. 既然是Monad, 那么从计算的角度看, 应该是应该是包含了对一个普通计算如何并行的一个Context. 所以构造Eval Monad实例的过程就可以看成是构造并行Context的过程.</li>
+</ol>
+<p>Haskell中的表达式都是惰性求值的, 程序当中的表达式运行时的表示也是通过thunk实现的. 即使是1 + 2这样简单的表达式, 也是惰性的.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> x <span class="fu">=</span> <span class="dv">1</span> <span class="fu">+</span> <span class="dv">2</span>
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint x
+x <span class="fu">=</span> _
+<span class="dt">Prelude</span><span class="fu">&gt;</span></code></pre>
+<p>Haskell的seq函数将一个表达式求值到WHNF, 而WHNF粗略地讲, 就是一个数据结构的constructor.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> swap (x, y) <span class="fu">=</span> (y, x)
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> x <span class="fu">=</span> <span class="dv">1</span> <span class="fu">+</span> <span class="dv">2</span>
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> z <span class="fu">=</span> swap(x, x <span class="fu">+</span> <span class="dv">1</span>)
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint z
+z <span class="fu">=</span> _
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">seq</span> z ()
+()
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint z
+z <span class="fu">=</span> (_,_)
+<span class="dt">Prelude</span><span class="fu">&gt;</span></code></pre>
+<p>这里表达式z在seq之后, 被evaluate到第一个constructor, 也就是(,)</p>
+<p>一个更复杂的例子, 考虑map函数:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="fu">map</span><span class="ot"> ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> [b]
+<span class="fu">map</span> f [] <span class="fu">=</span> []
+<span class="fu">map</span> f (x<span class="fu">:</span>xs) <span class="fu">=</span> f x <span class="fu">:</span> <span class="fu">map</span> f xs</code></pre>
+<p>这里如果有表达式:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> xs <span class="fu">=</span> <span class="fu">map</span> (<span class="fu">+</span> <span class="dv">1</span>) [<span class="dv">1</span><span class="fu">..</span><span class="dv">10</span>]
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint xs
+xs <span class="fu">=</span> _
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">seq</span> xs ()
+()
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint xs
+xs <span class="fu">=</span> _ <span class="fu">:</span> _
+<span class="dt">Prelude</span><span class="fu">&gt;</span></code></pre>
+<p>这里表达式xs进行seq求值之后, 只求值到第一个constructor, 也就是(:)</p>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Sun, 06 Oct 2013 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2013-10-06-parallel-concurrent-haskell.html</guid>
+</item>
+<item>
+    <title>理解Arrows</title>
+    <link>http://blog.fantasticsid.com/posts/2013-07-02-arrows.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+    <p class="meta"><time class="timeago" datetime="2013-07-02" pubdate>2013-07-02</time></p>
+    <h1>理解Arrows</h1>
+    </header>
+  <section>
+    <p>Haskell的一些library用到了Arrow这个概念. 如果能够理解Monad那么相信理解Arrow也并不是非常难, 至少从类型层面上来说并不难理解. 而难点可能正是理解各种combinators以及具体的instance实现的语义. 由于我也刚刚开始接触Arrow, 所以这里的描述都尽量简化了.</p>
+<p>要理解Arrow, 我们首先引入Kleisli这个type synonym:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">Kleisli</span> m a b <span class="fu">=</span> a <span class="ot">-&gt;</span> mb</code></pre>
+<p>这里可以看到, Kleisli这个高阶类型需要三个参数, 其中, 第二个参数m也是一个高阶类型, 可以是Maybe, [], IO等等. 而这个类型代表的是一个函数, 输入类型为a, 输出类型为m b.</p>
+<p>这里多提一句, 我们其实可以把右端改写成:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">Kleisli</span> m a b <span class="fu">=</span> (<span class="ot">-&gt;</span>) a (m b)</code></pre>
+<p>这样是不是就根本没啥神奇了, Kleisli就是对(-&gt;)这个高阶类型的一个别名.</p>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Tue, 02 Jul 2013 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2013-07-02-arrows.html</guid>
+</item>
+<item>
+    <title>C++ Templates: The Complete Guide 笔记</title>
+    <link>http://blog.fantasticsid.com/posts/2013-04-05-cpp-template.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+    <p class="meta"><time class="timeago" datetime="2013-04-05" pubdate>2013-04-05</time></p>
+    <h1>C++ Templates: The Complete Guide 笔记</h1>
+    </header>
+  <section>
+    <ol style="list-style-type: decimal">
+<li>这里解释了作者认为const放在类型之后的好处: 比如</li>
+</ol>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">char</span>* CHARS;
+<span class="kw">typedef</span> CHARS <span class="dt">const</span> CPTR;</code></pre>
+<p>这样声明的CPTR就是一个“constant pointer to chars”, 因为展开之后就是</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">char</span>* <span class="dt">const</span> CPTR;</code></pre>
+<p>相反</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">char</span> * CHARS;
+<span class="kw">typedef</span> <span class="dt">const</span> CHARS CPTR;</code></pre>
+<p>展开之后为:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">const</span> <span class="dt">char</span> * CPTR;
+<span class="dt">int</span> main();</code></pre>
+<p>这里const修饰的就不是CPTR了.</p>
+<p>另外, 推荐的引用和指针参数的空格放置位置</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> foo(<span class="dt">int</span> <span class="dt">const</span>&amp; x);</code></pre>
+<p>倒也是和工作时C++代码的风格一样的.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>函数模板</li>
+</ol>
+<ul>
+<li>template声明中使用typename较常用</li>
+<li>对于一个类型, 如果实例化函数模板后使用到了不支持的操作符, 会产生编译错误</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+T lt(T <span class="dt">const</span>&amp; a, T <span class="dt">const</span>&amp; b)
+{
+  <span class="kw">return</span> a * b;
+}
+
+lt(<span class="st">&quot;hi&quot;</span>, <span class="st">&quot;ya&quot;</span>); <span class="co">// error</span></code></pre>
+<ul>
+<li>函数模板的编译经过至少2层, 模板本身的语法, 以及实例化之后的语义检查</li>
+<li>模板函数参数的自动推导中不允许类型转化, 类型必须完全匹配. 解决的方法是转化实参的类型或者显示实例化模板参数</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+T lt(T <span class="dt">const</span>&amp; a, T <span class="dt">const</span>&amp; b)
+{
+  <span class="kw">return</span> a &lt; b;
+}
+
+lt(<span class="dv">4</span>, <span class="fl">5.0</span>); <span class="co">// error</span>
+lt&lt;<span class="dt">float</span>&gt;(<span class="dv">4</span>, <span class="fl">5.0</span>); <span class="co">// correct</span></code></pre>
+<ul>
+<li>函数模板不能有默认参数</li>
+<li>函数模板可以重载(参数个数不同), 可以进行特例化, 可以与非函数模板共存. 后者在选择时有更高的优先权</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>类模板</li>
+</ol>
+<ul>
+<li>类模板的成员函数的实例化是惰性的</li>
+<li>类模板特例化, 可以部分特例化</li>
+<li>类模板参数可以有默认值, 并且可以引用之前的模板参数</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt; <span class="kw">typename</span> T, <span class="kw">typename</span> CONT = vector&lt;T&gt; &gt;
+<span class="kw">class</span> A;</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>非类型的模板参数 (dependent types)</li>
+</ol>
+<ul>
+<li>模板参数不必要是一个类型, 还可以是整形值</li>
+<li>不同整型值构造出来的类型是不一样的, 比如长度为10的List, 和长度为20的List是不同的</li>
+<li>模板类和模板函数都可以用整型值来实例化</li>
+<li>甚至外部链接的字符串常量也可以作为模板参数</li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li>一些细节</li>
+</ol>
+<ul>
+<li>通常类内的typedef在别处使用时要用typename作修饰, 以免被编译器认为是静态类成员变量</li>
+<li>模板成员函数使用时如果进行了显示的特例化, 需要在“.”, “-&gt;”之后加上template以免编译器把“&lt;”认为是小于操作符</li>
+<li>模板类继承之后, 调用成员函数需要用“this-&gt;memfn()”</li>
+<li>模板本身也可以成为模板的实参 (template template arguments), 使用时不能利用默认参数</li>
+</ul>
+<ol start="6" style="list-style-type: decimal">
+<li>模板文件包含模式</li>
+</ol>
+<ul>
+<li>由于模板的实例化发生在编译期, 所以如果使用的模板定义在另外一个编译单元中, 则需要确保有恰当的实例化发生</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// template.hpp</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> print(T <span class="dt">const</span>&amp;);
+
+<span class="co">// template.cpp</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> print(T <span class="dt">const</span>&amp; x)
+{
+<span class="co">// implementation</span>
+}
+
+<span class="co">// prog.cpp</span>
+<span class="ot">#include &quot;template.hpp&quot;</span>
+<span class="dt">int</span> main()
+{
+<span class="dt">double</span> v = <span class="fl">1.0</span>;
+print(v);
+<span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre>
+<p>这里由于模板定义在另外一个编译单元(template.cpp), 而在其中并没有对double类型进行实例化的需要, 因此编译结果中并没有 print<double>(double const&amp; x) 这个函数. 而对prog.cpp的编译能够通过是因为其中包含了template.hpp中的print模板函数的声明. 这样就导致了编译能够通过, 但是链接阶段会发生错误.</p>
+<p>解决方法:</p>
+<ol style="list-style-type: decimal">
+<li><p>把模板实现放在模板声明中 (Inclusion model)</p></li>
+<li><p>显示实例化</p></li>
+</ol>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// template.cpp</span>
+<span class="kw">template</span> <span class="dt">void</span> print&lt;<span class="dt">double</span>&gt;(<span class="dt">double</span> <span class="dt">const</span> &amp;);</code></pre>
+<p>这样template.cpp编译单元中就会实例化相应的函数, 缺点是难以管理</p>
+<ol start="3" style="list-style-type: decimal">
+<li>结合上面两种方法, 提供额外的编译单元专门提供特例化声明</li>
+</ol>
+<ul>
+<li>使用export (Separation model)</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">export</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> print(T <span class="dt">const</span>&amp;);</code></pre>
+<p>缺点是编译器实现支持较少</p>
+<ul>
+<li><p>预编译头文件 - 编译器的优化可以保存前n行代码编译之后的状态, 这使得开头一样的编译单元(都包含了相同的头文件)的编译速度得以提高.</p></li>
+<li><p>模板编译错误的找错: 找到模板实例化处</p></li>
+<li><p>Archetypes: 模板库编写者提供的满足模板最小要求的类示例</p></li>
+</ul>
+<ol start="7" style="list-style-type: decimal">
+<li>模板术语</li>
+</ol>
+<ul>
+<li><p>Class template</p></li>
+<li><p>Instantiation and specialization</p></li>
+<li><p>Declaration vs definition</p></li>
+<li><p>Template arguments vs template parameters</p></li>
+</ul>
+<ol start="8" style="list-style-type: decimal">
+<li>模板参数限制</li>
+</ol>
+<ul>
+<li><p>模板定义分为类模板和函数模板, 其中还包括了类模板的成员函数, 类模板的嵌套类(nested class)定义和成员定义, 模板类的静态变量的模板定义</p></li>
+<li><p>模板成员函数不能被定义为虚函数, 因为虚表通常是用固定大小的表实现的. 而“模板虚函数”的个数只有到最后整个程序构建玩才能确定, 所以实现这个特性需要编译器, 连接器的支持</p></li>
+<li><p>主模板定义</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// primary template</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Box;
+
+<span class="co">// non-primary template</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Box&lt;T&gt;;</code></pre>
+<ul>
+<li><p>模板参数分为: 类型参数, 非类型参数(non-type parameters), 模板参数</p></li>
+<li><p>非类型参数包括整形/枚举, 指针, 引用</p></li>
+<li><p>模板参中的默认值可以在模板定义内使用, 但是模板显式实例化时模板类参数的参数个数(kind)必须与形参声明一样</p></li>
+<li>模板实参
+<ul>
+<li>只有模板类声明时可以有默认参数</li>
+<li>template-id: 显式模板参数T&lt;P1, P2, P3&gt;</li>
+<li>模板类定义作用域之内, 对类名的引用相当于tempate-id</li>
+<li>默认模板参数可省略, 但是“&lt;&gt;”仍然是必要的</li>
+<li>模板函数参数类型推导</li>
+</ul></li>
+<li><p>substitution-failure-is-not-an-error (SFINAE)</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+RT1 test(<span class="kw">typename</span> T::X <span class="dt">const</span>*);
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+RT2 test(...);
+
+<span class="kw">typedef</span> <span class="dt">char</span> RT1;
+<span class="kw">typedef</span> <span class="kw">struct</span> { <span class="dt">char</span> a[<span class="dv">2</span>]; } RT2;
+
+<span class="ot">#define type_has_member_type_X(T) (sizeof(test&lt;T&gt;(0)) == 1)</span></code></pre>
+<p>对没有定义成员X的类来说, 第一个模板函数定义应该产生编译错误, 但是因为SFINAE原则编译器选择继续从下一个模板定义来实例化test这个函数的调用</p>
+<p>SFINAE只能处理产生非法类型的错误, 别的错误(除零错误等)则不适用.</p>
+<ul>
+<li><p>局部类定义不能用作模板参数, 无名类型/枚举也不行(除非用typedef指定一个名字)</p></li>
+<li><p>成员函数模板的实例化不重载虚函数</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="ot">#include &lt;iostream&gt;</span>
+
+<span class="kw">class</span> A
+{
+<span class="kw">public</span>:
+  <span class="kw">virtual</span> <span class="dt">void</span> fun(<span class="dt">int</span> a)
+  {
+    std::cout &lt;&lt; <span class="st">&quot;A &quot;</span> &lt;&lt; a &lt;&lt; std::endl;
+  }
+
+  <span class="kw">virtual</span> ~A() {}
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> B: <span class="kw">public</span> A
+{
+<span class="kw">public</span>:
+  <span class="kw">template</span> &lt;<span class="kw">typename</span> T2&gt;
+  <span class="dt">void</span> fun(T2 a)
+  {
+    std::cout &lt;&lt; <span class="st">&quot;B &quot;</span> &lt;&lt; a &lt;&lt; std::endl;
+  }
+
+  <span class="kw">virtual</span> ~B() {}
+};
+
+<span class="kw">class</span> C: <span class="kw">public</span> A
+{
+<span class="kw">public</span>:
+  <span class="dt">void</span> fun(<span class="dt">int</span> a)
+  {
+    std::cout &lt;&lt; <span class="st">&quot;C &quot;</span> &lt;&lt; a &lt;&lt; std::endl;
+  }
+};
+
+<span class="dt">int</span> main(<span class="dt">int</span> argc, <span class="dt">char</span> *argv[])
+{
+  A *pa = <span class="kw">new</span> B&lt;<span class="dt">int</span>&gt;();
+  pa-&gt;fun(<span class="dv">2</span>);
+  <span class="kw">delete</span> pa;
+
+  B&lt;<span class="dt">int</span>&gt; b;
+  b.fun(<span class="dv">2</span>);
+
+  pa = <span class="kw">new</span> C();
+  pa-&gt;fun(<span class="dv">2</span>);
+  <span class="kw">delete</span> pa;
+
+  <span class="kw">return</span> <span class="dv">0</span>;
+}
+</code></pre>
+<p>输出为:</p>
+<pre><code>A 2
+B 2
+C 2</code></pre>
+<ul>
+<li><p>模板友类的声明处必须可见友类本身的定义, 一般类没有这个限制</p></li>
+<li><p>友函数声明可以是定义, 因此如果实例化若干模板类, 会重复定义此函数, 解决办法是让函数依赖于模板参数</p></li>
+<li><p>友模板: 声明一个模板的所有实例化都是友函数/类</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> Manager {
+  <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+    <span class="kw">friend</span> <span class="kw">class</span> Task;
+
+  <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+    <span class="kw">friend</span> <span class="dt">void</span> Schedule&lt;T&gt;::dispatch(Task&lt;T&gt;*);
+
+  <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+    <span class="kw">friend</span> <span class="dt">int</span> ticket() {
+      <span class="kw">return</span> ++Manager::counter;
+    }
+
+  <span class="dt">static</span> <span class="dt">int</span> counter;
+};</code></pre>
+<ol start="8" style="list-style-type: decimal">
+<li>模板中的命名</li>
+</ol>
+<ul>
+<li>C++语法并不是上下文无关的</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">
+x * y;</code></pre>
+<p>以上代码可以是一个乘法表达式, 也可能是一个指针声明. 这要视x的定义而定.</p>
+<ul>
+<li><p>Template-id: 模板与模板参数的组合, 如List<T, int, 0></p></li>
+<li><p>qualifed name的查找, unqualified name的查找(类作用域, 基类作用域, … , 嵌套的外层作用域), 这种查找是最普通的. C++中还有一个规则: Argument dependent lookup, 又称koenig lookup</p></li>
+<li><p>对于一个class, ADL规则会检查类本身, 包含类定义的外层类, 基类这些类声明处的namespace.</p></li>
+<li><p>对于函数调用, 函数参数以及返回值的类型关联的名称空间是ADL的查找范围.</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="ot">#include &lt;iostream&gt;</span>
+
+<span class="kw">namespace</span> X {
+  <span class="kw">template</span>&lt;<span class="kw">typename</span> T&gt; <span class="dt">void</span> f(T);
+}
+
+<span class="kw">namespace</span> N {
+  <span class="kw">using</span> <span class="kw">namespace</span> X; <span class="co">// ADL查找时, 此处没有引入X::f</span>
+  <span class="kw">enum</span> E{ e };
+  <span class="dt">void</span> f(E) {
+    std::cout &lt;&lt; <span class="st">&quot;N::f&quot;</span> &lt;&lt; std::endl;
+  }
+}
+
+<span class="dt">void</span> f(<span class="dt">int</span>)
+{
+  std::cout &lt;&lt; <span class="st">&quot;::f&quot;</span> &lt;&lt; std::endl;
+}
+
+<span class="dt">int</span> main(<span class="dt">int</span> argc, <span class="dt">char</span> *argv[])
+{
+  ::f(N::e); <span class="co">// ::f</span>
+  f(N::e); <span class="co">// N::f</span>
+}</code></pre>
+<ul>
+<li>类定义内可以引用类名本身, 模板类中可以引用模板类名并加上模板参数. 但是如果只用模板类名, 则代表着和当前instantiation相对应的template-id, 而不是一个类模板</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">template</span>&lt;<span class="kw">typename</span>&gt; <span class="kw">class</span> TT&gt;
+<span class="kw">class</span> X
+{
+}
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> C
+{
+  C a; <span class="co">// 代表C&lt;T&gt; a;</span>
+  C&lt;<span class="dt">void</span>&gt; b;
+  X&lt;C&gt; c; <span class="co">// 这里不行, C不代表一个模板类的名称</span>
+  X&lt;::C&gt; d; <span class="co">// &lt;: 是特殊字符序列, 代表 [</span>
+  X&lt; ::C&gt; e; <span class="co">// 总算行了这里</span>
+}</code></pre>
+<ul>
+<li><p>为了处理C++这样的上下文相关文法, 编译器有一个符号表记录各种声明. 这样就能区分比如x*究竟是一个声明还是乘法表达式的一部分了. 类似的例子还有X&lt;1&gt;(0)等(视X是否为模板类)</p></li>
+<li><p>Tokenizer也会有类似问题, 最常见的问题是模板实例作为模板参数: List&lt;List&lt;int&gt;&gt;, 这里&gt;&gt;会被解释为一个右移运算符. 有的编译器为这个问题作了特殊处理, 并給予警告.</p></li>
+<li><p>Dependent names: 模板定义中对另外一个模板类定义的名称引用是不合适的, 因为很可能显示模板化会改变这个名称的定义</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Trap {
+<span class="kw">public</span>:
+  <span class="kw">enum</span> {x};
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Victim {
+<span class="kw">public</span>:
+  <span class="dt">int</span> y;
+  <span class="dt">void</span> poof() {
+    Trap&lt;T&gt;::x * y; <span class="co">// 这里是声明还是乘法表达式?</span>
+  }
+};
+
+<span class="kw">template</span> &lt;&gt;
+<span class="kw">class</span> Trap&lt;<span class="dt">void</span>&gt; {
+<span class="kw">public</span>:
+  <span class="kw">typedef</span> <span class="dt">int</span> x;
+}
+
+<span class="dt">void</span> <span class="dt">bool</span>(Victim&lt;<span class="dt">void</span>&gt;&amp; bomb) <span class="co">// 书上这里是Trap&lt;void&gt;&amp;</span>
+{
+  bomb.poof()
+}</code></pre>
+<p>如果在Victim模板定义内部查找x的定义, 则认为x是一个enum值, 但是后面Trap对void的显示化却对覆盖了x的定义.</p>
+<p>C++的解决方法是: 默认情况下不认为一个dependent name是一个type, 除非用typename作声明.</p>
+<p>当一个名称 1. 出现在模板定义内 2. 是被限定的(qualified) 3. 不作为基类声明/成员初始化列表中作为类型 4. 依赖于模板参数</p>
+<p>则必须对之进行typename修饰. 看到这里感觉要吐了, 的确C++的template是非常的复杂, 需要知道的细节太多.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">struct</span> S: <span class="kw">typename</span> X&lt;T&gt;::Base {
+  S(): <span class="kw">typename</span> X&lt;T&gt;::Base(<span class="kw">typename</span> X&lt;T&gt;::Base(<span class="dv">0</span>)) {}
+  <span class="kw">typename</span> X&lt;T&gt; f() {
+    <span class="kw">typename</span> X&lt;T&gt;::C * p; <span class="co">// 声明</span>
+    X&lt;T&gt;::D * q; <span class="co">// 乘法表达式</span>
+  }
+  <span class="kw">typename</span> X&lt;<span class="dt">int</span>&gt;::C * s;
+};
+
+<span class="kw">struct</span> U {
+  <span class="kw">typename</span> X&lt;<span class="dt">int</span>&gt;::C * pc;
+};</code></pre>
+<pre><code>* 这个例子当中typename X&lt;T&gt;::Base中的typename是多余的, 因为他们不满足第3条规则.
+* 但是紧接着的typename X&lt;T&gt;::Base(0)中typename是必须的, 因为这里构造了一个对象.
+* 下面的typename X&lt;T&gt;中typename又是多余的, 这里没有限定名称(qualified name).
+* typename X&lt;T&gt;::C * p中typename是必须的, 否则就如下一行编译器认为其是一个乘法表达式.
+* 最后的typename X&lt;int&gt;::C * s说明了即使不满足第4条规则, 依然可以加上typename修饰, 反过来说, 前三条对typename的使用也是必要的.</code></pre>
+<ul>
+<li>类似的, 如果一个template定义也是有依赖的, 则必须告诉编译器.</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Shell {
+<span class="kw">public</span>:
+  <span class="kw">template</span> &lt;<span class="dt">int</span> N&gt;
+  <span class="kw">class</span> In {
+  <span class="kw">public</span>:
+    <span class="kw">template</span> &lt;<span class="dt">int</span> M&gt;
+    <span class="kw">class</span> Deep {
+    <span class="kw">public</span>:
+      <span class="kw">virtual</span> <span class="dt">void</span> f();
+    };
+  };
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T, <span class="dt">int</span> N&gt;
+<span class="kw">class</span> Weird {
+<span class="kw">public</span>:
+  <span class="dt">void</span> case1(Shell&lt;T&gt;::<span class="kw">template</span> In&lt;N&gt;::<span class="kw">template</span> Deep&lt;N&gt; * p) {
+    p-&gt;<span class="kw">template</span> Deep&lt;N&gt;::f();
+  }
+  <span class="dt">void</span> case2(Shell&lt;T&gt;::<span class="kw">template</span> In&lt;T&gt;::<span class="kw">template</span> Deep&lt;T&gt;&amp; p) {
+    p.<span class="kw">template</span> Deep&lt;N&gt;::f();
+  }
+};</code></pre>
+<ol start="14" style="list-style-type: decimal">
+<li>模板多态</li>
+</ol>
+<ul>
+<li><p>C++中的多态不单单指OO的virtual function, 模板也是实现多态的一种手段(一种表达, 多种行为)</p></li>
+<li><p>virtual function的多态处理比如异构(heterogeneous)集合中元素的多态行为比较适合. 模板有更好的类型安全性.</p></li>
+<li><p>模板是非侵入式的. 就是说OO的多态行为通常需要一个类继承一个基类, 而模板没有这样的要求. 只要类实现了对应的方法即可, 并且如果有些方法如果实例化过程中没有用到, 则不必实现.</p></li>
+<li><p>模板的多态运行时开销小很多, 但是可能生成的代码更大, 编译更久.</p></li>
+<li><p>C++的标准库中的iterator就是一个很好的模板设计. 容器通过定义各自的iterator来实现与generic算法的交互.</p></li>
+<li><p>同样的也可以用OO来实现类似iterator的功能, 但是性能较低(内存开销, 运行时效率). 并且对于内置类型需要wrapper class. (OO侵入式的后遗症). 然而模板多态与OO多态也是能共存的.</p></li>
+</ul>
+<ol start="15" style="list-style-type: decimal">
+<li>Traits, Policy Classes</li>
+</ol>
+<ul>
+<li><p>Traits是一种模板类, 它将类型和类型相关的信息联系起来, 比如int类型的范围, 最大最小值等等. 常用的方法是对要修饰的类型进行特例化.</p></li>
+<li><p>Traits中定义类型相关的类型比较容易(typedef), 定义相关常量值时可能遇到非整形量的常量而不能inline定义在类中. 这种情况通常将常量改为返回这个常量的函数.</p></li>
+<li><p>Traits模板也可以作为一个模板参数, 使得模板使用者能够重载一些Traits.</p></li>
+<li><p>Policy classes: 书上这里举了一个Accumulate的例子:</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt; <span class="kw">typename</span> T,
+           <span class="kw">typename</span> Policy = SumPolicy,
+           <span class="kw">typename</span> AT = AccumuationTraits&lt;T&gt; &gt;
+<span class="kw">class</span> Accum {
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> <span class="kw">typename</span> Traits::AccT Acct;
+    <span class="dt">static</span> AccT accum(T <span class="dt">const</span>* beg, T <span class="dt">const</span>* end) {
+      AccT total = Traits::zero();
+      <span class="kw">while</span> (beg != end) {
+        Policy::accumulate(total, *beg);
+        ++beg;
+      }
+      <span class="kw">return</span> total;
+    }
+};
+
+<span class="kw">class</span> SumPolicy {
+  <span class="kw">public</span>:
+    <span class="kw">template</span>&lt;<span class="kw">typename</span> T1, <span class="kw">typename</span> T2&gt;
+    <span class="dt">static</span> <span class="dt">void</span> accumulate(T1&amp; total, T2 <span class="dt">const</span>&amp; value) {
+      total += value;
+    }
+};</code></pre>
+<p>当然, 这里为了能够让乘法的例子产生正确的结果, 必须将zero()的定义放入Policy class中. (<a href="http://www.haskell.org/ghc/docs/latest/html/libraries/base/Data-Monoid.html">Monoid</a> 中的identity)</p>
+<ul>
+<li><p>Traits可以实现sizeof类似的功能(type function), 这个想想好像是类型系统中很强大的功能.</p></li>
+<li><p>一个用到了SFINAE的判断一个类型是否是class的traits class例子:</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> IsClassT {
+  <span class="kw">private</span>:
+    <span class="kw">typedef</span> <span class="dt">char</span> One;
+    <span class="kw">typedef</span> <span class="kw">struct</span> { <span class="dt">char</span> a[<span class="dv">2</span>]; } Two;
+    <span class="kw">template</span> &lt;<span class="kw">typename</span> C&gt; <span class="dt">static</span> One test(<span class="dt">int</span> C::*);
+    <span class="kw">template</span> &lt;<span class="kw">typename</span> C&gt; <span class="dt">static</span> Two test(...);
+  <span class="kw">public</span>:
+    <span class="kw">enum</span> { Yes = <span class="kw">sizeof</span>(IsClass&lt;T&gt;::test&lt;T&gt;(<span class="dv">0</span>)) == <span class="dv">1</span> };
+    <span class="kw">enum</span> { No = !Yes };
+};</code></pre>
+<p>这里用到了class类型可以有pointer to member function的事实来判断一个类型是不是class类型.</p>
+<ul>
+<li>利用Traits的partial specialisation可以对类型的const, reference进行剥离. (15.2.3)</li>
+</ul>
+<p>在以下例子中, 实现了一个apply函数的模板. 但是在处理引用的时候, 却会发生将T &amp;&amp;类型传给函数的情况</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> apply(T&amp; arg, <span class="dt">void</span> (*func)(T))
+{
+  func(arg);
+}
+
+<span class="dt">void</span> incr(<span class="dt">int</span>&amp; a)
+{
+  ++a;
+}
+
+<span class="dt">int</span> main(<span class="dt">int</span> argc, <span class="dt">char</span> *argv[])
+{
+  <span class="dt">int</span> x = <span class="dv">1</span>;
+  apply(x, incr);
+}</code></pre>
+<p>当然, C++标准中允许将模板参数T&amp;中的T替换为int&amp;时处理为int&amp;, 同样的, 在T const中如果T是int const, 将可以替换为int const.</p>
+<p>但是这里的解决方法是, 利用对traits class的partial specialisation进行const以及reference的“剥离”:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> TypeOp {
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> T ArgT;
+    <span class="kw">typedef</span> T BareT;
+    <span class="kw">typedef</span> T <span class="dt">const</span> ConstT;
+    <span class="kw">typedef</span> T &amp; RefT;
+    <span class="kw">typedef</span> T &amp; RefBareT;
+    <span class="kw">typedef</span> T <span class="dt">const</span> &amp; RefConstT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> TypeOp &lt;T <span class="dt">const</span>&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> T <span class="dt">const</span> ArgT;
+    <span class="kw">typedef</span> T BareT;
+    <span class="kw">typedef</span> T <span class="dt">const</span> ConstT;
+    <span class="kw">typedef</span> T <span class="dt">const</span> &amp; RefT;
+    <span class="kw">typedef</span> T &amp; RefBareT;
+    <span class="kw">typedef</span> T <span class="dt">const</span> &amp; RefConstT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> TypeOp &lt;T&amp;&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> T &amp; ArgT;
+    <span class="kw">typedef</span> <span class="kw">typename</span> TypeOp&lt;T&gt;::BareT BareT; <span class="co">//递归调用</span>
+    <span class="kw">typedef</span> T <span class="dt">const</span> ConstT;
+    <span class="kw">typedef</span> T &amp; RefT;
+    <span class="kw">typedef</span> <span class="kw">typename</span> TypeOp&lt;T&gt;::BareT &amp; RefBareT;
+    <span class="kw">typedef</span> T <span class="dt">const</span> &amp; RefConstT;
+};</code></pre>
+<p>这样, 前面的apply例子就可以重新写成:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> apply(<span class="kw">typename</span> TypeOp&lt;T&gt;::RefT arg, <span class="dt">void</span> (*func)(T))
+{
+  func(arg);
+}</code></pre>
+<ul>
+<li>类型提升traits将两种类型提升到更加“强大”的类型, 手段还是specialisation</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// 这里是不是有点像Haskell的declarative定义</span>
+
+<span class="kw">template</span> &lt;<span class="dt">bool</span> C, <span class="kw">typename</span> Ta, <span class="kw">typename</span> Tb&gt;
+<span class="kw">class</span> IfThenElse;
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> Ta, <span class="kw">typename</span> Tb&gt;
+<span class="kw">class</span> IfThenElse &lt;<span class="kw">true</span>, Ta, Tb&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> Ta ResultT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> Ta, <span class="kw">typename</span> Tb&gt;
+<span class="kw">class</span> IfThenElse&lt;<span class="kw">false</span>, Ta, Tb&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> Tb ResultT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T1, <span class="kw">typename</span> T2&gt;
+<span class="kw">class</span> Promotion; <span class="co">//没有默认定义</span>
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T1, <span class="kw">typename</span> T2&gt;
+<span class="kw">class</span> Promotion
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> <span class="kw">typename</span> IfThenElse&lt;(<span class="kw">sizeof</span>(T1) &gt; <span class="kw">sizeof</span>(T2)),
+                                T1,
+                                <span class="kw">typename</span> IfThenElse&lt;(<span class="kw">sizeof</span>(T1) &lt; <span class="kw">sizeof</span>(T2)),
+                                                    T2,
+                                                    <span class="dt">void</span>&gt;::ResultT
+                               &gt;::ResultT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Promotion &lt;T, T&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> T ResultT;
+};</code></pre>
+<ol start="16" style="list-style-type: decimal">
+<li>模板以及继承</li>
+</ol>
+<ul>
+<li><p>Empty base class optimisation</p></li>
+<li><p>curiously recurring template pattern: 父类的具体类型是一个模板类对子类的实例化. 可以实现诸如某个类型的对象计数器之类的功能, 重点是从此以后父类可以在实现时知道子类的类型了. 因此可以在父类中实现一个返回子类类型的clone方法. 这个见 <a href="http://en.wikipedia.org/wiki/Curiously_recurring_template_pattern">维基百科上CRTP的解释</a></p></li>
+</ul>
+<ol start="17" style="list-style-type: decimal">
+<li>元编程</li>
+</ol>
+<ul>
+<li><p>C++模板是图灵完备的, 意味着在编译器能够模拟出任何图灵等价的计算.</p></li>
+<li><p>比如计算幂函数</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="dt">int</span> N&gt;
+<span class="kw">class</span> Power2 {
+ <span class="kw">public</span>:
+  <span class="kw">enum</span> { result = <span class="dv">2</span> * Power2&lt;N<span class="dv">-1</span>&gt;::result };
+};
+
+<span class="kw">template</span> &lt;&gt;
+<span class="kw">class</span> Power2 {
+ <span class="kw">public</span>:
+  <span class="kw">enum</span> { result = <span class="dv">1</span> };
+};</code></pre>
+<ol start="20" style="list-style-type: decimal">
+<li>智能指针</li>
+</ol>
+<ul>
+<li><p>这里只讨论了模板在实现智能指针时的应用, 并没有深入讨论智能指针的实现细节(同步, 原子操作, 效率..)</p></li>
+<li><p>C++中以对象管理资源, 利用RAII是很常见的idiom.</p></li>
+<li><p>智能指针最少要实现初始化, 释放资源, 重载-&gt;, *操作符.</p></li>
+<li><p>引用计数: 话说虽然不能解决循环引用, 并且也需要同步操作以致降低效率, 这些貌似jvm没有. 但是好的是对资源掌控更加细致, 而jvm这方面反过来讲gc会对系统的延时性产生压力, 即使有很多对gc进行调整的途径和机会..</p></li>
+<li><p>智能指针也是policy based design. 计数器如何分配如何消亡, 资源如何删除 ( delete vs delete [] ) 都作为模板参数传递.</p></li>
+<li><p>智能指针也实现了父类子类转化的特性, 通过模板化的构造函数和conversion operator来实现.</p></li>
+</ul>
+<ol start="21" style="list-style-type: decimal">
+<li>Tuple</li>
+</ol>
+<ul>
+<li>感觉是在编译期用cons cell构建list差不多的性质. 用到了meta programming来实现静态的获取第N个元素的类型和值.</li>
+</ul>
+<ol start="22" style="list-style-type: decimal">
+<li>函数对象</li>
+</ol>
+<ul>
+<li><p>函数调用分为direct call, indirect call. 前者的函数地址是指令的一部分. 后者的函数地址在寄存器或者内存中.</p></li>
+<li><p>通常编译器会试图产生direct call, 对于不同编译单元的函数, 只要知道函数名字, 编译器会预留地址, 等待链接器补全地址. 但是对于函数指针, 则只能产生indirect call.</p></li>
+<li><p>成员函数指针需要记录相对对象的偏移.</p></li>
+<li><p>函数对象的使用, 可以作为模板参数, 也可以作为函数参数传递, 后者可以有状态. 另外一种方式是将两者结合起来:</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> F&gt;
+<span class="dt">void</span> my_sort(..., F cmp = F())
+{
+  <span class="kw">if</span> (cmp(x, y)) {
+  }
+}
+
+my_sort&lt;std::less&lt;..&gt;&gt;(...);
+my_sort&lt;..., std::less&lt;..&gt;());
+my_sort(..., mycriterion);</code></pre>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Fri, 05 Apr 2013 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2013-04-05-cpp-template.html</guid>
+</item>
+<item>
+    <title>2013新年计划</title>
+    <link>http://blog.fantasticsid.com/posts/2013-01-01-2013-resolutions.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+    <p class="meta"><time class="timeago" datetime="2013-01-01" pubdate>2013-01-01</time></p>
+    <h1>2013新年计划</h1>
+    </header>
+  <section>
+    <p>今年简单一点</p>
+<pre><code>深入研究Haskell, wiki上的页面基本都要有个了解, 能用Haskell写高效后台应用.
+
+深入研究C++, 熟练应用模版, C++ 11的高级特性.
+
+看CLRS, PFDS刷一下各种OJ, interviewstreet什么的.
+</code></pre>
+<p>去年的完成情况, 按照0-5完成进度打分:</p>
+<pre><code>定义新自己 2
+
+发布几个iOS应用 3
+
+看完Haskell的几本书, 写一个解释器/比较大的应用 1
+
+做机器学习的应用 0
+
+概率论, 组合数学, 分析, 线性代数各书习题重新做一遍 0
+
+搞个小提琴学 4
+
+练耳不靠谱 2
+
+要看的书:
+
+&lt;&lt;Learn you a haskell for great good&gt;&gt; 5
+
+&lt;&lt;Real world haskell&gt;&gt; 4
+
+&lt;&lt;Programming in haskell&gt;&gt; 0
+
+&lt;&lt;The Haskell Road to Logic, Math and Programming&gt;&gt; 0
+
+&lt;&lt;Purely functional data structures&gt;&gt; 2
+
+&lt;&lt;Pearls of functional algorithm design&gt;&gt; 0
+
+&lt;&lt;Introduction to algorithms&gt;&gt; 0
+
+&lt;&lt;Algorithms&gt;&gt; 0
+
+&lt;&lt;Structure and interpretation of computer programs&gt;&gt; 1
+
+&lt;&lt;Jazz theory book&gt;&gt; 0
+
+&lt;&lt;Javascript the good parts&gt;&gt; 4
+
+&lt;&lt;Clojure in action&gt;&gt; 0
+
+&lt;&lt;The joy of clojure&gt;&gt; 4
+
+&lt;&lt;Practical clojure&gt;&gt; 1
+
+&lt;&lt;Programming clojure&gt;&gt; 1
+
+&lt;&lt;Godel Escher Bach - an Eternal Golden Braid&gt;&gt; 0
+</code></pre>
+<p>发现去年又不知道活在哪个次元了.</p>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Tue, 01 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2013-01-01-2013-resolutions.html</guid>
+</item>
+<item>
+    <title>App idea - Unitask</title>
+    <link>http://blog.fantasticsid.com/posts/2012-04-03-unitask.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+    <p class="meta"><time class="timeago" datetime="2012-04-03" pubdate>2012-04-03</time></p>
+    <h1>App idea - Unitask</h1>
+    </header>
+  <section>
+    <p>这个和前面一篇<a href="/posts/2012-02-02-app-idea.html">Motivated App</a>的想法有点类似.</p>
+<div>
+<img src="/images/unitask1.jpeg" title="Unitask" />
+</div>
+
+<div>
+<img src="/images/unitask2.jpeg" title="Unitask" />
+</div>
+
+<div>
+<img src="/images/unitask3.jpeg" title="Unitask" />
+</div>
+
+
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Tue, 03 Apr 2012 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2012-04-03-unitask.html</guid>
+</item>
+<item>
+    <title>iPad上的画图软件: paper</title>
+    <link>http://blog.fantasticsid.com/posts/2012-04-02-paper-ipad.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+    <p class="meta"><time class="timeago" datetime="2012-04-02" pubdate>2012-04-02</time></p>
+    <h1>iPad上的画图软件: paper</h1>
+    </header>
+  <section>
+    <p>我一直对有些blog上的涂鸦很感兴趣. 很多blog如xkcd中的图都是画在纸上然后扫描进电脑里的, 这个对于我来说又显得太麻烦了, 而且画画从来对我就是一件难事, 如何选颜色, 风格都是很难的问题.</p>
+<p>其实我对涂鸦的要求很低, 只要能够起到说明问题, 让人一目了然就可以. 昨天发现了这个app: paper by fiftythree</p>
+<p>这个app我想了下, 吸引我的原因主要是:</p>
+<pre><code>
+1. 选择少, 有几种画笔但是画笔不能选择粗细, 颜色只有固定的几种.
+
+2. 这些选择的效果都不错. 不同画笔风格互相弥补, 仅有的几种颜色搭配很协调.
+</code></pre>
+<p>看来对我这样的业余用户来说, 在简洁性和功能性上选择前者更具有吸引力.</p>
+<div>
+<img src="/images/expopiano.jpg" title="exponential piano" />
+</div>
+
+
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Mon, 02 Apr 2012 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2012-04-02-paper-ipad.html</guid>
+</item>
+<item>
+    <title>App idea - Motivated</title>
+    <link>http://blog.fantasticsid.com/posts/2012-02-02-app-idea.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+    <p class="meta"><time class="timeago" datetime="2012-02-02" pubdate>2012-02-02</time></p>
+    <h1>App idea - Motivated</h1>
+    </header>
+  <section>
+    <p>Admit it, you are simply not as good a multitasker as a computer, and sometimes you’ve got moods that keep you distracted and unable to finish even one task at hand. Your productivity plumets and as soon as you realize this the negative feeling only adds to the problem you already have.</p>
+<p>Enter Motivated, an iphone app that reminds you of the most important task you are supposed to finish.</p>
+<p>Features:</p>
+<ul>
+<li>Only one task allowed at a time</li>
+<li>Make commitment to your goal publicly</li>
+<li>Schedule notifications, useful for example, to get yourself motivated at the start of day</li>
+</ul>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Thu, 02 Feb 2012 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2012-02-02-app-idea.html</guid>
+</item>
+<item>
+    <title>IELTS Quizme</title>
+    <link>http://blog.fantasticsid.com/posts/2012-01-08-ielts-quizme.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+    <p class="meta"><time class="timeago" datetime="2012-01-08" pubdate>2012-01-08</time></p>
+    <h1>IELTS Quizme</h1>
+    </header>
+  <section>
+    <p>发布了第一个iOS app, IELTS Quizme. 帮助准备考雅思的同学复习词汇, 对希望增加词汇的同学也有帮助.</p>
+<p><a href="http://itunes.apple.com/us/app/ielts-quizme/id488641011">IELTS Quizme</a></p>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Sun, 08 Jan 2012 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2012-01-08-ielts-quizme.html</guid>
+</item>
+<item>
+    <title>2012新年计划</title>
+    <link>http://blog.fantasticsid.com/posts/2011-12-30-2012-resolutions.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+    <p class="meta"><time class="timeago" datetime="2011-12-30" pubdate>2011-12-30</time></p>
+    <h1>2012新年计划</h1>
+    </header>
+  <section>
+    <pre><code>
+定义新自己
+
+发布几个iOS应用
+
+看完Haskell的几本书, 写一个解释器/比较大的应用
+
+做机器学习的应用
+
+概率论, 组合数学, 分析, 线性代数各书习题重新做一遍
+
+搞个小提琴学
+
+练耳不靠谱
+
+要看的书:
+
+&lt;&lt;Learn you a haskell for great good&gt;&gt;
+
+&lt;&lt;Real world haskell&gt;&gt;
+
+&lt;&lt;Programming in haskell&gt;&gt;
+
+&lt;&lt;The Haskell Road to Logic, Math and Programming&gt;&gt;
+
+&lt;&lt;Purely functional data structures&gt;&gt;
+
+&lt;&lt;Pearls of functional algorithm design&gt;&gt;
+
+&lt;&lt;Introduction to algorithms&gt;&gt;
+
+&lt;&lt;Algorithms&gt;&gt;
+
+&lt;&lt;Structure and interpretation of computer programs&gt;&gt;
+
+&lt;&lt;Jazz theory book&gt;&gt;
+
+&lt;&lt;Javascript the good parts&gt;&gt;
+
+&lt;&lt;Clojure in action&gt;&gt;
+
+&lt;&lt;The joy of clojure&gt;&gt;
+
+&lt;&lt;Practical clojure&gt;&gt;
+
+&lt;&lt;Programming clojure&gt;&gt;
+
+&lt;&lt;Godel Escher Bach - an Eternal Golden Braid&gt;&gt;
+</code></pre>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Fri, 30 Dec 2011 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2011-12-30-2012-resolutions.html</guid>
+</item>
+<item>
+    <title>Arrow定理 - 没有合理的选举!</title>
+    <link>http://blog.fantasticsid.com/posts/2011-09-04-arrowstheorem.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+    <p class="meta"><time class="timeago" datetime="2011-09-04" pubdate>2011-09-04</time></p>
+    <h1>Arrow定理 - 没有合理的选举!</h1>
+    </header>
+  <section>
+    <p><a href="http://en.wikipedia.org/wiki/Arrow's_impossibility_theorem">Arrow定理</a>可能是博弈论中最著名的定理之一了, 还记得Rudolf在上课时用了整整1节多课证明了这个定理. 同时它的结论绝对能够吸引任何一个人, 难道现存的所有选举制度都是不合理的吗? 当然, 定理是有条件的, arrow定理也不例外, 但是arrow定理的条件让人觉得再自然不过了:</p>
+<p>首先设想, 一个选举中有多于3个候选人, {A, B, C…}, N个选民. 每一个选民对候选人给出一个排名(两两可比, 传递), 例如, B &gt; A &gt; C . 而一个选举制度是一个函数F, 它把N个选民对候选人的排名映射到一个“全社会”的排名.</p>
+<p>Arrow定理的条件:</p>
+<pre><code> 1.  Unanimity(全票通过),
+ 就是说, 如果所有选民觉得A &gt; B, 那么对选举的结果也有A &gt; B
+
+ 2.  Independence of irrelevant alternatives(IIA, 不相关候选者独立性),
+ 就是, 选举结果中, A和B的相对次序只和A, B在所有选民的排名中的次序相关, 而和C的排名是无关的
+
+ 3.  No dictatorship(没有独裁),
+ 就是, 不存在一个选民i, 他的排名决定了任何一对候选人A, B在选举结果中的排名.</code></pre>
+<p>以上条件我们通常都认为是一个公平选举制度所必须具有的性质, 但是arrow定理告诉我们, 同时满足这3个条件的选举制度是不存在的! 或者说, 如果要满足条件1, 2, 那么这个选举中就存在一个独裁的选民.</p>
+<p>首先我们来看一个结论: 如果每一个选民都把候选人B排列在最前, 或者最后面, 那么选举结果也将会把B放在排名最前或者最后, 而不是中间的某一个位置.</p>
+<p>其实这个结论就已经让我们觉得这个选举是不公平的, 因为假如有一半的选民认为B是最好的, 另外一半认为B是最差的, 那么理想的选举似乎应该把B放在排名中间某个位置, 而不是放在最好或者最差的排名上.</p>
+<p>证明:</p>
+<p>假设选举结果中B不是在最好或者最差的位置上, 即存在A, C, 使得A &gt; B &gt; C, 那么假设我们现在在每一个选民的排名中, 将C移动到A之前.</p>
+<pre><code> 根据条件Unanimity, 选举结果应该有C &gt; A.
+
+ 但是注意在每个选民的排名中, 由于B是在排名两端之一的,
+ 所以这个移动并不会影响BC, AB之间的排名,
+
+ 于是根据条件IIA, 选举结果中BC, AB的排名应该不受影响,
+ 于是A &gt; B, B &gt; C仍然应该成立. 由于选举结果是两两可比并且传递的, 于是有A &gt; C.</code></pre>
+<p>这是个矛盾, 因此就证明了, 选举结果中, B一定也是在排名的最前或者最后, 而不是中间某个位置. 待续…</p>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Sun, 04 Sep 2011 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2011-09-04-arrowstheorem.html</guid>
+</item>
+
+    </channel> 
+</rss>
