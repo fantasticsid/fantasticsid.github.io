@@ -27,7 +27,8 @@
     </header>
   <section>
     <ol style="list-style-type: decimal">
-<li>Eval Monad. 既然是Monad, 那么从计算的角度看, 应该是应该是包含了对一个普通计算如何并行的一个Context. 所以构造Eval Monad实例的过程就可以看成是构造并行Context的过程.</li>
+<li><p>介绍了并行计算和多线程计算的概念和区别. Haskell里面并行计算是有确定执行结果的(deterministic), 并且提供了Eval Monad, Par Monad, 以及如repa和accelerate等库. 而多线程计算则有MVar, STM, actor等的支持.</p></li>
+<li><p>Eval Monad. 既然是Monad, 那么从计算的角度看, 应该是应该是包含了对一个普通计算如何并行的一个Context. 所以构造Eval Monad实例的过程就可以看成是构造并行Context的过程.</p></li>
 </ol>
 <p>Haskell中的表达式都是惰性求值的, 程序当中的表达式运行时的表示也是通过thunk实现的. 即使是1 + 2这样简单的表达式, 也是惰性的.</p>
 <pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> x <span class="fu">=</span> <span class="dv">1</span> <span class="fu">+</span> <span class="dv">2</span>
