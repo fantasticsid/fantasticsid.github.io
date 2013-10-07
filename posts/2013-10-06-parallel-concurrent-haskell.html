@@ -113,6 +113,14 @@ parMap f (a<span class="fu">:</span>as) <span class="fu">=</span> <span class="k
 <li>fizzled</li>
 </ul>
 <p>表达式创建的时候并没有被求值, 但是之后程序的其余部分对其进行了求值. 这些spark也会被清理掉</p>
+<p>在sudoku的例子当中, 程序开始时读入数据分割行的部分不能并行化. 这也是并行加速度不能无限制上升的原因之一. (Amdahl’s law) 另一方面, Haskell的惰性求值使得数据一旦部分读入, 就可以开始处理, 而不必等到整个列表都生成以后才开始计算.</p>
+<p>Deepseq</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">force ::</span> <span class="dt">NFData</span> a <span class="ot">=&gt;</span> a <span class="ot">-&gt;</span> a</code></pre>
+<p>force函数使得一个表达式求值为normal form.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">class</span> <span class="dt">NFData</span> a <span class="kw">where</span>
+<span class="ot">  rnf ::</span> a <span class="ot">-&gt;</span> ()
+  rnf a <span class="fu">=</span> a <span class="ot">`seq`</span> ()</code></pre>
+<p>性能上, 对于一个表达式/数据结构, 求值到normal form通常要遍历整个结构, 所以复杂度是O(n)的, n是数据结构的大小. 而如果是seq, 则是常数复杂度的操作.</p>
   </section>
 
   <section id="comment">
