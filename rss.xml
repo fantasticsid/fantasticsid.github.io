@@ -6,8 +6,45 @@
         <description><![CDATA[mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music]]></description>
         <atom:link href="http://blog.fantasticsid.com/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sun, 06 Oct 2013 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Mon, 07 Oct 2013 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Love in its broadest interpretation</title>
+    <link>http://blog.fantasticsid.com/posts/2013-10-07-love-in-its-boradest-interpretation.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+    <p class="meta"><time class="timeago" datetime="2013-10-07" pubdate>2013-10-07</time></p>
+    <h1>Love in its broadest interpretation</h1>
+    </header>
+  <section>
+    <iframe width="420" height="315" src="//www.youtube.com/embed/z_3xuu7PzhA" frameborder="0" allowfullscreen></iframe>
+
+
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Mon, 07 Oct 2013 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2013-10-07-love-in-its-boradest-interpretation.html</guid>
+</item>
+<item>
     <title>Parallel and Concurrent Programming in Haskell 笔记</title>
     <link>http://blog.fantasticsid.com/posts/2013-10-06-parallel-concurrent-haskell.html</link>
     <description><![CDATA[<article>
@@ -1176,64 +1213,6 @@ my_sort(..., mycriterion);</code></pre>
 ]]></description>
     <pubDate>Fri, 30 Dec 2011 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2011-12-30-2012-resolutions.html</guid>
-</item>
-<item>
-    <title>Arrow定理 - 没有合理的选举!</title>
-    <link>http://blog.fantasticsid.com/posts/2011-09-04-arrowstheorem.html</link>
-    <description><![CDATA[<article>
-  <header>
-    <div class="content">
-    <p class="meta"><time class="timeago" datetime="2011-09-04" pubdate>2011-09-04</time></p>
-    <h1>Arrow定理 - 没有合理的选举!</h1>
-    </header>
-  <section>
-    <p><a href="http://en.wikipedia.org/wiki/Arrow's_impossibility_theorem">Arrow定理</a>可能是博弈论中最著名的定理之一了, 还记得Rudolf在上课时用了整整1节多课证明了这个定理. 同时它的结论绝对能够吸引任何一个人, 难道现存的所有选举制度都是不合理的吗? 当然, 定理是有条件的, arrow定理也不例外, 但是arrow定理的条件让人觉得再自然不过了:</p>
-<p>首先设想, 一个选举中有多于3个候选人, {A, B, C…}, N个选民. 每一个选民对候选人给出一个排名(两两可比, 传递), 例如, B &gt; A &gt; C . 而一个选举制度是一个函数F, 它把N个选民对候选人的排名映射到一个“全社会”的排名.</p>
-<p>Arrow定理的条件:</p>
-<pre><code> 1.  Unanimity(全票通过),
- 就是说, 如果所有选民觉得A &gt; B, 那么对选举的结果也有A &gt; B
-
- 2.  Independence of irrelevant alternatives(IIA, 不相关候选者独立性),
- 就是, 选举结果中, A和B的相对次序只和A, B在所有选民的排名中的次序相关, 而和C的排名是无关的
-
- 3.  No dictatorship(没有独裁),
- 就是, 不存在一个选民i, 他的排名决定了任何一对候选人A, B在选举结果中的排名.</code></pre>
-<p>以上条件我们通常都认为是一个公平选举制度所必须具有的性质, 但是arrow定理告诉我们, 同时满足这3个条件的选举制度是不存在的! 或者说, 如果要满足条件1, 2, 那么这个选举中就存在一个独裁的选民.</p>
-<p>首先我们来看一个结论: 如果每一个选民都把候选人B排列在最前, 或者最后面, 那么选举结果也将会把B放在排名最前或者最后, 而不是中间的某一个位置.</p>
-<p>其实这个结论就已经让我们觉得这个选举是不公平的, 因为假如有一半的选民认为B是最好的, 另外一半认为B是最差的, 那么理想的选举似乎应该把B放在排名中间某个位置, 而不是放在最好或者最差的排名上.</p>
-<p>证明:</p>
-<p>假设选举结果中B不是在最好或者最差的位置上, 即存在A, C, 使得A &gt; B &gt; C, 那么假设我们现在在每一个选民的排名中, 将C移动到A之前.</p>
-<pre><code> 根据条件Unanimity, 选举结果应该有C &gt; A.
-
- 但是注意在每个选民的排名中, 由于B是在排名两端之一的,
- 所以这个移动并不会影响BC, AB之间的排名,
-
- 于是根据条件IIA, 选举结果中BC, AB的排名应该不受影响,
- 于是A &gt; B, B &gt; C仍然应该成立. 由于选举结果是两两可比并且传递的, 于是有A &gt; C.</code></pre>
-<p>这是个矛盾, 因此就证明了, 选举结果中, B一定也是在排名的最前或者最后, 而不是中间某个位置. 待续…</p>
-  </section>
-
-  <section id="comment">
-
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-  </section>
-</article>
-]]></description>
-    <pubDate>Sun, 04 Sep 2011 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2011-09-04-arrowstheorem.html</guid>
 </item>
 
     </channel> 
