@@ -11,7 +11,6 @@ jQuery(document).ready(function($) {
 
     // Timeago
     $("time.timeago").timeago();
-		$().UItoTop({ easingType: 'easeOutExpo' });
 
     // Scroll to anchors
     $("a").each(function(idx) {
