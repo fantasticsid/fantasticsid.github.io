@@ -45,21 +45,21 @@ x <span class="fu">=</span> _
 <span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> z <span class="fu">=</span> swap(x, x <span class="fu">+</span> <span class="dv">1</span>)
 <span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint z
 z <span class="fu">=</span> _
-<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">seq</span> z ()
+<span class="dt">Prelude</span><span class="fu">&gt;</span> seq z ()
 ()
 <span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint z
 z <span class="fu">=</span> (_,_)
 <span class="dt">Prelude</span><span class="fu">&gt;</span></code></pre>
 <p>这里表达式z在seq之后, 被evaluate到第一个constructor, 也就是(,)</p>
 <p>一个更复杂的例子, 考虑map函数:</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="fu">map</span><span class="ot"> ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> [b]
-<span class="fu">map</span> f [] <span class="fu">=</span> []
-<span class="fu">map</span> f (x<span class="fu">:</span>xs) <span class="fu">=</span> f x <span class="fu">:</span> <span class="fu">map</span> f xs</code></pre>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">map<span class="ot"> ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> [b]
+map f [] <span class="fu">=</span> []
+map f (x<span class="fu">:</span>xs) <span class="fu">=</span> f x <span class="fu">:</span> map f xs</code></pre>
 <p>这里如果有表达式:</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> xs <span class="fu">=</span> <span class="fu">map</span> (<span class="fu">+</span> <span class="dv">1</span>) [<span class="dv">1</span><span class="fu">..</span><span class="dv">10</span>]
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> xs <span class="fu">=</span> map (<span class="fu">+</span> <span class="dv">1</span>) [<span class="dv">1</span><span class="fu">..</span><span class="dv">10</span>]
 <span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint xs
 xs <span class="fu">=</span> _
-<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">seq</span> xs ()
+<span class="dt">Prelude</span><span class="fu">&gt;</span> seq xs ()
 ()
 <span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint xs
 xs <span class="fu">=</span> _ <span class="fu">:</span> _
@@ -77,30 +77,30 @@ xs <span class="fu">=</span> _ <span class="fu">:</span> _
   b <span class="ot">&lt;-</span> rpar (f y)
   rseq a
   rseq b
-  <span class="fu">return</span> (a, b)</code></pre>
+  return (a, b)</code></pre>
 <p>这种用法中, f x和f y并行求值, 但是整个表达式(a, b)在这两个运算完成后才返回.</p>
 <p>并行数独, 这个例子演示了如何用Eval Monad并行计算若干个数独问题的解.</p>
 <p>值得注意的是, 代码中:</p>
 <pre class="sourceCode haskell"><code class="sourceCode haskell">solutions <span class="fu">=</span> runEval <span class="fu">$</span> <span class="kw">do</span>
-              as' <span class="ot">&lt;-</span> rpar (force (<span class="fu">map</span> solve as))
-              bs' <span class="ot">&lt;-</span> rpar (force (<span class="fu">map</span> solve bs))
+              as' <span class="ot">&lt;-</span> rpar (force (map solve as))
+              bs' <span class="ot">&lt;-</span> rpar (force (map solve bs))
               rseq as'
               rseq bs'
-              <span class="fu">return</span> (as' <span class="fu">++</span> bs')</code></pre>
+              return (as' <span class="fu">++</span> bs')</code></pre>
 <p>这里如果省略掉了force, 那么map solve as只会求值到WHNF, 也就是第一个(:)就结束了.</p>
 <p>这事实上会导致返回的表达式在最终计算数独解法个数的时候:</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="fu">print</span> (<span class="fu">length</span> (<span class="fu">filter</span> isJust solutions))</code></pre>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">print (length (filter isJust solutions))</code></pre>
 <p>才被真正的计算出来. 这样就失去了用Eval Monad进行并行化的意义了.</p>
 <p>而force将一个表达式求值为NF (normal form).</p>
 <pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">force ::</span> <span class="dt">NFData</span> a <span class="ot">=&gt;</span> a <span class="ot">-&gt;</span> a</code></pre>
 <p>parMap: 为了增加并行的粒度</p>
 <p>它的定义十分直接:</p>
 <pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">parMap ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> <span class="dt">Eval</span> [b]
-parMap f [] <span class="fu">=</span> <span class="fu">return</span>
+parMap f [] <span class="fu">=</span> return
 parMap f (a<span class="fu">:</span>as) <span class="fu">=</span> <span class="kw">do</span>
   b <span class="ot">&lt;-</span> rpar (f a)
   bs <span class="ot">&lt;-</span> parMap f as
-  <span class="fu">return</span> (b<span class="fu">:</span>bs)</code></pre>
+  return (b<span class="fu">:</span>bs)</code></pre>
 <p>每一次使用rpar的时候, 我们都在创建spark, 这些spark在系统的一个spark池中. 而它们最终可能有多种结果:</p>
 <ul>
 <li>overflowed</li>
