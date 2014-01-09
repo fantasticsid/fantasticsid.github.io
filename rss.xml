@@ -23,6 +23,8 @@
 Persist: C++的persistent data structure
 
 RapLisp: 基于LLVM的lisp编译器
+
+Topcoder的rating上1500
 </code></pre>
 <p>去年的完成情况, 还是不太好, 按照0-5打分:</p>
 <pre><code>深入研究Haskell, wiki上的页面基本都要有个了解, 能用Haskell写高效后台应用. 3 (写了LilyLisp)
