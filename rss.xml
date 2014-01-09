@@ -18,7 +18,6 @@
     </header>
   <section>
     <p>今年还是要继续C++, Haskell, Algorithms, Distributed Systems, High Throughput, Low Latency, Compiler, Type Systems</p>
-<p><a href="http://2014.fantasticsid.com/">MY PLAN TO BECOME AWESOME IN 2014</a></p>
 <pre><code>Fritz: Haskell实现的简单pubsub server
 
 Persist: C++的persistent data structure
@@ -27,6 +26,11 @@ RapLisp: 基于LLVM的lisp编译器
 
 Topcoder的rating上1500
 </code></pre>
+<iframe src='http://padlet.com/embed/9r22docat' frameborder='0' width='100%' height='480px' style='padding:0;margin:0;border:none'></iframe><div style='border-top:2px solid #a7d23a;padding:8px;margin:0;font-size:12px;text-align:right'>
+<a href='http://padlet.com' style='color:#41555f;text-decoration:none'>Created with Padlet<img valign='middle' style='margin:0 0 0 10px;padding:0;border:none;width:16px;height:16px' src='http://padlet.com/favicon.ico'></a>
+</div>
+
+
 <p>去年的完成情况, 还是不太好, 按照0-5打分:</p>
 <pre><code>深入研究Haskell, wiki上的页面基本都要有个了解, 能用Haskell写高效后台应用. 3 (写了LilyLisp)
 
