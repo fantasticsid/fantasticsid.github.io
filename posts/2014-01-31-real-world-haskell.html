@@ -254,6 +254,78 @@ greaterP <span class="fu">=</span> liftP (<span class="fu">&gt;</span>)
 lesserP <span class="fu">=</span> liftP (<span class="fu">&lt;</span>)</code></pre>
 <pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">liftPath ::</span> (FilePath <span class="ot">-&gt;</span> a) <span class="ot">-&gt;</span> <span class="dt">InfoP</span> a
 liftPath f w _ _ _ <span class="fu">=</span> f w</code></pre>
+<ol start="28" style="list-style-type: decimal">
+<li>Software Transactional Memory</li>
+</ol>
+<p>传统的并发是基于锁和条件变量的, 而使用过程中会有各种问题:</p>
+<ul>
+<li>忘了锁的释放</li>
+<li>加锁顺序的问题导致思索</li>
+<li>异常处理</li>
+<li>忘了唤醒等待线程</li>
+</ul>
+<p>STM代表一个事务, 他们之间可以组合, 并且最终通过atomically在IO monad中执行, 而STM之间的执行是相互分离的.</p>
+<p>一个STM完成时, 会发生这几件事之一:</p>
+<ul>
+<li><p>如果其他线程没有对STM修改的数据进行修改, 则STM的修改同时生效</p></li>
+<li><p>否则, STM会重启</p></li>
+</ul>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Item</span> <span class="fu">=</span> <span class="dt">Scroll</span>
+          <span class="fu">|</span> <span class="dt">Wand</span>
+          <span class="fu">|</span> <span class="dt">Banjo</span>
+            <span class="kw">deriving</span> (<span class="dt">Eq</span>, <span class="dt">Ord</span>, <span class="dt">Show</span>)
+
+<span class="kw">newtype</span> <span class="dt">Gold</span> <span class="fu">=</span> <span class="dt">Gold</span> <span class="dt">Int</span>
+    <span class="kw">deriving</span> (<span class="dt">Eq</span>, <span class="dt">Ord</span>, <span class="dt">Show</span>, <span class="dt">Num</span>)
+
+<span class="kw">newtype</span> <span class="dt">HitPoint</span> <span class="fu">=</span> <span class="dt">HitPoint</span> <span class="dt">Int</span>
+    <span class="kw">deriving</span> (<span class="dt">Eq</span>, <span class="dt">Ord</span>, <span class="dt">Show</span>, <span class="dt">Num</span>)
+
+<span class="kw">type</span> <span class="dt">Inventory</span> <span class="fu">=</span> <span class="dt">TVar</span> [<span class="dt">Item</span>]
+<span class="kw">type</span> <span class="dt">Health</span> <span class="fu">=</span> <span class="dt">TVar</span> <span class="dt">HitPoint</span>
+<span class="kw">type</span> <span class="dt">Balance</span> <span class="fu">=</span> <span class="dt">TVar</span> <span class="dt">Gold</span>
+
+<span class="kw">data</span> <span class="dt">Player</span> <span class="fu">=</span> <span class="dt">Player</span> {
+<span class="ot">    balance ::</span> <span class="dt">Balance</span>,
+<span class="ot">    health ::</span> <span class="dt">Health</span>,
+<span class="ot">    inventory ::</span> <span class="dt">Inventory</span>
+}</code></pre>
+<p>一些API:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">atomically ::</span> <span class="dt">STM</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+
+<span class="ot">newTVar ::</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> (<span class="dt">TVar</span> a)
+
+<span class="ot">readTVar ::</span> <span class="dt">TVar</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> a
+
+<span class="ot">writeTVar ::</span> <span class="dt">TVar</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> ()
+
+<span class="ot">retry ::</span> <span class="dt">STM</span> a</code></pre>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">transfer ::</span> <span class="dt">Gold</span> <span class="ot">-&gt;</span> <span class="dt">Balance</span> <span class="ot">-&gt;</span> <span class="dt">Balance</span> <span class="ot">-&gt;</span> <span class="dt">STM</span> ()
+
+transfer qty fromBal toBal <span class="fu">=</span> <span class="kw">do</span>
+  fromQty <span class="ot">&lt;-</span> readTVar fromBal
+  when (qty <span class="fu">&gt;</span> fromQty) <span class="fu">$</span>
+    retry
+  writeTVar fromBal (fromQty <span class="fu">-</span> qty)
+  readTVar toBal <span class="fu">&gt;&gt;=</span> writeTVar toBal <span class="fu">.</span> (qty <span class="fu">+</span>)</code></pre>
+<p>retry在重启一个STM的时候, 会阻塞在之前改变的TVar上, 直到其中一个有改变.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">orElse ::</span> <span class="dt">STM</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> a</code></pre>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">someAction ::</span> <span class="dt">IO</span> a
+
+<span class="ot">stmTransaction ::</span> <span class="dt">STM</span> (<span class="dt">IO</span> a)
+stmTransaction <span class="fu">=</span> return someAction
+
+<span class="ot">doSomething ::</span> <span class="dt">IO</span> a
+doSomething <span class="fu">=</span> join (atomically stmTransaction)</code></pre>
+<p>也可以在STM中进行IO操作</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">unsafeIOToSTM ::</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> a</code></pre>
+<p>但是用了它STM存在的意义就少了一半了.</p>
+<p>Pattern guards</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">{-# LANGUAGE PatternGuards #-}</span>
+testme x xs <span class="fu">|</span> <span class="dt">Just</span> y <span class="ot">&lt;-</span> lookup x xs, y <span class="fu">&gt;</span> <span class="dv">3</span> <span class="fu">=</span> y <span class="fu">|</span> otherwise <span class="fu">=</span><span class="dv">0</span></code></pre>
+<p>Invariant</p>
+<p>STM存在的意义在于, 我们能够更容易地写出保持invariant的代码.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">alwaysSucceeds ::</span> <span class="dt">STM</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> ()</code></pre>
   </section>
 
   <section id="comment">
