@@ -880,6 +880,85 @@ bracket before after thing <span class="fu">=</span>
     r <span class="ot">&lt;-</span> restore (thing a) <span class="ot">`onException`</span> after a
     _ <span class="ot">&lt;-</span> after a
     return r</code></pre>
+<p>回顾我们之前定义的readChan</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">readChan ::</span> <span class="dt">Chan</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+readChan (<span class="dt">Chan</span> readVar _) <span class="fu">=</span> <span class="kw">do</span>
+  stream <span class="ot">&lt;-</span> takeMVar readVar
+  <span class="dt">Item</span> val new <span class="ot">&lt;-</span> readMVar stream
+  putMVar readVar new
+  return val</code></pre>
+<p>第一个takeMVar之后如果发生了异步异常, 则readVar就会永远是空, 造成死锁, 可以用modifyMVar:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">readChan ::</span> <span class="dt">Chan</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+readChan (<span class="dt">Chan</span> readVar _) <span class="fu">=</span> <span class="kw">do</span>
+  modifyMVar readVar <span class="fu">$</span> \stream <span class="ot">-&gt;</span> <span class="kw">do</span>
+    <span class="dt">Item</span> val tail <span class="ot">&lt;-</span> readMVar stream
+    return (tail, val)</code></pre>
+<p>还有个问题, 就是readMVar其实也不是异步异常安全的:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">readMVar ::</span> <span class="dt">MVar</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+readMVar m <span class="fu">=</span> <span class="kw">do</span>
+  a <span class="ot">&lt;-</span> takeMVar m
+  putMVar m a
+  return a</code></pre>
+<p>我们仍然可以用modifyMVar, 也可以用withMVar:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">withMVar ::</span> <span class="dt">MVar</span> a <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> <span class="dt">IO</span> b) <span class="ot">-&gt;</span> <span class="dt">IO</span> b</code></pre>
+<p>而Control.Concurrent.MVar是这么定义的:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">readMVar ::</span> <span class="dt">MVar</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+readMVar m <span class="fu">=</span>
+  mask_ <span class="fu">$</span> <span class="kw">do</span>
+    a <span class="ot">&lt;-</span> takeMVar m
+    putMVar m a
+    return a</code></pre>
+<p>我们之前顶一个的writeChan的异步异常安全的实现是:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">writeChan ::</span> <span class="dt">Chan</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> ()
+writeChan (<span class="dt">Chan</span> _ writeVar) val <span class="fu">=</span> <span class="kw">do</span>
+  newHole <span class="ot">&lt;-</span> newEmptyMVar
+  mask_ <span class="fu">$</span> <span class="kw">do</span>
+    oldHole <span class="ot">&lt;-</span> takeMVar writeVar
+    putMVar oldHole (<span class="dt">Item</span> val newHole)
+    putMVar writeVar newHole</code></pre>
+<p>超时: 我们希望能够让一个IO运算在一定时间内完成:</p>
+<p>如果IO a在一定时间内没有完成, 那么我们会给他抛出一个Timeout u的异步异常, 并且timeout返回Nothing. timeout的实现是forkIO出另外一个线程, 这个线程在一定时间之后, 会向自己抛异步异常. 但是如果本线程在超时之前完成, 则会抛出异步异常给这个创建出来的线程以结束它. 我们不能在另外一个线程里执行IO a的原因是: 1. IO a可能调用myThreadId, 而这个调用应该期望返回调用timeout的线程的id. 2. 如果调用timeout的线程被异步线程中断, 这个IO a也应该被中断.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">timeout ::</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> (<span class="dt">Maybe</span> a)
+timeout t m
+  <span class="fu">|</span> t <span class="fu">&lt;</span> <span class="dv">0</span> <span class="fu">=</span> fmap <span class="dt">Just</span> m
+  <span class="fu">|</span> t <span class="fu">==</span> <span class="dv">0</span> <span class="fu">=</span> return <span class="dt">Nothing</span>
+  <span class="fu">|</span> otherwise <span class="fu">=</span> <span class="kw">do</span>
+    pid <span class="ot">&lt;-</span> myThreadId
+    u <span class="ot">&lt;-</span> newUnique
+    <span class="kw">let</span> ex <span class="fu">=</span> <span class="dt">Timeout</span> u
+    handleJust
+      (\e <span class="ot">-&gt;</span> <span class="kw">if</span> e <span class="fu">==</span> ex <span class="kw">then</span> <span class="dt">Just</span> () <span class="kw">else</span> <span class="dt">Nothing</span>)
+      (\_ <span class="ot">-&gt;</span> return <span class="dt">Nothing</span>)
+      (bracket (forkIO <span class="fu">$</span> <span class="kw">do</span> threadDelay t
+                            throwTo pid ex)
+               (\tid <span class="ot">-&gt;</span> throwTo tid <span class="dt">ThreadKilled</span>)
+               (\_ <span class="ot">-&gt;</span> fmap <span class="dt">Just</span> m))
+
+<span class="ot">handleJust ::</span> <span class="dt">Exception</span> e <span class="ot">=&gt;</span> (e <span class="ot">-&gt;</span> <span class="dt">Maybe</span> b) <span class="ot">-&gt;</span> (b <span class="ot">-&gt;</span> <span class="dt">IO</span> a) <span class="ot">-&gt;</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a</code></pre>
+<p>handleJust只会处理Timeout u这个exception, 其他情况(Nothing)会重新抛出异常. 而如果是Timeout异常, 在下面return Nothing.</p>
+<p>里面的IO a比较复杂, 用到了bracket保证forkIO出来的线程一定会被回收掉. 而这个线程做的事情就是等待t, 然后向原来的线程抛出Timeout. 这里要不就是原来的线程在t时间内结束, 然后给子线程抛出ThreadKilled, 要不就是超时后, 子线程抛出Timeout异步异常.</p>
+<p>当然还有感觉会是race的情况: 如果两个线程同时给对方抛出异步异常会发生什么? 答案在于, throwTo是同步的, 也就是异常在目标线程上触发以后才会返回, 这样就不会发生一个线程已经给另外一个线程抛出异常, 然后自己又接收到这个线程抛过来的异常. 而且, throwTo在目标线程mask的时候会block, 而这个过程中又恰巧能够被异步异常打断. 这个就能保证, 无论如何, 只有一个线程能够成功把异步异常抛给对方.</p>
+<p>如果在异常handler里面接受到异步异常怎么办? 我们可以把异常处理放在mask里面.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">mask <span class="fu">$</span> \restore <span class="ot">-&gt;</span>
+  restore action <span class="ot">`catch`</span> handler</code></pre>
+<p>为了处理异步异常, 之前的Async函数也要重新写过:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">async ::</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> (<span class="dt">Async</span> a)
+async action <span class="fu">=</span> <span class="kw">do</span>
+  m <span class="ot">&lt;-</span> newEmptyMVar
+  t <span class="ot">&lt;-</span> mask <span class="fu">$</span> \restore <span class="ot">-&gt;</span>
+    forkIO (<span class="kw">do</span> r <span class="ot">&lt;-</span> try (restore action); putMVar m r)
+  return (<span class="dt">Async</span> t m)</code></pre>
+<p>这里, forkIO出来的线程会继承父线程的mask状态, 也就是它刚刚被创建就是异步异常被mask状态. 这是把mask放到子线程做不到的.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">forkFinally ::</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> (<span class="dt">Either</span> <span class="dt">SomeException</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> ()) <span class="ot">-&gt;</span> <span class="dt">IO</span> <span class="dt">ThreadId</span>
+forkFinally action fun <span class="fu">=</span>
+  mask <span class="fu">$</span> \restore <span class="ot">-&gt;</span>
+    forkIO (<span class="kw">do</span> r <span class="ot">&lt;-</span> try (restore action); fun r)
+
+<span class="ot">async ::</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> (<span class="dt">Async</span> a)
+async action <span class="fu">=</span> <span class="kw">do</span>
+  m <span class="ot">&lt;-</span> newEmptyMVar
+  t <span class="ot">&lt;-</span> forkFinally action (putMVar m)
+  return (<span class="dt">Async</span> t m)</code></pre>
   </section>
 
   <section id="comment">
