@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="../stylesheets/screen.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
 
-    <link href="http://fonts.googleapis.com/css?family=Oxygen&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Oxygen⊂=latin,latin-ext" rel="stylesheet" type="text/css">
 
     <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
   </head>
@@ -32,7 +32,22 @@
 <p>这里可以看到, Kleisli这个高阶类型需要三个参数, 其中, 第二个参数m也是一个高阶类型, 可以是Maybe, [], IO等等. 而这个类型代表的是一个函数, 输入类型为a, 输出类型为m b.</p>
 <p>这里多提一句, 我们其实可以把右端改写成:</p>
 <pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">Kleisli</span> m a b <span class="fu">=</span> (<span class="ot">-&gt;</span>) a (m b)</code></pre>
-<p>这样是不是就根本没啥神奇了, Kleisli就是对(-&gt;)这个高阶类型的一个别名.</p>
+<p>这样是不是就根本没啥神奇了, Kleisli就是对(-&gt;)这个高阶类型的一个别名. 而它本身代表了一个计算, 一个输入类型为a, 输出类型为b的计算. 我们对这种计算进行抽象, 得到Arrow的定义:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">class</span> <span class="dt">Arrow</span> arr <span class="kw">where</span>
+<span class="ot">  arr ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> arr a b
+<span class="ot">  (&gt;&gt;&gt;) ::</span> arr a b <span class="ot">-&gt;</span> arr b c <span class="ot">-&gt;</span> arr a c</code></pre>
+<p>看起来类型比较复杂, 但其实也很好理解. arr(Arrow arr这里)代表一个计算, 那么arr(typeclass function)代表了如何把一个函数lift到Arrow中, 这个和Monad的return类似. 而&gt;&gt;&gt;这个运算是对计算进行组合, 这个和Monad的&gt;&gt;=有点类似(这里并不严格, 只是希望能有一些类比).</p>
+<p>既然Arrow代表计算, 那么普通函数也当然是一个计算, 我们来看看普通函数的typeclass instance是如何实现的:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">instance</span> <span class="dt">Arrow</span> (<span class="ot">-&gt;</span>) <span class="kw">where</span>
+  arr <span class="fu">=</span> id
+  (<span class="fu">&gt;&gt;&gt;</span>) <span class="fu">=</span> flip (<span class="fu">.</span>)</code></pre>
+<p>这里有一些规律可以帮助我们理解: 1. 注意到(-&gt;)的kind是* -&gt; * -&gt; *, 即需要两个类型参数的高阶类型. 我们把(-&gt;)带入Arrow的typeclass定义发现, 需要定义的函数的类型:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">arr ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> (<span class="ot">-&gt;</span>) a b
+<span class="ot">(&gt;&gt;&gt;) ::</span> (<span class="ot">-&gt;</span>) a b <span class="ot">-&gt;</span> (<span class="ot">-&gt;</span>) b c <span class="ot">-&gt;</span> (<span class="ot">-&gt;</span>) a c</code></pre>
+<p>如果我们把(-&gt;)写成Infix notation, 那么就得到了:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">arr ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> b)
+<span class="ot">(&gt;&gt;&gt;) ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> (b <span class="ot">-&gt;</span> c) <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> c)</code></pre>
+<p>容易看到, (&gt;&gt;&gt;)和function composition(.)的类型是差不多的, 只是两个函数的顺序调换了一下.</p>
   </section>
 
   <section id="comment">
