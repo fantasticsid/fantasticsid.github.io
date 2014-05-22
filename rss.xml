@@ -1015,6 +1015,12 @@ async action <span class="fu">=</span> <span class="kw">do</span>
 <pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">arr ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> b)
 <span class="ot">(&gt;&gt;&gt;) ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> (b <span class="ot">-&gt;</span> c) <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> c)</code></pre>
 <p>容易看到, (&gt;&gt;&gt;)和function composition(.)的类型是差不多的, 只是两个函数的顺序调换了一下.</p>
+<p>现在我们来看一下Kleisli的Arrow instance定义:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">newtype</span> <span class="dt">Kleisli</span> m a b <span class="fu">=</span> <span class="dt">Kleisli</span> {<span class="ot">runKleisli ::</span> a <span class="ot">-&gt;</span> m b}
+<span class="kw">instance</span> <span class="dt">Monad</span> m <span class="ot">=&gt;</span> <span class="dt">Arrow</span> (<span class="dt">Kleisli</span> m) <span class="kw">where</span>
+  arr f <span class="fu">=</span> <span class="dt">Kleisli</span> <span class="fu">$</span> return <span class="fu">.</span> f
+  (runKleisli f) (<span class="fu">&gt;&gt;&gt;</span>) (runKleisli g) <span class="fu">=</span> <span class="dt">Kleisli</span> (\a <span class="ot">-&gt;</span> <span class="kw">do</span> r <span class="ot">&lt;-</span> f a
+                                                          return <span class="fu">$</span> g r)</code></pre>
   </section>
 
   <section id="comment">
