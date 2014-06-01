@@ -20,5 +20,5 @@ jQuery(document).ready(function($) {
     }); 
 
   // header
-  $(".headroom-header").headroom();
+  $(".headroom-header").headroom({tolerance: 5});
 });
