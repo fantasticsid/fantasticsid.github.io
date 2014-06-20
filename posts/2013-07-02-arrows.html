@@ -65,6 +65,21 @@
   arr f <span class="fu">=</span> <span class="dt">Kleisli</span> <span class="fu">$</span> return <span class="fu">.</span> f
   (runKleisli f) (<span class="fu">&gt;&gt;&gt;</span>) (runKleisli g) <span class="fu">=</span> <span class="dt">Kleisli</span> (\a <span class="ot">-&gt;</span> <span class="kw">do</span> r <span class="ot">&lt;-</span> f a
                                                           return <span class="fu">$</span> g r)</code></pre>
+<p>除了Kleisli之外, 我们还能找到其他的Arrow instance:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">newtype</span> <span class="dt">SF</span> a b <span class="fu">=</span> <span class="dt">SF</span> {<span class="ot">runSF ::</span> [a] <span class="ot">-&gt;</span> [b]}
+
+<span class="kw">instance</span> <span class="dt">Arrow</span> <span class="dt">SF</span> <span class="kw">where</span>
+  arr f <span class="fu">=</span> <span class="dt">SF</span> (map f)
+  <span class="dt">SF</span> f <span class="fu">&gt;&gt;&gt;</span> <span class="dt">SF</span> g <span class="fu">=</span> <span class="dt">SF</span> (f <span class="fu">&gt;&gt;&gt;</span> g)</code></pre>
+<p>这里我们再从类型角度来分析一下:</p>
+<p>对于SF来说(stream function), Arrow instance当中&gt;&gt;&gt;的类型应该是:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="fu">&gt;&gt;&gt;</span><span class="ot"> ::</span> <span class="dt">SF</span> a b <span class="ot">-&gt;</span> <span class="dt">SF</span> b c <span class="ot">-&gt;</span> <span class="dt">SF</span> a c</code></pre>
+<p>现在已知SF代表了一个函数, SF f当中, f的类型是[a] -&gt; [b], SF g中, g的类型是[b] -&gt; [c], 对这两个函数进行组合, 就能得到类型为[a] -&gt; [c]的函数. 而函数也是Arrow instance. 所以这样就得到了SF的&gt;&gt;&gt;实现.</p>
+<p>Arrow和Monad一样, 也满足一些定律. 不同的是, Monad有三个定律, 但是Arrow有至少20个定律…</p>
+<p>现在我们得到的Arrow并不能做如下Monad实现的功能:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">addM a b <span class="fu">=</span> <span class="kw">do</span> x <span class="ot">&lt;-</span> a
+              y <span class="ot">&lt;-</span> b
+              return (x <span class="fu">+</span> y)</code></pre>
   </section>
 
   <section id="comment">
