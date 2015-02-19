@@ -6,8 +6,47 @@
         <description><![CDATA[mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music]]></description>
         <atom:link href="http://blog.fantasticsid.com/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Fri, 31 Jan 2014 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Thu, 19 Feb 2015 00:00:00 UT</lastBuildDate>
         <item>
+    <title>2015新年计划</title>
+    <link>http://blog.fantasticsid.com/posts/2015-02-19-2015-resolution.html</link>
+    <description><![CDATA[<article>
+  <header>
+    <div class="content">
+    <p class="meta"><time class="timeago" datetime="2015-02-19" pubdate>2015-02-19</time></p>
+    <h1>2015新年计划</h1>
+    </header>
+  <section>
+    <pre><code>好好工作
+
+写关于音乐的App</code></pre>
+<p>去年的完成情况:</p>
+<p>不列出来了&gt;&lt;’ 但貌似刷题是有效的..</p>
+  </section>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+]]></description>
+    <pubDate>Thu, 19 Feb 2015 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2015-02-19-2015-resolution.html</guid>
+</item>
+<item>
     <title>Real World Haskell 笔记</title>
     <link>http://blog.fantasticsid.com/posts/2014-01-31-real-world-haskell.html</link>
     <description><![CDATA[<article>
@@ -1893,42 +1932,6 @@ my_sort(..., mycriterion);</code></pre>
 ]]></description>
     <pubDate>Thu, 02 Feb 2012 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2012-02-02-app-idea.html</guid>
-</item>
-<item>
-    <title>IELTS Quizme</title>
-    <link>http://blog.fantasticsid.com/posts/2012-01-08-ielts-quizme.html</link>
-    <description><![CDATA[<article>
-  <header>
-    <div class="content">
-    <p class="meta"><time class="timeago" datetime="2012-01-08" pubdate>2012-01-08</time></p>
-    <h1>IELTS Quizme</h1>
-    </header>
-  <section>
-    <p>发布了第一个iOS app, IELTS Quizme. 帮助准备考雅思的同学复习词汇, 对希望增加词汇的同学也有帮助.</p>
-<p><a href="http://itunes.apple.com/us/app/ielts-quizme/id488641011">IELTS Quizme</a></p>
-  </section>
-
-  <section id="comment">
-
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-  </section>
-</article>
-]]></description>
-    <pubDate>Sun, 08 Jan 2012 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2012-01-08-ielts-quizme.html</guid>
 </item>
 
     </channel> 
