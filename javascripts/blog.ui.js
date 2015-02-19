@@ -18,7 +18,4 @@ jQuery(document).ready(function($) {
         $(this).anchorScroll({fx: 'easeOutExpo'});
       }
     }); 
-
-  // header
-  $(".headroom-header").headroom({tolerance: 5});
 });

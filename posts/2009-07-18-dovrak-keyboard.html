@@ -10,23 +10,12 @@
     <link rel="stylesheet" type="text/css" media="all" href="../stylesheets/screen.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
 
-    <link href="http://fonts.googleapis.com/css?family=Oxygen⊂=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Oxygen&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
     <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
   </head>
-  
 
   <body class="post">
-
-    <header id="header" class="headroom-header">
-      <div class="contact">
-        <a href="../" title="home">home</a>
-        <a href="../code.html" title="code">code</a>
-        <a href="../about.html" title="about fantasticsid">about</a>
-        <a href="../rss.xml" title="subscribe">rss</a>
-      </div>
-    </header>
-
     <div id="bodywrapper">
 
       <div class="container">
@@ -68,8 +57,8 @@ f = <span class="dt">open</span>(<span class="st">'./words.txt'</span>, <span cl
 	<span class="kw">if</span> qwerty(w[:-<span class="dv">1</span>]):
 		qwen = qwen + <span class="dv">1</span>
 
-<span class="dt">print</span> <span class="st">'dvorak:'</span>, dvon
-<span class="dt">print</span> <span class="st">'qwerty:'</span>, qwen</code></pre>
+<span class="kw">print</span> <span class="st">'dvorak:'</span>, dvon
+<span class="kw">print</span> <span class="st">'qwerty:'</span>, qwen</code></pre>
 <p>程序的输出如下 :</p>
 <pre class="numberLines"><code>dvorak: 3481
 qwerty: 220</code></pre>
@@ -98,6 +87,15 @@ qwerty: 220</code></pre>
 
       </div>
 
+      <footer>
+          <div class="contact">
+            <a href="../" title="home">home</a>
+            <a href="../code.html" title="code">code</a>
+            <a href="../about.html" title="about fantasticsid">about</a>
+            <a href="../rss.xml" title="subscribe">rss</a>
+          </div>
+      </footer>
+
     </div>
 
     <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
@@ -105,7 +103,5 @@ qwerty: 220</code></pre>
     <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
     <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
     <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
-    <script type="text/javascript" src="../javascripts/headroom.js"></script>
-    <script type="text/javascript" src="../javascripts/jQuery.headroom.js"></script>
   </body>
 </html>
