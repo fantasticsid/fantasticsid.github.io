@@ -10,12 +10,23 @@
     <link rel="stylesheet" type="text/css" media="all" href="../stylesheets/screen.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
 
-    <link href="http://fonts.googleapis.com/css?family=Oxygen&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Oxygen⊂=latin,latin-ext" rel="stylesheet" type="text/css">
 
     <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
   </head>
+  
 
   <body class="post">
+
+    <header id="header" class="headroom-header">
+      <div class="contact">
+        <a href="../" title="home">home</a>
+        <a href="../code.html" title="code">code</a>
+        <a href="../about.html" title="about fantasticsid">about</a>
+        <a href="../rss.xml" title="subscribe">rss</a>
+      </div>
+    </header>
+
     <div id="bodywrapper">
 
       <div class="container">
@@ -32,7 +43,43 @@
 <p>这里可以看到, Kleisli这个高阶类型需要三个参数, 其中, 第二个参数m也是一个高阶类型, 可以是Maybe, [], IO等等. 而这个类型代表的是一个函数, 输入类型为a, 输出类型为m b.</p>
 <p>这里多提一句, 我们其实可以把右端改写成:</p>
 <pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">Kleisli</span> m a b <span class="fu">=</span> (<span class="ot">-&gt;</span>) a (m b)</code></pre>
-<p>这样是不是就根本没啥神奇了, Kleisli就是对(-&gt;)这个高阶类型的一个别名.</p>
+<p>这样是不是就根本没啥神奇了, Kleisli就是对(-&gt;)这个高阶类型的一个别名. 而它本身代表了一个计算, 一个输入类型为a, 输出类型为b的计算. 我们对这种计算进行抽象, 得到Arrow的定义:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">class</span> <span class="dt">Arrow</span> arr <span class="kw">where</span>
+<span class="ot">  arr ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> arr a b
+<span class="ot">  (&gt;&gt;&gt;) ::</span> arr a b <span class="ot">-&gt;</span> arr b c <span class="ot">-&gt;</span> arr a c</code></pre>
+<p>看起来类型比较复杂, 但其实也很好理解. arr(Arrow arr这里)代表一个计算, 那么arr(typeclass function)代表了如何把一个函数lift到Arrow中, 这个和Monad的return类似. 而&gt;&gt;&gt;这个运算是对计算进行组合, 这个和Monad的&gt;&gt;=有点类似(这里并不严格, 只是希望能有一些类比).</p>
+<p>既然Arrow代表计算, 那么普通函数也当然是一个计算, 我们来看看普通函数的typeclass instance是如何实现的:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">instance</span> <span class="dt">Arrow</span> (<span class="ot">-&gt;</span>) <span class="kw">where</span>
+  arr <span class="fu">=</span> id
+  (<span class="fu">&gt;&gt;&gt;</span>) <span class="fu">=</span> flip (<span class="fu">.</span>)</code></pre>
+<p>这里有一些规律可以帮助我们理解: 1. 注意到(-&gt;)的kind是* -&gt; * -&gt; *, 即需要两个类型参数的高阶类型. 我们把(-&gt;)带入Arrow的typeclass定义发现, 需要定义的函数的类型:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">arr ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> (<span class="ot">-&gt;</span>) a b
+<span class="ot">(&gt;&gt;&gt;) ::</span> (<span class="ot">-&gt;</span>) a b <span class="ot">-&gt;</span> (<span class="ot">-&gt;</span>) b c <span class="ot">-&gt;</span> (<span class="ot">-&gt;</span>) a c</code></pre>
+<p>如果我们把(-&gt;)写成Infix notation, 那么就得到了:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">arr ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> b)
+<span class="ot">(&gt;&gt;&gt;) ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> (b <span class="ot">-&gt;</span> c) <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> c)</code></pre>
+<p>容易看到, (&gt;&gt;&gt;)和function composition(.)的类型是差不多的, 只是两个函数的顺序调换了一下.</p>
+<p>现在我们来看一下Kleisli的Arrow instance定义:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">newtype</span> <span class="dt">Kleisli</span> m a b <span class="fu">=</span> <span class="dt">Kleisli</span> {<span class="ot">runKleisli ::</span> a <span class="ot">-&gt;</span> m b}
+<span class="kw">instance</span> <span class="dt">Monad</span> m <span class="ot">=&gt;</span> <span class="dt">Arrow</span> (<span class="dt">Kleisli</span> m) <span class="kw">where</span>
+  arr f <span class="fu">=</span> <span class="dt">Kleisli</span> <span class="fu">$</span> return <span class="fu">.</span> f
+  (runKleisli f) (<span class="fu">&gt;&gt;&gt;</span>) (runKleisli g) <span class="fu">=</span> <span class="dt">Kleisli</span> (\a <span class="ot">-&gt;</span> <span class="kw">do</span> r <span class="ot">&lt;-</span> f a
+                                                          return <span class="fu">$</span> g r)</code></pre>
+<p>除了Kleisli之外, 我们还能找到其他的Arrow instance:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">newtype</span> <span class="dt">SF</span> a b <span class="fu">=</span> <span class="dt">SF</span> {<span class="ot">runSF ::</span> [a] <span class="ot">-&gt;</span> [b]}
+
+<span class="kw">instance</span> <span class="dt">Arrow</span> <span class="dt">SF</span> <span class="kw">where</span>
+  arr f <span class="fu">=</span> <span class="dt">SF</span> (map f)
+  <span class="dt">SF</span> f <span class="fu">&gt;&gt;&gt;</span> <span class="dt">SF</span> g <span class="fu">=</span> <span class="dt">SF</span> (f <span class="fu">&gt;&gt;&gt;</span> g)</code></pre>
+<p>这里我们再从类型角度来分析一下:</p>
+<p>对于SF来说(stream function), Arrow instance当中&gt;&gt;&gt;的类型应该是:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="fu">&gt;&gt;&gt;</span><span class="ot"> ::</span> <span class="dt">SF</span> a b <span class="ot">-&gt;</span> <span class="dt">SF</span> b c <span class="ot">-&gt;</span> <span class="dt">SF</span> a c</code></pre>
+<p>现在已知SF代表了一个函数, SF f当中, f的类型是[a] -&gt; [b], SF g中, g的类型是[b] -&gt; [c], 对这两个函数进行组合, 就能得到类型为[a] -&gt; [c]的函数. 而函数也是Arrow instance. 所以这样就得到了SF的&gt;&gt;&gt;实现.</p>
+<p>Arrow和Monad一样, 也满足一些定律. 不同的是, Monad有三个定律, 但是Arrow有至少20个定律…</p>
+<p>现在我们得到的Arrow并不能做如下Monad实现的功能:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">addM a b <span class="fu">=</span> <span class="kw">do</span> x <span class="ot">&lt;-</span> a
+              y <span class="ot">&lt;-</span> b
+              return (x <span class="fu">+</span> y)</code></pre>
   </section>
 
   <section id="comment">
@@ -56,15 +103,6 @@
 
       </div>
 
-      <footer>
-          <div class="contact">
-            <a href="../" title="home">home</a>
-            <a href="../code.html" title="code">code</a>
-            <a href="../about.html" title="about fantasticsid">about</a>
-            <a href="../rss.xml" title="subscribe">rss</a>
-          </div>
-      </footer>
-
     </div>
 
     <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
@@ -72,5 +110,7 @@
     <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
     <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
     <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
+    <script type="text/javascript" src="../javascripts/headroom.js"></script>
+    <script type="text/javascript" src="../javascripts/jQuery.headroom.js"></script>
   </body>
 </html>

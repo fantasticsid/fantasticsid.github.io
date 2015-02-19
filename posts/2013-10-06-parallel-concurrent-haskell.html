@@ -10,12 +10,23 @@
     <link rel="stylesheet" type="text/css" media="all" href="../stylesheets/screen.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
 
-    <link href="http://fonts.googleapis.com/css?family=Oxygen&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Oxygen⊂=latin,latin-ext" rel="stylesheet" type="text/css">
 
     <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
   </head>
+  
 
   <body class="post">
+
+    <header id="header" class="headroom-header">
+      <div class="contact">
+        <a href="../" title="home">home</a>
+        <a href="../code.html" title="code">code</a>
+        <a href="../about.html" title="about fantasticsid">about</a>
+        <a href="../rss.xml" title="subscribe">rss</a>
+      </div>
+    </header>
+
     <div id="bodywrapper">
 
       <div class="container">
@@ -131,9 +142,9 @@ parMap f (a<span class="fu">:</span>as) <span class="fu">=</span> <span class="k
 </ol>
 <pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">forkIO ::</span> <span class="dt">IO</span> () <span class="ot">-&gt;</span> <span class="dt">IO</span> <span class="dt">ThreadId</span></code></pre>
 <p>这个API产生的是一个lightweight thread. 如果要系统线程, 则要用forkOS.</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">import</span> Control.Concurrent
-<span class="kw">import</span> Control.Monad
-<span class="kw">import</span> System.IO
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">import </span><span class="dt">Control.Concurrent</span>
+<span class="kw">import </span><span class="dt">Control.Monad</span>
+<span class="kw">import </span><span class="dt">System.IO</span>
 
 main <span class="fu">=</span> <span class="kw">do</span>
   hSetBuffering stdout <span class="dt">NoBuffering</span>
@@ -154,7 +165,7 @@ main <span class="fu">=</span> <span class="kw">do</span>
   r <span class="ot">&lt;-</span> takeMVar m
   print r</code></pre>
 <p>MVar可以作为线程之间通讯的一种方法. 奇妙的是, 如果发生死锁, Haskell的runtime会检测到并且抛出异常.</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">import</span> Control.Concurrent
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">import </span><span class="dt">Control.Concurrent</span>
 
 main <span class="fu">=</span> <span class="kw">do</span>
   m <span class="ot">&lt;-</span> newEmptyMVar
@@ -597,15 +608,6 @@ async action <span class="fu">=</span> <span class="kw">do</span>
 
       </div>
 
-      <footer>
-          <div class="contact">
-            <a href="../" title="home">home</a>
-            <a href="../code.html" title="code">code</a>
-            <a href="../about.html" title="about fantasticsid">about</a>
-            <a href="../rss.xml" title="subscribe">rss</a>
-          </div>
-      </footer>
-
     </div>
 
     <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
@@ -613,5 +615,7 @@ async action <span class="fu">=</span> <span class="kw">do</span>
     <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
     <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
     <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
+    <script type="text/javascript" src="../javascripts/headroom.js"></script>
+    <script type="text/javascript" src="../javascripts/jQuery.headroom.js"></script>
   </body>
 </html>
