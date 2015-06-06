@@ -21,12 +21,13 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-2">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-10">
           <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav h1">
+            <ul class="nav navbar-nav navbar-text">
               <li><a href="../" title="home">home</a></li>
+              <li><a href="../posts.html" title="all posts">posts</a></li>
               <li><a href="../about.html" title="about fantasticsid">about</a></li>
               <li><a href="../rss.xml" title="subscribe">rss</a></li>
             </ul>
@@ -38,11 +39,15 @@
     <div id="bodywrapper">
 
       <div class="container">
-        <article>
+        <div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2011-09-04" pubdate>2011-09-04</time></p>
-    <h1>Arrow定理 - 没有合理的选举!</h1>
+    <h1 class="text-center">Arrow定理 - 没有合理的选举!</h1>
     </header>
   <section>
     <p><a href="http://en.wikipedia.org/wiki/Arrow's_impossibility_theorem">Arrow定理</a>可能是博弈论中最著名的定理之一了, 还记得Rudolf在上课时用了整整1节多课证明了这个定理. 同时它的结论绝对能够吸引任何一个人, 难道现存的所有选举制度都是不合理的吗? 当然, 定理是有条件的, arrow定理也不例外, 但是arrow定理的条件让人觉得再自然不过了:</p>
@@ -70,6 +75,7 @@
  于是A &gt; B, B &gt; C仍然应该成立. 由于选举结果是两两可比并且传递的, 于是有A &gt; C.</code></pre>
 <p>这是个矛盾, 因此就证明了, 选举结果中, B一定也是在排名的最前或者最后, 而不是中间某个位置. 待续…</p>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2011-09-04" pubdate>2011-09-04</time></p>
 
   <section id="comment">
 
@@ -89,18 +95,14 @@
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 
       </div>
 
     </div>
-
-    <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
-    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
-    <script type="text/javascript" src="../javascripts/headroom.js"></script>
-    <script type="text/javascript" src="../javascripts/jQuery.headroom.js"></script>
+        <script type="text/javascript" src="../javascripts/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
   </body>
 </html>

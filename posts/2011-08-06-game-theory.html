@@ -21,12 +21,13 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-2">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-10">
           <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav h1">
+            <ul class="nav navbar-nav navbar-text">
               <li><a href="../" title="home">home</a></li>
+              <li><a href="../posts.html" title="all posts">posts</a></li>
               <li><a href="../about.html" title="about fantasticsid">about</a></li>
               <li><a href="../rss.xml" title="subscribe">rss</a></li>
             </ul>
@@ -38,11 +39,15 @@
     <div id="bodywrapper">
 
       <div class="container">
-        <article>
+        <div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2011-08-06" pubdate>2011-08-06</time></p>
-    <h1>一点博弈论趣题</h1>
+    <h1 class="text-center">一点博弈论趣题</h1>
     </header>
   <section>
     <p>回顾快要结束的研究生生活, 发现真正带给我学习快乐的并不是研究. 虽然机器学习, 计算机视觉都是非常有趣的方向, 可是由于自己积累太少, 要想真正体会到研究的快乐还是比较难, 尤其是作学术讲究求新立异, 现在看来一年的确是不够的. 事实上我向来觉得, 如果我们普通人能够掌握到19世纪初左右的数学, 科学知识, 那么也已经相当牛了. 而推进人类认知的任务, 就交给PHD先生/女士们了. 而我本来就没有一颗献身科学的心, 当然如果有的话, 也不会选择计算机科学, 一定是数学或者物理. 所以说学术这条路, 事实上已经在6年前被我亲手斩断了.</p>
@@ -71,6 +76,7 @@
 <p>事实上博弈论出现得比我们想象的更加频繁, 比如google adwords的第二价格竞标, 比如近两年很火的HFT, 股票市场的博弈, 顺便提一下, 计算纳什平衡是非常难的问题(PPAD), 所以这可能也是即使有了计算机, 市场仍然难以把握的原因之一.</p>
 <p>关于博弈论的书, &lt;&lt;Algorithmic game theory&gt;&gt;这本书写得的确不错, 内容也适合非数学/经济的同学读.</p>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2011-08-06" pubdate>2011-08-06</time></p>
 
   <section id="comment">
 
@@ -90,18 +96,14 @@
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 
       </div>
 
     </div>
-
-    <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
-    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
-    <script type="text/javascript" src="../javascripts/headroom.js"></script>
-    <script type="text/javascript" src="../javascripts/jQuery.headroom.js"></script>
+        <script type="text/javascript" src="../javascripts/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
   </body>
 </html>

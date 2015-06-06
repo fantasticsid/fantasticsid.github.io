@@ -21,12 +21,13 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-2">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-10">
           <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav h1">
+            <ul class="nav navbar-nav navbar-text">
               <li><a href="../" title="home">home</a></li>
+              <li><a href="../posts.html" title="all posts">posts</a></li>
               <li><a href="../about.html" title="about fantasticsid">about</a></li>
               <li><a href="../rss.xml" title="subscribe">rss</a></li>
             </ul>
@@ -38,11 +39,15 @@
     <div id="bodywrapper">
 
       <div class="container">
-        <article>
+        <div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2010-12-23" pubdate>2010-12-23</time></p>
-    <h1>最少要种多少棵菜</h1>
+    <h1 class="text-center">最少要种多少棵菜</h1>
     </header>
   <section>
     <p>试想有一块NxN的菜地, 为了获得大丰收又能够使投入最小, 希望最初开始种的菜种尽量少而让菜种自由发挥最终充满整个菜地. 一块空地的前后左右四块地上如果有两块或以上已经有了菜种, 那么这块空地也会发芽. 按照如此的生长趋势, 试问如何安放最初的菜种使得最终整块NxN菜地都能够长满菜呢? 开始时最少用几棵菜种呢?</p>
@@ -59,6 +64,7 @@
 <p>如上图, 如果k(=5)阶菜地需要k棵菜才能填满, 那么k+1阶菜地上红色区域至少要有一棵菜才能使此区域最终长满菜, 否则即使k阶子菜地填满, 按照生长规则这一区域也不能长出一棵菜. 因此k+1阶菜地至少需要k+1棵菜. 并且容易说明3阶菜地至少要3棵菜才能长满菜地, 所以归纳假设成立. 嗯, 这只能说是一种解释, 作为证明十分牵强漏洞很大. 不过暂时没有想到很好的巧妙的方法.</p>
 <p>来源: <a href="http://www.cut-the-knot.org/Curriculum/Combinatorics/FillTheBoard.shtml">cut the knot</a></p>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2010-12-23" pubdate>2010-12-23</time></p>
 
   <section id="comment">
 
@@ -78,18 +84,14 @@
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 
       </div>
 
     </div>
-
-    <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
-    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
-    <script type="text/javascript" src="../javascripts/headroom.js"></script>
-    <script type="text/javascript" src="../javascripts/jQuery.headroom.js"></script>
+        <script type="text/javascript" src="../javascripts/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
   </body>
 </html>

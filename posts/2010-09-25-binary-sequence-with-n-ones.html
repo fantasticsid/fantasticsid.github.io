@@ -21,12 +21,13 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-2">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-10">
           <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav h1">
+            <ul class="nav navbar-nav navbar-text">
               <li><a href="../" title="home">home</a></li>
+              <li><a href="../posts.html" title="all posts">posts</a></li>
               <li><a href="../about.html" title="about fantasticsid">about</a></li>
               <li><a href="../rss.xml" title="subscribe">rss</a></li>
             </ul>
@@ -38,11 +39,15 @@
     <div id="bodywrapper">
 
       <div class="container">
-        <article>
+        <div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2010-09-25" pubdate>2010-09-25</time></p>
-    <h1>有n个1的递增二进制序列 - 一道简单的面试题</h1>
+    <h1 class="text-center">有n个1的递增二进制序列 - 一道简单的面试题</h1>
     </header>
   <section>
     <p>题目是这样的:</p>
@@ -61,6 +66,7 @@
 ....</code></pre>
 <p>按照刚才的思路, 我们首先考虑这个二进制有几位. 对于一个n+k进制数, 第一位必须为1, 而剩下的n+k-1位共有C(n+k-1, k)种情况. 这也就是n+k位进制数, 并且其中一共有n个1的二进制数的个数. 那么给定数K, 我们要找最大的k, 使得K大于1+ C(n+1-1, 1) + C(n+2-1, 2) + C(n+3-1, 3) + … + C(n+k-1, k). 注意到, 1=C(n, 0), 利用组合公式C(m, n) = C(m-1, n-1) + C(m-1, n),以上和式可以化简为C(n+k, k). 这下就简单了, 我们只要找到能够使C(n+k, k) &lt; K的最大的k, 那么我们的二进制数就是n+k位的. 接下来的思路是类似的. 我们要确定第二位是1还是0, 我们假设是0, 检查这种情况下, 余下的二进制位的组合可能共有多少. 这仍然是一个组合数N的计算. 如果K小于这个组合数N, 那么这位就是0, 反之, 这一位就应该是1, 并且我们用K-N继续进行计算, 直到最后一位. 可以看到, 这种方法虽然不能给出第K个二进制数的直接表达式, 但是如果说组合数的计算是基本操作的话, 我们只需要用log(K)步计算就能得到这个二进制数.</p>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2010-09-25" pubdate>2010-09-25</time></p>
 
   <section id="comment">
 
@@ -80,18 +86,14 @@
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 
       </div>
 
     </div>
-
-    <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
-    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
-    <script type="text/javascript" src="../javascripts/headroom.js"></script>
-    <script type="text/javascript" src="../javascripts/jQuery.headroom.js"></script>
+        <script type="text/javascript" src="../javascripts/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
   </body>
 </html>

@@ -21,12 +21,13 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-2">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-10">
           <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav h1">
+            <ul class="nav navbar-nav navbar-text">
               <li><a href="../" title="home">home</a></li>
+              <li><a href="../posts.html" title="all posts">posts</a></li>
               <li><a href="../about.html" title="about fantasticsid">about</a></li>
               <li><a href="../rss.xml" title="subscribe">rss</a></li>
             </ul>
@@ -38,11 +39,15 @@
     <div id="bodywrapper">
 
       <div class="container">
-        <article>
+        <div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2010-08-10" pubdate>2010-08-10</time></p>
-    <h1>P = NP问题最新进展</h1>
+    <h1 class="text-center">P = NP问题最新进展</h1>
     </header>
   <section>
     <p>据说, P问题是否等于NP问题是千禧难题中唯一的平民也能够理解和尝试的问题, 也是理论计算机界最为重要的问题. 几乎大家都认为, P是不等于NP的, 但是, 至今没有人给出一个证明. 但是前几天, 一位来自HP Labs的研究人员<a href="http://www.hpl.hp.com/personal/Vinay_Deolalikar/">Vinay Deolalikar</a>对这个问题给出了一个证明, 这个证明目前还没有得到认可. 如果这个证明是正确的, 那么就能说明, 使用计算机是难以有效解决一些计算问题的, 于是我们就不必费力去寻找这些问题的高效算法了, 只要说明这些问题和已知的一些NPC问题是等价的即可.</p>
@@ -51,6 +56,7 @@
 <p>Update: IBM的研究员Charanjit Jutla认为证明有<a href="http://rjlipton.wordpress.com/2010/08/09/issues-in-the-proof-that-p%E2%89%A0np/#comment-4712">严重漏洞</a>.</p>
 <p>Update: 又发现<a href="http://rjlipton.wordpress.com/2010/08/12/fatal-flaws-in-deolalikars-proof/">漏洞</a>了.</p>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2010-08-10" pubdate>2010-08-10</time></p>
 
   <section id="comment">
 
@@ -70,18 +76,14 @@
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 
       </div>
 
     </div>
-
-    <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
-    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
-    <script type="text/javascript" src="../javascripts/headroom.js"></script>
-    <script type="text/javascript" src="../javascripts/jQuery.headroom.js"></script>
+        <script type="text/javascript" src="../javascripts/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
   </body>
 </html>

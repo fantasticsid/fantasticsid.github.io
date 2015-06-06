@@ -21,12 +21,13 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-2">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-10">
           <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav h1">
+            <ul class="nav navbar-nav navbar-text">
               <li><a href="../" title="home">home</a></li>
+              <li><a href="../posts.html" title="all posts">posts</a></li>
               <li><a href="../about.html" title="about fantasticsid">about</a></li>
               <li><a href="../rss.xml" title="subscribe">rss</a></li>
             </ul>
@@ -38,11 +39,15 @@
     <div id="bodywrapper">
 
       <div class="container">
-        <article>
+        <div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2011-01-18" pubdate>2011-01-18</time></p>
-    <h1>那些你知我知的帽子游戏</h1>
+    <h1 class="text-center">那些你知我知的帽子游戏</h1>
     </header>
   <section>
     <p>在围绕帽子展开的那些游戏中, 信息总是以A是否知道/不知道事件k这样的形式传递. 而这“知道/不知道”本身又是一种事件, 因此这种包含多重命题的论断在推理演绎之下奇妙地能帮游戏者得到一些原本看似不能得到的信息. 这正是此类帽子游戏吸引人的地方.</p>
@@ -75,6 +80,7 @@
 <p>策略很简单: 如果你看到其余两位同学的帽子是同色的, 猜剩下的一种颜色. 否则不猜, 把机会留给下个同学. 这个策略能够在3顶帽子非同色的情形下给出正确的猜测, 在颜色相同的情形下这种策略失败了.</p>
 <p>这个游戏是没有100%的必胜策略的.不过游戏可以推广到<a href="http://en.wikipedia.org/wiki/Hat_puzzle">更多的人甚至无穷多人的情形</a>下, 并且在这种情况下, 获胜的概率将更高.</p>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2011-01-18" pubdate>2011-01-18</time></p>
 
   <section id="comment">
 
@@ -94,18 +100,14 @@
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 
       </div>
 
     </div>
-
-    <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
-    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
-    <script type="text/javascript" src="../javascripts/headroom.js"></script>
-    <script type="text/javascript" src="../javascripts/jQuery.headroom.js"></script>
+        <script type="text/javascript" src="../javascripts/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
   </body>
 </html>

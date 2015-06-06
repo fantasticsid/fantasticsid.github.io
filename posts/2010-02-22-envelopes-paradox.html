@@ -21,12 +21,13 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-2">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-10">
           <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav h1">
+            <ul class="nav navbar-nav navbar-text">
               <li><a href="../" title="home">home</a></li>
+              <li><a href="../posts.html" title="all posts">posts</a></li>
               <li><a href="../about.html" title="about fantasticsid">about</a></li>
               <li><a href="../rss.xml" title="subscribe">rss</a></li>
             </ul>
@@ -38,11 +39,15 @@
     <div id="bodywrapper">
 
       <div class="container">
-        <article>
+        <div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2010-02-22" pubdate>2010-02-22</time></p>
-    <h1>瞎猜也有道理: 信封悖论</h1>
+    <h1 class="text-center">瞎猜也有道理: 信封悖论</h1>
     </header>
   <section>
     <p>这是一个非常有趣的问题: 有两个信封中写着两个不同的实数, 某人以相等的概率随机取一个信封给你看其中的那个实数, 设为A, 然后让你猜另外一个信封中的实数是比这个实数A更大还是更小. 问题是, 能否有一个猜测的策略, 使得你猜对的概率大于50%.</p>
@@ -51,6 +56,7 @@
 <p>我认为这个解答的巧妙之处在于把“猜测”这个动作也用概率化, 引入了f(x)这样一个单调连续递增的, 值域为(0,1)的函数. 总之, 太奇妙, 太厉害了. 接着可以继续看一下关于<a href="http://en.wikipedia.org/wiki/Two_envelopes_problem" target="_blank">two envelopes problem</a>的一些历史和变形.</p>
 <p>来源: <a href="http://blog.xkcd.com/2010/02/09/math-puzzle/">xkcd</a></p>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2010-02-22" pubdate>2010-02-22</time></p>
 
   <section id="comment">
 
@@ -70,18 +76,14 @@
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 
       </div>
 
     </div>
-
-    <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
-    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
-    <script type="text/javascript" src="../javascripts/headroom.js"></script>
-    <script type="text/javascript" src="../javascripts/jQuery.headroom.js"></script>
+        <script type="text/javascript" src="../javascripts/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
   </body>
 </html>

@@ -21,12 +21,13 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-2">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-10">
           <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav h1">
+            <ul class="nav navbar-nav navbar-text">
               <li><a href="../" title="home">home</a></li>
+              <li><a href="../posts.html" title="all posts">posts</a></li>
               <li><a href="../about.html" title="about fantasticsid">about</a></li>
               <li><a href="../rss.xml" title="subscribe">rss</a></li>
             </ul>
@@ -38,11 +39,15 @@
     <div id="bodywrapper">
 
       <div class="container">
-        <article>
+        <div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2011-07-07" pubdate>2011-07-07</time></p>
-    <h1>一图胜万言: fibonacci数列的一些结论的有趣证明</h1>
+    <h1 class="text-center">一图胜万言: fibonacci数列的一些结论的有趣证明</h1>
     </header>
   <section>
     <p>看到一篇有趣的文章, 作者举了一个简单的出现了fibonacci数列的例子, 然后用这个例子证明了一系列关于fibonacci数列的结论. 这种巧妙的构造总是让人惊叹如果生活中处处都存在这样的“捷径”那该是多么精彩!</p>
@@ -80,6 +85,7 @@
 <p>还有一些诸如降N表示为1和2之和, 不考虑顺序有多少种方式? (不需要用文章的方法..) 用1x2的多米诺平铺2*n的地板有多少种方式等等的问题, 都是不错的等菜题.</p>
 <p>有兴趣的话可以通读<a href="http://www.jamestanton.com/images/2011/06/Fibonacci-Surprises.pdf" target="_blank">全文</a>, 看看作者如何证明其他有趣结论.</p>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2011-07-07" pubdate>2011-07-07</time></p>
 
   <section id="comment">
 
@@ -99,18 +105,14 @@
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 
       </div>
 
     </div>
-
-    <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
-    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
-    <script type="text/javascript" src="../javascripts/headroom.js"></script>
-    <script type="text/javascript" src="../javascripts/jQuery.headroom.js"></script>
+        <script type="text/javascript" src="../javascripts/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
   </body>
 </html>

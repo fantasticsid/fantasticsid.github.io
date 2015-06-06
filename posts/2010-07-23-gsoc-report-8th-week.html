@@ -21,12 +21,13 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-2">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-10">
           <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav h1">
+            <ul class="nav navbar-nav navbar-text">
               <li><a href="../" title="home">home</a></li>
+              <li><a href="../posts.html" title="all posts">posts</a></li>
               <li><a href="../about.html" title="about fantasticsid">about</a></li>
               <li><a href="../rss.xml" title="subscribe">rss</a></li>
             </ul>
@@ -38,17 +39,22 @@
     <div id="bodywrapper">
 
       <div class="container">
-        <article>
+        <div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2010-07-23" pubdate>2010-07-23</time></p>
-    <h1>Gsoc report: 8th week</h1>
+    <h1 class="text-center">Gsoc report: 8th week</h1>
     </header>
   <section>
     <p>Last week I’ve been reading documentations on XTLS. Meanwhile, several bugs have been fixed. First, file transfer over proxy has been enabled. The peer is informed of proxy activation after the initiator has received activate stanza from proxy. Also I’ve fixed a bug that has existed since the start of implementation, that is, the incorrect use of jid where the account is required. .This is due to the fact that I named every account after the jid of that account, thus the bug was not revealed until I tested the implementation on another machine.</p>
 <p>the XTLS protocol seems to be quite straight forward, but it requires a secure connection for exchanging certificate when bootstrapping trust on first communication, which gajim has not implemented yet (XEP-0189, XEP-0247).</p>
 <p>So for the rest of gsoc, I shall implement TLS connection so gajim will be able to transfer data over the secured tunnel without much re-factoring of the code.</p>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2010-07-23" pubdate>2010-07-23</time></p>
 
   <section id="comment">
 
@@ -68,18 +74,14 @@
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 
       </div>
 
     </div>
-
-    <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
-    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
-    <script type="text/javascript" src="../javascripts/headroom.js"></script>
-    <script type="text/javascript" src="../javascripts/jQuery.headroom.js"></script>
+        <script type="text/javascript" src="../javascripts/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
   </body>
 </html>

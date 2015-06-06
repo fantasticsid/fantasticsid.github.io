@@ -10,17 +10,22 @@
         <item>
     <title>2015新年计划</title>
     <link>http://blog.fantasticsid.com/posts/2015-02-19-2015-resolution.html</link>
-    <description><![CDATA[<article>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2015-02-19" pubdate>2015-02-19</time></p>
-    <h1>2015新年计划</h1>
+    <h1 class="text-center">2015新年计划</h1>
     </header>
   <section>
     <pre><code>好好工作
 
 写关于音乐的App</code></pre>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2015-02-19" pubdate>2015-02-19</time></p>
 
   <section id="comment">
 
@@ -40,6 +45,9 @@
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 ]]></description>
     <pubDate>Thu, 19 Feb 2015 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2015-02-19-2015-resolution.html</guid>
@@ -47,11 +55,15 @@
 <item>
     <title>Real World Haskell 笔记</title>
     <link>http://blog.fantasticsid.com/posts/2014-01-31-real-world-haskell.html</link>
-    <description><![CDATA[<article>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2014-01-31" pubdate>2014-01-31</time></p>
-    <h1>Real World Haskell 笔记</h1>
+    <h1 class="text-center">Real World Haskell 笔记</h1>
     </header>
   <section>
     <ol style="list-style-type: decimal">
@@ -355,6 +367,7 @@ testme x xs <span class="fu">|</span> <span class="dt">Just</span> y <span class
 <p>STM存在的意义在于, 我们能够更容易地写出保持invariant的代码.</p>
 <pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">alwaysSucceeds ::</span> <span class="dt">STM</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> ()</code></pre>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2014-01-31" pubdate>2014-01-31</time></p>
 
   <section id="comment">
 
@@ -374,6 +387,9 @@ testme x xs <span class="fu">|</span> <span class="dt">Just</span> y <span class
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 ]]></description>
     <pubDate>Fri, 31 Jan 2014 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2014-01-31-real-world-haskell.html</guid>
@@ -381,11 +397,15 @@ testme x xs <span class="fu">|</span> <span class="dt">Just</span> y <span class
 <item>
     <title>2014新年计划</title>
     <link>http://blog.fantasticsid.com/posts/2014-01-01-2014-resolutions.html</link>
-    <description><![CDATA[<article>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2014-01-01" pubdate>2014-01-01</time></p>
-    <h1>2014新年计划</h1>
+    <h1 class="text-center">2014新年计划</h1>
     </header>
   <section>
     <p>今年还是要继续C++, Haskell, Algorithms, Distributed Systems, High Throughput, Low Latency, Compiler, Type Systems</p>
@@ -415,6 +435,7 @@ Topcoder的rating上1500
 看CLRS, PFDS刷一下各种OJ, interviewstreet什么的. 5
 </code></pre>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2014-01-01" pubdate>2014-01-01</time></p>
 
   <section id="comment">
 
@@ -434,6 +455,9 @@ Topcoder的rating上1500
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 ]]></description>
     <pubDate>Wed, 01 Jan 2014 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2014-01-01-2014-resolutions.html</guid>
@@ -441,11 +465,15 @@ Topcoder的rating上1500
 <item>
     <title>Parallel and Concurrent Programming in Haskell 笔记</title>
     <link>http://blog.fantasticsid.com/posts/2013-10-06-parallel-concurrent-haskell.html</link>
-    <description><![CDATA[<article>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2013-10-06" pubdate>2013-10-06</time></p>
-    <h1>Parallel and Concurrent Programming in Haskell 笔记</h1>
+    <h1 class="text-center">Parallel and Concurrent Programming in Haskell 笔记</h1>
     </header>
   <section>
     <ol style="list-style-type: decimal">
@@ -997,6 +1025,7 @@ async action <span class="fu">=</span> <span class="kw">do</span>
   t <span class="ot">&lt;-</span> forkFinally action (putMVar m)
   return (<span class="dt">Async</span> t m)</code></pre>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2013-10-06" pubdate>2013-10-06</time></p>
 
   <section id="comment">
 
@@ -1016,6 +1045,9 @@ async action <span class="fu">=</span> <span class="kw">do</span>
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 ]]></description>
     <pubDate>Sun, 06 Oct 2013 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2013-10-06-parallel-concurrent-haskell.html</guid>
@@ -1023,11 +1055,15 @@ async action <span class="fu">=</span> <span class="kw">do</span>
 <item>
     <title>理解Arrows</title>
     <link>http://blog.fantasticsid.com/posts/2013-07-02-arrows.html</link>
-    <description><![CDATA[<article>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2013-07-02" pubdate>2013-07-02</time></p>
-    <h1>理解Arrows</h1>
+    <h1 class="text-center">理解Arrows</h1>
     </header>
   <section>
     <p>Haskell的一些library用到了Arrow这个概念. 如果能够理解Monad那么相信理解Arrow也并不是非常难, 至少从类型层面上来说并不难理解. 而难点可能正是理解各种combinators以及具体的instance实现的语义. 由于我也刚刚开始接触Arrow, 所以这里的描述都尽量简化了.</p>
@@ -1059,6 +1095,7 @@ async action <span class="fu">=</span> <span class="kw">do</span>
   (runKleisli f) (<span class="fu">&gt;&gt;&gt;</span>) (runKleisli g) <span class="fu">=</span> <span class="dt">Kleisli</span> (\a <span class="ot">-&gt;</span> <span class="kw">do</span> r <span class="ot">&lt;-</span> f a
                                                           return <span class="fu">$</span> g r)</code></pre>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2013-07-02" pubdate>2013-07-02</time></p>
 
   <section id="comment">
 
@@ -1078,6 +1115,9 @@ async action <span class="fu">=</span> <span class="kw">do</span>
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 ]]></description>
     <pubDate>Tue, 02 Jul 2013 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2013-07-02-arrows.html</guid>
@@ -1085,11 +1125,15 @@ async action <span class="fu">=</span> <span class="kw">do</span>
 <item>
     <title>C++ Templates: The Complete Guide 笔记</title>
     <link>http://blog.fantasticsid.com/posts/2013-04-05-cpp-template.html</link>
-    <description><![CDATA[<article>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2013-04-05" pubdate>2013-04-05</time></p>
-    <h1>C++ Templates: The Complete Guide 笔记</h1>
+    <h1 class="text-center">C++ Templates: The Complete Guide 笔记</h1>
     </header>
   <section>
     <ol style="list-style-type: decimal">
@@ -1706,6 +1750,7 @@ my_sort&lt;std::less&lt;..&gt;&gt;(...);
 my_sort&lt;..., std::less&lt;..&gt;());
 my_sort(..., mycriterion);</code></pre>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2013-04-05" pubdate>2013-04-05</time></p>
 
   <section id="comment">
 
@@ -1725,6 +1770,9 @@ my_sort(..., mycriterion);</code></pre>
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 ]]></description>
     <pubDate>Fri, 05 Apr 2013 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2013-04-05-cpp-template.html</guid>
@@ -1732,11 +1780,15 @@ my_sort(..., mycriterion);</code></pre>
 <item>
     <title>2013新年计划</title>
     <link>http://blog.fantasticsid.com/posts/2013-01-01-2013-resolutions.html</link>
-    <description><![CDATA[<article>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2013-01-01" pubdate>2013-01-01</time></p>
-    <h1>2013新年计划</h1>
+    <h1 class="text-center">2013新年计划</h1>
     </header>
   <section>
     <p>今年简单一点</p>
@@ -1797,6 +1849,7 @@ my_sort(..., mycriterion);</code></pre>
 </code></pre>
 <p>发现去年又不知道活在哪个次元了.</p>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2013-01-01" pubdate>2013-01-01</time></p>
 
   <section id="comment">
 
@@ -1816,6 +1869,9 @@ my_sort(..., mycriterion);</code></pre>
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 ]]></description>
     <pubDate>Tue, 01 Jan 2013 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2013-01-01-2013-resolutions.html</guid>
@@ -1823,11 +1879,15 @@ my_sort(..., mycriterion);</code></pre>
 <item>
     <title>App idea - Unitask</title>
     <link>http://blog.fantasticsid.com/posts/2012-04-03-unitask.html</link>
-    <description><![CDATA[<article>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2012-04-03" pubdate>2012-04-03</time></p>
-    <h1>App idea - Unitask</h1>
+    <h1 class="text-center">App idea - Unitask</h1>
     </header>
   <section>
     <p>这个和前面一篇<a href="/posts/2012-02-02-app-idea.html">Motivated App</a>的想法有点类似.</p>
@@ -1841,6 +1901,7 @@ my_sort(..., mycriterion);</code></pre>
 <img src="/images/unitask3.jpeg" title="Unitask" />
 </div>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2012-04-03" pubdate>2012-04-03</time></p>
 
   <section id="comment">
 
@@ -1860,6 +1921,9 @@ my_sort(..., mycriterion);</code></pre>
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 ]]></description>
     <pubDate>Tue, 03 Apr 2012 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2012-04-03-unitask.html</guid>
@@ -1867,11 +1931,15 @@ my_sort(..., mycriterion);</code></pre>
 <item>
     <title>iPad上的画图软件: paper</title>
     <link>http://blog.fantasticsid.com/posts/2012-04-02-paper-ipad.html</link>
-    <description><![CDATA[<article>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2012-04-02" pubdate>2012-04-02</time></p>
-    <h1>iPad上的画图软件: paper</h1>
+    <h1 class="text-center">iPad上的画图软件: paper</h1>
     </header>
   <section>
     <p>我一直对有些blog上的涂鸦很感兴趣. 很多blog如xkcd中的图都是画在纸上然后扫描进电脑里的, 这个对于我来说又显得太麻烦了, 而且画画从来对我就是一件难事, 如何选颜色, 风格都是很难的问题.</p>
@@ -1887,6 +1955,7 @@ my_sort(..., mycriterion);</code></pre>
 <img src="/images/expopiano.jpg" title="exponential piano" />
 </div>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2012-04-02" pubdate>2012-04-02</time></p>
 
   <section id="comment">
 
@@ -1906,6 +1975,9 @@ my_sort(..., mycriterion);</code></pre>
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 ]]></description>
     <pubDate>Mon, 02 Apr 2012 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2012-04-02-paper-ipad.html</guid>
@@ -1913,11 +1985,15 @@ my_sort(..., mycriterion);</code></pre>
 <item>
     <title>App idea - Motivated</title>
     <link>http://blog.fantasticsid.com/posts/2012-02-02-app-idea.html</link>
-    <description><![CDATA[<article>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2012-02-02" pubdate>2012-02-02</time></p>
-    <h1>App idea - Motivated</h1>
+    <h1 class="text-center">App idea - Motivated</h1>
     </header>
   <section>
     <p>Admit it, you are simply not as good a multitasker as a computer, and sometimes you’ve got moods that keep you distracted and unable to finish even one task at hand. Your productivity plumets and as soon as you realize this the negative feeling only adds to the problem you already have.</p>
@@ -1929,6 +2005,7 @@ my_sort(..., mycriterion);</code></pre>
 <li>Schedule notifications, useful for example, to get yourself motivated at the start of day</li>
 </ul>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2012-02-02" pubdate>2012-02-02</time></p>
 
   <section id="comment">
 
@@ -1948,6 +2025,9 @@ my_sort(..., mycriterion);</code></pre>
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 ]]></description>
     <pubDate>Thu, 02 Feb 2012 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2012-02-02-app-idea.html</guid>

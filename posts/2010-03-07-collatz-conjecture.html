@@ -21,12 +21,13 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-2">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-10">
           <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav h1">
+            <ul class="nav navbar-nav navbar-text">
               <li><a href="../" title="home">home</a></li>
+              <li><a href="../posts.html" title="all posts">posts</a></li>
               <li><a href="../about.html" title="about fantasticsid">about</a></li>
               <li><a href="../rss.xml" title="subscribe">rss</a></li>
             </ul>
@@ -38,11 +39,15 @@
     <div id="bodywrapper">
 
       <div class="container">
-        <article>
+        <div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
   <header>
     <div class="content">
-    <p class="meta"><time class="timeago" datetime="2010-03-07" pubdate>2010-03-07</time></p>
-    <h1>Collatz猜想</h1>
+    <h1 class="text-center">Collatz猜想</h1>
     </header>
   <section>
     <p>听同学们讨论过这个问题好几次了, 但是从来不知道原来这个问题是悬而未决的猜想. 任意自然数, 如果是偶数, 对其取半. 如果是奇数, 则乘3加1. 这个过程不断进行, Collatz猜想是: 最终这个序列一定会收敛到1. 一直以为这是个需要仔细想想的面试题而已, 结果竟然是一个猜想. 可能许多人都听说过这个问题, 却不知道它的名字以及它猜想的身份.</p>
@@ -50,6 +55,7 @@
 <p><a href="http://xkcd.com/710/">xkcd</a></p>
 <p><a href="http://en.wikipedia.org/wiki/Collatz_conjecture">wikipedia</a></p>
   </section>
+    <p class="meta text-right"><time class="timeago" datetime="2010-03-07" pubdate>2010-03-07</time></p>
 
   <section id="comment">
 
@@ -69,18 +75,14 @@
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
 </article>
+  </div>
+    </div>
+  </div>
 
       </div>
 
     </div>
-
-    <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.timeago.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.easing.js"></script>
-    <script type="text/javascript" src="../javascripts/jquery.anchorscroll.js"></script>
-    <script type="text/javascript" src="../javascripts/blog.ui.js"></script>
-    <script type="text/javascript" src="../javascripts/headroom.js"></script>
-    <script type="text/javascript" src="../javascripts/jQuery.headroom.js"></script>
+        <script type="text/javascript" src="../javascripts/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
   </body>
 </html>
