@@ -6,51 +6,8 @@
         <description><![CDATA[mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music]]></description>
         <atom:link href="http://blog.fantasticsid.com/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Thu, 04 Jun 2015 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Thu, 19 Feb 2015 00:00:00 UT</lastBuildDate>
         <item>
-    <title>前端</title>
-    <link>http://blog.fantasticsid.com/posts/2015-06-04-web-development.html</link>
-    <description><![CDATA[<div class="container">
-  <div class="row">
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-8">
-  <article>
-  <header>
-    <div class="content">
-    <h1 class="text-center">前端</h1>
-    </header>
-  <section>
-    <p>CSS中排版是个难的问题, <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flexbox</a> 是解决排版的一个相对简单的方法</p>
-  </section>
-    <p class="meta text-right"><time class="timeago" datetime="2015-06-04" pubdate>2015-06-04</time></p>
-
-  <section id="comment">
-
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-  </section>
-</article>
-  </div>
-    </div>
-  </div>
-]]></description>
-    <pubDate>Thu, 04 Jun 2015 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2015-06-04-web-development.html</guid>
-</item>
-<item>
     <title>2015新年计划</title>
     <link>http://blog.fantasticsid.com/posts/2015-02-19-2015-resolution.html</link>
     <description><![CDATA[<div class="container">
@@ -2024,6 +1981,56 @@ my_sort(..., mycriterion);</code></pre>
 ]]></description>
     <pubDate>Mon, 02 Apr 2012 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2012-04-02-paper-ipad.html</guid>
+</item>
+<item>
+    <title>App idea - Motivated</title>
+    <link>http://blog.fantasticsid.com/posts/2012-02-02-app-idea.html</link>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
+  <header>
+    <div class="content">
+    <h1 class="text-center">App idea - Motivated</h1>
+    </header>
+  <section>
+    <p>Admit it, you are simply not as good a multitasker as a computer, and sometimes you’ve got moods that keep you distracted and unable to finish even one task at hand. Your productivity plumets and as soon as you realize this the negative feeling only adds to the problem you already have.</p>
+<p>Enter Motivated, an iphone app that reminds you of the most important task you are supposed to finish.</p>
+<p>Features:</p>
+<ul>
+<li>Only one task allowed at a time</li>
+<li>Make commitment to your goal publicly</li>
+<li>Schedule notifications, useful for example, to get yourself motivated at the start of day</li>
+</ul>
+  </section>
+    <p class="meta text-right"><time class="timeago" datetime="2012-02-02" pubdate>2012-02-02</time></p>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+  </div>
+    </div>
+  </div>
+]]></description>
+    <pubDate>Thu, 02 Feb 2012 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2012-02-02-app-idea.html</guid>
 </item>
 
     </channel> 
