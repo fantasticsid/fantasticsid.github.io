@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>一个图与其补图染色数之和的上界 | fantasticsid</title>
+    <meta name="author" content="fantasticsid">
+    <meta name="description" content="一个图与其补图染色数之和的上界">
+    <meta name="keywords" content="mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/styles.css">
+
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+  </head>
+
+
+  <body class="post">
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-bar">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navigation-bar">
+              <ul class="nav navbar-nav">
+                <li><a href="../" title="home">home</a></li>
+                <li><a href="../posts.html" title="all posts">posts</a></li>
+                <li><a href="../about.html" title="about fantasticsid">about</a></li>
+                <li><a href="../rss.xml" title="subscribe">rss</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div id="bodywrapper">
+
+      <div class="container">
+        <div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
+  <header>
+    <div class="content">
+    <h1 class="text-center">一个图与其补图染色数之和的上界</h1>
+    </header>
+  <section>
+    <p>我们来证明对一个图<span class="math"><em>G</em></span>以及它的补图<span class="math"><em>Ḡ</em></span>进行染色, 两张图的染色数之和小于图<span class="math"><em>G</em></span>的阶加1. 也就是说, 对于一张完全图K, 需要使用<span class="math"><em>n</em> = ∣<em>K</em>∣</span>种颜色进行染色, 而无论如何选取<span class="math"><em>K</em></span>的一个子图, 剩下的边形成的图与这张子图染色数之和最多只需要额外多一种颜色.</p>
+<p>命题: <span class="math"><em>χ</em>(<em>G</em>) + <em>χ</em>(<em>Ḡ</em>) ≤ <em>n</em>(<em>G</em>) + 1</span></p>
+<p>对于图<span class="math"><em>G</em></span>, 我们将顶点度数从大到小排序, 然后对顶点逐个染色. 显然这样的染色方法能够得到一个图的染色数至多为图中最大度数加1这样的结论. 更好一点的结论是</p>
+<p><span class="math"><em>χ</em>(<em>G</em>) ≤ <em>m</em><em>a</em><em>x</em><em>m</em><em>i</em><em>n</em><sub><em>i</em></sub>(<em>d</em><sub><em>i</em></sub>, <em>i</em>) + 1, <em>i</em> = 0, 1, . . . , <em>n</em>(<em>G</em>) − 1</span></p>
+<p>其实, 后一结论能够直接得到我们所需要证明的命题. 因为对于一个图<span class="math"><em>G</em></span>和它的补图<span class="math"><em>Ḡ</em></span>来说, 这两个值之和一定是不大于<span class="math"><em>n</em>(<em>G</em>) + 1</span>的. 如下图.</p>
+<div>
+<img src="../images/G.png" title="G" />
+</div>
+<p>对于这样的一个图G, 我们画出顶点度数以及<span class="math"><em>y</em> = <em>i</em></span>这两个序列的图像:</p>
+<div>
+<img src="../images/plotG.png" title="G" />
+</div>
+<p>我们发现, 这两个序列在(3,3)处有相交, 这个即是上面得到结论中的值, 即这个图可以用至多4种颜色进行着色. 我们发现, 其实将此图旋转180度, 得到的图像和<span class="math"><em>Ḡ</em></span>的图像是一样的:</p>
+<div>
+<img src="../images/plotGbar.png" title="图G的补图顶点的度数" />
+</div>
+<p>对于任意一个图<span class="math"><em>G</em></span>, 这个结论始终是成立的(实际上仔细考虑, 可能取得最大值的点不是同一个, 但是我们可以想象这两个值之和始终是不大于<span class="math"><em>n</em>(<em>G</em>) − 1</span>的. ) 这样, 我们就得到<span class="math"><em>χ</em>(<em>G</em>) + <em>χ</em>(<em>Ḡ</em>) ≤ <em>n</em>(<em>G</em>) − 1 + 1 + 1 = <em>n</em>(<em>G</em>) + 1</span></p>
+<p>来源: 图论考试</p>
+  </section>
+    <p class="meta text-right"><time class="timeago" datetime="2010-01-26" pubdate>2010-01-26</time></p>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+  </div>
+    </div>
+  </div>
+
+      </div>
+
+    </div>
+        <script type="text/javascript" src="../javascripts/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
+  </body>
+</html>

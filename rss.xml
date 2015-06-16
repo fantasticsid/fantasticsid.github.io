@@ -1,0 +1,2037 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>fantasticsid</title>
+        <link>http://blog.fantasticsid.com</link>
+        <description><![CDATA[mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music]]></description>
+        <atom:link href="http://blog.fantasticsid.com/rss.xml" rel="self"
+                   type="application/rss+xml" />
+        <lastBuildDate>Thu, 19 Feb 2015 00:00:00 UT</lastBuildDate>
+        <item>
+    <title>2015新年计划</title>
+    <link>http://blog.fantasticsid.com/posts/2015-02-19-2015-resolution.html</link>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
+  <header>
+    <div class="content">
+    <h1 class="text-center">2015新年计划</h1>
+    </header>
+  <section>
+    <pre><code>好好工作
+
+写关于音乐的App</code></pre>
+  </section>
+    <p class="meta text-right"><time class="timeago" datetime="2015-02-19" pubdate>2015-02-19</time></p>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+  </div>
+    </div>
+  </div>
+]]></description>
+    <pubDate>Thu, 19 Feb 2015 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2015-02-19-2015-resolution.html</guid>
+</item>
+<item>
+    <title>Real World Haskell 笔记</title>
+    <link>http://blog.fantasticsid.com/posts/2014-01-31-real-world-haskell.html</link>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
+  <header>
+    <div class="content">
+    <h1 class="text-center">Real World Haskell 笔记</h1>
+    </header>
+  <section>
+    <ol style="list-style-type: decimal">
+<li>Getting Started</li>
+</ol>
+<p>介绍了Haskell的REPL: ghci. Haskell是强类型语言, 类型扮演了非常重要的角色.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Types and Functions</li>
+</ol>
+<p>类型推导. Haskell的一些基本类型: Char, Bool, Int, Integer, Double.</p>
+<p>函数: Haskell函数几乎都是纯的, 即不带有副作用. 所谓副作用, 是指的函数的行为依赖于一些全局的状态.</p>
+<p>Lazy Evaluation: Haskell的求值是惰性的. 表达式在需要其值的时候才会被真正求值, 在此之前, 它们以thunk的形式出现.</p>
+<p>Curry and Partial Application</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Defining Types, Streamlining Functions</li>
+</ol>
+<p>介绍了Haskell的Algebraic Data Types, Pattern Matching. Pattern Matching当中要注意pattern里面不能用同一个pattern变量代表2个值相等这样的限制.</p>
+<p>Parameterized types, 类似于C++里的模板.</p>
+<p>表达式缩进规则: 所有顶层定义的开始都要有一样的缩进, 如果下一行的开始缩进更大, 则被认为是当前表达式的延续. 如果是同一层, 则认为是同一个代码块的一个新项目. Structured Haskell Mode是一个Emacs Haskell的编辑模式, 通过parse haskell代码来推断缩进应该在哪里. Haskell里也可以用“{}”来组合代码, 并且用分号分割.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Functional Programming</li>
+</ol>
+<p>FP中递归是很重要的思想, 很多循环可以用尾递归的方式实现. 本章介绍了FP中很多List的函数, 比如map, foldl, foldr, head, init, inits, tail, tails等等.</p>
+<p>As patterns.</p>
+<p>Function composition with ‘.’ operator</p>
+<p>seq能够对一个thunk进行严格求值(到head normal form).</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">foldl&#39; _ zero [] <span class="fu">=</span> zero
+foldl&#39; step zero (x<span class="fu">:</span>xs) <span class="fu">=</span>
+       <span class="kw">let</span> new <span class="fu">=</span> step zero x
+              <span class="kw">in</span> new <span class="ot">`seq`</span> foldl&#39; step new xs</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Writing a Library: Working with JSON Data</li>
+</ol>
+<p>用Haskell的ADT表示JSON:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">JValue</span> <span class="fu">=</span> <span class="dt">JString</span> <span class="dt">String</span>
+              <span class="fu">|</span> <span class="dt">JNumber</span> <span class="dt">Double</span>
+              <span class="fu">|</span> <span class="dt">JBool</span> <span class="dt">Bool</span>
+              <span class="fu">|</span> <span class="dt">JNull</span>
+              <span class="fu">|</span> <span class="dt">JObject</span> [(<span class="dt">String</span>, <span class="dt">JValue</span>)]
+              <span class="fu">|</span> <span class="dt">JArray</span> [<span class="dt">JValue</span>]
+                <span class="kw">deriving</span> (<span class="dt">Eq</span>, <span class="dt">Ord</span>, <span class="dt">Show</span>)</code></pre>
+<p>Haskell代码一个文件通常代表一个Haskell Module</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="dt">Module</span> <span class="dt">SimpleJSON</span>
+  (
+  <span class="dt">JValue</span>(<span class="fu">..</span>)
+  , getString
+  , getInt
+  ) <span class="kw">where</span></code></pre>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="dt">Module</span> <span class="dt">ExportNothing</span> () <span class="kw">where</span></code></pre>
+<p>通用的PrettyPrinter</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Doc</span> <span class="fu">=</span> <span class="dt">Empty</span>
+         <span class="fu">|</span> <span class="dt">Char</span> <span class="dt">Char</span>
+         <span class="fu">|</span> <span class="dt">Text</span> <span class="dt">String</span>
+         <span class="fu">|</span> <span class="dt">Line</span>
+         <span class="fu">|</span> <span class="dt">Concat</span> <span class="dt">Doc</span> <span class="dt">Doc</span>
+         <span class="fu">|</span> <span class="dt">Union</span> <span class="dt">Doc</span> <span class="dt">Doc</span>
+           <span class="kw">deriving</span> (<span class="dt">Show</span>,<span class="dt">Eq</span>)</code></pre>
+<p>有了这个定义, 定义一些基本的combinator, 我们就可以对一个Doc进行渲染:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">compact ::</span> <span class="dt">Doc</span> <span class="ot">-&gt;</span> <span class="dt">String</span>
+compact x <span class="fu">=</span> transform [x]
+    <span class="kw">where</span> transform [] <span class="fu">=</span> <span class="st">&quot;&quot;</span>
+          transform (d<span class="fu">:</span>ds) <span class="fu">=</span>
+              <span class="kw">case</span> d <span class="kw">of</span>
+                <span class="dt">Empty</span>        <span class="ot">-&gt;</span> transform ds
+                <span class="dt">Char</span> c       <span class="ot">-&gt;</span> c <span class="fu">:</span> transform ds
+                <span class="dt">Text</span> s       <span class="ot">-&gt;</span> s <span class="fu">++</span> transform ds
+                <span class="dt">Line</span>         <span class="ot">-&gt;</span> <span class="ch">&#39;\n&#39;</span> <span class="fu">:</span> transform ds
+                a <span class="ot">`Concat`</span> b <span class="ot">-&gt;</span> transform (a<span class="fu">:</span>b<span class="fu">:</span>ds)
+                _ <span class="ot">`Union`</span> b  <span class="ot">-&gt;</span> transform (b<span class="fu">:</span>ds)</code></pre>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">pretty ::</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Doc</span> <span class="ot">-&gt;</span> <span class="dt">String</span>
+pretty width x <span class="fu">=</span> best <span class="dv">0</span> [x]
+    <span class="kw">where</span> best col (d<span class="fu">:</span>ds) <span class="fu">=</span>
+              <span class="kw">case</span> d <span class="kw">of</span>
+                <span class="dt">Empty</span>        <span class="ot">-&gt;</span> best col ds
+                <span class="dt">Char</span> c       <span class="ot">-&gt;</span> c <span class="fu">:</span>  best (col <span class="fu">+</span> <span class="dv">1</span>) ds
+                <span class="dt">Text</span> s       <span class="ot">-&gt;</span> s <span class="fu">++</span> best (col <span class="fu">+</span> length s) ds
+                <span class="dt">Line</span>         <span class="ot">-&gt;</span> <span class="ch">&#39;\n&#39;</span> <span class="fu">:</span> best <span class="dv">0</span> ds
+                a <span class="ot">`Concat`</span> b <span class="ot">-&gt;</span> best col (a<span class="fu">:</span>b<span class="fu">:</span>ds)
+                a <span class="ot">`Union`</span> b  <span class="ot">-&gt;</span> nicest col (best col (a<span class="fu">:</span>ds))
+                                           (best col (b<span class="fu">:</span>ds))
+          best _ _ <span class="fu">=</span> <span class="st">&quot;&quot;</span>
+
+          nicest col a b <span class="fu">|</span> (width <span class="fu">-</span> least) <span class="ot">`fits`</span> a <span class="fu">=</span> a
+                         <span class="fu">|</span> otherwise                <span class="fu">=</span> b
+                         <span class="kw">where</span> least <span class="fu">=</span> min width col</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li>Using Typeclasses</li>
+</ol>
+<p>其实typeclass和C++的模板特列化(concept)有点相似. 但是typeclass有运行的额外开销.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">class</span> <span class="dt">Eq</span> a <span class="kw">where</span>
+  (<span class="fu">==</span>),<span class="ot"> (/=) ::</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">Bool</span>
+  x <span class="fu">/=</span> y <span class="fu">=</span> not (x <span class="fu">==</span> y)
+  x <span class="fu">==</span> y <span class="fu">=</span> not (x <span class="fu">/=</span> y)</code></pre>
+<p>Overlapping instances</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">class</span> <span class="dt">Borked</span> a <span class="kw">where</span>
+<span class="ot">  bork ::</span> a <span class="ot">-&gt;</span> <span class="dt">String</span>
+  
+<span class="kw">instance</span> <span class="dt">Borked</span> <span class="dt">Int</span> <span class="kw">where</span>
+  bork <span class="fu">=</span> show
+  
+<span class="kw">instance</span> <span class="dt">Borked</span> (<span class="dt">Int</span>, <span class="dt">Int</span>) <span class="kw">where</span>
+  bork (a, b) <span class="fu">=</span> bork a <span class="fu">++</span> <span class="st">&quot;, &quot;</span> <span class="fu">++</span> bork b
+  
+<span class="kw">instance</span> (<span class="dt">Borked</span> a, <span class="dt">Borked</span> b) <span class="ot">=&gt;</span> <span class="dt">Borked</span> (a, b) <span class="kw">where</span>
+ bork (a, b) <span class="fu">=</span> <span class="st">&quot;&gt;&gt;&quot;</span> <span class="fu">++</span> bork a <span class="fu">++</span> <span class="st">&quot; &quot;</span> <span class="fu">++</span> bork b <span class="fu">++</span> <span class="st">&quot;&lt;&lt;&quot;</span></code></pre>
+<p>这个有点像C++的template specialization. 当然C++当中会使用最specific的template定义. 而Haskell则默认会拒绝自动选择一个定义, 除非使用了OverlappingInstances, TypeSynonymInstances这两个language extension.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">{-# LANGUAGE TypeSynonymInstances, OverlappingInstances #-}</span>
+
+<span class="kw">import</span> Data.List
+
+<span class="kw">class</span> <span class="dt">Foo</span> a <span class="kw">where</span>
+<span class="ot">  foo ::</span> a <span class="ot">-&gt;</span> <span class="dt">String</span>
+  
+<span class="kw">instance</span> <span class="dt">Foo</span> a <span class="ot">=&gt;</span> <span class="dt">Foo</span> [a] <span class="kw">where</span>
+  foo <span class="fu">=</span> concat <span class="fu">.</span> intersperse <span class="st">&quot;, &quot;</span> <span class="fu">.</span> map foo
+  
+<span class="kw">instance</span> <span class="dt">Foo</span> <span class="dt">Char</span> <span class="kw">where</span>
+  foo c <span class="fu">=</span> [c]
+  
+<span class="kw">instance</span> <span class="dt">Foo</span> <span class="dt">String</span> <span class="kw">where</span>
+  foo <span class="fu">=</span> id</code></pre>
+<p>Monomorphism restriction的原因是Haskell当中typeclass参数其实在运行时是需要有一个参数来代表具体instance的实现. (虚表?) 于是如果没有这个Monomorphism, 有的计算就有可能不得不进行2次, 因为编译器在编译一段代码的时候不能做出只算一次的决定.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">f xs <span class="fu">=</span> (len, len)
+  <span class="kw">where</span> len <span class="fu">=</span> genericLength xs</code></pre>
+<p>这段代码当中, f的类型应该是</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">f ::</span> <span class="dt">Num</span> t <span class="ot">=&gt;</span> [b] <span class="ot">-&gt;</span> (t, t)</code></pre>
+<p>如果我们想要使得f的类型中t代表不同的类型:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">f ::</span> (<span class="dt">Num</span> b, <span class="dt">Num</span> c) <span class="ot">=&gt;</span> [a] <span class="ot">-&gt;</span> (b, c)
+f xs <span class="fu">=</span> (len, len)
+  <span class="kw">where</span> len <span class="fu">=</span> genericLength xs</code></pre>
+<p>则会出现编译错误, 因为编译器觉得这里要进行两次对len的计算, 而这是Hughes认为不对的, 至少不能是默认的行为.</p>
+<p>解决这个错误的方法有几个:</p>
+<ul>
+<li>给函数参数显式binding</li>
+<li>给函数加上适当的类型签名</li>
+<li>加上{-# LANGUAGE NoMonomorphismRestriction #-}</li>
+</ul>
+<ol start="7" style="list-style-type: decimal">
+<li>I/O</li>
+</ol>
+<p>I/O在Haskell里是比较神奇的东西:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">let</span> writefoo <span class="fu">=</span> putStrLn <span class="st">&quot;foo&quot;</span></code></pre>
+<p>这段代码不会输出“foo”, 而是把putStrLn “foo”这个I/O computation绑定到writefoo. 所以这里的代码就像数据一样. “Code is data, data is code”.</p>
+<p>但是这段代码放在另外一个I/O action里就会被执行.</p>
+<p>同样, 在ghci里也会被执行, 原因是ghci其实是在I/O monad中执行.</p>
+<p>openFile, hPutStrLn, hPrint, putStrLn, hClose</p>
+<p>hSeek, hTell, AbsoluteSeek, RelativeSeek, hIsSeekable</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">main <span class="fu">=</span> <span class="kw">do</span>
+  inh <span class="ot">&lt;-</span> openFile <span class="st">&quot;input.txt&quot;</span> <span class="dt">ReadMode</span>
+  seekable <span class="ot">&lt;-</span> hIsSeekable inh
+  hSeek inh <span class="dt">RelativeSeek</span> <span class="dv">1</span>
+  line <span class="ot">&lt;-</span> hGetLine inh
+  putStrLn line
+  hClose inh</code></pre>
+<p>System.Directory</p>
+<p>removeFile, renameFile</p>
+<p>openTempFile, openBinaryTempFile</p>
+<p>System.Directory.getTemporaryDirectory</p>
+<p>hGetContents因为lazy evaluation所以在读大文件的时候不会有内存不够的问题(视情况)</p>
+<p>readFile, writeFile</p>
+<p>interact :: (String -&gt; String) -&gt; IO ()</p>
+<p>System.Environment.getArgs System.Environment.getProgName System.Environment.genEnv</p>
+<ol start="8" style="list-style-type: decimal">
+<li>Efficient File Processing, Regular Expressions, and Filename Matching</li>
+</ol>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">import</span> <span class="kw">qualified</span> Data.ByteString.Lazy <span class="kw">as</span> L
+
+<span class="ot">hasElfMagic ::</span>  <span class="dt">L.ByteString</span> <span class="ot">-&gt;</span> <span class="dt">Bool</span>
+hasElfMagic content <span class="fu">=</span> L.take <span class="dv">4</span> content <span class="fu">==</span> elfMagic
+  <span class="kw">where</span> elfMagic <span class="fu">=</span> L.pack [<span class="dv">0x7f</span>, <span class="dv">0x45</span>, <span class="dv">0x4c</span>, <span class="dv">0x46</span>]
+
+<span class="ot">isElfFile ::</span>  FilePath <span class="ot">-&gt;</span> <span class="dt">IO</span> <span class="dt">Bool</span>
+isElfFile path <span class="fu">=</span> <span class="kw">do</span>
+  content <span class="ot">&lt;-</span> L.readFile path
+  return (hasElfMagic content)</code></pre>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">import</span> System.IO
+<span class="kw">import</span> Control.Applicative
+<span class="kw">import</span> Data.List
+
+<span class="kw">import</span> <span class="kw">qualified</span> Data.ByteString <span class="kw">as</span> B
+<span class="kw">import</span> <span class="kw">qualified</span> Data.ByteString.Char8 <span class="kw">as</span> C
+
+main <span class="fu">=</span> <span class="kw">do</span> inh <span class="ot">&lt;-</span> openFile <span class="st">&quot;data.txt&quot;</span> <span class="dt">ReadMode</span>
+          content <span class="ot">&lt;-</span> B.hGetContents inh
+          putStrLn <span class="fu">$</span> (show <span class="fu">.</span> foldl (liftA2 (<span class="fu">+</span>)) (<span class="dt">Just</span> <span class="dv">0</span>) <span class="fu">.</span> (map (fmap fst <span class="fu">.</span> C.readInt)) <span class="fu">.</span> C.lines) content</code></pre>
+<p>为何以上程序在解释模式下, 比python更慢?</p>
+<p>Regular Expressions</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">import</span> Text.Regex.Posix.Wrap
+<span class="fu">:</span>t (<span class="fu">=~</span>)
+(<span class="fu">=~</span>)
+<span class="ot">  ::</span> (<span class="dt">Text.Regex.Base.RegexLike.RegexContext</span> <span class="dt">Regex</span> source1 target,
+      <span class="dt">Text.Regex.Base.RegexLike.RegexMaker</span>
+        <span class="dt">Regex</span> <span class="dt">CompOption</span> <span class="dt">ExecOption</span> source) <span class="ot">=&gt;</span>
+     source1 <span class="ot">-&gt;</span> source <span class="ot">-&gt;</span> target</code></pre>
+<ol start="9" style="list-style-type: decimal">
+<li>I/O Case Study: A Library for Searching the Filesystem</li>
+</ol>
+<p>Control.Exception</p>
+<p>bracket :: IO a -&gt; (a -&gt; IO b) -&gt; (a -&gt; IO c) -&gt; IO c</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">getFileSize path <span class="fu">=</span> handle (\_ <span class="ot">-&gt;</span> return <span class="dt">Nothing</span>) <span class="fu">$</span>
+  bracket (openFile path <span class="dt">ReadMode</span>) hClose <span class="fu">$</span> \h <span class="ot">-&gt;</span> <span class="kw">do</span>
+    size <span class="ot">&lt;-</span> hFileSize h
+    return (<span class="dt">Just</span> size)</code></pre>
+<p>eDSL</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">InfoP</span> a <span class="fu">=</span> FilePath
+            <span class="ot">-&gt;</span> <span class="dt">Permissions</span>
+            <span class="ot">-&gt;</span> <span class="dt">Maybe</span> <span class="dt">Integer</span>
+            <span class="ot">-&gt;</span> <span class="dt">ClockTime</span>
+            <span class="ot">-&gt;</span> a
+<span class="ot">pathP ::</span> <span class="dt">InfoP</span> FilePath</code></pre>
+<p>这样我们就能构造各种类型的Predicate/Extractor</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">sizeP ::</span> <span class="dt">InfoP</span> <span class="dt">Integer</span> <span class="co">-- 输入FilePath的信息, 返回Integer的函数类型</span>
+sizeP _ _ (<span class="dt">Just</span> size) _ <span class="fu">=</span> size
+sizeP _ _ <span class="dt">Nothing</span> _ <span class="fu">=</span> <span class="fu">-</span><span class="dv">1</span></code></pre>
+<p>这是一个Extractor</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">equalP ::</span> (<span class="dt">Eq</span> a) <span class="ot">=&gt;</span> <span class="dt">InfoP</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">InfoP</span> <span class="dt">Bool</span>
+equalP f k <span class="fu">=</span> \w x y z <span class="ot">-&gt;</span> f w x y z <span class="fu">==</span> k</code></pre>
+<p>这是一个Predicate</p>
+<p>当然也可以写成</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">equalP&#39; ::</span> (<span class="dt">Eq</span> a) <span class="ot">=&gt;</span> <span class="dt">InfoP</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">InfoP</span> <span class="dt">Bool</span>
+equalP&#39; f k w x y z <span class="fu">=</span> f w x y z <span class="fu">==</span> k</code></pre>
+<p>我们还可以继续抽象:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">liftP ::</span> (a <span class="ot">-&gt;</span> b <span class="ot">-&gt;</span> c) <span class="ot">-&gt;</span> <span class="dt">InfoP</span> a <span class="ot">-&gt;</span> b <span class="ot">-&gt;</span> <span class="dt">InfoP</span> c
+liftP q f k w x y z <span class="fu">=</span> f w x y z <span class="ot">`q`</span> k
+
+greaterP,<span class="ot"> lesserP ::</span> (<span class="dt">Ord</span> a) <span class="ot">=&gt;</span> <span class="dt">InfoP</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">InfoP</span> <span class="dt">Bool</span>
+greaterP <span class="fu">=</span> liftP (<span class="fu">&gt;</span>)
+lesserP <span class="fu">=</span> liftP (<span class="fu">&lt;</span>)</code></pre>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">liftPath ::</span> (FilePath <span class="ot">-&gt;</span> a) <span class="ot">-&gt;</span> <span class="dt">InfoP</span> a
+liftPath f w _ _ _ <span class="fu">=</span> f w</code></pre>
+<ol start="28" style="list-style-type: decimal">
+<li>Software Transactional Memory</li>
+</ol>
+<p>传统的并发是基于锁和条件变量的, 而使用过程中会有各种问题:</p>
+<ul>
+<li>忘了锁的释放</li>
+<li>加锁顺序的问题导致思索</li>
+<li>异常处理</li>
+<li>忘了唤醒等待线程</li>
+</ul>
+<p>STM代表一个事务, 他们之间可以组合, 并且最终通过atomically在IO monad中执行, 而STM之间的执行是相互分离的.</p>
+<p>一个STM完成时, 会发生这几件事之一:</p>
+<ul>
+<li><p>如果其他线程没有对STM修改的数据进行修改, 则STM的修改同时生效</p></li>
+<li><p>否则, STM会重启</p></li>
+</ul>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Item</span> <span class="fu">=</span> <span class="dt">Scroll</span>
+          <span class="fu">|</span> <span class="dt">Wand</span>
+          <span class="fu">|</span> <span class="dt">Banjo</span>
+            <span class="kw">deriving</span> (<span class="dt">Eq</span>, <span class="dt">Ord</span>, <span class="dt">Show</span>)
+
+<span class="kw">newtype</span> <span class="dt">Gold</span> <span class="fu">=</span> <span class="dt">Gold</span> <span class="dt">Int</span>
+    <span class="kw">deriving</span> (<span class="dt">Eq</span>, <span class="dt">Ord</span>, <span class="dt">Show</span>, <span class="dt">Num</span>)
+
+<span class="kw">newtype</span> <span class="dt">HitPoint</span> <span class="fu">=</span> <span class="dt">HitPoint</span> <span class="dt">Int</span>
+    <span class="kw">deriving</span> (<span class="dt">Eq</span>, <span class="dt">Ord</span>, <span class="dt">Show</span>, <span class="dt">Num</span>)
+
+<span class="kw">type</span> <span class="dt">Inventory</span> <span class="fu">=</span> <span class="dt">TVar</span> [<span class="dt">Item</span>]
+<span class="kw">type</span> <span class="dt">Health</span> <span class="fu">=</span> <span class="dt">TVar</span> <span class="dt">HitPoint</span>
+<span class="kw">type</span> <span class="dt">Balance</span> <span class="fu">=</span> <span class="dt">TVar</span> <span class="dt">Gold</span>
+
+<span class="kw">data</span> <span class="dt">Player</span> <span class="fu">=</span> <span class="dt">Player</span> {
+<span class="ot">    balance ::</span> <span class="dt">Balance</span>,
+<span class="ot">    health ::</span> <span class="dt">Health</span>,
+<span class="ot">    inventory ::</span> <span class="dt">Inventory</span>
+}</code></pre>
+<p>一些API:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">atomically ::</span> <span class="dt">STM</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+
+<span class="ot">newTVar ::</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> (<span class="dt">TVar</span> a)
+
+<span class="ot">readTVar ::</span> <span class="dt">TVar</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> a
+
+<span class="ot">writeTVar ::</span> <span class="dt">TVar</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> ()
+
+<span class="ot">retry ::</span> <span class="dt">STM</span> a</code></pre>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">transfer ::</span> <span class="dt">Gold</span> <span class="ot">-&gt;</span> <span class="dt">Balance</span> <span class="ot">-&gt;</span> <span class="dt">Balance</span> <span class="ot">-&gt;</span> <span class="dt">STM</span> ()
+
+transfer qty fromBal toBal <span class="fu">=</span> <span class="kw">do</span>
+  fromQty <span class="ot">&lt;-</span> readTVar fromBal
+  when (qty <span class="fu">&gt;</span> fromQty) <span class="fu">$</span>
+    retry
+  writeTVar fromBal (fromQty <span class="fu">-</span> qty)
+  readTVar toBal <span class="fu">&gt;&gt;=</span> writeTVar toBal <span class="fu">.</span> (qty <span class="fu">+</span>)</code></pre>
+<p>retry在重启一个STM的时候, 会阻塞在之前改变的TVar上, 直到其中一个有改变.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">orElse ::</span> <span class="dt">STM</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> a</code></pre>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">someAction ::</span> <span class="dt">IO</span> a
+
+<span class="ot">stmTransaction ::</span> <span class="dt">STM</span> (<span class="dt">IO</span> a)
+stmTransaction <span class="fu">=</span> return someAction
+
+<span class="ot">doSomething ::</span> <span class="dt">IO</span> a
+doSomething <span class="fu">=</span> join (atomically stmTransaction)</code></pre>
+<p>也可以在STM中进行IO操作</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">unsafeIOToSTM ::</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> a</code></pre>
+<p>但是用了它STM存在的意义就少了一半了.</p>
+<p>Pattern guards</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">{-# LANGUAGE PatternGuards #-}</span>
+testme x xs <span class="fu">|</span> <span class="dt">Just</span> y <span class="ot">&lt;-</span> lookup x xs, y <span class="fu">&gt;</span> <span class="dv">3</span> <span class="fu">=</span> y <span class="fu">|</span> otherwise <span class="fu">=</span><span class="dv">0</span></code></pre>
+<p>Invariant</p>
+<p>STM存在的意义在于, 我们能够更容易地写出保持invariant的代码.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">alwaysSucceeds ::</span> <span class="dt">STM</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> ()</code></pre>
+  </section>
+    <p class="meta text-right"><time class="timeago" datetime="2014-01-31" pubdate>2014-01-31</time></p>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+  </div>
+    </div>
+  </div>
+]]></description>
+    <pubDate>Fri, 31 Jan 2014 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2014-01-31-real-world-haskell.html</guid>
+</item>
+<item>
+    <title>2014新年计划</title>
+    <link>http://blog.fantasticsid.com/posts/2014-01-01-2014-resolutions.html</link>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
+  <header>
+    <div class="content">
+    <h1 class="text-center">2014新年计划</h1>
+    </header>
+  <section>
+    <p>今年还是要继续C++, Haskell, Algorithms, Distributed Systems, High Throughput, Low Latency, Compiler, Type Systems</p>
+<pre><code>Fritz: Haskell实现的简单pubsub server
+
+Persist: C++的persistent data structure
+
+RapLisp: 基于LLVM的lisp编译器
+
+Filter: C++实现的基于Cap&#39;n Proto的Query matching library
+
+Topcoder的rating上1500
+</code></pre>
+<iframe src='http://padlet.com/embed/9r22docat' frameborder='0' width='100%' height='480px' style='padding:0;margin:0;border:none'></iframe><div style='border-top:2px solid #a7d23a;padding:8px;margin:0;font-size:12px;text-align:right'>
+<a href='http://padlet.com' style='color:#41555f;text-decoration:none'>Created with Padlet<img valign='middle' style='margin:0 0 0 10px;padding:0;border:none;width:16px;height:16px' src='http://padlet.com/favicon.ico'></a>
+</div>
+
+
+<p>去年的完成情况, 还是不太好, 按照0-5打分:</p>
+<pre><code>深入研究Haskell, wiki上的页面基本都要有个了解, 能用Haskell写高效后台应用. 3 (写了LilyLisp)
+
+深入研究C++, 熟练应用模版, C++ 11的高级特性. 3
+(由于是工作语言, 所以这一年进步还是有的.
+对模板了解了不少 - type level purely functional programming.
+但是对C++11还是不了解.)
+
+看CLRS, PFDS刷一下各种OJ, interviewstreet什么的. 5
+</code></pre>
+  </section>
+    <p class="meta text-right"><time class="timeago" datetime="2014-01-01" pubdate>2014-01-01</time></p>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+  </div>
+    </div>
+  </div>
+]]></description>
+    <pubDate>Wed, 01 Jan 2014 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2014-01-01-2014-resolutions.html</guid>
+</item>
+<item>
+    <title>Parallel and Concurrent Programming in Haskell 笔记</title>
+    <link>http://blog.fantasticsid.com/posts/2013-10-06-parallel-concurrent-haskell.html</link>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
+  <header>
+    <div class="content">
+    <h1 class="text-center">Parallel and Concurrent Programming in Haskell 笔记</h1>
+    </header>
+  <section>
+    <ol style="list-style-type: decimal">
+<li>Introduction</li>
+</ol>
+<p>介绍了并行计算和多线程计算的概念和区别. Haskell里面并行计算是有确定执行结果的(deterministic), 并且提供了Eval Monad, Par Monad, 以及如repa和accelerate等库. 而多线程计算则有MVar, STM, actor等的支持.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Basic Parallelism: The Eval Monad</li>
+</ol>
+<p>Eval Monad. 既然是Monad, 那么从计算的角度看, 应该是应该是包含了对一个普通计算如何并行的一个Context. 所以构造Eval Monad实例的过程就可以看成是构造并行Context的过程.</p>
+<p>Haskell中的表达式都是惰性求值的, 程序当中的表达式运行时的表示也是通过thunk实现的. 即使是1 + 2这样简单的表达式, 也是惰性的.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> x <span class="fu">=</span> <span class="dv">1</span> <span class="fu">+</span> <span class="dv">2</span>
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint x
+x <span class="fu">=</span> _
+<span class="dt">Prelude</span><span class="fu">&gt;</span></code></pre>
+<p>Haskell的seq函数将一个表达式求值到WHNF (weak head normal form), 而WHNF粗略地讲, 就是一个数据结构的constructor.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> swap (x, y) <span class="fu">=</span> (y, x)
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> x <span class="fu">=</span> <span class="dv">1</span> <span class="fu">+</span> <span class="dv">2</span>
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> z <span class="fu">=</span> swap(x, x <span class="fu">+</span> <span class="dv">1</span>)
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint z
+z <span class="fu">=</span> _
+<span class="dt">Prelude</span><span class="fu">&gt;</span> seq z ()
+()
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint z
+z <span class="fu">=</span> (_,_)
+<span class="dt">Prelude</span><span class="fu">&gt;</span></code></pre>
+<p>这里表达式z在seq之后, 被evaluate到第一个constructor, 也就是(,)</p>
+<p>一个更复杂的例子, 考虑map函数:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">map<span class="ot"> ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> [b]
+map f [] <span class="fu">=</span> []
+map f (x<span class="fu">:</span>xs) <span class="fu">=</span> f x <span class="fu">:</span> map f xs</code></pre>
+<p>这里如果有表达式:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="kw">let</span> xs <span class="fu">=</span> map (<span class="fu">+</span> <span class="dv">1</span>) [<span class="dv">1</span><span class="fu">..</span><span class="dv">10</span>]
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint xs
+xs <span class="fu">=</span> _
+<span class="dt">Prelude</span><span class="fu">&gt;</span> seq xs ()
+()
+<span class="dt">Prelude</span><span class="fu">&gt;</span> <span class="fu">:</span>sprint xs
+xs <span class="fu">=</span> _ <span class="fu">:</span> _
+<span class="dt">Prelude</span><span class="fu">&gt;</span></code></pre>
+<p>这里表达式xs进行seq求值之后, 只求值到第一个constructor, 也就是(:)</p>
+<p>Eval Monad</p>
+<p>和State Monad等类似, Eval Monad有一些基本的combinator</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">runEval ::</span> <span class="dt">Eval</span> a <span class="ot">-&gt;</span> a
+
+<span class="ot">rpar ::</span> a <span class="ot">-&gt;</span> <span class="dt">Eval</span> a
+<span class="ot">rseq ::</span> a <span class="ot">-&gt;</span> <span class="dt">Eval</span> a</code></pre>
+<p>关于rpar, rseq有一些管用用法, 可以精准控制是否等待表达式求值完成后返回. (rpar表示可以并行, 而rseq等待表达式完成后才返回.) 而最常用的一个用法是:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">runEval <span class="fu">$</span> <span class="kw">do</span>
+  a <span class="ot">&lt;-</span> rpar (f x)
+  b <span class="ot">&lt;-</span> rpar (f y)
+  rseq a
+  rseq b
+  return (a, b)</code></pre>
+<p>这种用法中, f x和f y并行求值, 但是整个表达式(a, b)在这两个运算完成后才返回.</p>
+<p>并行数独, 这个例子演示了如何用Eval Monad并行计算若干个数独问题的解.</p>
+<p>值得注意的是, 代码中:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">solutions <span class="fu">=</span> runEval <span class="fu">$</span> <span class="kw">do</span>
+              as&#39; <span class="ot">&lt;-</span> rpar (force (map solve as))
+              bs&#39; <span class="ot">&lt;-</span> rpar (force (map solve bs))
+              rseq as&#39;
+              rseq bs&#39;
+              return (as&#39; <span class="fu">++</span> bs&#39;)</code></pre>
+<p>这里如果省略掉了force, 那么map solve as只会求值到WHNF, 也就是第一个(:)就结束了.</p>
+<p>这事实上会导致返回的表达式在最终计算数独解法个数的时候:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">print (length (filter isJust solutions))</code></pre>
+<p>才被真正的计算出来. 这样就失去了用Eval Monad进行并行化的意义了.</p>
+<p>而force将一个表达式求值为NF (normal form).</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">force ::</span> <span class="dt">NFData</span> a <span class="ot">=&gt;</span> a <span class="ot">-&gt;</span> a</code></pre>
+<p>parMap: 为了增加并行的粒度</p>
+<p>它的定义十分直接:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">parMap ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> <span class="dt">Eval</span> [b]
+parMap f [] <span class="fu">=</span> return
+parMap f (a<span class="fu">:</span>as) <span class="fu">=</span> <span class="kw">do</span>
+  b <span class="ot">&lt;-</span> rpar (f a)
+  bs <span class="ot">&lt;-</span> parMap f as
+  return (b<span class="fu">:</span>bs)</code></pre>
+<p>每一次使用rpar的时候, 我们都在创建spark, 这些spark在系统的一个spark池中. 而它们最终可能有多种结果:</p>
+<ul>
+<li>overflowed</li>
+</ul>
+<p>spark太多, spark pool放不下</p>
+<ul>
+<li>dud</li>
+</ul>
+<p>表达式已经被求值</p>
+<ul>
+<li>GC’d</li>
+</ul>
+<p>程序运行的时候并没有用到这个表达式</p>
+<ul>
+<li>fizzled</li>
+</ul>
+<p>表达式创建的时候并没有被求值, 但是之后程序的其余部分对其进行了求值. 这些spark也会被清理掉</p>
+<p>在sudoku的例子当中, 程序开始时读入数据分割行的部分不能并行化. 这也是并行加速度不能无限制上升的原因之一. (Amdahl’s law) 另一方面, Haskell的惰性求值使得数据一旦部分读入, 就可以开始处理, 而不必等到整个列表都生成以后才开始计算.</p>
+<p>Deepseq</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">force ::</span> <span class="dt">NFData</span> a <span class="ot">=&gt;</span> a <span class="ot">-&gt;</span> a</code></pre>
+<p>force函数使得一个表达式求值为normal form.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">class</span> <span class="dt">NFData</span> a <span class="kw">where</span>
+<span class="ot">  rnf ::</span> a <span class="ot">-&gt;</span> ()
+  rnf a <span class="fu">=</span> a <span class="ot">`seq`</span> ()</code></pre>
+<p>性能上, 对于一个表达式/数据结构, 求值到normal form通常要遍历整个结构, 所以复杂度是O(n)的, n是数据结构的大小. 而如果是seq, 则是常数复杂度的操作.</p>
+<ol start="7" style="list-style-type: decimal">
+<li>Basic Concurrency: Threads and MVars</li>
+</ol>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">forkIO ::</span> <span class="dt">IO</span> () <span class="ot">-&gt;</span> <span class="dt">IO</span> <span class="dt">ThreadId</span></code></pre>
+<p>这个API产生的是一个lightweight thread. 如果要系统线程, 则要用forkOS.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">import</span> Control.Concurrent
+<span class="kw">import</span> Control.Monad
+<span class="kw">import</span> System.IO
+
+main <span class="fu">=</span> <span class="kw">do</span>
+  hSetBuffering stdout <span class="dt">NoBuffering</span>
+  forkIO (replicateM_ <span class="dv">10</span> (putChar <span class="ch">&#39;A&#39;</span> <span class="fu">&gt;&gt;</span> threadDelay <span class="dv">1000000</span>))
+  replicateM_ <span class="dv">10</span> (putChar <span class="ch">&#39;B&#39;</span> <span class="fu">&gt;&gt;</span> threadDelay <span class="dv">1000000</span>)</code></pre>
+<p>这里使用threadDelay的原因是threaDelay是合适Haskell lightweight thread的API. 如果使用sleep, 因为GHC的内部时钟是使用操作系统的signal的, 会导致sleep的系统调用立刻返回. 而且即使禁止了RTS timer, 也必须在OS thread中调用sleep, 否则会阻塞其他的线程. threadDelay就不会有这些限制. 我的理解是, 只有和原生的库互操作时, 才可能需要用到sleep.</p>
+<p>Haskell的线程默认情况下, main返回的时候就会结束. 也就是说他们默认都是daemon thread, 除了main所在的线程.</p>
+<p>Haskell线程之间通讯可以用MVar</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">MVar</span> a
+<span class="ot">newEmptyMVar ::</span> <span class="dt">IO</span> (<span class="dt">MVar</span> a)
+<span class="ot">newMVar ::</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> (<span class="dt">MVar</span> a)
+<span class="ot">takeMVar ::</span> <span class="dt">MVar</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+<span class="ot">putMVar ::</span> <span class="dt">MVar</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> ()</code></pre>
+<p>这里MVar的API设计与后面的STM TVar的设计很像, 但是不能像TVar那样进行组合.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">main <span class="fu">=</span> <span class="kw">do</span>
+  m <span class="ot">&lt;-</span> newEmptyMVar
+  forkIO <span class="fu">$</span> putMVar m <span class="ch">&#39;x&#39;</span>
+  r <span class="ot">&lt;-</span> takeMVar m
+  print r</code></pre>
+<p>MVar可以作为线程之间通讯的一种方法. 奇妙的是, 如果发生死锁, Haskell的runtime会检测到并且抛出异常.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">import</span> Control.Concurrent
+
+main <span class="fu">=</span> <span class="kw">do</span>
+  m <span class="ot">&lt;-</span> newEmptyMVar
+  takeMVar m</code></pre>
+<p>所以总结下来, MVar可以看做是一个容量为1的channel, 可以用作线程间通讯, Haskell里面多个线程需要操作一个状态的时候, 可以把这个状态放在MVar里面, 这样takeMVar的时候就获得了状态并且对其加锁. putMVar的时候就更新了状态并且解锁, 当然, 也可以用MVar ()来代表一个锁.</p>
+<p>MVar是Haskell里面并发数据结构的基本构件.</p>
+<p>用MVar可以构建出一个logging service:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Logger</span> <span class="fu">=</span> <span class="dt">Logger</span> (<span class="dt">MVar</span> <span class="dt">LogCommand</span>)
+<span class="kw">data</span> <span class="dt">LogCommand</span> <span class="fu">=</span> <span class="dt">Message</span> <span class="dt">String</span> <span class="fu">|</span> <span class="dt">Stop</span> (<span class="dt">MVar</span> ())
+
+<span class="ot">initLogger ::</span> <span class="dt">IO</span> <span class="dt">Logger</span>
+initLogger <span class="fu">=</span> <span class="kw">do</span>
+  m <span class="ot">&lt;-</span> newEmptyMVar
+  <span class="kw">let</span> l <span class="fu">=</span> <span class="dt">Logger</span> m
+  forkIO (logger l)
+  return l
+
+<span class="ot">logger ::</span> <span class="dt">Logger</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> ()
+logger (<span class="dt">Logger</span> m) <span class="fu">=</span> loop
+  <span class="kw">where</span>
+    loop <span class="fu">=</span> <span class="kw">do</span>
+    <span class="kw">case</span> cmd <span class="kw">of</span>
+      <span class="dt">Message</span> msg <span class="ot">-&gt;</span> <span class="kw">do</span>
+        putStrLn msg
+        loop
+      <span class="dt">Stop</span> s <span class="ot">-&gt;</span> <span class="kw">do</span>
+        putStrLn <span class="st">&quot;logger: stop&quot;</span>
+        putMVar s ()
+
+<span class="ot">logMessage ::</span> <span class="dt">Logger</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> ()
+logMessage (<span class="dt">Logger</span> m) s <span class="fu">=</span> putMVar m (<span class="dt">Message</span> s)
+
+<span class="ot">logStop ::</span> <span class="dt">Logger</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> ()
+logStop (<span class="dt">Logger</span> m) <span class="fu">=</span> <span class="kw">do</span>
+  s <span class="ot">&lt;-</span> newEmptyMVar
+  putMVar m (<span class="dt">Stop</span> s)
+  takeMVar s</code></pre>
+<p>如果不用MVar, 以上的logging service用C++实现要用到Lock, Condition Variable. MVar可以作为Lock(takeMVar, putMVar), 也可以作为Condition Variable(takeMVar阻塞直到有线程putMVar).</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">Name</span> <span class="fu">=</span> <span class="dt">String</span>
+<span class="kw">type</span> <span class="dt">PhoneNumber</span> <span class="fu">=</span> <span class="dt">String</span>
+<span class="kw">type</span> <span class="dt">PhoneBook</span> <span class="fu">=</span> <span class="dt">Map</span> <span class="dt">Name</span> <span class="dt">PhoneNumber</span>
+
+<span class="kw">newtype</span> <span class="dt">PhoneBookState</span> <span class="fu">=</span> <span class="dt">PhoneBookState</span> (<span class="dt">MVar</span> <span class="dt">PhoneBook</span>)</code></pre>
+<p>这里PhoneBookState可以在export的时候以抽象的形式出现.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">insert ::</span> <span class="dt">PhoneBookState</span> <span class="ot">-&gt;</span> <span class="dt">Name</span> <span class="ot">-&gt;</span> <span class="dt">Phone</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> ()
+insert (<span class="dt">PhoneBookState</span> m) name number <span class="fu">=</span> <span class="kw">do</span>
+  book <span class="ot">&lt;-</span> takeMVar m
+  putMVar m (Map.insert name number book)
+
+lookup<span class="ot"> ::</span> <span class="dt">PhoneBookState</span> <span class="ot">-&gt;</span> <span class="dt">Name</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> (<span class="dt">Maybe</span> <span class="dt">PhoneNumber</span>)
+lookup (<span class="dt">PhoneBookState</span> m) name <span class="fu">=</span> <span class="kw">do</span>
+  book <span class="ot">&lt;-</span> takeMVar m
+  putMVar m book
+  return (Map.lookup name book)</code></pre>
+<p>这里注意, 我们的查找事实上是在takeMVar, putMVar之后发生. 这对于提高并发是一件好事. 当然, 这得益于Map是immutable data structure这一事实, 否则我们就必须在持有锁期间进行查找.</p>
+<p>另外一点值得注意点是, putMVar m (Map.insert name number book)之后, m里面是一个thunk. 如果我们要减少space leak, 需要:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">putMVar m <span class="fu">$!</span> Map.insert name number book</code></pre>
+<p>但是这样, Map.insert就要在putMVar之前执行完. 如果我们既要减少space leak, 又要使得持有锁的时间尽量短, 可以这样做:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">let</span> book&#39; <span class="fu">=</span> Map.insert name number book
+putMVar m book&#39;
+seq book&#39; (return ())</code></pre>
+<p>这里我感觉, 在极端情况下, putMVar之后, 在seq之前, 如果有其他线程获得这个MVar, 那么一致性就要依靠下面的thunk如何保持一致性了.</p>
+<p>Unbounded Channels</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Chan</span> a
+
+<span class="ot">newChan ::</span> <span class="dt">IO</span> (<span class="dt">Chan</span> a)
+<span class="ot">readChan ::</span> <span class="dt">Chan</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+<span class="ot">writeChan ::</span> <span class="dt">Chan</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> ()</code></pre>
+<p>这里再次注意这个API和MVar, TVar的API之间的相似性.</p>
+<p>Channel有相对复杂的结构:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">Stream</span> a <span class="fu">=</span> <span class="dt">MVar</span> (<span class="dt">Item</span> a)
+<span class="kw">data</span> <span class="dt">Item</span> a <span class="fu">=</span> <span class="dt">Item</span> a (<span class="dt">Stream</span> a)
+
+<span class="kw">data</span> <span class="dt">Chan</span> a <span class="fu">=</span> <span class="dt">Chan</span> (<span class="dt">MVar</span> (<span class="dt">Stream</span> a)) (<span class="dt">MVar</span> (<span class="dt">Stream</span> a))</code></pre>
+<p>Chan有两个MVar包含有两个Stream, 分别用作read pointer和write pointer.</p>
+<p>创建一个新的Channel时, 只需要创建一个新的空Stream:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">newChan ::</span> <span class="dt">IO</span> (<span class="dt">Chan</span> a)
+newChan <span class="fu">=</span> <span class="kw">do</span>
+  hole <span class="ot">&lt;-</span> newEmptyMVar
+  readVar <span class="ot">&lt;-</span> newMVar hole
+  writeVar <span class="ot">&lt;-</span> newMVar hole
+  return (<span class="dt">Chan</span> readVar writeVar)</code></pre>
+<p>加入一个新元素, 我们需要构建一个新的Item, 然后让其后继结点指向当前write pointer, 然后调整write pointer. 这里和链表头插入新元素一样, 但是要注意concurrent safety:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">writeChan ::</span> <span class="dt">Chan</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> ()
+writeChan (<span class="dt">Chan</span> _ writeVar) val <span class="fu">=</span> <span class="kw">do</span>
+  newHole <span class="ot">&lt;-</span> newEmptyMVar
+  oldHole <span class="ot">&lt;-</span> takeMVar writeVar
+  putMVar oldHole (<span class="dt">Item</span> val newHole)
+  putMVar writeVar newHole</code></pre>
+<p>而拿出一个元素的代码:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">readChan ::</span> <span class="dt">Chan</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+readChan (<span class="dt">Chan</span> readVar _) <span class="fu">=</span> <span class="kw">do</span>
+  stream <span class="ot">&lt;-</span> takeMVar readVar
+  <span class="dt">Item</span> val tail <span class="ot">&lt;-</span> takeMVar stream
+  putMVar readVar tail
+  return val</code></pre>
+<p>就writeChan, readChan来说, 代码并不复杂. 但是我们写的是concurrent code, 所以要注意是否线程安全.</p>
+<p>当Channel是空的时候, readChan的第二个takeMVar会block, 直到有其他线程writeChan. 这里由于是空Channel, 所以read pointer和write pointer指向的是同一个MVar. 第一个线程阻塞时, 第二个线程可以putMVar, 从而第一个线程得以继续. 这里的极端情况, 即使是writeChan刚写入空Channel的第一个元素时, readChan读出第一个元素, 也是正确的. read pointer, write pointer保证了同时只有一个read, write操作(这里其实2个操作都是read write, 而不是read only, write only), 但是read, write可以同时存在.</p>
+<p>对以上实现稍加修改, 可以得到multicast channel:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">dupChan ::</span> <span class="dt">Chan</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> (<span class="dt">Chan</span> a)
+dupChan (<span class="dt">Chan</span> _ writeVar) <span class="fu">=</span> <span class="kw">do</span>
+  hole <span class="ot">&lt;-</span> readMVar writeVar
+  newReadVar <span class="ot">&lt;-</span> newMVar hole
+  return (<span class="dt">Chan</span> newReadVar writeVar)
+
+<span class="ot">readMVar ::</span> <span class="dt">MVar</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+readMVar m <span class="fu">=</span> <span class="kw">do</span>
+  a <span class="ot">&lt;-</span> takeMVar m
+  putMVar m a
+  return a</code></pre>
+<p>也就是, 新的channel和以前的channel共用了同一个write pointer, 但是read pointer仍然是分开的. 但是, 这里的一个问题是, 我们在实现readChan的时候使用了takeMVar stream. 这样, 指向这个Item的MVar就是空的了. 所以我们应该要做如下更改:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">readChan ::</span> <span class="dt">Chan</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+readChan (<span class="dt">Chan</span> readVar _) <span class="fu">=</span> <span class="kw">do</span>
+  stream <span class="ot">&lt;-</span> takeMVar readVar
+  <span class="dt">Item</span> val tail <span class="ot">&lt;-</span> readMVar stream
+  putMVar readVar tail
+  return val</code></pre>
+<p>我们还可以继续丰富channel的API:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">unGetChan ::</span> <span class="dt">Chan</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> ()
+unGetChan (<span class="dt">Chan</span> readVar _) val <span class="fu">=</span> <span class="kw">do</span>
+  newReadEnd <span class="ot">&lt;-</span> newEmptyMvar
+  readEnd <span class="ot">&lt;-</span> takeMVar readVar
+  putMVar newReadEnd (<span class="dt">Item</span> val readEnd)
+  putMVar readVar newReadEnd</code></pre>
+<p>但是这个函数与readChan, 在channel为空的时候会死锁: readChan得到了readVar, 然后阻塞在stream上. 而unGetChan阻塞在readVar上. 理想情况下, 应该是unGetChan成功返回然后readChan也返回.</p>
+<p>到这里, 我们发现, 使用MVar构建跟更高层的并发数据结构时需要考虑的情况变得越来越多了.</p>
+<p>GHC保证, 只要没有线程一直获取一个MVar不释放, 那么在一个MVar上等待的线程不会永远阻塞. GHC会用一个queue保存一个MVar上等待的线程, 无论是putMVar还是takeMVar. 这里书上还提到了实现里的一个注意点: 当MVar上有值之后, 仅仅唤醒一个FIFO队列的第一个线程是不够的, 因为这时可能有另外一个线程正在运行从而获得这个MVar的控制权. 正确的做法是, 原子性地唤醒第一个等待的线程并且完成这个线程阻塞的MVar操作.</p>
+<p>线程公平性</p>
+<p>stdout这个文件描述符是用一个MVar表示的. 所以开始时, 两个不断输出字符的线程会交替输出, 原因是这两个线程交替在FIFO队列的队末进行等待.</p>
+<p>这个实现的好处是: 多个线程阻塞在同一个MVar上时, 如果有一个putMVar/takeMVar使得这些线程能够继续, 则只有一个线程被unblock. 而MVar的公平性, 以及这个单个线程唤醒的特性是使得MVar没有被STM完全取代的原因.</p>
+<ol start="8" style="list-style-type: decimal">
+<li>Overlapping Input/Output</li>
+</ol>
+<p>我们可以用MVar来进行线程间同步:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">main <span class="fu">=</span> <span class="kw">do</span>
+  m1 <span class="ot">&lt;-</span> newEmptyMVar
+  m2 <span class="ot">&lt;-</span> newEmptyMVar
+
+  forkIO <span class="fu">$</span> <span class="kw">do</span>
+    r <span class="ot">&lt;-</span> getURL <span class="st">&quot;http://www.google.com&quot;</span>
+    putMVar m1 r
+
+  forkIO <span class="fu">$</span> <span class="kw">do</span>
+    r <span class="ot">&lt;-</span> getURL <span class="st">&quot;http://zhenchao.li&quot;</span>
+    putMVar m2 r
+
+  r1 <span class="ot">&lt;-</span> takeMVar m1
+  r2 <span class="ot">&lt;-</span> takeMVar m2
+  print (B.length r1, B.length r2)</code></pre>
+<p>对其进行抽象, 我们需要异步执行一个计算, 并且得到计算的结果:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Async</span> a <span class="fu">=</span> <span class="dt">Async</span> (<span class="dt">MVar</span> a)
+
+<span class="ot">async ::</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> (<span class="dt">Async</span> a)
+async action <span class="fu">=</span> <span class="kw">do</span>
+  var <span class="ot">&lt;-</span> newEmptyMVar
+  forkIO (<span class="kw">do</span> r <span class="ot">&lt;-</span> action; putMVar var r)
+  return (<span class="dt">Async</span> var)
+
+<span class="ot">wait ::</span> <span class="dt">Async</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+wait (<span class="dt">Async</span> var) <span class="fu">=</span> readMVar var</code></pre>
+<p>要注意, 这里使用readMVar的原因是使得多个线程wait一个结果成为可能.</p>
+<p>这样我们的程序就简化为:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">main <span class="fu">=</span> <span class="kw">do</span>
+  a1 <span class="ot">&lt;-</span> async (getURL <span class="st">&quot;http://www.google.com&quot;</span>)
+  a2 <span class="ot">&lt;-</span> async (getURL <span class="st">&quot;http://zhenchao.li&quot;</span>)
+  r1 <span class="ot">&lt;-</span> wait a1
+  r2 <span class="ot">&lt;-</span> wait a2
+  print (B.length r1, B.length r2)</code></pre>
+<p>Exceptions in Haskell</p>
+<p>GHC对纯函数抛出的异常进行了一些拓展. 但是总的来说Haskell异常处理还不是十分一致的.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">throw ::</span> <span class="dt">Exception</span> e <span class="ot">=&gt;</span> e <span class="ot">-&gt;</span> a</code></pre>
+<p>Exception这个typeclass的定义:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">class</span> (<span class="dt">Typeable</span> e, <span class="dt">Show</span> e) <span class="ot">=&gt;</span> <span class="dt">Exception</span> e <span class="kw">where</span></code></pre>
+<p>Typeable是:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">class</span> <span class="dt">Typeable</span> a <span class="kw">where</span>
+<span class="ot">  typeOf ::</span> a <span class="ot">-&gt;</span> <span class="dt">TypeRep</span></code></pre>
+<p>对于任何类型, 如果实现了Typeable的instance, 就能够得到一个TypeRep. 注意这里文档里说instance的实现需要忽略a的具体值, 以使得我们可以传undefined. (make sense啊make sense)..</p>
+<p>ErrorCall是一个常用的Exception</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">newtype</span> <span class="dt">ErrorCall</span> <span class="fu">=</span> <span class="dt">ErrorCall</span> <span class="dt">String</span>
+  <span class="kw">deriving</span> (<span class="dt">Typeable</span>)
+
+throw (<span class="dt">ErrorCall</span> <span class="st">&quot;oops!&quot;</span>)
+
+<span class="co">-- 事实上, error的定义:</span>
+
+error<span class="ot"> ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> a
+error s <span class="fu">=</span> throw (<span class="dt">ErrorCall</span> s)</code></pre>
+<p>除此之外还有IOException.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">catch<span class="ot"> ::</span> <span class="dt">Exception</span> e <span class="ot">=&gt;</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> (e <span class="ot">-&gt;</span> <span class="dt">IO</span> a) <span class="ot">-&gt;</span> <span class="dt">IO</span> a</code></pre>
+<p>这里catch只捕获固定类型的Exception, 但是Exception是有层次关系的, 最顶层的是SomeException</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">throw (<span class="dt">ErrorCall</span> <span class="st">&quot;oops&quot;</span>) <span class="ot">`catch`</span> \e <span class="ot">-&gt;</span> print (<span class="ot">e ::</span> <span class="dt">SomeException</span>)</code></pre>
+<p>这里需要说明, 捕获所有异常只有在调试, 以及做清理工作然后重新抛出异常这两种情况下是提倡做的, 不要吞掉异常.</p>
+<p>另外常用的异常处理API:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">try ::</span> <span class="dt">Exception</span> e <span class="ot">=&gt;</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> (<span class="dt">Either</span> e a)
+
+<span class="ot">handle ::</span> <span class="dt">Exception</span> e <span class="ot">=&gt;</span> (e <span class="ot">-&gt;</span> <span class="dt">IO</span> a) <span class="ot">-&gt;</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+
+<span class="ot">onException ::</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> b <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+
+<span class="co">-- 资源清理, 重新抛出异常</span>
+onException io what <span class="fu">=</span>
+ io <span class="ot">`catch`</span> \e <span class="ot">-&gt;</span> <span class="kw">do</span> _ <span class="ot">&lt;-</span> what
+                     throwIO (<span class="ot">e ::</span> <span class="dt">SomeException</span>)
+
+<span class="ot">throwIO ::</span> <span class="dt">Exception</span> e <span class="ot">=&gt;</span> e <span class="ot">-&gt;</span> <span class="dt">IO</span> a</code></pre>
+<p>在IO monad中, throwIO保证相对其他IO的顺序, 而throw则没有这个保证.</p>
+<p>最后还有两个有用的API:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">bracket ::</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> <span class="dt">IO</span> b) <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> <span class="dt">IO</span> c) <span class="ot">-&gt;</span> <span class="dt">IO</span> c
+bracket before after during <span class="fu">=</span> <span class="kw">do</span>
+  a <span class="ot">&lt;-</span> before
+  c <span class="ot">&lt;-</span> during a <span class="ot">`onException`</span> after a <span class="co">-- 如果发生异常, 资源清理, 然后重新抛出</span>
+  after a
+  return c
+
+<span class="ot">finally ::</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> b <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+finally io after <span class="fu">=</span> <span class="kw">do</span>
+  io <span class="ot">`onException`</span> after
+  after</code></pre>
+<p>每一个forkIO都有一个默认异常处理handler, 它会输出这个异常然后退出线程. 如果我们希望能够在Async API当中得到另外一个线程的计算结果, 并且知道是否发生了异常, 我们需要进行修改:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Async</span> a <span class="fu">=</span> <span class="dt">Async</span> (<span class="dt">MVar</span> (<span class="dt">Either</span> <span class="dt">SomeException</span> a))
+
+<span class="ot">async ::</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> (<span class="dt">Async</span> a)
+async action <span class="fu">=</span> <span class="kw">do</span>
+  var <span class="ot">&lt;-</span> newEmptyMVar
+  forkIO (<span class="kw">do</span> r <span class="ot">&lt;-</span> try action; putMVar var r)
+  return (<span class="dt">Async</span> var)
+
+<span class="ot">waitCatch ::</span> <span class="dt">Async</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> (<span class="dt">Either</span> <span class="dt">SomeException</span> a)
+waitCatch (<span class="dt">Async</span> var) <span class="fu">=</span> readMVar var
+
+<span class="ot">wait ::</span> <span class="dt">Async</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+wait a <span class="fu">=</span> <span class="kw">do</span>
+  r <span class="ot">&lt;-</span> waitCatch a
+  <span class="kw">case</span> r <span class="kw">of</span>
+    <span class="dt">Left</span> e <span class="ot">-&gt;</span> throwIO e
+    right a <span class="ot">-&gt;</span> return a</code></pre>
+<p>等待最早的一个线程返回:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">waitAny ::</span> [<span class="dt">Async</span> a] <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+waitAny as <span class="fu">=</span> <span class="kw">do</span>
+  m <span class="ot">&lt;-</span> newEmptyMVar
+  <span class="kw">let</span> forkwait a <span class="fu">=</span> forkIO <span class="fu">$</span> <span class="kw">do</span> r <span class="ot">&lt;-</span> try (wait a); putMVar m r
+  mapM_ forwait as
+  <span class="co">-- race condition?</span>
+  <span class="co">-- readMVar is not atomic, could end up taking MVar and blocked at putting it back</span>
+  wait (<span class="dt">Async</span> m)
+
+<span class="ot">main ::</span> <span class="dt">IO</span> ()
+main <span class="fu">=</span> <span class="kw">do</span>
+  <span class="kw">let</span>
+    download url <span class="fu">=</span> <span class="kw">do</span>
+      r <span class="ot">&lt;-</span> getURL url
+      return (url, r)
+
+  as <span class="ot">&lt;-</span> mapM (async <span class="fu">.</span> download) sites
+
+  (url, r) <span class="ot">&lt;-</span> waitAny as
+  printf <span class="st">&quot;%s was first (%d bytes)\n&quot;</span> url (B.length r)
+  mapM_ wait as</code></pre>
+<p>值得注意的是, 这里的waitAny是可能发生死锁的, 原因是readMVar并不是原子操作. 这个结论在irc #haskell上得到了验证, 而且这里还有ticket要去实现原子的readMVar:</p>
+<p><a href="https://ghc.haskell.org/trac/ghc/ticket/4001">Implement an atomic readMVar</a></p>
+<ol start="9" style="list-style-type: decimal">
+<li>Cancellation and Timeouts</li>
+</ol>
+<p>在考虑如何中断一个线程时, 需要解决的问题是应该让被中断的线程不断轮询还是被直接终止. 轮询不是一个好方法, 而直接终止意味着我们必须对一些状态进行保护. Haskell的好处是多数计算是纯的, 对于不纯的计算我们额外进行保护就可以.</p>
+<p>Asynchronous Exception</p>
+<p>一个例子是, 使用bracket进行资源获取 - 资源使用 - 资源释放这个模式. 这里bracket捕获的打开文件异常以及从其他线程的Cancellation导致的异常是不同的. 前者是Synchronous Exception, 使用throw, throwIO抛出. 后者是Asynchronous Exception, 使用throwTo.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">throwTo ::</span> <span class="dt">Exception</span> e <span class="ot">=&gt;</span> <span class="dt">ThreadId</span> <span class="ot">-&gt;</span> e <span class="ot">-&gt;</span> <span class="dt">IO</span> ()</code></pre>
+<p>这里ThreadId代表的线程可能处于running, blocked, finished之一的状态. 如果是finished, 则throwTo什么也不做.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Async</span> a <span class="fu">=</span> <span class="dt">Async</span> <span class="dt">ThreadId</span> (<span class="dt">MVar</span> (<span class="dt">Either</span> <span class="dt">SomeException</span> a))
+
+<span class="ot">cancel ::</span> <span class="dt">Async</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> ()
+cancel (<span class="dt">Async</span> t var) <span class="fu">=</span> throwTo t <span class="dt">ThreadKilled</span>
+
+<span class="ot">async ::</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> (<span class="dt">Async</span> a)
+async action <span class="fu">=</span> <span class="kw">do</span>
+  m <span class="ot">&lt;-</span> newEmptyMVar
+  t <span class="ot">&lt;-</span> forkIO (<span class="kw">do</span> r <span class="ot">&lt;-</span> try action; putMVar m r)
+  return (<span class="dt">Async</span> t m)
+
+main <span class="fu">=</span> <span class="kw">do</span>
+  as <span class="ot">&lt;-</span> mapM (async <span class="fu">.</span> timeDownload) sites
+  
+  forkIO <span class="fu">$</span> <span class="kw">do</span>
+    hSetBuffering stdin <span class="dt">NoBuffering</span>
+    forever <span class="fu">$</span> <span class="kw">do</span>
+      c <span class="ot">&lt;-</span> getChar
+      when (c <span class="fu">==</span> <span class="ch">&#39;q&#39;</span>) <span class="fu">$</span> mapM_ cancel as
+  
+  rs <span class="ot">&lt;-</span> mapM waitCatch as
+  printf <span class="st">&quot;%d/%d succeeded\n&quot;</span> (length (rights rs)) (length rs)</code></pre>
+<p>这里cancel的是一个线程, 但是在forkIO里面, 如果这个ThreadKilled的异常在try action里面发生, 则m这个MVar会被putMVar, 但是如果异常在putMVar m r之前发生, 又在try之后发生, 则会发生死锁, 这个问题书中进行了详细讨论:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">problem ::</span> <span class="dt">MVar</span> a <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> <span class="dt">IO</span> a) <span class="ot">-&gt;</span> <span class="dt">IO</span> ()
+problem m f <span class="fu">=</span> <span class="kw">do</span>
+  a <span class="ot">&lt;-</span> takeMVar m
+  r <span class="fu">&lt;</span> f a <span class="ot">`catch`</span> \e <span class="ot">-&gt;</span> <span class="kw">do</span> putMVar m a; throw e
+  putMVar m r</code></pre>
+<p>这里在takeMVar之后, putMVar之前, 都有可能发生asynchronous exception, 这个exception不会被当中的那个catch捕获.</p>
+<p>Haskell提供了这样一个API:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">mask ::</span> ((<span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a) <span class="ot">-&gt;</span> <span class="dt">IO</span> b) <span class="ot">-&gt;</span> <span class="dt">IO</span> b</code></pre>
+<p>这样上面的代码就可以写成: <sub>~</sub> {.haskell} problem :: MVar a -&gt; (a -&gt; IO a) -&gt; IO () problem m f = mask $ -&gt; do a &lt;- takeMVar m r &lt;- restore (f a) <code>catch</code> -&gt; do putMVar m a; throw e putMVar m r <sub>~</sub></p>
+<p>mask类型比较复杂. 我们是要把我们的一个IO b变成一个带额外参数(类型为(IO a -&gt; IO a)的函数)的IO b. 这样我们就可以在原来的IO b中, 调用这个额外参数来把我们不需要屏蔽asynchronous exception的IO恢复到没有屏蔽的状态.</p>
+<p>注意Haskell(GHC)的实现里, takeMVar, putMVar都是可以被打断的(这里有比较复杂的细节).</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">uninterruptibleMask ::</span> ((<span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a) <span class="ot">-&gt;</span> <span class="dt">IO</span> b) <span class="ot">-&gt;</span> <span class="dt">IO</span> b
+
+<span class="ot">getMaskingState ::</span> <span class="dt">IO</span> <span class="dt">MaskingState</span>
+
+<span class="kw">data</span> <span class="dt">MaskingState</span>
+  <span class="fu">=</span> <span class="dt">Unmasked</span>
+  <span class="fu">|</span> <span class="dt">MaskedInterruptible</span>
+  <span class="fu">|</span> <span class="dt">MaskedUninterruptible</span></code></pre>
+<p>我们对MVar的操作进行一下抽象, 有如下的API:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">modifyMVar_ ::</span> <span class="dt">MVar</span> a <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> <span class="dt">IO</span> a) <span class="ot">-&gt;</span> <span class="dt">IO</span> ()
+modifyMVar_ m io <span class="fu">=</span>
+  mask <span class="fu">$</span> \restore <span class="ot">-&gt;</span> <span class="kw">do</span>
+    a <span class="ot">&lt;-</span> takeMVar m
+    a&#39; <span class="ot">&lt;-</span> restore (io a) <span class="ot">`onException`</span> putMVar m a
+    putMVar m a&#39;
+
+<span class="ot">modifyMVar ::</span> <span class="dt">MVar</span> a <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> <span class="dt">IO</span> (a,b)) <span class="ot">-&gt;</span> <span class="dt">IO</span> b
+modifyMVar m io <span class="fu">=</span>
+  mask <span class="fu">$</span> \restore <span class="ot">-&gt;</span> <span class="kw">do</span>
+    a <span class="ot">&lt;-</span> takeMVar m
+    (a&#39;,b) <span class="ot">&lt;-</span> restore (io a) <span class="ot">`onException`</span> putMVar m a
+    putMVar m a&#39;
+    return b
+                  
+<span class="ot">casMVar ::</span> <span class="dt">Eq</span> a <span class="ot">=&gt;</span> <span class="dt">MVar</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> <span class="dt">Bool</span>
+casMVar m old new <span class="fu">=</span>
+  modifyMVar m <span class="fu">$</span> \cur
+    <span class="kw">if</span> cur <span class="fu">==</span> old
+      <span class="kw">then</span> return (new, <span class="dt">True</span>)
+      <span class="kw">else</span> return (cur, <span class="dt">False</span>)</code></pre>
+<p>我们之前提到的bracket函数, 也应该有asynchronous exception的保护:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">bracket ::</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> <span class="dt">IO</span> b) <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> <span class="dt">IO</span> c) <span class="ot">-&gt;</span> <span class="dt">IO</span> c
+bracket before after thing <span class="fu">=</span>
+  mask <span class="fu">$</span> \restore <span class="ot">-&gt;</span> <span class="kw">do</span>
+    a <span class="ot">&lt;-</span> before
+    r <span class="ot">&lt;-</span> restore (thing a) <span class="ot">`onException`</span> after a
+    _ <span class="ot">&lt;-</span> after a
+    return r</code></pre>
+<p>回顾我们之前定义的readChan</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">readChan ::</span> <span class="dt">Chan</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+readChan (<span class="dt">Chan</span> readVar _) <span class="fu">=</span> <span class="kw">do</span>
+  stream <span class="ot">&lt;-</span> takeMVar readVar
+  <span class="dt">Item</span> val new <span class="ot">&lt;-</span> readMVar stream
+  putMVar readVar new
+  return val</code></pre>
+<p>第一个takeMVar之后如果发生了异步异常, 则readVar就会永远是空, 造成死锁, 可以用modifyMVar:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">readChan ::</span> <span class="dt">Chan</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+readChan (<span class="dt">Chan</span> readVar _) <span class="fu">=</span> <span class="kw">do</span>
+  modifyMVar readVar <span class="fu">$</span> \stream <span class="ot">-&gt;</span> <span class="kw">do</span>
+    <span class="dt">Item</span> val tail <span class="ot">&lt;-</span> readMVar stream
+    return (tail, val)</code></pre>
+<p>还有个问题, 就是readMVar其实也不是异步异常安全的:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">readMVar ::</span> <span class="dt">MVar</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+readMVar m <span class="fu">=</span> <span class="kw">do</span>
+  a <span class="ot">&lt;-</span> takeMVar m
+  putMVar m a
+  return a</code></pre>
+<p>我们仍然可以用modifyMVar, 也可以用withMVar:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">withMVar ::</span> <span class="dt">MVar</span> a <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> <span class="dt">IO</span> b) <span class="ot">-&gt;</span> <span class="dt">IO</span> b</code></pre>
+<p>而Control.Concurrent.MVar是这么定义的:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">readMVar ::</span> <span class="dt">MVar</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+readMVar m <span class="fu">=</span>
+  mask_ <span class="fu">$</span> <span class="kw">do</span>
+    a <span class="ot">&lt;-</span> takeMVar m
+    putMVar m a
+    return a</code></pre>
+<p>我们之前顶一个的writeChan的异步异常安全的实现是:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">writeChan ::</span> <span class="dt">Chan</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> ()
+writeChan (<span class="dt">Chan</span> _ writeVar) val <span class="fu">=</span> <span class="kw">do</span>
+  newHole <span class="ot">&lt;-</span> newEmptyMVar
+  mask_ <span class="fu">$</span> <span class="kw">do</span>
+    oldHole <span class="ot">&lt;-</span> takeMVar writeVar
+    putMVar oldHole (<span class="dt">Item</span> val newHole)
+    putMVar writeVar newHole</code></pre>
+<p>超时: 我们希望能够让一个IO运算在一定时间内完成:</p>
+<p>如果IO a在一定时间内没有完成, 那么我们会给他抛出一个Timeout u的异步异常, 并且timeout返回Nothing. timeout的实现是forkIO出另外一个线程, 这个线程在一定时间之后, 会向自己抛异步异常. 但是如果本线程在超时之前完成, 则会抛出异步异常给这个创建出来的线程以结束它. 我们不能在另外一个线程里执行IO a的原因是: 1. IO a可能调用myThreadId, 而这个调用应该期望返回调用timeout的线程的id. 2. 如果调用timeout的线程被异步线程中断, 这个IO a也应该被中断.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">timeout ::</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> (<span class="dt">Maybe</span> a)
+timeout t m
+  <span class="fu">|</span> t <span class="fu">&lt;</span> <span class="dv">0</span> <span class="fu">=</span> fmap <span class="dt">Just</span> m
+  <span class="fu">|</span> t <span class="fu">==</span> <span class="dv">0</span> <span class="fu">=</span> return <span class="dt">Nothing</span>
+  <span class="fu">|</span> otherwise <span class="fu">=</span> <span class="kw">do</span>
+    pid <span class="ot">&lt;-</span> myThreadId
+    u <span class="ot">&lt;-</span> newUnique
+    <span class="kw">let</span> ex <span class="fu">=</span> <span class="dt">Timeout</span> u
+    handleJust
+      (\e <span class="ot">-&gt;</span> <span class="kw">if</span> e <span class="fu">==</span> ex <span class="kw">then</span> <span class="dt">Just</span> () <span class="kw">else</span> <span class="dt">Nothing</span>)
+      (\_ <span class="ot">-&gt;</span> return <span class="dt">Nothing</span>)
+      (bracket (forkIO <span class="fu">$</span> <span class="kw">do</span> threadDelay t
+                            throwTo pid ex)
+               (\tid <span class="ot">-&gt;</span> throwTo tid <span class="dt">ThreadKilled</span>)
+               (\_ <span class="ot">-&gt;</span> fmap <span class="dt">Just</span> m))
+
+<span class="ot">handleJust ::</span> <span class="dt">Exception</span> e <span class="ot">=&gt;</span> (e <span class="ot">-&gt;</span> <span class="dt">Maybe</span> b) <span class="ot">-&gt;</span> (b <span class="ot">-&gt;</span> <span class="dt">IO</span> a) <span class="ot">-&gt;</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a</code></pre>
+<p>handleJust只会处理Timeout u这个exception, 其他情况(Nothing)会重新抛出异常. 而如果是Timeout异常, 在下面return Nothing.</p>
+<p>里面的IO a比较复杂, 用到了bracket保证forkIO出来的线程一定会被回收掉. 而这个线程做的事情就是等待t, 然后向原来的线程抛出Timeout. 这里要不就是原来的线程在t时间内结束, 然后给子线程抛出ThreadKilled, 要不就是超时后, 子线程抛出Timeout异步异常.</p>
+<p>当然还有感觉会是race的情况: 如果两个线程同时给对方抛出异步异常会发生什么? 答案在于, throwTo是同步的, 也就是异常在目标线程上触发以后才会返回, 这样就不会发生一个线程已经给另外一个线程抛出异常, 然后自己又接收到这个线程抛过来的异常. 而且, throwTo在目标线程mask的时候会block, 而这个过程中又恰巧能够被异步异常打断. 这个就能保证, 无论如何, 只有一个线程能够成功把异步异常抛给对方.</p>
+<p>如果在异常handler里面接受到异步异常怎么办? 我们可以把异常处理放在mask里面.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">mask <span class="fu">$</span> \restore <span class="ot">-&gt;</span>
+  restore action <span class="ot">`catch`</span> handler</code></pre>
+<p>为了处理异步异常, 之前的Async函数也要重新写过:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">async ::</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> (<span class="dt">Async</span> a)
+async action <span class="fu">=</span> <span class="kw">do</span>
+  m <span class="ot">&lt;-</span> newEmptyMVar
+  t <span class="ot">&lt;-</span> mask <span class="fu">$</span> \restore <span class="ot">-&gt;</span>
+    forkIO (<span class="kw">do</span> r <span class="ot">&lt;-</span> try (restore action); putMVar m r)
+  return (<span class="dt">Async</span> t m)</code></pre>
+<p>这里, forkIO出来的线程会继承父线程的mask状态, 也就是它刚刚被创建就是异步异常被mask状态. 这是把mask放到子线程做不到的.</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">forkFinally ::</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> (<span class="dt">Either</span> <span class="dt">SomeException</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> ()) <span class="ot">-&gt;</span> <span class="dt">IO</span> <span class="dt">ThreadId</span>
+forkFinally action fun <span class="fu">=</span>
+  mask <span class="fu">$</span> \restore <span class="ot">-&gt;</span>
+    forkIO (<span class="kw">do</span> r <span class="ot">&lt;-</span> try (restore action); fun r)
+
+<span class="ot">async ::</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> (<span class="dt">Async</span> a)
+async action <span class="fu">=</span> <span class="kw">do</span>
+  m <span class="ot">&lt;-</span> newEmptyMVar
+  t <span class="ot">&lt;-</span> forkFinally action (putMVar m)
+  return (<span class="dt">Async</span> t m)</code></pre>
+  </section>
+    <p class="meta text-right"><time class="timeago" datetime="2013-10-06" pubdate>2013-10-06</time></p>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+  </div>
+    </div>
+  </div>
+]]></description>
+    <pubDate>Sun, 06 Oct 2013 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2013-10-06-parallel-concurrent-haskell.html</guid>
+</item>
+<item>
+    <title>理解Arrows</title>
+    <link>http://blog.fantasticsid.com/posts/2013-07-02-arrows.html</link>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
+  <header>
+    <div class="content">
+    <h1 class="text-center">理解Arrows</h1>
+    </header>
+  <section>
+    <p>Haskell的一些library用到了Arrow这个概念. 如果能够理解Monad那么相信理解Arrow也并不是非常难, 至少从类型层面上来说并不难理解. 而难点可能正是理解各种combinators以及具体的instance实现的语义. 由于我也刚刚开始接触Arrow, 所以这里的描述都尽量简化了.</p>
+<p>要理解Arrow, 我们首先引入Kleisli这个type synonym:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">Kleisli</span> m a b <span class="fu">=</span> a <span class="ot">-&gt;</span> mb</code></pre>
+<p>这里可以看到, Kleisli这个高阶类型需要三个参数, 其中, 第二个参数m也是一个高阶类型, 可以是Maybe, [], IO等等. 而这个类型代表的是一个函数, 输入类型为a, 输出类型为m b.</p>
+<p>这里多提一句, 我们其实可以把右端改写成:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">Kleisli</span> m a b <span class="fu">=</span> (<span class="ot">-&gt;</span>) a (m b)</code></pre>
+<p>这样是不是就根本没啥神奇了, Kleisli就是对(-&gt;)这个高阶类型的一个别名. 而它本身代表了一个计算, 一个输入类型为a, 输出类型为b的计算. 我们对这种计算进行抽象, 得到Arrow的定义:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">class</span> <span class="dt">Arrow</span> arr <span class="kw">where</span>
+<span class="ot">  arr ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> arr a b
+<span class="ot">  (&gt;&gt;&gt;) ::</span> arr a b <span class="ot">-&gt;</span> arr b c <span class="ot">-&gt;</span> arr a c</code></pre>
+<p>看起来类型比较复杂, 但其实也很好理解. arr(Arrow arr这里)代表一个计算, 那么arr(typeclass function)代表了如何把一个函数lift到Arrow中, 这个和Monad的return类似. 而&gt;&gt;&gt;这个运算是对计算进行组合, 这个和Monad的&gt;&gt;=有点类似(这里并不严格, 只是希望能有一些类比).</p>
+<p>既然Arrow代表计算, 那么普通函数也当然是一个计算, 我们来看看普通函数的typeclass instance是如何实现的:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">instance</span> <span class="dt">Arrow</span> (<span class="ot">-&gt;</span>) <span class="kw">where</span>
+  arr <span class="fu">=</span> id
+  (<span class="fu">&gt;&gt;&gt;</span>) <span class="fu">=</span> flip (<span class="fu">.</span>)</code></pre>
+<p>这里有一些规律可以帮助我们理解: 1. 注意到(-&gt;)的kind是* -&gt; * -&gt; *, 即需要两个类型参数的高阶类型. 我们把(-&gt;)带入Arrow的typeclass定义发现, 需要定义的函数的类型:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">arr ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> (<span class="ot">-&gt;</span>) a b
+<span class="ot">(&gt;&gt;&gt;) ::</span> (<span class="ot">-&gt;</span>) a b <span class="ot">-&gt;</span> (<span class="ot">-&gt;</span>) b c <span class="ot">-&gt;</span> (<span class="ot">-&gt;</span>) a c</code></pre>
+<p>如果我们把(-&gt;)写成Infix notation, 那么就得到了:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">arr ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> b)
+<span class="ot">(&gt;&gt;&gt;) ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> (b <span class="ot">-&gt;</span> c) <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> c)</code></pre>
+<p>容易看到, (&gt;&gt;&gt;)和function composition(.)的类型是差不多的, 只是两个函数的顺序调换了一下.</p>
+<p>现在我们来看一下Kleisli的Arrow instance定义:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">newtype</span> <span class="dt">Kleisli</span> m a b <span class="fu">=</span> <span class="dt">Kleisli</span> {<span class="ot">runKleisli ::</span> a <span class="ot">-&gt;</span> m b}
+<span class="kw">instance</span> <span class="dt">Monad</span> m <span class="ot">=&gt;</span> <span class="dt">Arrow</span> (<span class="dt">Kleisli</span> m) <span class="kw">where</span>
+  arr f <span class="fu">=</span> <span class="dt">Kleisli</span> <span class="fu">$</span> return <span class="fu">.</span> f
+  (runKleisli f) (<span class="fu">&gt;&gt;&gt;</span>) (runKleisli g) <span class="fu">=</span> <span class="dt">Kleisli</span> (\a <span class="ot">-&gt;</span> <span class="kw">do</span> r <span class="ot">&lt;-</span> f a
+                                                          return <span class="fu">$</span> g r)</code></pre>
+  </section>
+    <p class="meta text-right"><time class="timeago" datetime="2013-07-02" pubdate>2013-07-02</time></p>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+  </div>
+    </div>
+  </div>
+]]></description>
+    <pubDate>Tue, 02 Jul 2013 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2013-07-02-arrows.html</guid>
+</item>
+<item>
+    <title>C++ Templates: The Complete Guide 笔记</title>
+    <link>http://blog.fantasticsid.com/posts/2013-04-05-cpp-template.html</link>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
+  <header>
+    <div class="content">
+    <h1 class="text-center">C++ Templates: The Complete Guide 笔记</h1>
+    </header>
+  <section>
+    <ol style="list-style-type: decimal">
+<li>这里解释了作者认为const放在类型之后的好处: 比如</li>
+</ol>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">char</span>* CHARS;
+<span class="kw">typedef</span> CHARS <span class="dt">const</span> CPTR;</code></pre>
+<p>这样声明的CPTR就是一个“constant pointer to chars”, 因为展开之后就是</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">char</span>* <span class="dt">const</span> CPTR;</code></pre>
+<p>相反</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">char</span> * CHARS;
+<span class="kw">typedef</span> <span class="dt">const</span> CHARS CPTR;</code></pre>
+<p>展开之后为:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">const</span> <span class="dt">char</span> * CPTR;
+<span class="dt">int</span> main();</code></pre>
+<p>这里const修饰的就不是CPTR了.</p>
+<p>另外, 推荐的引用和指针参数的空格放置位置</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> foo(<span class="dt">int</span> <span class="dt">const</span>&amp; x);</code></pre>
+<p>倒也是和工作时C++代码的风格一样的.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>函数模板</li>
+</ol>
+<ul>
+<li>template声明中使用typename较常用</li>
+<li>对于一个类型, 如果实例化函数模板后使用到了不支持的操作符, 会产生编译错误</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+T lt(T <span class="dt">const</span>&amp; a, T <span class="dt">const</span>&amp; b)
+{
+  <span class="kw">return</span> a * b;
+}
+
+lt(<span class="st">&quot;hi&quot;</span>, <span class="st">&quot;ya&quot;</span>); <span class="co">// error</span></code></pre>
+<ul>
+<li>函数模板的编译经过至少2层, 模板本身的语法, 以及实例化之后的语义检查</li>
+<li>模板函数参数的自动推导中不允许类型转化, 类型必须完全匹配. 解决的方法是转化实参的类型或者显示实例化模板参数</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+T lt(T <span class="dt">const</span>&amp; a, T <span class="dt">const</span>&amp; b)
+{
+  <span class="kw">return</span> a &lt; b;
+}
+
+lt(<span class="dv">4</span>, <span class="fl">5.0</span>); <span class="co">// error</span>
+lt&lt;<span class="dt">float</span>&gt;(<span class="dv">4</span>, <span class="fl">5.0</span>); <span class="co">// correct</span></code></pre>
+<ul>
+<li>函数模板不能有默认参数</li>
+<li>函数模板可以重载(参数个数不同), 可以进行特例化, 可以与非函数模板共存. 后者在选择时有更高的优先权</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>类模板</li>
+</ol>
+<ul>
+<li>类模板的成员函数的实例化是惰性的</li>
+<li>类模板特例化, 可以部分特例化</li>
+<li>类模板参数可以有默认值, 并且可以引用之前的模板参数</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt; <span class="kw">typename</span> T, <span class="kw">typename</span> CONT = vector&lt;T&gt; &gt;
+<span class="kw">class</span> A;</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>非类型的模板参数 (dependent types)</li>
+</ol>
+<ul>
+<li>模板参数不必要是一个类型, 还可以是整形值</li>
+<li>不同整型值构造出来的类型是不一样的, 比如长度为10的List, 和长度为20的List是不同的</li>
+<li>模板类和模板函数都可以用整型值来实例化</li>
+<li>甚至外部链接的字符串常量也可以作为模板参数</li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li>一些细节</li>
+</ol>
+<ul>
+<li>通常类内的typedef在别处使用时要用typename作修饰, 以免被编译器认为是静态类成员变量</li>
+<li>模板成员函数使用时如果进行了显示的特例化, 需要在“.”, “-&gt;”之后加上template以免编译器把“&lt;”认为是小于操作符</li>
+<li>模板类继承之后, 调用成员函数需要用“this-&gt;memfn()”</li>
+<li>模板本身也可以成为模板的实参 (template template arguments), 使用时不能利用默认参数</li>
+</ul>
+<ol start="6" style="list-style-type: decimal">
+<li>模板文件包含模式</li>
+</ol>
+<ul>
+<li>由于模板的实例化发生在编译期, 所以如果使用的模板定义在另外一个编译单元中, 则需要确保有恰当的实例化发生</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// template.hpp</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> print(T <span class="dt">const</span>&amp;);
+
+<span class="co">// template.cpp</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> print(T <span class="dt">const</span>&amp; x)
+{
+<span class="co">// implementation</span>
+}
+
+<span class="co">// prog.cpp</span>
+<span class="ot">#include &quot;template.hpp&quot;</span>
+<span class="dt">int</span> main()
+{
+<span class="dt">double</span> v = <span class="fl">1.0</span>;
+print(v);
+<span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre>
+<p>这里由于模板定义在另外一个编译单元(template.cpp), 而在其中并没有对double类型进行实例化的需要, 因此编译结果中并没有 print<double>(double const&amp; x) 这个函数. 而对prog.cpp的编译能够通过是因为其中包含了template.hpp中的print模板函数的声明. 这样就导致了编译能够通过, 但是链接阶段会发生错误.</p>
+<p>解决方法:</p>
+<ol style="list-style-type: decimal">
+<li><p>把模板实现放在模板声明中 (Inclusion model)</p></li>
+<li><p>显示实例化</p></li>
+</ol>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// template.cpp</span>
+<span class="kw">template</span> <span class="dt">void</span> print&lt;<span class="dt">double</span>&gt;(<span class="dt">double</span> <span class="dt">const</span> &amp;);</code></pre>
+<p>这样template.cpp编译单元中就会实例化相应的函数, 缺点是难以管理</p>
+<ol start="3" style="list-style-type: decimal">
+<li>结合上面两种方法, 提供额外的编译单元专门提供特例化声明</li>
+</ol>
+<ul>
+<li>使用export (Separation model)</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">export</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> print(T <span class="dt">const</span>&amp;);</code></pre>
+<p>缺点是编译器实现支持较少</p>
+<ul>
+<li><p>预编译头文件 - 编译器的优化可以保存前n行代码编译之后的状态, 这使得开头一样的编译单元(都包含了相同的头文件)的编译速度得以提高.</p></li>
+<li><p>模板编译错误的找错: 找到模板实例化处</p></li>
+<li><p>Archetypes: 模板库编写者提供的满足模板最小要求的类示例</p></li>
+</ul>
+<ol start="7" style="list-style-type: decimal">
+<li>模板术语</li>
+</ol>
+<ul>
+<li><p>Class template</p></li>
+<li><p>Instantiation and specialization</p></li>
+<li><p>Declaration vs definition</p></li>
+<li><p>Template arguments vs template parameters</p></li>
+</ul>
+<ol start="8" style="list-style-type: decimal">
+<li>模板参数限制</li>
+</ol>
+<ul>
+<li><p>模板定义分为类模板和函数模板, 其中还包括了类模板的成员函数, 类模板的嵌套类(nested class)定义和成员定义, 模板类的静态变量的模板定义</p></li>
+<li><p>模板成员函数不能被定义为虚函数, 因为虚表通常是用固定大小的表实现的. 而“模板虚函数”的个数只有到最后整个程序构建玩才能确定, 所以实现这个特性需要编译器, 连接器的支持</p></li>
+<li><p>主模板定义</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// primary template</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Box;
+
+<span class="co">// non-primary template</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Box&lt;T&gt;;</code></pre>
+<ul>
+<li><p>模板参数分为: 类型参数, 非类型参数(non-type parameters), 模板参数</p></li>
+<li><p>非类型参数包括整形/枚举, 指针, 引用</p></li>
+<li><p>模板参中的默认值可以在模板定义内使用, 但是模板显式实例化时模板类参数的参数个数(kind)必须与形参声明一样</p></li>
+<li>模板实参
+<ul>
+<li>只有模板类声明时可以有默认参数</li>
+<li>template-id: 显式模板参数T&lt;P1, P2, P3&gt;</li>
+<li>模板类定义作用域之内, 对类名的引用相当于tempate-id</li>
+<li>默认模板参数可省略, 但是“&lt;&gt;”仍然是必要的</li>
+<li>模板函数参数类型推导</li>
+</ul></li>
+<li><p>substitution-failure-is-not-an-error (SFINAE)</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+RT1 test(<span class="kw">typename</span> T::X <span class="dt">const</span>*);
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+RT2 test(...);
+
+<span class="kw">typedef</span> <span class="dt">char</span> RT1;
+<span class="kw">typedef</span> <span class="kw">struct</span> { <span class="dt">char</span> a[<span class="dv">2</span>]; } RT2;
+
+<span class="ot">#define type_has_member_type_X(T) (sizeof(test&lt;T&gt;(0)) == 1)</span></code></pre>
+<p>对没有定义成员X的类来说, 第一个模板函数定义应该产生编译错误, 但是因为SFINAE原则编译器选择继续从下一个模板定义来实例化test这个函数的调用</p>
+<p>SFINAE只能处理产生非法类型的错误, 别的错误(除零错误等)则不适用.</p>
+<ul>
+<li><p>局部类定义不能用作模板参数, 无名类型/枚举也不行(除非用typedef指定一个名字)</p></li>
+<li><p>成员函数模板的实例化不重载虚函数</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="ot">#include &lt;iostream&gt;</span>
+
+<span class="kw">class</span> A
+{
+<span class="kw">public</span>:
+  <span class="kw">virtual</span> <span class="dt">void</span> fun(<span class="dt">int</span> a)
+  {
+    std::cout &lt;&lt; <span class="st">&quot;A &quot;</span> &lt;&lt; a &lt;&lt; std::endl;
+  }
+
+  <span class="kw">virtual</span> ~A() {}
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> B: <span class="kw">public</span> A
+{
+<span class="kw">public</span>:
+  <span class="kw">template</span> &lt;<span class="kw">typename</span> T2&gt;
+  <span class="dt">void</span> fun(T2 a)
+  {
+    std::cout &lt;&lt; <span class="st">&quot;B &quot;</span> &lt;&lt; a &lt;&lt; std::endl;
+  }
+
+  <span class="kw">virtual</span> ~B() {}
+};
+
+<span class="kw">class</span> C: <span class="kw">public</span> A
+{
+<span class="kw">public</span>:
+  <span class="dt">void</span> fun(<span class="dt">int</span> a)
+  {
+    std::cout &lt;&lt; <span class="st">&quot;C &quot;</span> &lt;&lt; a &lt;&lt; std::endl;
+  }
+};
+
+<span class="dt">int</span> main(<span class="dt">int</span> argc, <span class="dt">char</span> *argv[])
+{
+  A *pa = <span class="kw">new</span> B&lt;<span class="dt">int</span>&gt;();
+  pa-&gt;fun(<span class="dv">2</span>);
+  <span class="kw">delete</span> pa;
+
+  B&lt;<span class="dt">int</span>&gt; b;
+  b.fun(<span class="dv">2</span>);
+
+  pa = <span class="kw">new</span> C();
+  pa-&gt;fun(<span class="dv">2</span>);
+  <span class="kw">delete</span> pa;
+
+  <span class="kw">return</span> <span class="dv">0</span>;
+}
+</code></pre>
+<p>输出为:</p>
+<pre><code>A 2
+B 2
+C 2</code></pre>
+<ul>
+<li><p>模板友类的声明处必须可见友类本身的定义, 一般类没有这个限制</p></li>
+<li><p>友函数声明可以是定义, 因此如果实例化若干模板类, 会重复定义此函数, 解决办法是让函数依赖于模板参数</p></li>
+<li><p>友模板: 声明一个模板的所有实例化都是友函数/类</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> Manager {
+  <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+    <span class="kw">friend</span> <span class="kw">class</span> Task;
+
+  <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+    <span class="kw">friend</span> <span class="dt">void</span> Schedule&lt;T&gt;::dispatch(Task&lt;T&gt;*);
+
+  <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+    <span class="kw">friend</span> <span class="dt">int</span> ticket() {
+      <span class="kw">return</span> ++Manager::counter;
+    }
+
+  <span class="dt">static</span> <span class="dt">int</span> counter;
+};</code></pre>
+<ol start="8" style="list-style-type: decimal">
+<li>模板中的命名</li>
+</ol>
+<ul>
+<li>C++语法并不是上下文无关的</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">
+x * y;</code></pre>
+<p>以上代码可以是一个乘法表达式, 也可能是一个指针声明. 这要视x的定义而定.</p>
+<ul>
+<li><p>Template-id: 模板与模板参数的组合, 如List<T, int, 0></p></li>
+<li><p>qualifed name的查找, unqualified name的查找(类作用域, 基类作用域, … , 嵌套的外层作用域), 这种查找是最普通的. C++中还有一个规则: Argument dependent lookup, 又称koenig lookup</p></li>
+<li><p>对于一个class, ADL规则会检查类本身, 包含类定义的外层类, 基类这些类声明处的namespace.</p></li>
+<li><p>对于函数调用, 函数参数以及返回值的类型关联的名称空间是ADL的查找范围.</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="ot">#include &lt;iostream&gt;</span>
+
+<span class="kw">namespace</span> X {
+  <span class="kw">template</span>&lt;<span class="kw">typename</span> T&gt; <span class="dt">void</span> f(T);
+}
+
+<span class="kw">namespace</span> N {
+  <span class="kw">using</span> <span class="kw">namespace</span> X; <span class="co">// ADL查找时, 此处没有引入X::f</span>
+  <span class="kw">enum</span> E{ e };
+  <span class="dt">void</span> f(E) {
+    std::cout &lt;&lt; <span class="st">&quot;N::f&quot;</span> &lt;&lt; std::endl;
+  }
+}
+
+<span class="dt">void</span> f(<span class="dt">int</span>)
+{
+  std::cout &lt;&lt; <span class="st">&quot;::f&quot;</span> &lt;&lt; std::endl;
+}
+
+<span class="dt">int</span> main(<span class="dt">int</span> argc, <span class="dt">char</span> *argv[])
+{
+  ::f(N::e); <span class="co">// ::f</span>
+  f(N::e); <span class="co">// N::f</span>
+}</code></pre>
+<ul>
+<li>类定义内可以引用类名本身, 模板类中可以引用模板类名并加上模板参数. 但是如果只用模板类名, 则代表着和当前instantiation相对应的template-id, 而不是一个类模板</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">template</span>&lt;<span class="kw">typename</span>&gt; <span class="kw">class</span> TT&gt;
+<span class="kw">class</span> X
+{
+}
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> C
+{
+  C a; <span class="co">// 代表C&lt;T&gt; a;</span>
+  C&lt;<span class="dt">void</span>&gt; b;
+  X&lt;C&gt; c; <span class="co">// 这里不行, C不代表一个模板类的名称</span>
+  X&lt;::C&gt; d; <span class="co">// &lt;: 是特殊字符序列, 代表 [</span>
+  X&lt; ::C&gt; e; <span class="co">// 总算行了这里</span>
+}</code></pre>
+<ul>
+<li><p>为了处理C++这样的上下文相关文法, 编译器有一个符号表记录各种声明. 这样就能区分比如x*究竟是一个声明还是乘法表达式的一部分了. 类似的例子还有X&lt;1&gt;(0)等(视X是否为模板类)</p></li>
+<li><p>Tokenizer也会有类似问题, 最常见的问题是模板实例作为模板参数: List&lt;List&lt;int&gt;&gt;, 这里&gt;&gt;会被解释为一个右移运算符. 有的编译器为这个问题作了特殊处理, 并給予警告.</p></li>
+<li><p>Dependent names: 模板定义中对另外一个模板类定义的名称引用是不合适的, 因为很可能显示模板化会改变这个名称的定义</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Trap {
+<span class="kw">public</span>:
+  <span class="kw">enum</span> {x};
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Victim {
+<span class="kw">public</span>:
+  <span class="dt">int</span> y;
+  <span class="dt">void</span> poof() {
+    Trap&lt;T&gt;::x * y; <span class="co">// 这里是声明还是乘法表达式?</span>
+  }
+};
+
+<span class="kw">template</span> &lt;&gt;
+<span class="kw">class</span> Trap&lt;<span class="dt">void</span>&gt; {
+<span class="kw">public</span>:
+  <span class="kw">typedef</span> <span class="dt">int</span> x;
+}
+
+<span class="dt">void</span> <span class="dt">bool</span>(Victim&lt;<span class="dt">void</span>&gt;&amp; bomb) <span class="co">// 书上这里是Trap&lt;void&gt;&amp;</span>
+{
+  bomb.poof()
+}</code></pre>
+<p>如果在Victim模板定义内部查找x的定义, 则认为x是一个enum值, 但是后面Trap对void的显示化却对覆盖了x的定义.</p>
+<p>C++的解决方法是: 默认情况下不认为一个dependent name是一个type, 除非用typename作声明.</p>
+<p>当一个名称 1. 出现在模板定义内 2. 是被限定的(qualified) 3. 不作为基类声明/成员初始化列表中作为类型 4. 依赖于模板参数</p>
+<p>则必须对之进行typename修饰. 看到这里感觉要吐了, 的确C++的template是非常的复杂, 需要知道的细节太多.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">struct</span> S: <span class="kw">typename</span> X&lt;T&gt;::Base {
+  S(): <span class="kw">typename</span> X&lt;T&gt;::Base(<span class="kw">typename</span> X&lt;T&gt;::Base(<span class="dv">0</span>)) {}
+  <span class="kw">typename</span> X&lt;T&gt; f() {
+    <span class="kw">typename</span> X&lt;T&gt;::C * p; <span class="co">// 声明</span>
+    X&lt;T&gt;::D * q; <span class="co">// 乘法表达式</span>
+  }
+  <span class="kw">typename</span> X&lt;<span class="dt">int</span>&gt;::C * s;
+};
+
+<span class="kw">struct</span> U {
+  <span class="kw">typename</span> X&lt;<span class="dt">int</span>&gt;::C * pc;
+};</code></pre>
+<pre><code>* 这个例子当中typename X&lt;T&gt;::Base中的typename是多余的, 因为他们不满足第3条规则.
+* 但是紧接着的typename X&lt;T&gt;::Base(0)中typename是必须的, 因为这里构造了一个对象.
+* 下面的typename X&lt;T&gt;中typename又是多余的, 这里没有限定名称(qualified name).
+* typename X&lt;T&gt;::C * p中typename是必须的, 否则就如下一行编译器认为其是一个乘法表达式.
+* 最后的typename X&lt;int&gt;::C * s说明了即使不满足第4条规则, 依然可以加上typename修饰, 反过来说, 前三条对typename的使用也是必要的.</code></pre>
+<ul>
+<li>类似的, 如果一个template定义也是有依赖的, 则必须告诉编译器.</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Shell {
+<span class="kw">public</span>:
+  <span class="kw">template</span> &lt;<span class="dt">int</span> N&gt;
+  <span class="kw">class</span> In {
+  <span class="kw">public</span>:
+    <span class="kw">template</span> &lt;<span class="dt">int</span> M&gt;
+    <span class="kw">class</span> Deep {
+    <span class="kw">public</span>:
+      <span class="kw">virtual</span> <span class="dt">void</span> f();
+    };
+  };
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T, <span class="dt">int</span> N&gt;
+<span class="kw">class</span> Weird {
+<span class="kw">public</span>:
+  <span class="dt">void</span> case1(Shell&lt;T&gt;::<span class="kw">template</span> In&lt;N&gt;::<span class="kw">template</span> Deep&lt;N&gt; * p) {
+    p-&gt;<span class="kw">template</span> Deep&lt;N&gt;::f();
+  }
+  <span class="dt">void</span> case2(Shell&lt;T&gt;::<span class="kw">template</span> In&lt;T&gt;::<span class="kw">template</span> Deep&lt;T&gt;&amp; p) {
+    p.<span class="kw">template</span> Deep&lt;N&gt;::f();
+  }
+};</code></pre>
+<ol start="14" style="list-style-type: decimal">
+<li>模板多态</li>
+</ol>
+<ul>
+<li><p>C++中的多态不单单指OO的virtual function, 模板也是实现多态的一种手段(一种表达, 多种行为)</p></li>
+<li><p>virtual function的多态处理比如异构(heterogeneous)集合中元素的多态行为比较适合. 模板有更好的类型安全性.</p></li>
+<li><p>模板是非侵入式的. 就是说OO的多态行为通常需要一个类继承一个基类, 而模板没有这样的要求. 只要类实现了对应的方法即可, 并且如果有些方法如果实例化过程中没有用到, 则不必实现.</p></li>
+<li><p>模板的多态运行时开销小很多, 但是可能生成的代码更大, 编译更久.</p></li>
+<li><p>C++的标准库中的iterator就是一个很好的模板设计. 容器通过定义各自的iterator来实现与generic算法的交互.</p></li>
+<li><p>同样的也可以用OO来实现类似iterator的功能, 但是性能较低(内存开销, 运行时效率). 并且对于内置类型需要wrapper class. (OO侵入式的后遗症). 然而模板多态与OO多态也是能共存的.</p></li>
+</ul>
+<ol start="15" style="list-style-type: decimal">
+<li>Traits, Policy Classes</li>
+</ol>
+<ul>
+<li><p>Traits是一种模板类, 它将类型和类型相关的信息联系起来, 比如int类型的范围, 最大最小值等等. 常用的方法是对要修饰的类型进行特例化.</p></li>
+<li><p>Traits中定义类型相关的类型比较容易(typedef), 定义相关常量值时可能遇到非整形量的常量而不能inline定义在类中. 这种情况通常将常量改为返回这个常量的函数.</p></li>
+<li><p>Traits模板也可以作为一个模板参数, 使得模板使用者能够重载一些Traits.</p></li>
+<li><p>Policy classes: 书上这里举了一个Accumulate的例子:</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt; <span class="kw">typename</span> T,
+           <span class="kw">typename</span> Policy = SumPolicy,
+           <span class="kw">typename</span> AT = AccumuationTraits&lt;T&gt; &gt;
+<span class="kw">class</span> Accum {
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> <span class="kw">typename</span> Traits::AccT Acct;
+    <span class="dt">static</span> AccT accum(T <span class="dt">const</span>* beg, T <span class="dt">const</span>* end) {
+      AccT total = Traits::zero();
+      <span class="kw">while</span> (beg != end) {
+        Policy::accumulate(total, *beg);
+        ++beg;
+      }
+      <span class="kw">return</span> total;
+    }
+};
+
+<span class="kw">class</span> SumPolicy {
+  <span class="kw">public</span>:
+    <span class="kw">template</span>&lt;<span class="kw">typename</span> T1, <span class="kw">typename</span> T2&gt;
+    <span class="dt">static</span> <span class="dt">void</span> accumulate(T1&amp; total, T2 <span class="dt">const</span>&amp; value) {
+      total += value;
+    }
+};</code></pre>
+<p>当然, 这里为了能够让乘法的例子产生正确的结果, 必须将zero()的定义放入Policy class中. (<a href="http://www.haskell.org/ghc/docs/latest/html/libraries/base/Data-Monoid.html">Monoid</a> 中的identity)</p>
+<ul>
+<li><p>Traits可以实现sizeof类似的功能(type function), 这个想想好像是类型系统中很强大的功能.</p></li>
+<li><p>一个用到了SFINAE的判断一个类型是否是class的traits class例子:</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> IsClassT {
+  <span class="kw">private</span>:
+    <span class="kw">typedef</span> <span class="dt">char</span> One;
+    <span class="kw">typedef</span> <span class="kw">struct</span> { <span class="dt">char</span> a[<span class="dv">2</span>]; } Two;
+    <span class="kw">template</span> &lt;<span class="kw">typename</span> C&gt; <span class="dt">static</span> One test(<span class="dt">int</span> C::*);
+    <span class="kw">template</span> &lt;<span class="kw">typename</span> C&gt; <span class="dt">static</span> Two test(...);
+  <span class="kw">public</span>:
+    <span class="kw">enum</span> { Yes = <span class="kw">sizeof</span>(IsClass&lt;T&gt;::test&lt;T&gt;(<span class="dv">0</span>)) == <span class="dv">1</span> };
+    <span class="kw">enum</span> { No = !Yes };
+};</code></pre>
+<p>这里用到了class类型可以有pointer to member function的事实来判断一个类型是不是class类型.</p>
+<ul>
+<li>利用Traits的partial specialisation可以对类型的const, reference进行剥离. (15.2.3)</li>
+</ul>
+<p>在以下例子中, 实现了一个apply函数的模板. 但是在处理引用的时候, 却会发生将T &amp;&amp;类型传给函数的情况</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> apply(T&amp; arg, <span class="dt">void</span> (*func)(T))
+{
+  func(arg);
+}
+
+<span class="dt">void</span> incr(<span class="dt">int</span>&amp; a)
+{
+  ++a;
+}
+
+<span class="dt">int</span> main(<span class="dt">int</span> argc, <span class="dt">char</span> *argv[])
+{
+  <span class="dt">int</span> x = <span class="dv">1</span>;
+  apply(x, incr);
+}</code></pre>
+<p>当然, C++标准中允许将模板参数T&amp;中的T替换为int&amp;时处理为int&amp;, 同样的, 在T const中如果T是int const, 将可以替换为int const.</p>
+<p>但是这里的解决方法是, 利用对traits class的partial specialisation进行const以及reference的“剥离”:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> TypeOp {
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> T ArgT;
+    <span class="kw">typedef</span> T BareT;
+    <span class="kw">typedef</span> T <span class="dt">const</span> ConstT;
+    <span class="kw">typedef</span> T &amp; RefT;
+    <span class="kw">typedef</span> T &amp; RefBareT;
+    <span class="kw">typedef</span> T <span class="dt">const</span> &amp; RefConstT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> TypeOp &lt;T <span class="dt">const</span>&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> T <span class="dt">const</span> ArgT;
+    <span class="kw">typedef</span> T BareT;
+    <span class="kw">typedef</span> T <span class="dt">const</span> ConstT;
+    <span class="kw">typedef</span> T <span class="dt">const</span> &amp; RefT;
+    <span class="kw">typedef</span> T &amp; RefBareT;
+    <span class="kw">typedef</span> T <span class="dt">const</span> &amp; RefConstT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> TypeOp &lt;T&amp;&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> T &amp; ArgT;
+    <span class="kw">typedef</span> <span class="kw">typename</span> TypeOp&lt;T&gt;::BareT BareT; <span class="co">//递归调用</span>
+    <span class="kw">typedef</span> T <span class="dt">const</span> ConstT;
+    <span class="kw">typedef</span> T &amp; RefT;
+    <span class="kw">typedef</span> <span class="kw">typename</span> TypeOp&lt;T&gt;::BareT &amp; RefBareT;
+    <span class="kw">typedef</span> T <span class="dt">const</span> &amp; RefConstT;
+};</code></pre>
+<p>这样, 前面的apply例子就可以重新写成:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> apply(<span class="kw">typename</span> TypeOp&lt;T&gt;::RefT arg, <span class="dt">void</span> (*func)(T))
+{
+  func(arg);
+}</code></pre>
+<ul>
+<li>类型提升traits将两种类型提升到更加“强大”的类型, 手段还是specialisation</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// 这里是不是有点像Haskell的declarative定义</span>
+
+<span class="kw">template</span> &lt;<span class="dt">bool</span> C, <span class="kw">typename</span> Ta, <span class="kw">typename</span> Tb&gt;
+<span class="kw">class</span> IfThenElse;
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> Ta, <span class="kw">typename</span> Tb&gt;
+<span class="kw">class</span> IfThenElse &lt;<span class="kw">true</span>, Ta, Tb&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> Ta ResultT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> Ta, <span class="kw">typename</span> Tb&gt;
+<span class="kw">class</span> IfThenElse&lt;<span class="kw">false</span>, Ta, Tb&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> Tb ResultT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T1, <span class="kw">typename</span> T2&gt;
+<span class="kw">class</span> Promotion; <span class="co">//没有默认定义</span>
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T1, <span class="kw">typename</span> T2&gt;
+<span class="kw">class</span> Promotion
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> <span class="kw">typename</span> IfThenElse&lt;(<span class="kw">sizeof</span>(T1) &gt; <span class="kw">sizeof</span>(T2)),
+                                T1,
+                                <span class="kw">typename</span> IfThenElse&lt;(<span class="kw">sizeof</span>(T1) &lt; <span class="kw">sizeof</span>(T2)),
+                                                    T2,
+                                                    <span class="dt">void</span>&gt;::ResultT
+                               &gt;::ResultT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Promotion &lt;T, T&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> T ResultT;
+};</code></pre>
+<ol start="16" style="list-style-type: decimal">
+<li>模板以及继承</li>
+</ol>
+<ul>
+<li><p>Empty base class optimisation</p></li>
+<li><p>curiously recurring template pattern: 父类的具体类型是一个模板类对子类的实例化. 可以实现诸如某个类型的对象计数器之类的功能, 重点是从此以后父类可以在实现时知道子类的类型了. 因此可以在父类中实现一个返回子类类型的clone方法. 这个见 <a href="http://en.wikipedia.org/wiki/Curiously_recurring_template_pattern">维基百科上CRTP的解释</a></p></li>
+</ul>
+<ol start="17" style="list-style-type: decimal">
+<li>元编程</li>
+</ol>
+<ul>
+<li><p>C++模板是图灵完备的, 意味着在编译器能够模拟出任何图灵等价的计算.</p></li>
+<li><p>比如计算幂函数</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="dt">int</span> N&gt;
+<span class="kw">class</span> Power2 {
+ <span class="kw">public</span>:
+  <span class="kw">enum</span> { result = <span class="dv">2</span> * Power2&lt;N<span class="dv">-1</span>&gt;::result };
+};
+
+<span class="kw">template</span> &lt;&gt;
+<span class="kw">class</span> Power2 {
+ <span class="kw">public</span>:
+  <span class="kw">enum</span> { result = <span class="dv">1</span> };
+};</code></pre>
+<ol start="20" style="list-style-type: decimal">
+<li>智能指针</li>
+</ol>
+<ul>
+<li><p>这里只讨论了模板在实现智能指针时的应用, 并没有深入讨论智能指针的实现细节(同步, 原子操作, 效率..)</p></li>
+<li><p>C++中以对象管理资源, 利用RAII是很常见的idiom.</p></li>
+<li><p>智能指针最少要实现初始化, 释放资源, 重载-&gt;, *操作符.</p></li>
+<li><p>引用计数: 话说虽然不能解决循环引用, 并且也需要同步操作以致降低效率, 这些貌似jvm没有. 但是好的是对资源掌控更加细致, 而jvm这方面反过来讲gc会对系统的延时性产生压力, 即使有很多对gc进行调整的途径和机会..</p></li>
+<li><p>智能指针也是policy based design. 计数器如何分配如何消亡, 资源如何删除 ( delete vs delete [] ) 都作为模板参数传递.</p></li>
+<li><p>智能指针也实现了父类子类转化的特性, 通过模板化的构造函数和conversion operator来实现.</p></li>
+</ul>
+<ol start="21" style="list-style-type: decimal">
+<li>Tuple</li>
+</ol>
+<ul>
+<li>感觉是在编译期用cons cell构建list差不多的性质. 用到了meta programming来实现静态的获取第N个元素的类型和值.</li>
+</ul>
+<ol start="22" style="list-style-type: decimal">
+<li>函数对象</li>
+</ol>
+<ul>
+<li><p>函数调用分为direct call, indirect call. 前者的函数地址是指令的一部分. 后者的函数地址在寄存器或者内存中.</p></li>
+<li><p>通常编译器会试图产生direct call, 对于不同编译单元的函数, 只要知道函数名字, 编译器会预留地址, 等待链接器补全地址. 但是对于函数指针, 则只能产生indirect call.</p></li>
+<li><p>成员函数指针需要记录相对对象的偏移.</p></li>
+<li><p>函数对象的使用, 可以作为模板参数, 也可以作为函数参数传递, 后者可以有状态. 另外一种方式是将两者结合起来:</p></li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> F&gt;
+<span class="dt">void</span> my_sort(..., F cmp = F())
+{
+  <span class="kw">if</span> (cmp(x, y)) {
+  }
+}
+
+my_sort&lt;std::less&lt;..&gt;&gt;(...);
+my_sort&lt;..., std::less&lt;..&gt;());
+my_sort(..., mycriterion);</code></pre>
+  </section>
+    <p class="meta text-right"><time class="timeago" datetime="2013-04-05" pubdate>2013-04-05</time></p>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+  </div>
+    </div>
+  </div>
+]]></description>
+    <pubDate>Fri, 05 Apr 2013 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2013-04-05-cpp-template.html</guid>
+</item>
+<item>
+    <title>2013新年计划</title>
+    <link>http://blog.fantasticsid.com/posts/2013-01-01-2013-resolutions.html</link>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
+  <header>
+    <div class="content">
+    <h1 class="text-center">2013新年计划</h1>
+    </header>
+  <section>
+    <p>今年简单一点</p>
+<pre><code>深入研究Haskell, wiki上的页面基本都要有个了解, 能用Haskell写高效后台应用.
+
+深入研究C++, 熟练应用模版, C++ 11的高级特性.
+
+看CLRS, PFDS刷一下各种OJ, interviewstreet什么的.
+</code></pre>
+<p>去年的完成情况, 按照0-5完成进度打分:</p>
+<pre><code>定义新自己 2
+
+发布几个iOS应用 3
+
+看完Haskell的几本书, 写一个解释器/比较大的应用 1
+
+做机器学习的应用 0
+
+概率论, 组合数学, 分析, 线性代数各书习题重新做一遍 0
+
+搞个小提琴学 4
+
+练耳不靠谱 2
+
+要看的书:
+
+&lt;&lt;Learn you a haskell for great good&gt;&gt; 5
+
+&lt;&lt;Real world haskell&gt;&gt; 4
+
+&lt;&lt;Programming in haskell&gt;&gt; 0
+
+&lt;&lt;The Haskell Road to Logic, Math and Programming&gt;&gt; 0
+
+&lt;&lt;Purely functional data structures&gt;&gt; 2
+
+&lt;&lt;Pearls of functional algorithm design&gt;&gt; 0
+
+&lt;&lt;Introduction to algorithms&gt;&gt; 0
+
+&lt;&lt;Algorithms&gt;&gt; 0
+
+&lt;&lt;Structure and interpretation of computer programs&gt;&gt; 1
+
+&lt;&lt;Jazz theory book&gt;&gt; 0
+
+&lt;&lt;Javascript the good parts&gt;&gt; 4
+
+&lt;&lt;Clojure in action&gt;&gt; 0
+
+&lt;&lt;The joy of clojure&gt;&gt; 4
+
+&lt;&lt;Practical clojure&gt;&gt; 1
+
+&lt;&lt;Programming clojure&gt;&gt; 1
+
+&lt;&lt;Godel Escher Bach - an Eternal Golden Braid&gt;&gt; 0
+</code></pre>
+<p>发现去年又不知道活在哪个次元了.</p>
+  </section>
+    <p class="meta text-right"><time class="timeago" datetime="2013-01-01" pubdate>2013-01-01</time></p>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+  </div>
+    </div>
+  </div>
+]]></description>
+    <pubDate>Tue, 01 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2013-01-01-2013-resolutions.html</guid>
+</item>
+<item>
+    <title>App idea - Unitask</title>
+    <link>http://blog.fantasticsid.com/posts/2012-04-03-unitask.html</link>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
+  <header>
+    <div class="content">
+    <h1 class="text-center">App idea - Unitask</h1>
+    </header>
+  <section>
+    <p>这个和前面一篇<a href="/posts/2012-02-02-app-idea.html">Motivated App</a>的想法有点类似.</p>
+<div>
+<img src="/images/unitask1.jpeg" title="Unitask" />
+</div>
+<div>
+<img src="/images/unitask2.jpeg" title="Unitask" />
+</div>
+<div>
+<img src="/images/unitask3.jpeg" title="Unitask" />
+</div>
+  </section>
+    <p class="meta text-right"><time class="timeago" datetime="2012-04-03" pubdate>2012-04-03</time></p>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+  </div>
+    </div>
+  </div>
+]]></description>
+    <pubDate>Tue, 03 Apr 2012 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2012-04-03-unitask.html</guid>
+</item>
+<item>
+    <title>iPad上的画图软件: paper</title>
+    <link>http://blog.fantasticsid.com/posts/2012-04-02-paper-ipad.html</link>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
+  <header>
+    <div class="content">
+    <h1 class="text-center">iPad上的画图软件: paper</h1>
+    </header>
+  <section>
+    <p>我一直对有些blog上的涂鸦很感兴趣. 很多blog如xkcd中的图都是画在纸上然后扫描进电脑里的, 这个对于我来说又显得太麻烦了, 而且画画从来对我就是一件难事, 如何选颜色, 风格都是很难的问题.</p>
+<p>其实我对涂鸦的要求很低, 只要能够起到说明问题, 让人一目了然就可以. 昨天发现了这个app: paper by fiftythree</p>
+<p>这个app我想了下, 吸引我的原因主要是:</p>
+<pre><code>
+1. 选择少, 有几种画笔但是画笔不能选择粗细, 颜色只有固定的几种.
+
+2. 这些选择的效果都不错. 不同画笔风格互相弥补, 仅有的几种颜色搭配很协调.
+</code></pre>
+<p>看来对我这样的业余用户来说, 在简洁性和功能性上选择前者更具有吸引力.</p>
+<div>
+<img src="/images/expopiano.jpg" title="exponential piano" />
+</div>
+  </section>
+    <p class="meta text-right"><time class="timeago" datetime="2012-04-02" pubdate>2012-04-02</time></p>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+  </div>
+    </div>
+  </div>
+]]></description>
+    <pubDate>Mon, 02 Apr 2012 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2012-04-02-paper-ipad.html</guid>
+</item>
+<item>
+    <title>App idea - Motivated</title>
+    <link>http://blog.fantasticsid.com/posts/2012-02-02-app-idea.html</link>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
+  <header>
+    <div class="content">
+    <h1 class="text-center">App idea - Motivated</h1>
+    </header>
+  <section>
+    <p>Admit it, you are simply not as good a multitasker as a computer, and sometimes you’ve got moods that keep you distracted and unable to finish even one task at hand. Your productivity plumets and as soon as you realize this the negative feeling only adds to the problem you already have.</p>
+<p>Enter Motivated, an iphone app that reminds you of the most important task you are supposed to finish.</p>
+<p>Features:</p>
+<ul>
+<li>Only one task allowed at a time</li>
+<li>Make commitment to your goal publicly</li>
+<li>Schedule notifications, useful for example, to get yourself motivated at the start of day</li>
+</ul>
+  </section>
+    <p class="meta text-right"><time class="timeago" datetime="2012-02-02" pubdate>2012-02-02</time></p>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+  </div>
+    </div>
+  </div>
+]]></description>
+    <pubDate>Thu, 02 Feb 2012 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2012-02-02-app-idea.html</guid>
+</item>
+
+    </channel> 
+</rss>
