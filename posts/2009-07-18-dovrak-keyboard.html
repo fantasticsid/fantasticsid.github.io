@@ -62,40 +62,45 @@
   <section>
     <p>我曾经想过现在我们的键盘排列是不是最科学的, 是否最有利于我们打字. 所谓科学的键盘, 应该尽可能减少我们打字的移动, 并且按照手的结构, 让中间的三根手指承担最最重要的责任. 这就如哈夫曼编码一样, 中间的三根手指在中间一排键盘的输入是码字比较短的, 只有让它们代表频率最高的字母时才比较有效. 键盘排列的设计还需要考虑字母在各种语言中的频率, 以及常见的字母组合. 我们常见的QWERTY键盘, 把A, S, D, F, G, H, J, K, L这几个字母放在了中间, 说实话, G, J, K, L这样的几个字母并不是使用频率较高的. 有的字母比如I, O, E, T明显出现频率更加高. 如果我们把这些字母位置调换一下, 应该能够在手移动更少的前提下, 造出更好更科学的键盘. 这种键盘原来真的存在, 它就是Dvorak键盘, 而且这种键盘早在上世纪30年代就已经发明了. 原先的QWERTY键盘的设计没有考虑到键盘输入的速度, 只是为了减少打字机的打印条互相卡住的情况. 因此它的效率并没有最优. 而Dvorak设计的键盘排列是他考察了语言中字母的出现频率后设计的键盘排列方式, 我们可以从图中看出, 这种键盘将A,O,E,U,I,D,H,T,N,S这几个字母放在了中间一排, 于是很多的词语都不用离开手的原位就能够输入了.</p>
 <div>
-<img src="../images/dvorakkeyboardlayout.gif" title="Dvorak键盘" />
+<div class="figure">
+<img src="../images/dvorakkeyboardlayout.gif" title="Dvorak键盘" alt />
+
+</div>
 </div>
 <p>我们来做一个统计, 统计一下英语单词里面有多少是分别用两种键盘不离开原位就能够输入的. 用如下的程序测试words.txt文件里面的词语</p>
-<pre class="sourceCode python"><code class="sourceCode python">dvo = <span class="st">'aoeuidhtnsAOEUIDHTNS'</span>
-qwe = <span class="st">'asdfghjklASDFGHJKL'</span>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">dvo <span class="op">=</span> <span class="st">'aoeuidhtnsAOEUIDHTNS'</span>
+qwe <span class="op">=</span> <span class="st">'asdfghjklASDFGHJKL'</span>
 
-dvon = <span class="dv">0</span>
-qwen = <span class="dv">0</span>
+dvon <span class="op">=</span> <span class="dv">0</span>
+qwen <span class="op">=</span> <span class="dv">0</span>
 
 <span class="kw">def</span> dvorak(word):
-	<span class="kw">for</span> l in word:
-		<span class="kw">if</span> not l in dvo:
-			<span class="kw">return</span> <span class="ot">False</span>
-	<span class="kw">return</span> <span class="ot">True</span>
+	<span class="cf">for</span> l <span class="op">in</span> word:
+		<span class="cf">if</span> <span class="op">not</span> l <span class="op">in</span> dvo:
+			<span class="cf">return</span> <span class="va">False</span>
+	<span class="cf">return</span> <span class="va">True</span>
 
 <span class="kw">def</span> qwerty(word):
-	<span class="kw">for</span> l in word:
-		<span class="kw">if</span> not l in qwe:
-			<span class="kw">return</span> <span class="ot">False</span>
-	<span class="kw">return</span> <span class="ot">True</span>
+	<span class="cf">for</span> l <span class="op">in</span> word:
+		<span class="cf">if</span> <span class="op">not</span> l <span class="op">in</span> qwe:
+			<span class="cf">return</span> <span class="va">False</span>
+	<span class="cf">return</span> <span class="va">True</span>
 
-f = <span class="dt">open</span>(<span class="st">'./words.txt'</span>, <span class="st">'r'</span>)
-<span class="kw">for</span> w in f.readlines():
+f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./words.txt'</span>, <span class="st">'r'</span>)
+<span class="cf">for</span> w <span class="op">in</span> f.readlines():
 
-	<span class="kw">if</span> dvorak(w[:-<span class="dv">1</span>]):
-		dvon = dvon + <span class="dv">1</span>
-	<span class="kw">if</span> qwerty(w[:-<span class="dv">1</span>]):
-		qwen = qwen + <span class="dv">1</span>
+	<span class="cf">if</span> dvorak(w[:<span class="op">-</span><span class="dv">1</span>]):
+		dvon <span class="op">=</span> dvon <span class="op">+</span> <span class="dv">1</span>
+	<span class="cf">if</span> qwerty(w[:<span class="op">-</span><span class="dv">1</span>]):
+		qwen <span class="op">=</span> qwen <span class="op">+</span> <span class="dv">1</span>
 
-<span class="kw">print</span> <span class="st">'dvorak:'</span>, dvon
-<span class="kw">print</span> <span class="st">'qwerty:'</span>, qwen</code></pre>
+<span class="bu">print</span> <span class="st">'dvorak:'</span>, dvon
+<span class="bu">print</span> <span class="st">'qwerty:'</span>, qwen</code></pre></div>
 <p>程序的输出如下 :</p>
-<pre class="numberLines"><code>dvorak: 3481
-qwerty: 220</code></pre>
+<div class="sourceCode"><table class="sourceCode numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+</pre></td><td class="sourceCode"><pre><code class="sourceCode">dvorak: 3481
+qwerty: 220</code></pre></td></tr></table></div>
 <p>差别是非常明显的, 如果用Dvorak键盘, 我们能够在不移动的情况下就直接输入3000多的词语. 很多词语比如, the, that都可以在手指不移动到其他键位的情况下输入.</p>
 <p>可惜的是Dvorak键盘并没有很好的推广, 使用的范围很小. 也找不到哪里有卖, 淘宝都没有. 不过我们可以用键盘的贴膜改造QWERTY键盘, 然后再系统中设定一下. 现在的操作系统都有键盘排列的设定. 开始的时候肯定不适应的, 目前我也在学习过程中,很汗颜, 在<a href="http://play.typeracer.com/" target="_blank">typeracer这个游戏</a>里我现在用QWERTY键盘的速度是60-70WPM, 而用Dvorak键盘只有10WPM左右. 但是相信等到小脑的突触连接形成之后, 就能享受手指的飞舞了. 到时候, 西瓜进, 代码出.</p>
   </section>

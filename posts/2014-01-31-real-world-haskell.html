@@ -84,39 +84,39 @@
 <p>As patterns.</p>
 <p>Function composition with ‘.’ operator</p>
 <p>seq能够对一个thunk进行严格求值(到head normal form).</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell">foldl' _ zero [] <span class="fu">=</span> zero
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell">foldl' _ zero [] <span class="fu">=</span> zero
 foldl' step zero (x<span class="fu">:</span>xs) <span class="fu">=</span>
        <span class="kw">let</span> new <span class="fu">=</span> step zero x
-              <span class="kw">in</span> new <span class="ot">`seq`</span> foldl' step new xs</code></pre>
+              <span class="kw">in</span> new <span class="ot">`seq`</span> foldl' step new xs</code></pre></div>
 <ol start="5" style="list-style-type: decimal">
 <li>Writing a Library: Working with JSON Data</li>
 </ol>
 <p>用Haskell的ADT表示JSON:</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">JValue</span> <span class="fu">=</span> <span class="dt">JString</span> <span class="dt">String</span>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">JValue</span> <span class="fu">=</span> <span class="dt">JString</span> <span class="dt">String</span>
               <span class="fu">|</span> <span class="dt">JNumber</span> <span class="dt">Double</span>
               <span class="fu">|</span> <span class="dt">JBool</span> <span class="dt">Bool</span>
               <span class="fu">|</span> <span class="dt">JNull</span>
               <span class="fu">|</span> <span class="dt">JObject</span> [(<span class="dt">String</span>, <span class="dt">JValue</span>)]
               <span class="fu">|</span> <span class="dt">JArray</span> [<span class="dt">JValue</span>]
-                <span class="kw">deriving</span> (<span class="dt">Eq</span>, <span class="dt">Ord</span>, <span class="dt">Show</span>)</code></pre>
+                <span class="kw">deriving</span> (<span class="dt">Eq</span>, <span class="dt">Ord</span>, <span class="dt">Show</span>)</code></pre></div>
 <p>Haskell代码一个文件通常代表一个Haskell Module</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="dt">Module</span> <span class="dt">SimpleJSON</span>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="dt">Module</span> <span class="dt">SimpleJSON</span>
   (
   <span class="dt">JValue</span>(<span class="fu">..</span>)
   , getString
   , getInt
-  ) <span class="kw">where</span></code></pre>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="dt">Module</span> <span class="dt">ExportNothing</span> () <span class="kw">where</span></code></pre>
+  ) <span class="kw">where</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="dt">Module</span> <span class="dt">ExportNothing</span> () <span class="kw">where</span></code></pre></div>
 <p>通用的PrettyPrinter</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Doc</span> <span class="fu">=</span> <span class="dt">Empty</span>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Doc</span> <span class="fu">=</span> <span class="dt">Empty</span>
          <span class="fu">|</span> <span class="dt">Char</span> <span class="dt">Char</span>
          <span class="fu">|</span> <span class="dt">Text</span> <span class="dt">String</span>
          <span class="fu">|</span> <span class="dt">Line</span>
          <span class="fu">|</span> <span class="dt">Concat</span> <span class="dt">Doc</span> <span class="dt">Doc</span>
          <span class="fu">|</span> <span class="dt">Union</span> <span class="dt">Doc</span> <span class="dt">Doc</span>
-           <span class="kw">deriving</span> (<span class="dt">Show</span>,<span class="dt">Eq</span>)</code></pre>
+           <span class="kw">deriving</span> (<span class="dt">Show</span>,<span class="dt">Eq</span>)</code></pre></div>
 <p>有了这个定义, 定义一些基本的combinator, 我们就可以对一个Doc进行渲染:</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">compact ::</span> <span class="dt">Doc</span> <span class="ot">-&gt;</span> <span class="dt">String</span>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">compact ::</span> <span class="dt">Doc</span> <span class="ot">-&gt;</span> <span class="dt">String</span>
 compact x <span class="fu">=</span> transform [x]
     <span class="kw">where</span> transform [] <span class="fu">=</span> <span class="st">&quot;&quot;</span>
           transform (d<span class="fu">:</span>ds) <span class="fu">=</span>
@@ -126,8 +126,8 @@ compact x <span class="fu">=</span> transform [x]
                 <span class="dt">Text</span> s       <span class="ot">-&gt;</span> s <span class="fu">++</span> transform ds
                 <span class="dt">Line</span>         <span class="ot">-&gt;</span> <span class="ch">'\n'</span> <span class="fu">:</span> transform ds
                 a <span class="ot">`Concat`</span> b <span class="ot">-&gt;</span> transform (a<span class="fu">:</span>b<span class="fu">:</span>ds)
-                _ <span class="ot">`Union`</span> b  <span class="ot">-&gt;</span> transform (b<span class="fu">:</span>ds)</code></pre>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">pretty ::</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Doc</span> <span class="ot">-&gt;</span> <span class="dt">String</span>
+                _ <span class="ot">`Union`</span> b  <span class="ot">-&gt;</span> transform (b<span class="fu">:</span>ds)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">pretty ::</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Doc</span> <span class="ot">-&gt;</span> <span class="dt">String</span>
 pretty width x <span class="fu">=</span> best <span class="dv">0</span> [x]
     <span class="kw">where</span> best col (d<span class="fu">:</span>ds) <span class="fu">=</span>
               <span class="kw">case</span> d <span class="kw">of</span>
@@ -142,17 +142,17 @@ pretty width x <span class="fu">=</span> best <span class="dv">0</span> [x]
 
           nicest col a b <span class="fu">|</span> (width <span class="fu">-</span> least) <span class="ot">`fits`</span> a <span class="fu">=</span> a
                          <span class="fu">|</span> otherwise                <span class="fu">=</span> b
-                         <span class="kw">where</span> least <span class="fu">=</span> min width col</code></pre>
+                         <span class="kw">where</span> least <span class="fu">=</span> min width col</code></pre></div>
 <ol start="6" style="list-style-type: decimal">
 <li>Using Typeclasses</li>
 </ol>
 <p>其实typeclass和C++的模板特列化(concept)有点相似. 但是typeclass有运行的额外开销.</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">class</span> <span class="dt">Eq</span> a <span class="kw">where</span>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">class</span> <span class="dt">Eq</span> a <span class="kw">where</span>
   (<span class="fu">==</span>),<span class="ot"> (/=) ::</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">Bool</span>
   x <span class="fu">/=</span> y <span class="fu">=</span> not (x <span class="fu">==</span> y)
-  x <span class="fu">==</span> y <span class="fu">=</span> not (x <span class="fu">/=</span> y)</code></pre>
+  x <span class="fu">==</span> y <span class="fu">=</span> not (x <span class="fu">/=</span> y)</code></pre></div>
 <p>Overlapping instances</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">class</span> <span class="dt">Borked</span> a <span class="kw">where</span>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">class</span> <span class="dt">Borked</span> a <span class="kw">where</span>
 <span class="ot">  bork ::</span> a <span class="ot">-&gt;</span> <span class="dt">String</span>
   
 <span class="kw">instance</span> <span class="dt">Borked</span> <span class="dt">Int</span> <span class="kw">where</span>
@@ -162,11 +162,11 @@ pretty width x <span class="fu">=</span> best <span class="dv">0</span> [x]
   bork (a, b) <span class="fu">=</span> bork a <span class="fu">++</span> <span class="st">&quot;, &quot;</span> <span class="fu">++</span> bork b
   
 <span class="kw">instance</span> (<span class="dt">Borked</span> a, <span class="dt">Borked</span> b) <span class="ot">=&gt;</span> <span class="dt">Borked</span> (a, b) <span class="kw">where</span>
- bork (a, b) <span class="fu">=</span> <span class="st">&quot;&gt;&gt;&quot;</span> <span class="fu">++</span> bork a <span class="fu">++</span> <span class="st">&quot; &quot;</span> <span class="fu">++</span> bork b <span class="fu">++</span> <span class="st">&quot;&lt;&lt;&quot;</span></code></pre>
+ bork (a, b) <span class="fu">=</span> <span class="st">&quot;&gt;&gt;&quot;</span> <span class="fu">++</span> bork a <span class="fu">++</span> <span class="st">&quot; &quot;</span> <span class="fu">++</span> bork b <span class="fu">++</span> <span class="st">&quot;&lt;&lt;&quot;</span></code></pre></div>
 <p>这个有点像C++的template specialization. 当然C++当中会使用最specific的template定义. 而Haskell则默认会拒绝自动选择一个定义, 除非使用了OverlappingInstances, TypeSynonymInstances这两个language extension.</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">{-# LANGUAGE TypeSynonymInstances, OverlappingInstances #-}</span>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">{-# LANGUAGE TypeSynonymInstances, OverlappingInstances #-}</span>
 
-<span class="kw">import</span> Data.List
+<span class="kw">import </span><span class="dt">Data.List</span>
 
 <span class="kw">class</span> <span class="dt">Foo</span> a <span class="kw">where</span>
 <span class="ot">  foo ::</span> a <span class="ot">-&gt;</span> <span class="dt">String</span>
@@ -178,16 +178,16 @@ pretty width x <span class="fu">=</span> best <span class="dv">0</span> [x]
   foo c <span class="fu">=</span> [c]
   
 <span class="kw">instance</span> <span class="dt">Foo</span> <span class="dt">String</span> <span class="kw">where</span>
-  foo <span class="fu">=</span> id</code></pre>
+  foo <span class="fu">=</span> id</code></pre></div>
 <p>Monomorphism restriction的原因是Haskell当中typeclass参数其实在运行时是需要有一个参数来代表具体instance的实现. (虚表?) 于是如果没有这个Monomorphism, 有的计算就有可能不得不进行2次, 因为编译器在编译一段代码的时候不能做出只算一次的决定.</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell">f xs <span class="fu">=</span> (len, len)
-  <span class="kw">where</span> len <span class="fu">=</span> genericLength xs</code></pre>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell">f xs <span class="fu">=</span> (len, len)
+  <span class="kw">where</span> len <span class="fu">=</span> genericLength xs</code></pre></div>
 <p>这段代码当中, f的类型应该是</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">f ::</span> <span class="dt">Num</span> t <span class="ot">=&gt;</span> [b] <span class="ot">-&gt;</span> (t, t)</code></pre>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">f ::</span> <span class="dt">Num</span> t <span class="ot">=&gt;</span> [b] <span class="ot">-&gt;</span> (t, t)</code></pre></div>
 <p>如果我们想要使得f的类型中t代表不同的类型:</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">f ::</span> (<span class="dt">Num</span> b, <span class="dt">Num</span> c) <span class="ot">=&gt;</span> [a] <span class="ot">-&gt;</span> (b, c)
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">f ::</span> (<span class="dt">Num</span> b, <span class="dt">Num</span> c) <span class="ot">=&gt;</span> [a] <span class="ot">-&gt;</span> (b, c)
 f xs <span class="fu">=</span> (len, len)
-  <span class="kw">where</span> len <span class="fu">=</span> genericLength xs</code></pre>
+  <span class="kw">where</span> len <span class="fu">=</span> genericLength xs</code></pre></div>
 <p>则会出现编译错误, 因为编译器觉得这里要进行两次对len的计算, 而这是Hughes认为不对的, 至少不能是默认的行为.</p>
 <p>解决这个错误的方法有几个:</p>
 <ul>
@@ -199,19 +199,19 @@ f xs <span class="fu">=</span> (len, len)
 <li>I/O</li>
 </ol>
 <p>I/O在Haskell里是比较神奇的东西:</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">let</span> writefoo <span class="fu">=</span> putStrLn <span class="st">&quot;foo&quot;</span></code></pre>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">let</span> writefoo <span class="fu">=</span> putStrLn <span class="st">&quot;foo&quot;</span></code></pre></div>
 <p>这段代码不会输出“foo”, 而是把putStrLn “foo”这个I/O computation绑定到writefoo. 所以这里的代码就像数据一样. “Code is data, data is code”.</p>
 <p>但是这段代码放在另外一个I/O action里就会被执行.</p>
 <p>同样, 在ghci里也会被执行, 原因是ghci其实是在I/O monad中执行.</p>
 <p>openFile, hPutStrLn, hPrint, putStrLn, hClose</p>
 <p>hSeek, hTell, AbsoluteSeek, RelativeSeek, hIsSeekable</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell">main <span class="fu">=</span> <span class="kw">do</span>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell">main <span class="fu">=</span> <span class="kw">do</span>
   inh <span class="ot">&lt;-</span> openFile <span class="st">&quot;input.txt&quot;</span> <span class="dt">ReadMode</span>
   seekable <span class="ot">&lt;-</span> hIsSeekable inh
   hSeek inh <span class="dt">RelativeSeek</span> <span class="dv">1</span>
   line <span class="ot">&lt;-</span> hGetLine inh
   putStrLn line
-  hClose inh</code></pre>
+  hClose inh</code></pre></div>
 <p>System.Directory</p>
 <p>removeFile, renameFile</p>
 <p>openTempFile, openBinaryTempFile</p>
@@ -223,71 +223,71 @@ f xs <span class="fu">=</span> (len, len)
 <ol start="8" style="list-style-type: decimal">
 <li>Efficient File Processing, Regular Expressions, and Filename Matching</li>
 </ol>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">import</span> <span class="kw">qualified</span> Data.ByteString.Lazy <span class="kw">as</span> L
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">import qualified</span> <span class="dt">Data.ByteString.Lazy</span> <span class="kw">as</span> <span class="dt">L</span>
 
 <span class="ot">hasElfMagic ::</span>  <span class="dt">L.ByteString</span> <span class="ot">-&gt;</span> <span class="dt">Bool</span>
 hasElfMagic content <span class="fu">=</span> L.take <span class="dv">4</span> content <span class="fu">==</span> elfMagic
-  <span class="kw">where</span> elfMagic <span class="fu">=</span> L.pack [<span class="dv">0x7f</span>, <span class="dv">0x45</span>, <span class="dv">0x4c</span>, <span class="dv">0x46</span>]
+  <span class="kw">where</span> elfMagic <span class="fu">=</span> L.pack [<span class="bn">0x7f</span>, <span class="bn">0x45</span>, <span class="bn">0x4c</span>, <span class="bn">0x46</span>]
 
 <span class="ot">isElfFile ::</span>  FilePath <span class="ot">-&gt;</span> <span class="dt">IO</span> <span class="dt">Bool</span>
 isElfFile path <span class="fu">=</span> <span class="kw">do</span>
   content <span class="ot">&lt;-</span> L.readFile path
-  return (hasElfMagic content)</code></pre>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">import</span> System.IO
-<span class="kw">import</span> Control.Applicative
-<span class="kw">import</span> Data.List
+  return (hasElfMagic content)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">import </span><span class="dt">System.IO</span>
+<span class="kw">import </span><span class="dt">Control.Applicative</span>
+<span class="kw">import </span><span class="dt">Data.List</span>
 
-<span class="kw">import</span> <span class="kw">qualified</span> Data.ByteString <span class="kw">as</span> B
-<span class="kw">import</span> <span class="kw">qualified</span> Data.ByteString.Char8 <span class="kw">as</span> C
+<span class="kw">import qualified</span> <span class="dt">Data.ByteString</span> <span class="kw">as</span> <span class="dt">B</span>
+<span class="kw">import qualified</span> <span class="dt">Data.ByteString.Char8</span> <span class="kw">as</span> <span class="dt">C</span>
 
 main <span class="fu">=</span> <span class="kw">do</span> inh <span class="ot">&lt;-</span> openFile <span class="st">&quot;data.txt&quot;</span> <span class="dt">ReadMode</span>
           content <span class="ot">&lt;-</span> B.hGetContents inh
-          putStrLn <span class="fu">$</span> (show <span class="fu">.</span> foldl (liftA2 (<span class="fu">+</span>)) (<span class="dt">Just</span> <span class="dv">0</span>) <span class="fu">.</span> (map (fmap fst <span class="fu">.</span> C.readInt)) <span class="fu">.</span> C.lines) content</code></pre>
+          putStrLn <span class="fu">$</span> (show <span class="fu">.</span> foldl (liftA2 (<span class="fu">+</span>)) (<span class="dt">Just</span> <span class="dv">0</span>) <span class="fu">.</span> (map (fmap fst <span class="fu">.</span> C.readInt)) <span class="fu">.</span> C.lines) content</code></pre></div>
 <p>为何以上程序在解释模式下, 比python更慢?</p>
 <p>Regular Expressions</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">import</span> Text.Regex.Posix.Wrap
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">import </span><span class="dt">Text.Regex.Posix.Wrap</span>
 <span class="fu">:</span>t (<span class="fu">=~</span>)
 (<span class="fu">=~</span>)
 <span class="ot">  ::</span> (<span class="dt">Text.Regex.Base.RegexLike.RegexContext</span> <span class="dt">Regex</span> source1 target,
       <span class="dt">Text.Regex.Base.RegexLike.RegexMaker</span>
         <span class="dt">Regex</span> <span class="dt">CompOption</span> <span class="dt">ExecOption</span> source) <span class="ot">=&gt;</span>
-     source1 <span class="ot">-&gt;</span> source <span class="ot">-&gt;</span> target</code></pre>
+     source1 <span class="ot">-&gt;</span> source <span class="ot">-&gt;</span> target</code></pre></div>
 <ol start="9" style="list-style-type: decimal">
 <li>I/O Case Study: A Library for Searching the Filesystem</li>
 </ol>
 <p>Control.Exception</p>
 <p>bracket :: IO a -&gt; (a -&gt; IO b) -&gt; (a -&gt; IO c) -&gt; IO c</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell">getFileSize path <span class="fu">=</span> handle (\_ <span class="ot">-&gt;</span> return <span class="dt">Nothing</span>) <span class="fu">$</span>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell">getFileSize path <span class="fu">=</span> handle (\_ <span class="ot">-&gt;</span> return <span class="dt">Nothing</span>) <span class="fu">$</span>
   bracket (openFile path <span class="dt">ReadMode</span>) hClose <span class="fu">$</span> \h <span class="ot">-&gt;</span> <span class="kw">do</span>
     size <span class="ot">&lt;-</span> hFileSize h
-    return (<span class="dt">Just</span> size)</code></pre>
+    return (<span class="dt">Just</span> size)</code></pre></div>
 <p>eDSL</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">InfoP</span> a <span class="fu">=</span> FilePath
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">InfoP</span> a <span class="fu">=</span> FilePath
             <span class="ot">-&gt;</span> <span class="dt">Permissions</span>
             <span class="ot">-&gt;</span> <span class="dt">Maybe</span> <span class="dt">Integer</span>
             <span class="ot">-&gt;</span> <span class="dt">ClockTime</span>
             <span class="ot">-&gt;</span> a
-<span class="ot">pathP ::</span> <span class="dt">InfoP</span> FilePath</code></pre>
+<span class="ot">pathP ::</span> <span class="dt">InfoP</span> FilePath</code></pre></div>
 <p>这样我们就能构造各种类型的Predicate/Extractor</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">sizeP ::</span> <span class="dt">InfoP</span> <span class="dt">Integer</span> <span class="co">-- 输入FilePath的信息, 返回Integer的函数类型</span>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">sizeP ::</span> <span class="dt">InfoP</span> <span class="dt">Integer</span> <span class="co">-- 输入FilePath的信息, 返回Integer的函数类型</span>
 sizeP _ _ (<span class="dt">Just</span> size) _ <span class="fu">=</span> size
-sizeP _ _ <span class="dt">Nothing</span> _ <span class="fu">=</span> <span class="fu">-</span><span class="dv">1</span></code></pre>
+sizeP _ _ <span class="dt">Nothing</span> _ <span class="fu">=</span> <span class="fu">-</span><span class="dv">1</span></code></pre></div>
 <p>这是一个Extractor</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">equalP ::</span> (<span class="dt">Eq</span> a) <span class="ot">=&gt;</span> <span class="dt">InfoP</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">InfoP</span> <span class="dt">Bool</span>
-equalP f k <span class="fu">=</span> \w x y z <span class="ot">-&gt;</span> f w x y z <span class="fu">==</span> k</code></pre>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">equalP ::</span> (<span class="dt">Eq</span> a) <span class="ot">=&gt;</span> <span class="dt">InfoP</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">InfoP</span> <span class="dt">Bool</span>
+equalP f k <span class="fu">=</span> \w x y z <span class="ot">-&gt;</span> f w x y z <span class="fu">==</span> k</code></pre></div>
 <p>这是一个Predicate</p>
 <p>当然也可以写成</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">equalP' ::</span> (<span class="dt">Eq</span> a) <span class="ot">=&gt;</span> <span class="dt">InfoP</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">InfoP</span> <span class="dt">Bool</span>
-equalP' f k w x y z <span class="fu">=</span> f w x y z <span class="fu">==</span> k</code></pre>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">equalP' ::</span> (<span class="dt">Eq</span> a) <span class="ot">=&gt;</span> <span class="dt">InfoP</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">InfoP</span> <span class="dt">Bool</span>
+equalP' f k w x y z <span class="fu">=</span> f w x y z <span class="fu">==</span> k</code></pre></div>
 <p>我们还可以继续抽象:</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">liftP ::</span> (a <span class="ot">-&gt;</span> b <span class="ot">-&gt;</span> c) <span class="ot">-&gt;</span> <span class="dt">InfoP</span> a <span class="ot">-&gt;</span> b <span class="ot">-&gt;</span> <span class="dt">InfoP</span> c
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">liftP ::</span> (a <span class="ot">-&gt;</span> b <span class="ot">-&gt;</span> c) <span class="ot">-&gt;</span> <span class="dt">InfoP</span> a <span class="ot">-&gt;</span> b <span class="ot">-&gt;</span> <span class="dt">InfoP</span> c
 liftP q f k w x y z <span class="fu">=</span> f w x y z <span class="ot">`q`</span> k
 
 greaterP,<span class="ot"> lesserP ::</span> (<span class="dt">Ord</span> a) <span class="ot">=&gt;</span> <span class="dt">InfoP</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">InfoP</span> <span class="dt">Bool</span>
 greaterP <span class="fu">=</span> liftP (<span class="fu">&gt;</span>)
-lesserP <span class="fu">=</span> liftP (<span class="fu">&lt;</span>)</code></pre>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">liftPath ::</span> (FilePath <span class="ot">-&gt;</span> a) <span class="ot">-&gt;</span> <span class="dt">InfoP</span> a
-liftPath f w _ _ _ <span class="fu">=</span> f w</code></pre>
+lesserP <span class="fu">=</span> liftP (<span class="fu">&lt;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">liftPath ::</span> (FilePath <span class="ot">-&gt;</span> a) <span class="ot">-&gt;</span> <span class="dt">InfoP</span> a
+liftPath f w _ _ _ <span class="fu">=</span> f w</code></pre></div>
 <ol start="28" style="list-style-type: decimal">
 <li>Software Transactional Memory</li>
 </ol>
@@ -304,7 +304,7 @@ liftPath f w _ _ _ <span class="fu">=</span> f w</code></pre>
 <li><p>如果其他线程没有对STM修改的数据进行修改, 则STM的修改同时生效</p></li>
 <li><p>否则, STM会重启</p></li>
 </ul>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Item</span> <span class="fu">=</span> <span class="dt">Scroll</span>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Item</span> <span class="fu">=</span> <span class="dt">Scroll</span>
           <span class="fu">|</span> <span class="dt">Wand</span>
           <span class="fu">|</span> <span class="dt">Banjo</span>
             <span class="kw">deriving</span> (<span class="dt">Eq</span>, <span class="dt">Ord</span>, <span class="dt">Show</span>)
@@ -323,9 +323,9 @@ liftPath f w _ _ _ <span class="fu">=</span> f w</code></pre>
 <span class="ot">    balance ::</span> <span class="dt">Balance</span>,
 <span class="ot">    health ::</span> <span class="dt">Health</span>,
 <span class="ot">    inventory ::</span> <span class="dt">Inventory</span>
-}</code></pre>
+}</code></pre></div>
 <p>一些API:</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">atomically ::</span> <span class="dt">STM</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">atomically ::</span> <span class="dt">STM</span> a <span class="ot">-&gt;</span> <span class="dt">IO</span> a
 
 <span class="ot">newTVar ::</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> (<span class="dt">TVar</span> a)
 
@@ -333,33 +333,33 @@ liftPath f w _ _ _ <span class="fu">=</span> f w</code></pre>
 
 <span class="ot">writeTVar ::</span> <span class="dt">TVar</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> ()
 
-<span class="ot">retry ::</span> <span class="dt">STM</span> a</code></pre>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">transfer ::</span> <span class="dt">Gold</span> <span class="ot">-&gt;</span> <span class="dt">Balance</span> <span class="ot">-&gt;</span> <span class="dt">Balance</span> <span class="ot">-&gt;</span> <span class="dt">STM</span> ()
+<span class="ot">retry ::</span> <span class="dt">STM</span> a</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">transfer ::</span> <span class="dt">Gold</span> <span class="ot">-&gt;</span> <span class="dt">Balance</span> <span class="ot">-&gt;</span> <span class="dt">Balance</span> <span class="ot">-&gt;</span> <span class="dt">STM</span> ()
 
 transfer qty fromBal toBal <span class="fu">=</span> <span class="kw">do</span>
   fromQty <span class="ot">&lt;-</span> readTVar fromBal
   when (qty <span class="fu">&gt;</span> fromQty) <span class="fu">$</span>
     retry
   writeTVar fromBal (fromQty <span class="fu">-</span> qty)
-  readTVar toBal <span class="fu">&gt;&gt;=</span> writeTVar toBal <span class="fu">.</span> (qty <span class="fu">+</span>)</code></pre>
+  readTVar toBal <span class="fu">&gt;&gt;=</span> writeTVar toBal <span class="fu">.</span> (qty <span class="fu">+</span>)</code></pre></div>
 <p>retry在重启一个STM的时候, 会阻塞在之前改变的TVar上, 直到其中一个有改变.</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">orElse ::</span> <span class="dt">STM</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> a</code></pre>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">someAction ::</span> <span class="dt">IO</span> a
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">orElse ::</span> <span class="dt">STM</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> a</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">someAction ::</span> <span class="dt">IO</span> a
 
 <span class="ot">stmTransaction ::</span> <span class="dt">STM</span> (<span class="dt">IO</span> a)
 stmTransaction <span class="fu">=</span> return someAction
 
 <span class="ot">doSomething ::</span> <span class="dt">IO</span> a
-doSomething <span class="fu">=</span> join (atomically stmTransaction)</code></pre>
+doSomething <span class="fu">=</span> join (atomically stmTransaction)</code></pre></div>
 <p>也可以在STM中进行IO操作</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">unsafeIOToSTM ::</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> a</code></pre>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">unsafeIOToSTM ::</span> <span class="dt">IO</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> a</code></pre></div>
 <p>但是用了它STM存在的意义就少了一半了.</p>
 <p>Pattern guards</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">{-# LANGUAGE PatternGuards #-}</span>
-testme x xs <span class="fu">|</span> <span class="dt">Just</span> y <span class="ot">&lt;-</span> lookup x xs, y <span class="fu">&gt;</span> <span class="dv">3</span> <span class="fu">=</span> y <span class="fu">|</span> otherwise <span class="fu">=</span><span class="dv">0</span></code></pre>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">{-# LANGUAGE PatternGuards #-}</span>
+testme x xs <span class="fu">|</span> <span class="dt">Just</span> y <span class="ot">&lt;-</span> lookup x xs, y <span class="fu">&gt;</span> <span class="dv">3</span> <span class="fu">=</span> y <span class="fu">|</span> otherwise <span class="fu">=</span><span class="dv">0</span></code></pre></div>
 <p>Invariant</p>
 <p>STM存在的意义在于, 我们能够更容易地写出保持invariant的代码.</p>
-<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">alwaysSucceeds ::</span> <span class="dt">STM</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> ()</code></pre>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">alwaysSucceeds ::</span> <span class="dt">STM</span> a <span class="ot">-&gt;</span> <span class="dt">STM</span> ()</code></pre></div>
   </section>
     <p class="meta text-right"><time class="timeago" datetime="2014-01-31" pubdate>2014-01-31</time></p>
 

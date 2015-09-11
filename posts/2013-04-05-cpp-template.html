@@ -63,19 +63,19 @@
     <ol style="list-style-type: decimal">
 <li>这里解释了作者认为const放在类型之后的好处: 比如</li>
 </ol>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">char</span>* CHARS;
-<span class="kw">typedef</span> CHARS <span class="dt">const</span> CPTR;</code></pre>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">char</span>* CHARS;
+<span class="kw">typedef</span> CHARS <span class="dt">const</span> CPTR;</code></pre></div>
 <p>这样声明的CPTR就是一个“constant pointer to chars”, 因为展开之后就是</p>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">char</span>* <span class="dt">const</span> CPTR;</code></pre>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">char</span>* <span class="dt">const</span> CPTR;</code></pre></div>
 <p>相反</p>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">char</span> * CHARS;
-<span class="kw">typedef</span> <span class="dt">const</span> CHARS CPTR;</code></pre>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">char</span> * CHARS;
+<span class="kw">typedef</span> <span class="dt">const</span> CHARS CPTR;</code></pre></div>
 <p>展开之后为:</p>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">const</span> <span class="dt">char</span> * CPTR;
-<span class="dt">int</span> main();</code></pre>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">const</span> <span class="dt">char</span> * CPTR;
+<span class="dt">int</span> main();</code></pre></div>
 <p>这里const修饰的就不是CPTR了.</p>
 <p>另外, 推荐的引用和指针参数的空格放置位置</p>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> foo(<span class="dt">int</span> <span class="dt">const</span>&amp; x);</code></pre>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> foo(<span class="dt">int</span> <span class="dt">const</span>&amp; x);</code></pre></div>
 <p>倒也是和工作时C++代码的风格一样的.</p>
 <ol start="2" style="list-style-type: decimal">
 <li>函数模板</li>
@@ -84,25 +84,25 @@
 <li>template声明中使用typename较常用</li>
 <li>对于一个类型, 如果实例化函数模板后使用到了不支持的操作符, 会产生编译错误</li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
 T lt(T <span class="dt">const</span>&amp; a, T <span class="dt">const</span>&amp; b)
 {
   <span class="kw">return</span> a * b;
 }
 
-lt(<span class="st">&quot;hi&quot;</span>, <span class="st">&quot;ya&quot;</span>); <span class="co">// error</span></code></pre>
+lt(<span class="st">&quot;hi&quot;</span>, <span class="st">&quot;ya&quot;</span>); <span class="co">// error</span></code></pre></div>
 <ul>
 <li>函数模板的编译经过至少2层, 模板本身的语法, 以及实例化之后的语义检查</li>
 <li>模板函数参数的自动推导中不允许类型转化, 类型必须完全匹配. 解决的方法是转化实参的类型或者显示实例化模板参数</li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
 T lt(T <span class="dt">const</span>&amp; a, T <span class="dt">const</span>&amp; b)
 {
   <span class="kw">return</span> a &lt; b;
 }
 
-lt(<span class="dv">4</span>, <span class="fl">5.0</span>); <span class="co">// error</span>
-lt&lt;<span class="dt">float</span>&gt;(<span class="dv">4</span>, <span class="fl">5.0</span>); <span class="co">// correct</span></code></pre>
+lt(<span class="dv">4</span>, <span class="fl">5.</span><span class="dv">0</span>); <span class="co">// error</span>
+lt&lt;<span class="dt">float</span>&gt;(<span class="dv">4</span>, <span class="fl">5.</span><span class="dv">0</span>); <span class="co">// correct</span></code></pre></div>
 <ul>
 <li>函数模板不能有默认参数</li>
 <li>函数模板可以重载(参数个数不同), 可以进行特例化, 可以与非函数模板共存. 后者在选择时有更高的优先权</li>
@@ -115,8 +115,8 @@ lt&lt;<span class="dt">float</span>&gt;(<span class="dv">4</span>, <span class="
 <li>类模板特例化, 可以部分特例化</li>
 <li>类模板参数可以有默认值, 并且可以引用之前的模板参数</li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt; <span class="kw">typename</span> T, <span class="kw">typename</span> CONT = vector&lt;T&gt; &gt;
-<span class="kw">class</span> A;</code></pre>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt; <span class="kw">typename</span> T, <span class="kw">typename</span> CONT = vector&lt;T&gt; &gt;
+<span class="kw">class</span> A;</code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>非类型的模板参数 (dependent types)</li>
 </ol>
@@ -141,7 +141,7 @@ lt&lt;<span class="dt">float</span>&gt;(<span class="dv">4</span>, <span class="
 <ul>
 <li>由于模板的实例化发生在编译期, 所以如果使用的模板定义在另外一个编译单元中, 则需要确保有恰当的实例化发生</li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// template.hpp</span>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// template.hpp</span>
 <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
 <span class="dt">void</span> print(T <span class="dt">const</span>&amp;);
 
@@ -156,18 +156,18 @@ lt&lt;<span class="dt">float</span>&gt;(<span class="dv">4</span>, <span class="
 <span class="ot">#include &quot;template.hpp&quot;</span>
 <span class="dt">int</span> main()
 {
-<span class="dt">double</span> v = <span class="fl">1.0</span>;
+<span class="dt">double</span> v = <span class="fl">1.</span><span class="dv">0</span>;
 print(v);
 <span class="kw">return</span> <span class="dv">0</span>;
-}</code></pre>
+}</code></pre></div>
 <p>这里由于模板定义在另外一个编译单元(template.cpp), 而在其中并没有对double类型进行实例化的需要, 因此编译结果中并没有 print<double>(double const&amp; x) 这个函数. 而对prog.cpp的编译能够通过是因为其中包含了template.hpp中的print模板函数的声明. 这样就导致了编译能够通过, 但是链接阶段会发生错误.</p>
 <p>解决方法:</p>
 <ol style="list-style-type: decimal">
 <li><p>把模板实现放在模板声明中 (Inclusion model)</p></li>
 <li><p>显示实例化</p></li>
 </ol>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// template.cpp</span>
-<span class="kw">template</span> <span class="dt">void</span> print&lt;<span class="dt">double</span>&gt;(<span class="dt">double</span> <span class="dt">const</span> &amp;);</code></pre>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// template.cpp</span>
+<span class="kw">template</span> <span class="dt">void</span> print&lt;<span class="dt">double</span>&gt;(<span class="dt">double</span> <span class="dt">const</span> &amp;);</code></pre></div>
 <p>这样template.cpp编译单元中就会实例化相应的函数, 缺点是难以管理</p>
 <ol start="3" style="list-style-type: decimal">
 <li>结合上面两种方法, 提供额外的编译单元专门提供特例化声明</li>
@@ -175,9 +175,9 @@ print(v);
 <ul>
 <li>使用export (Separation model)</li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">export</span>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">export</span>
 <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
-<span class="dt">void</span> print(T <span class="dt">const</span>&amp;);</code></pre>
+<span class="dt">void</span> print(T <span class="dt">const</span>&amp;);</code></pre></div>
 <p>缺点是编译器实现支持较少</p>
 <ul>
 <li><p>预编译头文件 - 编译器的优化可以保存前n行代码编译之后的状态, 这使得开头一样的编译单元(都包含了相同的头文件)的编译速度得以提高.</p></li>
@@ -201,13 +201,13 @@ print(v);
 <li><p>模板成员函数不能被定义为虚函数, 因为虚表通常是用固定大小的表实现的. 而“模板虚函数”的个数只有到最后整个程序构建玩才能确定, 所以实现这个特性需要编译器, 连接器的支持</p></li>
 <li><p>主模板定义</p></li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// primary template</span>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// primary template</span>
 <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
 <span class="kw">class</span> Box;
 
 <span class="co">// non-primary template</span>
 <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
-<span class="kw">class</span> Box&lt;T&gt;;</code></pre>
+<span class="kw">class</span> Box&lt;T&gt;;</code></pre></div>
 <ul>
 <li><p>模板参数分为: 类型参数, 非类型参数(non-type parameters), 模板参数</p></li>
 <li><p>非类型参数包括整形/枚举, 指针, 引用</p></li>
@@ -222,7 +222,7 @@ print(v);
 </ul></li>
 <li><p>substitution-failure-is-not-an-error (SFINAE)</p></li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
 RT1 test(<span class="kw">typename</span> T::X <span class="dt">const</span>*);
 
 <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
@@ -231,14 +231,14 @@ RT2 test(...);
 <span class="kw">typedef</span> <span class="dt">char</span> RT1;
 <span class="kw">typedef</span> <span class="kw">struct</span> { <span class="dt">char</span> a[<span class="dv">2</span>]; } RT2;
 
-<span class="ot">#define type_has_member_type_X(T) (sizeof(test&lt;T&gt;(0)) == 1)</span></code></pre>
+<span class="ot">#define type_has_member_type_X(T) (sizeof(test&lt;T&gt;(0)) == 1)</span></code></pre></div>
 <p>对没有定义成员X的类来说, 第一个模板函数定义应该产生编译错误, 但是因为SFINAE原则编译器选择继续从下一个模板定义来实例化test这个函数的调用</p>
 <p>SFINAE只能处理产生非法类型的错误, 别的错误(除零错误等)则不适用.</p>
 <ul>
 <li><p>局部类定义不能用作模板参数, 无名类型/枚举也不行(除非用typedef指定一个名字)</p></li>
 <li><p>成员函数模板的实例化不重载虚函数</p></li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="ot">#include &lt;iostream&gt;</span>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="ot">#include &lt;iostream&gt;</span>
 
 <span class="kw">class</span> A
 {
@@ -288,7 +288,7 @@ RT2 test(...);
 
   <span class="kw">return</span> <span class="dv">0</span>;
 }
-</code></pre>
+</code></pre></div>
 <p>输出为:</p>
 <pre><code>A 2
 B 2
@@ -298,7 +298,7 @@ C 2</code></pre>
 <li><p>友函数声明可以是定义, 因此如果实例化若干模板类, 会重复定义此函数, 解决办法是让函数依赖于模板参数</p></li>
 <li><p>友模板: 声明一个模板的所有实例化都是友函数/类</p></li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> Manager {
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> Manager {
   <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
     <span class="kw">friend</span> <span class="kw">class</span> Task;
 
@@ -311,15 +311,15 @@ C 2</code></pre>
     }
 
   <span class="dt">static</span> <span class="dt">int</span> counter;
-};</code></pre>
+};</code></pre></div>
 <ol start="8" style="list-style-type: decimal">
 <li>模板中的命名</li>
 </ol>
 <ul>
 <li>C++语法并不是上下文无关的</li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp">
-x * y;</code></pre>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">
+x * y;</code></pre></div>
 <p>以上代码可以是一个乘法表达式, 也可能是一个指针声明. 这要视x的定义而定.</p>
 <ul>
 <li><p>Template-id: 模板与模板参数的组合, 如List<T, int, 0></p></li>
@@ -327,7 +327,7 @@ x * y;</code></pre>
 <li><p>对于一个class, ADL规则会检查类本身, 包含类定义的外层类, 基类这些类声明处的namespace.</p></li>
 <li><p>对于函数调用, 函数参数以及返回值的类型关联的名称空间是ADL的查找范围.</p></li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="ot">#include &lt;iostream&gt;</span>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="ot">#include &lt;iostream&gt;</span>
 
 <span class="kw">namespace</span> X {
   <span class="kw">template</span>&lt;<span class="kw">typename</span> T&gt; <span class="dt">void</span> f(T);
@@ -350,11 +350,11 @@ x * y;</code></pre>
 {
   ::f(N::e); <span class="co">// ::f</span>
   f(N::e); <span class="co">// N::f</span>
-}</code></pre>
+}</code></pre></div>
 <ul>
 <li>类定义内可以引用类名本身, 模板类中可以引用模板类名并加上模板参数. 但是如果只用模板类名, 则代表着和当前instantiation相对应的template-id, 而不是一个类模板</li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">template</span>&lt;<span class="kw">typename</span>&gt; <span class="kw">class</span> TT&gt;
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">template</span>&lt;<span class="kw">typename</span>&gt; <span class="kw">class</span> TT&gt;
 <span class="kw">class</span> X
 {
 }
@@ -367,13 +367,13 @@ x * y;</code></pre>
   X&lt;C&gt; c; <span class="co">// 这里不行, C不代表一个模板类的名称</span>
   X&lt;::C&gt; d; <span class="co">// &lt;: 是特殊字符序列, 代表 [</span>
   X&lt; ::C&gt; e; <span class="co">// 总算行了这里</span>
-}</code></pre>
+}</code></pre></div>
 <ul>
 <li><p>为了处理C++这样的上下文相关文法, 编译器有一个符号表记录各种声明. 这样就能区分比如x*究竟是一个声明还是乘法表达式的一部分了. 类似的例子还有X&lt;1&gt;(0)等(视X是否为模板类)</p></li>
 <li><p>Tokenizer也会有类似问题, 最常见的问题是模板实例作为模板参数: List&lt;List&lt;int&gt;&gt;, 这里&gt;&gt;会被解释为一个右移运算符. 有的编译器为这个问题作了特殊处理, 并給予警告.</p></li>
 <li><p>Dependent names: 模板定义中对另外一个模板类定义的名称引用是不合适的, 因为很可能显示模板化会改变这个名称的定义</p></li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
 <span class="kw">class</span> Trap {
 <span class="kw">public</span>:
   <span class="kw">enum</span> {x};
@@ -397,12 +397,12 @@ x * y;</code></pre>
 <span class="dt">void</span> <span class="dt">bool</span>(Victim&lt;<span class="dt">void</span>&gt;&amp; bomb) <span class="co">// 书上这里是Trap&lt;void&gt;&amp;</span>
 {
   bomb.poof()
-}</code></pre>
+}</code></pre></div>
 <p>如果在Victim模板定义内部查找x的定义, 则认为x是一个enum值, 但是后面Trap对void的显示化却对覆盖了x的定义.</p>
 <p>C++的解决方法是: 默认情况下不认为一个dependent name是一个type, 除非用typename作声明.</p>
 <p>当一个名称 1. 出现在模板定义内 2. 是被限定的(qualified) 3. 不作为基类声明/成员初始化列表中作为类型 4. 依赖于模板参数</p>
 <p>则必须对之进行typename修饰. 看到这里感觉要吐了, 的确C++的template是非常的复杂, 需要知道的细节太多.</p>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
 <span class="kw">struct</span> S: <span class="kw">typename</span> X&lt;T&gt;::Base {
   S(): <span class="kw">typename</span> X&lt;T&gt;::Base(<span class="kw">typename</span> X&lt;T&gt;::Base(<span class="dv">0</span>)) {}
   <span class="kw">typename</span> X&lt;T&gt; f() {
@@ -414,7 +414,7 @@ x * y;</code></pre>
 
 <span class="kw">struct</span> U {
   <span class="kw">typename</span> X&lt;<span class="dt">int</span>&gt;::C * pc;
-};</code></pre>
+};</code></pre></div>
 <pre><code>* 这个例子当中typename X&lt;T&gt;::Base中的typename是多余的, 因为他们不满足第3条规则.
 * 但是紧接着的typename X&lt;T&gt;::Base(0)中typename是必须的, 因为这里构造了一个对象.
 * 下面的typename X&lt;T&gt;中typename又是多余的, 这里没有限定名称(qualified name).
@@ -423,7 +423,7 @@ x * y;</code></pre>
 <ul>
 <li>类似的, 如果一个template定义也是有依赖的, 则必须告诉编译器.</li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
 <span class="kw">class</span> Shell {
 <span class="kw">public</span>:
   <span class="kw">template</span> &lt;<span class="dt">int</span> N&gt;
@@ -446,7 +446,7 @@ x * y;</code></pre>
   <span class="dt">void</span> case2(Shell&lt;T&gt;::<span class="kw">template</span> In&lt;T&gt;::<span class="kw">template</span> Deep&lt;T&gt;&amp; p) {
     p.<span class="kw">template</span> Deep&lt;N&gt;::f();
   }
-};</code></pre>
+};</code></pre></div>
 <ol start="14" style="list-style-type: decimal">
 <li>模板多态</li>
 </ol>
@@ -467,7 +467,7 @@ x * y;</code></pre>
 <li><p>Traits模板也可以作为一个模板参数, 使得模板使用者能够重载一些Traits.</p></li>
 <li><p>Policy classes: 书上这里举了一个Accumulate的例子:</p></li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt; <span class="kw">typename</span> T,
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt; <span class="kw">typename</span> T,
            <span class="kw">typename</span> Policy = SumPolicy,
            <span class="kw">typename</span> AT = AccumuationTraits&lt;T&gt; &gt;
 <span class="kw">class</span> Accum {
@@ -489,13 +489,13 @@ x * y;</code></pre>
     <span class="dt">static</span> <span class="dt">void</span> accumulate(T1&amp; total, T2 <span class="dt">const</span>&amp; value) {
       total += value;
     }
-};</code></pre>
+};</code></pre></div>
 <p>当然, 这里为了能够让乘法的例子产生正确的结果, 必须将zero()的定义放入Policy class中. (<a href="http://www.haskell.org/ghc/docs/latest/html/libraries/base/Data-Monoid.html">Monoid</a> 中的identity)</p>
 <ul>
 <li><p>Traits可以实现sizeof类似的功能(type function), 这个想想好像是类型系统中很强大的功能.</p></li>
 <li><p>一个用到了SFINAE的判断一个类型是否是class的traits class例子:</p></li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
 <span class="kw">class</span> IsClassT {
   <span class="kw">private</span>:
     <span class="kw">typedef</span> <span class="dt">char</span> One;
@@ -505,13 +505,13 @@ x * y;</code></pre>
   <span class="kw">public</span>:
     <span class="kw">enum</span> { Yes = <span class="kw">sizeof</span>(IsClass&lt;T&gt;::test&lt;T&gt;(<span class="dv">0</span>)) == <span class="dv">1</span> };
     <span class="kw">enum</span> { No = !Yes };
-};</code></pre>
+};</code></pre></div>
 <p>这里用到了class类型可以有pointer to member function的事实来判断一个类型是不是class类型.</p>
 <ul>
 <li>利用Traits的partial specialisation可以对类型的const, reference进行剥离. (15.2.3)</li>
 </ul>
 <p>在以下例子中, 实现了一个apply函数的模板. 但是在处理引用的时候, 却会发生将T &amp;&amp;类型传给函数的情况</p>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
 <span class="dt">void</span> apply(T&amp; arg, <span class="dt">void</span> (*func)(T))
 {
   func(arg);
@@ -526,10 +526,10 @@ x * y;</code></pre>
 {
   <span class="dt">int</span> x = <span class="dv">1</span>;
   apply(x, incr);
-}</code></pre>
+}</code></pre></div>
 <p>当然, C++标准中允许将模板参数T&amp;中的T替换为int&amp;时处理为int&amp;, 同样的, 在T const中如果T是int const, 将可以替换为int const.</p>
 <p>但是这里的解决方法是, 利用对traits class的partial specialisation进行const以及reference的“剥离”:</p>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
 <span class="kw">class</span> TypeOp {
   <span class="kw">public</span>:
     <span class="kw">typedef</span> T ArgT;
@@ -562,17 +562,17 @@ x * y;</code></pre>
     <span class="kw">typedef</span> T &amp; RefT;
     <span class="kw">typedef</span> <span class="kw">typename</span> TypeOp&lt;T&gt;::BareT &amp; RefBareT;
     <span class="kw">typedef</span> T <span class="dt">const</span> &amp; RefConstT;
-};</code></pre>
+};</code></pre></div>
 <p>这样, 前面的apply例子就可以重新写成:</p>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
 <span class="dt">void</span> apply(<span class="kw">typename</span> TypeOp&lt;T&gt;::RefT arg, <span class="dt">void</span> (*func)(T))
 {
   func(arg);
-}</code></pre>
+}</code></pre></div>
 <ul>
 <li>类型提升traits将两种类型提升到更加“强大”的类型, 手段还是specialisation</li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// 这里是不是有点像Haskell的declarative定义</span>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// 这里是不是有点像Haskell的declarative定义</span>
 
 <span class="kw">template</span> &lt;<span class="dt">bool</span> C, <span class="kw">typename</span> Ta, <span class="kw">typename</span> Tb&gt;
 <span class="kw">class</span> IfThenElse;
@@ -611,7 +611,7 @@ x * y;</code></pre>
 {
   <span class="kw">public</span>:
     <span class="kw">typedef</span> T ResultT;
-};</code></pre>
+};</code></pre></div>
 <ol start="16" style="list-style-type: decimal">
 <li>模板以及继承</li>
 </ol>
@@ -626,7 +626,7 @@ x * y;</code></pre>
 <li><p>C++模板是图灵完备的, 意味着在编译器能够模拟出任何图灵等价的计算.</p></li>
 <li><p>比如计算幂函数</p></li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="dt">int</span> N&gt;
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="dt">int</span> N&gt;
 <span class="kw">class</span> Power2 {
  <span class="kw">public</span>:
   <span class="kw">enum</span> { result = <span class="dv">2</span> * Power2&lt;N<span class="dv">-1</span>&gt;::result };
@@ -636,7 +636,7 @@ x * y;</code></pre>
 <span class="kw">class</span> Power2 {
  <span class="kw">public</span>:
   <span class="kw">enum</span> { result = <span class="dv">1</span> };
-};</code></pre>
+};</code></pre></div>
 <ol start="20" style="list-style-type: decimal">
 <li>智能指针</li>
 </ol>
@@ -663,7 +663,7 @@ x * y;</code></pre>
 <li><p>成员函数指针需要记录相对对象的偏移.</p></li>
 <li><p>函数对象的使用, 可以作为模板参数, 也可以作为函数参数传递, 后者可以有状态. 另外一种方式是将两者结合起来:</p></li>
 </ul>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> F&gt;
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> F&gt;
 <span class="dt">void</span> my_sort(..., F cmp = F())
 {
   <span class="kw">if</span> (cmp(x, y)) {
@@ -672,7 +672,7 @@ x * y;</code></pre>
 
 my_sort&lt;std::less&lt;..&gt;&gt;(...);
 my_sort&lt;..., std::less&lt;..&gt;());
-my_sort(..., mycriterion);</code></pre>
+my_sort(..., mycriterion);</code></pre></div>
   </section>
     <p class="meta text-right"><time class="timeago" datetime="2013-04-05" pubdate>2013-04-05</time></p>
 
