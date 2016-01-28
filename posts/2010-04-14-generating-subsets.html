@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>经典重访: 如何按序生成集合的所有子集 | fantasticsid</title>
+    <meta name="author" content="fantasticsid">
+    <meta name="description" content="经典重访: 如何按序生成集合的所有子集">
+    <meta name="keywords" content="mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/styles.css">
+
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+  </head>
+
+
+  <body class="post">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../">The blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <!-- <li class="dropdown"> -->
+            <!--   <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Our Collection of Templates &amp; Themes" aria-expanded="false">Themes <b class="caret"></b></a> -->
+            <!--   <ul class="dropdown-menu"> -->
+            <!--     <li> -->
+            <!--       <a href="/template-categories/all"><i class="fa fa-globe fa-fw"></i> All Templates &amp; Themes</a> -->
+            <!--     </li> -->
+            <!--     <li> -->
+            <!--       <a href="/template-categories/popular"><i class="fa fa-star fa-fw"></i> Most Popular</a> -->
+            <!--     </li> -->
+            <!--     <li> -->
+            <!--       <a href="/buy-bootstrap-templates"><i class="fa fa-shopping-cart fa-fw"></i> Buy Bootstrap Templates</a> -->
+            <!--     </li> -->
+            <!--     <li class="divider"></li> -->
+            <!--     <li class="dropdown-header"> -->
+            <!--       Template &amp; Theme Categories: -->
+            <!--     </li> -->
+            <!--     <li> -->
+            <!--       <a href="/template-categories/admin-dashboard">Admin and Dashboard</a> -->
+            <!--     </li> -->
+            <!--     <li> -->
+            <!--       <a href="/template-categories/full-websites">Full Websites</a> -->
+            <!--     </li> -->
+            <!--     <li> -->
+            <!--       <a href="/template-categories/landing-pages">Landing Pages</a> -->
+            <!--     </li> -->
+            <!--     <li> -->
+            <!--       <a href="/template-categories/one-page">One Page Websites</a> -->
+            <!--     </li> -->
+            <!--     <li> -->
+            <!--       <a href="/template-categories/portfolios">Portfolios</a> -->
+            <!--     </li> -->
+            <!--     <li> -->
+            <!--       <a href="/template-categories/blogs">Blogs</a> -->
+            <!--     </li> -->
+            <!--     <li> -->
+            <!--       <a href="/template-categories/ecommerce">Ecommerce</a> -->
+            <!--     </li> -->
+            <!--     <li> -->
+            <!--       <a href="/template-categories/unstyled">Unstyled Starter Templates</a> -->
+            <!--     </li> -->
+            <!--     <li> -->
+            <!--       <a href="/template-categories/navigation-menus">Navigation and Navbars</a> -->
+            <!--     </li> -->
+            <!--   </ul> -->
+            <!-- </li> -->
+            <li>
+              <a href="../" title="Home">Home</a>
+            </li>
+            <!-- <li class="dropdown"> -->
+            <!--   <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Bootstrap Related Resources" aria-expanded="false">Resources <b class="caret"></b></a> -->
+            <!--   <ul class="dropdown-menu"> -->
+            <!--     <li> -->
+            <!--       <a href="/bootstrap-resources"><i class="fa fa-list fa-fw"></i> Bootstrap Resources List</a> -->
+            <!--     </li> -->
+            <!--     <li> -->
+            <!--       <a href="/showcase"><i class="fa fa-desktop fa-fw"></i> Start Bootstrap Showcase</a> -->
+            <!--     </li> -->
+            <!--   </ul> -->
+            <!-- </li> -->
+            <li>
+              <a href="../posts.html" title="Posts">Posts</a>
+            </li>
+            <li>
+              <a href="../about.html" title="About">About</a>
+            </li>
+          </ul>
+          <!-- <ul class="nav navbar-nav navbar-right"> -->
+          <!--   <li class="dropdown"> -->
+          <!--     <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Premium Bootstrap Themes &amp; Templates"><i class="fa fa-star text-yellow"></i> Premium <b class="caret"></b></a> -->
+          <!--     <ul class="dropdown-menu"> -->
+          <!--       <li> -->
+          <!--         <a href="/bootstrap-design-services"><i class="fa fa-fw fa-paint-brush"></i> Custom Bootstrap Design Services</a> -->
+          <!--       </li> -->
+          <!--       <li> -->
+          <!--         <a href="https://wrapbootstrap.com/?ref=StartBootstrap"><i class="fa fa-fw fa-shopping-cart"></i> WrapBootstrap - Premium Bootstrap Themes</a> -->
+          <!--       </li> -->
+          <!--     </ul> -->
+          <!--   </li> -->
+          <!-- </ul> -->
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+    
+    <div id="bodywrapper">
+
+      <div class="container">
+        <div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
+  <header>
+    <div class="content">
+    <h1 class="text-center">经典重访: 如何按序生成集合的所有子集</h1>
+    </header>
+  <section>
+    <p>如何列举一个集合的所有子集呢? 可能最先想到的是模拟二进制从0累加到111….111, 表示一个元素是否出现在子集中吧. 但是这种方法生成的子集序列的规律不那么明显, 如果要求生成的子集序列拥有一些良好的性质, 该怎么生成呢?</p>
+<ol style="list-style-type: decimal">
+<li>Gray Code</li>
+</ol>
+<p>如果要求生成的子集序列相邻两个子集之间只相差一个元素, 那么这种序列对应的二进制编码就是gray编码. 例如含有两个元素的集合A={a, b}, 按照这个方法就应该生成{}, {a}, {a, b}, {b}, 这样的子集序列. 对应的二进制编码为00, 10, 11, 01.</p>
+<p>gray编码构造的方法很巧妙. 将序列编号为0到2^n-1. 第一个子集为空集, 对应00…00. 以后, 如果前一个子集编号为偶数, 就在对应编码的第一位改变值(0-&gt;1, 1-&gt;0). 如果前一个子集编号为奇数, 那么就在第一个1之后的位置改变对应的值. 很容易想象这个方法是如何生成gray编码的. 假设此方法能够生成长度为k-1的gray编码, 那么在长度为k的情况下, 前一半的最后一位显然是0, 且最后一个编码为00..010, 且此编码的编号为奇数. 这样, 下一个编码为00..011, 之后的序列也容易想象和前一半序列正好镜像生成. 这种构造方法来自于对n维正方体的顶点用gray code进行编码.</p>
+<pre><code>0000 1000
+1100 0100
+0110 1110
+1010 0010
+0011 1011
+1111 0111
+0101 1101
+1001 0001</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Lexicographical Order</li>
+</ol>
+<p>生成的子集按照字典顺序排列, 这也是常用的排列顺序. 而且生成的方法也很简单. 这里既然要以字典的顺序, 就应该认为集合中的元素是有全序的. 我们从空集开始, 每次在最后一个元素后面加上仅大于它的最小元素作为下一个子集. 如果不存在这样的元素, 我们删除这个最后元素, 将前一个元素增加为它的后继, 然后作为下一个子集返回.</p>
+<pre><code>-
+a
+ab
+abc
+ac
+b
+bc
+c</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Banker’s Sequence</li>
+</ol>
+<p>以上两种子集顺序中, 子集的大小都不是递增的. 如果要求得到满足某个性质的最小的子集, 那么用以上两种方法都会在得到答案前枚举很多没有用的, 比较大的子集. 在&lt;<Efficiently Enumerating the Subsets of a Set>&gt;这篇文章中, 作者提出了将子集按照元素个数进行枚举的算法. 其实生成的方法非常简单, 简单地说, 就是将最后一个能够向右移位的1向右移, 如果不存在这样的位, 就在首位增加1. 然后将改变的位之后的所有1连续排列在这个位之后.</p>
+<pre><code>0000
+1000
+0100
+0010
+0001
+1100
+1010
+1001
+0110
+0101
+0011
+1110
+1101
+1011
+0111
+1111</code></pre>
+<p>这种方法是有状态的, 在<a href="http://www.thelowlyprogrammer.com/2010/04/indexing-and-enumerating-subsets-of.html">这篇博客</a>里提到了一种无状态生成banker’s sequence的方法. 要生成第i个大小为k的, n元素集合的子集, 由于前C(n-1, k-1)个元素都是以1开始的, 如果i大于C(n-1, k-1), 那么第一个元素就没有出现在子集中, 否则它出现在这个子集中. 接着可以递归生成第i - C(n-1, k-1) (或者仍然i), 大小为k-1(或者仍然k), n-1元素集合的子集. 这种方法的效率是线性的, 并且不需要如上面的方法逐个生成子集.</p>
+<p>来源:</p>
+<p>&lt;&lt;Combinatorial Algorithms&gt;&gt;</p>
+<p>&lt;&lt;Efficiently Enumerating the Subsets of a Set&gt;&gt;</p>
+  </section>
+    <p class="meta text-right"><time class="timeago" datetime="2010-04-14" pubdate>2010-04-14</time></p>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+  </div>
+    </div>
+  </div>
+
+      </div>
+
+    </div>
+        <script type="text/javascript" src="../javascripts/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
+  </body>
+</html>
