@@ -97,6 +97,50 @@
     <dc:creator>fantasticsid</dc:creator>
 </item>
 <item>
+    <title>要成为一个牛逼的前端工程师</title>
+    <link>http://blog.fantasticsid.com/posts/2016-01-07-a.html</link>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
+  <header>
+    <div class="content">
+    <h1 class="text-center">要成为一个牛逼的前端工程师</h1>
+    </header>
+  <section>
+    <p>要成为一个牛逼的前端工程师</p>
+  </section>
+    <p class="meta text-right"><time class="timeago" datetime="2016-01-07" pubdate>2016-01-07</time></p>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+  </div>
+    </div>
+  </div>
+]]></description>
+    <pubDate>Thu, 07 Jan 2016 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2016-01-07-a.html</guid>
+    <dc:creator>fantasticsid</dc:creator>
+</item>
+<item>
     <title>无处安放的手掌..</title>
     <link>http://blog.fantasticsid.com/posts/2015-09-12-keyboard.html</link>
     <description><![CDATA[<div class="container">
@@ -375,50 +419,6 @@
 ]]></description>
     <pubDate>Thu, 19 Feb 2015 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2015-02-19-2015-resolution.html</guid>
-    <dc:creator>fantasticsid</dc:creator>
-</item>
-<item>
-    <title>要成为一个牛逼的前端工程师</title>
-    <link>http://blog.fantasticsid.com/posts/2015-01-07-a.html</link>
-    <description><![CDATA[<div class="container">
-  <div class="row">
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-8">
-  <article>
-  <header>
-    <div class="content">
-    <h1 class="text-center">要成为一个牛逼的前端工程师</h1>
-    </header>
-  <section>
-    <p>要成为一个牛逼的前端工程师</p>
-  </section>
-    <p class="meta text-right"><time class="timeago" datetime="2015-01-07" pubdate>2015-01-07</time></p>
-
-  <section id="comment">
-
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-  </section>
-</article>
-  </div>
-    </div>
-  </div>
-]]></description>
-    <pubDate>Wed, 07 Jan 2015 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2015-01-07-a.html</guid>
     <dc:creator>fantasticsid</dc:creator>
 </item>
 <item>
