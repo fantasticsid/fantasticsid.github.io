@@ -7,8 +7,52 @@
         <description><![CDATA[mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music]]></description>
         <atom:link href="http://blog.fantasticsid.com/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sat, 12 Sep 2015 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Thu, 28 Jan 2016 00:00:00 UT</lastBuildDate>
         <item>
+    <title>为什么自然界美景如此普遍，美丽的声音却不常"见"？</title>
+    <link>http://blog.fantasticsid.com/posts/2016-01-28-q.html</link>
+    <description><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+  <article>
+  <header>
+    <div class="content">
+    <h1 class="text-center">为什么自然界美景如此普遍，美丽的声音却不常"见"？</h1>
+    </header>
+  <section>
+    <p>为什么自然界美景如此普遍，美丽的声音却不常“见”？</p>
+  </section>
+    <p class="meta text-right"><time class="timeago" datetime="2016-01-28" pubdate>2016-01-28</time></p>
+
+  <section id="comment">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+  </div>
+    </div>
+  </div>
+]]></description>
+    <pubDate>Thu, 28 Jan 2016 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2016-01-28-q.html</guid>
+    <dc:creator>fantasticsid</dc:creator>
+</item>
+<item>
     <title>无处安放的手掌..</title>
     <link>http://blog.fantasticsid.com/posts/2015-09-12-keyboard.html</link>
     <description><![CDATA[<div class="container">
@@ -1290,77 +1334,6 @@ async action <span class="fu">=</span> <span class="kw">do</span>
 ]]></description>
     <pubDate>Sun, 06 Oct 2013 00:00:00 UT</pubDate>
     <guid>http://blog.fantasticsid.com/posts/2013-10-06-parallel-concurrent-haskell.html</guid>
-    <dc:creator>fantasticsid</dc:creator>
-</item>
-<item>
-    <title>理解Arrows</title>
-    <link>http://blog.fantasticsid.com/posts/2013-07-02-arrows.html</link>
-    <description><![CDATA[<div class="container">
-  <div class="row">
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-8">
-  <article>
-  <header>
-    <div class="content">
-    <h1 class="text-center">理解Arrows</h1>
-    </header>
-  <section>
-    <p>Haskell的一些library用到了Arrow这个概念. 如果能够理解Monad那么相信理解Arrow也并不是非常难, 至少从类型层面上来说并不难理解. 而难点可能正是理解各种combinators以及具体的instance实现的语义. 由于我也刚刚开始接触Arrow, 所以这里的描述都尽量简化了.</p>
-<p>要理解Arrow, 我们首先引入Kleisli这个type synonym:</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">Kleisli</span> m a b <span class="fu">=</span> a <span class="ot">-&gt;</span> mb</code></pre></div>
-<p>这里可以看到, Kleisli这个高阶类型需要三个参数, 其中, 第二个参数m也是一个高阶类型, 可以是Maybe, [], IO等等. 而这个类型代表的是一个函数, 输入类型为a, 输出类型为m b.</p>
-<p>这里多提一句, 我们其实可以把右端改写成:</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">Kleisli</span> m a b <span class="fu">=</span> (<span class="ot">-&gt;</span>) a (m b)</code></pre></div>
-<p>这样是不是就根本没啥神奇了, Kleisli就是对(-&gt;)这个高阶类型的一个别名. 而它本身代表了一个计算, 一个输入类型为a, 输出类型为b的计算. 我们对这种计算进行抽象, 得到Arrow的定义:</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">class</span> <span class="dt">Arrow</span> arr <span class="kw">where</span>
-<span class="ot">  arr ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> arr a b
-<span class="ot">  (&gt;&gt;&gt;) ::</span> arr a b <span class="ot">-&gt;</span> arr b c <span class="ot">-&gt;</span> arr a c</code></pre></div>
-<p>看起来类型比较复杂, 但其实也很好理解. arr(Arrow arr这里)代表一个计算, 那么arr(typeclass function)代表了如何把一个函数lift到Arrow中, 这个和Monad的return类似. 而&gt;&gt;&gt;这个运算是对计算进行组合, 这个和Monad的&gt;&gt;=有点类似(这里并不严格, 只是希望能有一些类比).</p>
-<p>既然Arrow代表计算, 那么普通函数也当然是一个计算, 我们来看看普通函数的typeclass instance是如何实现的:</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">instance</span> <span class="dt">Arrow</span> (<span class="ot">-&gt;</span>) <span class="kw">where</span>
-  arr <span class="fu">=</span> id
-  (<span class="fu">&gt;&gt;&gt;</span>) <span class="fu">=</span> flip (<span class="fu">.</span>)</code></pre></div>
-<p>这里有一些规律可以帮助我们理解: 1. 注意到(-&gt;)的kind是* -&gt; * -&gt; *, 即需要两个类型参数的高阶类型. 我们把(-&gt;)带入Arrow的typeclass定义发现, 需要定义的函数的类型:</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">arr ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> (<span class="ot">-&gt;</span>) a b
-<span class="ot">(&gt;&gt;&gt;) ::</span> (<span class="ot">-&gt;</span>) a b <span class="ot">-&gt;</span> (<span class="ot">-&gt;</span>) b c <span class="ot">-&gt;</span> (<span class="ot">-&gt;</span>) a c</code></pre></div>
-<p>如果我们把(-&gt;)写成Infix notation, 那么就得到了:</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">arr ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> b)
-<span class="ot">(&gt;&gt;&gt;) ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> (b <span class="ot">-&gt;</span> c) <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> c)</code></pre></div>
-<p>容易看到, (&gt;&gt;&gt;)和function composition(.)的类型是差不多的, 只是两个函数的顺序调换了一下.</p>
-<p>现在我们来看一下Kleisli的Arrow instance定义:</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">newtype</span> <span class="dt">Kleisli</span> m a b <span class="fu">=</span> <span class="dt">Kleisli</span> {<span class="ot">runKleisli ::</span> a <span class="ot">-&gt;</span> m b}
-<span class="kw">instance</span> <span class="dt">Monad</span> m <span class="ot">=&gt;</span> <span class="dt">Arrow</span> (<span class="dt">Kleisli</span> m) <span class="kw">where</span>
-  arr f <span class="fu">=</span> <span class="dt">Kleisli</span> <span class="fu">$</span> return <span class="fu">.</span> f
-  (runKleisli f) (<span class="fu">&gt;&gt;&gt;</span>) (runKleisli g) <span class="fu">=</span> <span class="dt">Kleisli</span> (\a <span class="ot">-&gt;</span> <span class="kw">do</span> r <span class="ot">&lt;-</span> f a
-                                                          return <span class="fu">$</span> g r)</code></pre></div>
-  </section>
-    <p class="meta text-right"><time class="timeago" datetime="2013-07-02" pubdate>2013-07-02</time></p>
-
-  <section id="comment">
-
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'fantasticsidtheblog'; // required: replace example with your forum shortname
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-  </section>
-</article>
-  </div>
-    </div>
-  </div>
-]]></description>
-    <pubDate>Tue, 02 Jul 2013 00:00:00 UT</pubDate>
-    <guid>http://blog.fantasticsid.com/posts/2013-07-02-arrows.html</guid>
     <dc:creator>fantasticsid</dc:creator>
 </item>
 
