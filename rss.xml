@@ -3501,7 +3501,7 @@ my_sort(..., mycriterion);</code></pre></div>
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
 			<p>据说, P问题是否等于NP问题是千禧难题中唯一的平民也能够理解和尝试的问题, 也是理论计算机界最为重要的问题. 几乎大家都认为, P是不等于NP的, 但是, 至今没有人给出一个证明. 但是前几天, 一位来自HP Labs的研究人员<a href="http://www.hpl.hp.com/personal/Vinay_Deolalikar/">Vinay Deolalikar</a>对这个问题给出了一个证明, 这个证明目前还没有得到认可. 如果这个证明是正确的, 那么就能说明, 使用计算机是难以有效解决一些计算问题的, 于是我们就不必费力去寻找这些问题的高效算法了, 只要说明这些问题和已知的一些NPC问题是等价的即可.</p>
-<p>但是这个证明据说横跨n个领域: 计算机科学, 数学, 逻辑, 统计, 物理…包括使用了代数几何 的方法. 于是我等闲人只能等大牛们鉴定完毕再欢呼了. 这里有作者的博客<a href="http://gregbaker.ca/blog/2010/08/07/p-n-np/">http://gregbaker.ca/blog/2010/08/07/p-n-np/</a>, 还有文章: <a href="http://www.hpl.hp.com/personal/Vinay_Deolalikar/Papers/pnp_updated.pdf">http://www.hpl.hp.com/personal/Vinay_Deolalikar/Papers/pnp_updated.pdf</a> . 如果这个证明的确被验证, 那么2012到来之前人类还是非常争气啊, 证明了庞加来猜想, 又证明了P!=NP …</p>
+<p>但是这个证明据说横跨n个领域: 计算机科学, 数学, 逻辑, 统计, 物理…包括使用了代数几何 的方法. 于是我等闲人只能等大牛们鉴定完毕再欢呼了. 这里有作者的<a href="http://gregbaker.ca/blog/2010/08/07/p-n-np/">博客</a>, 还有<a href="http://www.hpl.hp.com/personal/Vinay_Deolalikar/Papers/pnp_updated.pdf">文章</a> . 如果这个证明的确被验证, 那么2012到来之前人类还是非常争气啊, 证明了庞加来猜想, 又证明了P!=NP …</p>
 <p>Update: <a href="http://rjlipton.wordpress.com/2010/08/09/issues-in-the-proof-that-p%E2%89%A0np/">这里</a>讨论了文章中的一些可能的错误.</p>
 <p>Update: IBM的研究员Charanjit Jutla认为证明有<a href="http://rjlipton.wordpress.com/2010/08/09/issues-in-the-proof-that-p%E2%89%A0np/#comment-4712">严重漏洞</a>.</p>
 <p>Update: 又发现<a href="http://rjlipton.wordpress.com/2010/08/12/fatal-flaws-in-deolalikars-proof/">漏洞</a>了.</p>	
