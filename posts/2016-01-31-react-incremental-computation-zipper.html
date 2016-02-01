@@ -233,7 +233,7 @@ if (window.navigator.appName == "Microsoft Internet Explorer") {
 <p>我们把蛋壳扯掉了, 现在要往蛋黄里扯.</p>
 <p>React内部是用virtual dom来连接你的application state和下面的browser dom的一致性的, 给你的赶脚是一个纯函数, 从app state -&gt; browser dom.</p>
 <p>那它是怎么做到的呢? 每次把旧的和新的virtual dom遍历一遍, 就知道了是啥变化了.</p>
-<p>举个栗子, 你要render一个朋友列表, 你的app state是[小蜗, 派大星, 珊迪, 蟹老板]. 然后这是后新来一个章鱼哥, 你把它塞到最后. (好惨..) 你的app state变成了[小蜗, 派大星, 珊迪, 蟹老板, 章鱼哥]. 然后你给React的东西是啥?</p>
+<p>举个栗子, 你要render一个朋友列表, 你的app state是[小蜗, 派大星, 珊迪, 蟹老板]. 然后这时候新来一个章鱼哥, 你把它塞到最后. (好惨..) 你的app state变成了[小蜗, 派大星, 珊迪, 蟹老板, 章鱼哥]. 然后你给React的东西是啥?</p>
 <p>前后两次分别是</p>
 <ul>
 <li>小蜗</li>
