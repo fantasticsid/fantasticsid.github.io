@@ -115,7 +115,7 @@
 <p>并没有, 大家洗洗睡了..</p>
 <p>Just kidding.</p>
 <p>前面说到React的diff, 各种heuristics. 现在一种比较流行(是吗?我很不靠谱地在猜)的做法是用functional data structure的reference equality来进行value equality的检查从而得到巨大的性能优化.</p>
-<p>我们可以想想(“经观察容易得到”), 如果React内部用的是类似zipper数据结构, 然后算diff的时候, 看到蟹老板那里就发现其实之前的一坨都是没变(想象有一个从functional data structure reference -&gt; dom的hash table), 那就啥都不用做了直接跳过. 然后再看到章鱼哥的时候, 在dom相应的蟹老板节点出, 新增一个章鱼哥节点.. (啊好费劲, 我写的费劲你估计看的也费劲我扯不下去了..)</p>
+<p>我们可以想象(“经观察容易得到”), 如果React内部用的是类似zipper数据结构, 然后算diff的时候, 看到蟹老板那里就发现其实之前的一坨都是没变(想象有一个从functional data structure reference -&gt; dom的hash table), 那就啥都不用做了直接跳过. 然后再看到章鱼哥的时候, 在dom相应的蟹老板节点出, 新增一个章鱼哥节点.. (啊好费劲, 我写的费劲你估计看的也费劲我扯不下去了..)</p>
 <p>嗯我觉得其实上面说的各种优化很可能React里面已经有了, 但是我还是觉得用zipper会使得diff算法更加聪明, 里面的优化更加普适 (去屎扯淡君)</p>
 <p>嗯, 差不多快结束了.</p>
 <p>有几个由于文采关系没法组织到上面的想法:</p>
