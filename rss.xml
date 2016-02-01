@@ -52,7 +52,8 @@
 <p>你有一个React component, 然后state是一坨数字, 它render粗来一个&lt;p&gt;{min}&lt;/p&gt;.. (啊好简洁, 不禁让我想起一句高中数学老师的话: 好的反例只要一个. 不过这又不是个反例&gt;&lt;’)</p>
 <p>那你原来是咋实现的?</p>
 <p>可能你会有个函数, 计算所有元素最小值, 每次有元素更新, 你就重来一次更新这个最小值, 然后setState, 重新render, 得到新的&lt;p&gt;{min}&lt;/p&gt;</p>
-<p>说到这里感觉没有Exciting的感觉有没有? 我也没有!</p>
+<p>现在有了incremental computation, 你在计算新的最小值min的时候可以变得更快更聪明~</p>
+<p>但是仅仅是这个, 说到这里没有Exciting的感觉有没有? 我也没有!</p>
 <p>Too young!</p>
 <p>我们把蛋壳扯掉了, 现在要往蛋黄里扯.</p>
 <p>React内部是用virtual dom来连接你的application state和下面的browser dom的一致性的, 给你的赶脚是一个纯函数, 从app state -&gt; browser dom.</p>
