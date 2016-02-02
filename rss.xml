@@ -128,6 +128,29 @@
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -172,6 +195,29 @@
 			<p>为什么自然界美景如此普遍，美丽的声音却不常“见”？</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -218,6 +264,29 @@
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -263,6 +332,29 @@
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -307,6 +399,29 @@
 			<p>限制创造新事物的是不够好的创造工具？</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -354,6 +469,29 @@
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -399,6 +537,29 @@
 </iframe>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -446,6 +607,29 @@
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -492,6 +676,29 @@
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -537,6 +744,29 @@
 <p>There is an island upon which a tribe resides. The tribe consists of 1000 people, with various eye colours. Yet, their religion forbids them to know their own eye color, or even to discuss the topic; thus, each resident can (and does) see the eye colors of all other residents, but has no way of discovering his or her own (there are no reflective surfaces). If a tribesperson does discover his or her own eye color, then their religion compels them to commit ritual suicide at noon the following day in the village square for all to witness. All the tribespeople are highly logical and devout, and they all know that each other is also highly logical and devout (and they all know that they all know that each other is highly logical and devout, and so forth). [Added, Feb 15: for the purposes of this logic puzzle, “highly logical” means that any conclusion that can logically deduced from the information and observations available to an islander, will automatically be known to that islander.] Of the 1000 islanders, it turns out that 100 of them have blue eyes and 900 of them have brown eyes, although the islanders are not initially aware of these statistics (each of them can of course only see 999 of the 1000 tribespeople). One day, a blue-eyed foreigner visits to the island and wins the complete trust of the tribe. One evening, he addresses the entire tribe to thank them for their hospitality. However, not knowing the customs, the foreigner makes the mistake of mentioning eye color in his address, remarking “how unusual it is to see another blue-eyed person like myself in this region of the world”. What effect, if anything, does this faux pas have on the tribe?</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -591,6 +821,29 @@
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -641,6 +894,29 @@
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -688,6 +964,29 @@
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -733,6 +1032,29 @@
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -777,6 +1099,29 @@
 			<p>想要一个App可以方便我和人约会时确定时间(地点)</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -824,6 +1169,29 @@
 写关于音乐的App</code></pre>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -1169,6 +1537,29 @@ testme x xs <span class="fu">|</span> <span class="dt">Just</span> y <span class
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -1238,6 +1629,29 @@ Topcoder的rating上1500
 </code></pre>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -1831,6 +2245,29 @@ async action <span class="fu">=</span> <span class="kw">do</span>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -1902,6 +2339,29 @@ async action <span class="fu">=</span> <span class="kw">do</span>
                                                           return <span class="fu">$</span> g r)</code></pre></div>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -2560,6 +3020,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -2661,6 +3144,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -2724,6 +3230,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -2783,6 +3312,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -2835,6 +3387,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -2880,6 +3455,29 @@ my_sort(..., mycriterion);</code></pre></div>
 <p><a href="http://itunes.apple.com/us/app/ielts-quizme/id488641011">IELTS Quizme</a></p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -2974,6 +3572,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -3041,6 +3662,29 @@ my_sort(..., mycriterion);</code></pre></div>
 <p>这是个矛盾, 因此就证明了, 选举结果中, B一定也是在排名的最前或者最后, 而不是中间某个位置. 待续…</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -3116,6 +3760,29 @@ my_sort(..., mycriterion);</code></pre></div>
 <p>关于博弈论的书, &lt;&lt;Algorithmic game theory&gt;&gt;这本书写得的确不错, 内容也适合非数学/经济的同学读.</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -3210,6 +3877,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -3274,6 +3964,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -3322,6 +4035,29 @@ my_sort(..., mycriterion);</code></pre></div>
 <p>来源: <a href="http://vihart.com/blog/mobius-story/">vihart</a></p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -3396,6 +4132,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -3462,6 +4221,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -3521,6 +4303,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -3575,6 +4380,29 @@ my_sort(..., mycriterion);</code></pre></div>
 <p>最后祈祷我能有时间阅读到有意思的东西, 有时间看以上清单里的书.</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -3646,6 +4474,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -3705,6 +4556,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -3759,6 +4633,29 @@ my_sort(..., mycriterion);</code></pre></div>
 <p>答案: 显然, Charlie的球技不太行. 构造一个有三个顶点A, B, C的多重边无向图, 一条边代表一场比赛. 容易看到, A-B边共10条, B-C边4条, A-C边5条. 现在要将这19条边收集起来, 但是有一个限制是, 同一对顶点的边不能被紧接着一起被收集, 就是说, 一场比赛之后, 必定会进行不同对手的下一场比赛. 显然, A-B边每两场比赛就被收集一次, 当中夹杂着B-C边和A-C边, 且第一条和最后一条被收集的边都是A-B边, 而在B-C边以及A-C边两者中则是A-C边多一次. 这样, 用c代表A-B边, b代表A-C边, a代表B-C边, 那么边收集的顺序就是cbcacbcacbcacbcacbc第13条边为c, 即A-B, 也就是Alice和Bob的比赛. 并且我们可以看到Charlie的确很菜, 输掉了所有的比赛.</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -3818,6 +4715,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -3868,6 +4788,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -3917,6 +4860,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -3962,6 +4928,29 @@ my_sort(..., mycriterion);</code></pre></div>
 <p>The key exchange process seems straight-forward, but it really requires careful manipulation of the certificates, and of course when designing something claiming to be security related, you just can’t think too much about it. But the bottom line is: Gajim now has the capability to encrypt data that is transferred, and this whole process will be complete once the key exchange is implemented.</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -4013,6 +5002,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -4058,6 +5070,29 @@ my_sort(..., mycriterion);</code></pre></div>
 <p>So after talking to Yann, we have decided that we will implement secured trasnfer method on the assumption that certificates are already on hard drive, which eliminates much uncertainty we are facing. The X509 encryption method, which I shall implement first, seems to be a mixture of RSA public key cryptography algorithm and some sort of authentication of identity algorithm (Not sure). But with the openssl library these should be easy. The difficult part is incorporating these into the existing socks5  transport method, which I am sure involves a lot of probing and debugging. So, no more words, off I go then, reading, probing, debugging, coding…</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -4105,6 +5140,29 @@ my_sort(..., mycriterion);</code></pre></div>
 <p>So for the rest of gsoc, I shall implement TLS connection so gajim will be able to transfer data over the secured tunnel without much re-factoring of the code.</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -4154,6 +5212,29 @@ my_sort(..., mycriterion);</code></pre></div>
 </p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -4206,6 +5287,29 @@ my_sort(..., mycriterion);</code></pre></div>
 <p>write scaffold code to manage XTLS session initiation</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -4263,6 +5367,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -4307,6 +5434,29 @@ my_sort(..., mycriterion);</code></pre></div>
 			<p>I was taking exams at school and didn’t progress last week. This is bad because it’s like doing something else while you’re employed to do a full-time job. But anyway the only thing I could do now is try to make up for the lost week. I will post another entry at the end of the week and see what I will achieve. Hopefully I can get the file transfer work.</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -4359,6 +5509,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -4406,6 +5579,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -4452,6 +5648,29 @@ my_sort(..., mycriterion);</code></pre></div>
 <p>Since I’ve left most methods unimplemented, gajim sometimes throws exceptions when we’re supposed to implement certain methods. The good thing about this is it helps to pinpoint which method I should implement very quickly and efficiently. The bad news is that I dunno if there are things broken just silently and I certainly don’t want to see many exceptions raised in the final product. We will see how it goes.</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -4501,6 +5720,29 @@ my_sort(..., mycriterion);</code></pre></div>
 <p>值得一提的是, 文中的算法产生的集合的确可能不等于我们所求的频繁元素集合, 而是一个“真超集”, 尤其是在没有给定这样的频繁元素一定存在这样的假定的时候, 反例尤其容易举. 于是再次计算这个集合中符合频率要求的元素就需要重新遍历一遍. 但是在<span class="math inline"><em>θ</em> = 0.5</span>的情形下, 如果的确存在这样的元素, 我们的原先的算法是能够保证最后的元素就是频繁元素的. 那么假设现在给定条件, 这样的频繁元素至少存在一个, 能否保证文中算法给出的集合中没有频率低于<span class="math inline"><em>θ</em></span>的元素呢? 或者能否举出反例呢?</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -4561,6 +5803,29 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -4611,6 +5876,29 @@ my_sort(..., mycriterion);</code></pre></div>
 <p>The community members from jabber and gajim are all very kind. Prior to the program I didn’t know my mentor Yann Leboulanger. It is gsoc that teaches me how to talk to the community, contribute to the community and later establish yourself as a developer in open source community. In this sense open source means more than just open access to the source code, but more importantly, a welcoming community.</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -4706,6 +5994,29 @@ c</code></pre>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -4753,6 +6064,29 @@ c</code></pre>
 <p><a href="http://en.wikipedia.org/wiki/Collatz_conjecture">wikipedia</a></p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -4802,6 +6136,29 @@ c</code></pre>
 <p>来源: <a href="http://blog.xkcd.com/2010/02/09/math-puzzle/">xkcd</a></p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -4866,6 +6223,29 @@ c</code></pre>
 <p>以上都是Economist杂志的, 图的作者是Peter Schrank. 如果你觉得有侵害你的权益的内容, 请联系我.</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -4938,6 +6318,29 @@ c</code></pre>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -4988,6 +6391,29 @@ c</code></pre>
 <p>来源: <a href="http://bbs.flyine.net">flyine</a></p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -5060,6 +6486,29 @@ c</code></pre>
 <p>还有点意思, 迎接一下秋天. 下次预感记忆将出现问题时, 也可以写首Haiku, 给记忆一个tag.</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -5148,6 +6597,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -5194,6 +6666,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 <p>其实这个想法完全是玩笑的，但就是觉得独立日结尾太唐突, 太不令人信服. 总觉得它原本可以成为像黑客帝国那样令人深思的电影. 有点可惜.</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -5245,6 +6740,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -5292,6 +6810,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 <p>当然Khoomei有很多的唱法, 有的唱法发出的和谐音音强更大, 也就更明显. 其他的Kargyraa, Sygyt都可以找到相关的视频.</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -5348,6 +6889,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 <p>接着的正是放假前死去活来的一段.</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -5410,6 +6974,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -5470,6 +7057,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -5519,6 +7129,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 <p>很过瘾.</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -5574,6 +7207,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -5625,6 +7281,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -5675,6 +7354,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 <p>我系Alpha型的鞋带, 所以它就砸我?</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -5730,6 +7432,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -5780,6 +7505,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 </div>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -5832,6 +7580,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -5882,6 +7653,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 <p>下次说好玩单板的, 肯定又是一番新滋味, 不过现在, 只能悬着它咯.</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -5942,6 +7736,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -5993,6 +7810,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 <p>答:有感觉的时候感觉时间是短的, 没有感觉的时候是没有时间的.</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -6048,6 +7888,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -6092,6 +7955,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 			<p>今天我兄弟有重要的事情, 很早就起来了, 很兴奋, 然后朝着目标奔去了. 现在就一个人在寝室, 没有事情驱动我. 重复每天必修的循环. 终端, 挂上分区, 打开XMMS音乐, 浏览新闻… 不过记得昨天有买雅思的书, 终于有事情可做了. 是好久没有增加单词库存了, 更由于英语课没有选到, 英文也没有机会说了. 考雅思, 不考GRE, 托福, 是因为想去英国, 不想去美国. 去英国, 是因为喜欢英国人的腔调. 原来我是有目标的, 只是看来太远了. 是该奔一下了, 像那位兄弟一样有激情.</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
@@ -6142,6 +8028,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
                 <ul class="pager">
                     
                     
@@ -6190,6 +8099,29 @@ qwerty: 220</code></pre></td></tr></table></div>
 <p>离别的时候我的惋惜丝毫不能给这个节目带来任何重生的机会，就简单地对这个节目的所有工作人员说谢谢了，祝在新岗位上给更多听众带来快乐。</p>	
 
                 <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 <ul class="pager">
                     
