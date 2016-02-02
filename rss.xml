@@ -130,16 +130,9 @@
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -198,16 +191,9 @@
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -266,16 +252,9 @@
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -334,16 +313,9 @@
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -402,16 +374,9 @@
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -471,16 +436,9 @@
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -540,16 +498,9 @@
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -609,16 +560,9 @@
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -678,16 +622,9 @@
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -747,16 +684,9 @@
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -823,16 +753,9 @@
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -896,16 +819,9 @@
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -966,16 +882,9 @@
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -1034,16 +943,9 @@
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -1102,16 +1004,9 @@
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -1172,16 +1067,9 @@
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -1539,16 +1427,9 @@ testme x xs <span class="fu">|</span> <span class="dt">Just</span> y <span class
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -1632,16 +1513,9 @@ Topcoder的rating上1500
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -2247,16 +2121,9 @@ async action <span class="fu">=</span> <span class="kw">do</span>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -2342,16 +2209,9 @@ async action <span class="fu">=</span> <span class="kw">do</span>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -3022,16 +2882,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -3146,16 +2999,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -3232,16 +3078,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -3314,16 +3153,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -3389,16 +3221,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -3458,16 +3283,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -3574,16 +3392,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -3665,16 +3476,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -3763,16 +3567,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -3879,16 +3676,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -3966,16 +3756,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -4038,16 +3821,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -4134,16 +3910,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -4223,16 +3992,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -4305,16 +4067,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -4383,16 +4138,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -4476,16 +4224,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -4558,16 +4299,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -4636,16 +4370,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -4717,16 +4444,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -4790,16 +4510,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -4862,16 +4575,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -4931,16 +4637,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -5004,16 +4703,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -5073,16 +4765,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -5143,16 +4828,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -5215,16 +4893,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -5290,16 +4961,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -5369,16 +5033,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -5437,16 +5094,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -5511,16 +5161,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -5581,16 +5224,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -5651,16 +5287,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -5723,16 +5352,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -5805,16 +5427,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -5879,16 +5494,9 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -5996,16 +5604,9 @@ c</code></pre>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -6067,16 +5668,9 @@ c</code></pre>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -6139,16 +5733,9 @@ c</code></pre>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -6226,16 +5813,9 @@ c</code></pre>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -6320,16 +5900,9 @@ c</code></pre>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -6394,16 +5967,9 @@ c</code></pre>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -6489,16 +6055,9 @@ c</code></pre>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -6599,16 +6158,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -6669,16 +6221,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -6742,16 +6287,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -6813,16 +6351,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -6892,16 +6423,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -6976,16 +6500,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -7059,16 +6576,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -7132,16 +6642,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -7209,16 +6712,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -7283,16 +6779,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -7357,16 +6846,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -7434,16 +6916,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -7508,16 +6983,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -7582,16 +7050,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -7656,16 +7117,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -7738,16 +7192,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -7813,16 +7260,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -7890,16 +7330,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -7958,16 +7391,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -8030,16 +7456,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
@@ -8102,16 +7521,9 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <div id="disqus_thread"></div>
                 <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
                   var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  this.discovery.disable_promoted = 'true';
                   };
-                  */
                   (function() { // DON'T EDIT BELOW THIS LINE
                   var d = document, s = d.createElement('script');
 
