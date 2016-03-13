@@ -7,8 +7,77 @@
         <description><![CDATA[mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music]]></description>
         <atom:link href="http://blog.fantasticsid.com/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sat, 06 Feb 2016 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Sat, 12 Mar 2016 00:00:00 UT</lastBuildDate>
         <item>
+    <title>部分放弃Haskell</title>
+    <link>http://blog.fantasticsid.com/posts/2016-03-12-haskell.html</link>
+    <description><![CDATA[<!-- Post Header -->
+<header class="intro-header" style="background-image: url('/static/img/sun.jpg')" alt="" title="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>部分放弃Haskell</h1>
+                    
+                    <span class="meta">
+		    
+			March 12, 2016
+		    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+			<p>研究Haskell也有些时间了, 今天突然醒悟了. 以后做实用项目, 除非是编译器之类的东西, 就不考虑Haskell了. 主要原因是</p>
+<ol style="list-style-type: decimal">
+<li>智商不够, 没法在生产环境下调bug, 调性能. 毕竟调bug之类的活是需要拆开抽象往下层走的. 而Haskell语言/运行时的复杂度已经足够在我找到bug之前彻底碾压我了.</li>
+<li>抽象太多学不完(智商不够). 懂了Monad又有Transformer, Arrow, Lense .. 等学完人家都月活跃用户过百万了</li>
+<li>从来没见过哪个人用得好Haskell还能做出好看好用的设计的.</li>
+</ol>
+<p>所以?</p>
+<p>Haskell的各种抽象需要了解, 之后可以在其他地方使用. Ocaml可以试一下, 无数编译器最初版本都是Ocaml写的. 最近对Incremental这个库比较感兴趣. 然后, 多余的时间还不如写写Javascript, CSS, 设计了. 说实话正经干事还不如用C++了.</p>
+<p>Haskell只是适合某些特定领域, 特定人群和公司吧. FB的垃圾过滤系统看似是Haskell生产环境的一个好例子, 但是它背后是写GHC的大牛以及各种其他神牛在搞, 况且FB也有足够资源. 其实我感觉同样的这些神牛, 用同样的资源, 无论啥语言基本都会做得很好.</p>	
+
+                <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  var disqus_config = function () {
+                  this.discovery.disable_promoted = 'true';
+                  };
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+                <ul class="pager">
+                    
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+]]></description>
+    <pubDate>Sat, 12 Mar 2016 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2016-03-12-haskell.html</guid>
+    <dc:creator>fantasticsid</dc:creator>
+</item>
+<item>
     <title>Gradients</title>
     <link>http://blog.fantasticsid.com/posts/2016-02-06-gradients.html</link>
     <description><![CDATA[<!-- Post Header -->
