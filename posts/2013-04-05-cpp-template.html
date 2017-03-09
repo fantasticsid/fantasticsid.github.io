@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- Microsoft Internet Explorer documentMode compatMode setting IE Modus --> 
+<script type="text/javascript">
+var IE = null;
+if (window.navigator.appName == "Microsoft Internet Explorer") {
+  if (document.documentMode) {
+  
+    IE = document.documentMode; 
+    } else {
+   
+        IE = 5; 
+          if (document.compatMode) {
+      if (document.compatMode == "CSS1Compat")
+      IE = 11; 
+      }
+    }
+  }
+</script>
+
+    <meta charset="utf-8">
+    <!-- X-UA --> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+
+
+    <meta name="google" content="notranslate" />
+    <!-- Viewport --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- index ROBOTS follow --> 
+    <meta name="robots" content="index, follow" />
+    <!-- Site Desciption --> 
+    <meta name="description" content fantastic!" - 第九任博士">
+        <!-- Site Desciption --> 
+    <meta name="keywords" content="Hacker, Back End Engineer, Web Developer, Front End Engineer">
+    <!-- Favicon --> 
+    <link rel="shortcut icon" href="../static/img/ico.png" type="image/x-icon" />
+    <!-- Blog Title -->
+    <title>The blog</title>
+
+    <!--     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+--> 
+    <!-- Property Metas --> 
+    <meta property="og:image" content="/static/img/ix.png" />
+    <meta property="og:title" content fantastic!" - 第九任博士" />
+    <meta property="og:site_name" content fantastic!" - 第九任博士" />
+    <!-- Canonical -->
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/spaceg.stylesheets.css">
+    <link rel="stylesheet" href="../static/css/syntax.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+	#preloader {position:fixed;top:0;left:0;right:0;bottom:0;background-color:#fff; /* change if the mask should have another color then white */z-index:99; /* makes sure it stays on top */}
+	#status {width:200px;height:200px;position:absolute;left:50%; /* centers the loading animation horizontally one the screen */top:50%; /* centers the loading animation vertically one the screen */background-image:url("/static/img/preloader.gif"); /* path to your loading animation */background-repeat:no-repeat;background-position:center;margin:-100px 0 0 -100px; /* is width and height divided by two */}
+	ul, ol {margin-top: 0;margin-bottom: 10px;}
+	.navbar-inverse {background-color: #FFF;border-color: #FFFFFF;}
+</style> 
+<!--link rel="stylesheet" href="/static/css/prettify.css"-->
+<style>
+	header.intro-header {background: #6f5499;background: no-repeat center center;background-attachment: scroll;-webkit-background-size: cover;-moz-background-size: cover;background-size: cover;-o-background-size: cover;}
+	/* Preloader */#preloader {position:fixed;top:0;left:0;right:0;bottom:0;background-color:#fff; /* change if the mask should have another color then white */z-index:99; /* makes sure it stays on top */}
+	#status {width:200px;height:200px;position:absolute;left:50%; /* centers the loading animation horizontally one the screen */top:50%; /* centers the loading animation vertically one the screen */background-image:; /* path to your loading animation */background-repeat:no-repeat;background-position:center;margin:-100px 0 0 -100px; /* is width and height divided by two */} 
+	li {list-style: none;}
+            body.modal-open 
+            {overflow: hidden;padding-right: 0px;
+        }
+	article li {list-style: inherit;}
+	article .figure {text-align: center}
+    </style>
+    <!-- end Loading front stylesheet here --> 
+    </head>
+
+    <body>
+	<div id="preloader">
+	    <div id="status">
+
+	    </div>
+
+	</div>  
+	<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../" id="blog-title-left-top"><i class="fa fa-terminal"></i></a>
+        </div>   
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#portfolioModal2" data-toggle="modal"><i class="fa fa-tty" id="icon-top"></i></a>
+                <ul class="dropdown-menu"></ul>
+                </li>
+                <li><a href="https://www.twitter.com/fantasticsid" id="roundbutton" target="_blank"><i class="fa fa-twitter"></i>fantasticsid</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="padding-right:0px; overflow: hidden;">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h1 class="font-style-inline-small-h1">Zhenchao Li</h1>
+                            <hr class="star-primary">
+                            <img src="../static/img/fantasticsid.png" class="img-responsive img-centered" alt title>
+                            <p class="font-style-inline-small">
+                              Hi! I'm Zhenchao.
+                              <br>
+                                <a href="https://www.twitter.com/fantasticsid" target="_blank">follow me</a>. <br> 
+                                <a href="https://www.github.com/fantasticsid" target="_blank">    <i class="fa fa-github" id="spaceg-social-modal"></i> </a> 
+                                <a href="https://www.twitter.com/fantasticsid" target="_blank"><i class="fa fa-twitter" id="spaceg-social-modal"></i> </a>    
+                            </p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Menu Modals Add New Sa.21.Feb.2015 03:22:25 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true" style="padding-right:0px; overflow: hidden;">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h1 class="font-style-inline-small-h1">Zhenchao Li</h1>
+                            <hr class="star-primary">
+                            <p class="font-style-inline-small">
+                              Hi! I'm Zhenchao.
+                              <br>
+                        <a href="https://www.twitter.com/fantasticsid" target="_blank">follow me</a>. <br>
+                        <a href="https://www.github.com/fantasticsid" target="_blank">    <i class="fa fa-github" id="spaceg-social-modal"></i> </a> 
+                        <a href="https://www.twitter.com/fantasticsid" target="_blank"><i class="fa fa-twitter" id="spaceg-social-modal"></i> </a>    
+                    <li><a href="../">Home</a></li>
+                            </p>
+                      
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        <div id="content">
+            <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/static/img/sun.jpg')" alt title>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>C++ Templates The Complete Guide 笔记</h1>
+                    
+                    <span class="meta">
+		    
+			April  5, 2013
+		    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+			<ol style="list-style-type: decimal">
+<li>这里解释了作者认为const放在类型之后的好处: 比如</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">char</span>* CHARS;
+<span class="kw">typedef</span> CHARS <span class="at">const</span> CPTR;</code></pre></div>
+<p>这样声明的CPTR就是一个“constant pointer to chars”, 因为展开之后就是</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">char</span>* <span class="at">const</span> CPTR;</code></pre></div>
+<p>相反</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">char</span> * CHARS;
+<span class="kw">typedef</span> <span class="at">const</span> CHARS CPTR;</code></pre></div>
+<p>展开之后为:</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="at">const</span> <span class="dt">char</span> * CPTR;
+<span class="dt">int</span> main();</code></pre></div>
+<p>这里const修饰的就不是CPTR了.</p>
+<p>另外, 推荐的引用和指针参数的空格放置位置</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> foo(<span class="dt">int</span> <span class="at">const</span>&amp; x);</code></pre></div>
+<p>倒也是和工作时C++代码的风格一样的.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>函数模板</li>
+</ol>
+<ul>
+<li>template声明中使用typename较常用</li>
+<li>对于一个类型, 如果实例化函数模板后使用到了不支持的操作符, 会产生编译错误</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+T lt(T <span class="at">const</span>&amp; a, T <span class="at">const</span>&amp; b)
+{
+  <span class="cf">return</span> a * b;
+}
+
+lt(<span class="st">&quot;hi&quot;</span>, <span class="st">&quot;ya&quot;</span>); <span class="co">// error</span></code></pre></div>
+<ul>
+<li>函数模板的编译经过至少2层, 模板本身的语法, 以及实例化之后的语义检查</li>
+<li>模板函数参数的自动推导中不允许类型转化, 类型必须完全匹配. 解决的方法是转化实参的类型或者显示实例化模板参数</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+T lt(T <span class="at">const</span>&amp; a, T <span class="at">const</span>&amp; b)
+{
+  <span class="cf">return</span> a &lt; b;
+}
+
+lt(<span class="dv">4</span>, <span class="fl">5.0</span>); <span class="co">// error</span>
+lt&lt;<span class="dt">float</span>&gt;(<span class="dv">4</span>, <span class="fl">5.0</span>); <span class="co">// correct</span></code></pre></div>
+<ul>
+<li>函数模板不能有默认参数</li>
+<li>函数模板可以重载(参数个数不同), 可以进行特例化, 可以与非函数模板共存. 后者在选择时有更高的优先权</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>类模板</li>
+</ol>
+<ul>
+<li>类模板的成员函数的实例化是惰性的</li>
+<li>类模板特例化, 可以部分特例化</li>
+<li>类模板参数可以有默认值, 并且可以引用之前的模板参数</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt; <span class="kw">typename</span> T, <span class="kw">typename</span> CONT = vector&lt;T&gt; &gt;
+<span class="kw">class</span> A;</code></pre></div>
+<ol start="4" style="list-style-type: decimal">
+<li>非类型的模板参数 (dependent types)</li>
+</ol>
+<ul>
+<li>模板参数不必要是一个类型, 还可以是整形值</li>
+<li>不同整型值构造出来的类型是不一样的, 比如长度为10的List, 和长度为20的List是不同的</li>
+<li>模板类和模板函数都可以用整型值来实例化</li>
+<li>甚至外部链接的字符串常量也可以作为模板参数</li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li>一些细节</li>
+</ol>
+<ul>
+<li>通常类内的typedef在别处使用时要用typename作修饰, 以免被编译器认为是静态类成员变量</li>
+<li>模板成员函数使用时如果进行了显示的特例化, 需要在“.”, “-&gt;”之后加上template以免编译器把“&lt;”认为是小于操作符</li>
+<li>模板类继承之后, 调用成员函数需要用“this-&gt;memfn()”</li>
+<li>模板本身也可以成为模板的实参 (template template arguments), 使用时不能利用默认参数</li>
+</ul>
+<ol start="6" style="list-style-type: decimal">
+<li>模板文件包含模式</li>
+</ol>
+<ul>
+<li>由于模板的实例化发生在编译期, 所以如果使用的模板定义在另外一个编译单元中, 则需要确保有恰当的实例化发生</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// template.hpp</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> print(T <span class="at">const</span>&amp;);
+
+<span class="co">// template.cpp</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> print(T <span class="at">const</span>&amp; x)
+{
+<span class="co">// implementation</span>
+}
+
+<span class="co">// prog.cpp</span>
+<span class="pp">#include </span><span class="im">&quot;template.hpp&quot;</span>
+<span class="dt">int</span> main()
+{
+<span class="dt">double</span> v = <span class="fl">1.0</span>;
+print(v);
+<span class="cf">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<p>这里由于模板定义在另外一个编译单元(template.cpp), 而在其中并没有对double类型进行实例化的需要, 因此编译结果中并没有 print<double>(double const&amp; x) 这个函数. 而对prog.cpp的编译能够通过是因为其中包含了template.hpp中的print模板函数的声明. 这样就导致了编译能够通过, 但是链接阶段会发生错误.</p>
+<p>解决方法:</p>
+<ol style="list-style-type: decimal">
+<li><p>把模板实现放在模板声明中 (Inclusion model)</p></li>
+<li><p>显示实例化</p></li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// template.cpp</span>
+<span class="kw">template</span> <span class="dt">void</span> print&lt;<span class="dt">double</span>&gt;(<span class="dt">double</span> <span class="at">const</span> &amp;);</code></pre></div>
+<p>这样template.cpp编译单元中就会实例化相应的函数, 缺点是难以管理</p>
+<ol start="3" style="list-style-type: decimal">
+<li>结合上面两种方法, 提供额外的编译单元专门提供特例化声明</li>
+</ol>
+<ul>
+<li>使用export (Separation model)</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">export</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> print(T <span class="at">const</span>&amp;);</code></pre></div>
+<p>缺点是编译器实现支持较少</p>
+<ul>
+<li><p>预编译头文件 - 编译器的优化可以保存前n行代码编译之后的状态, 这使得开头一样的编译单元(都包含了相同的头文件)的编译速度得以提高.</p></li>
+<li><p>模板编译错误的找错: 找到模板实例化处</p></li>
+<li><p>Archetypes: 模板库编写者提供的满足模板最小要求的类示例</p></li>
+</ul>
+<ol start="7" style="list-style-type: decimal">
+<li>模板术语</li>
+</ol>
+<ul>
+<li><p>Class template</p></li>
+<li><p>Instantiation and specialization</p></li>
+<li><p>Declaration vs definition</p></li>
+<li><p>Template arguments vs template parameters</p></li>
+</ul>
+<ol start="8" style="list-style-type: decimal">
+<li>模板参数限制</li>
+</ol>
+<ul>
+<li><p>模板定义分为类模板和函数模板, 其中还包括了类模板的成员函数, 类模板的嵌套类(nested class)定义和成员定义, 模板类的静态变量的模板定义</p></li>
+<li><p>模板成员函数不能被定义为虚函数, 因为虚表通常是用固定大小的表实现的. 而“模板虚函数”的个数只有到最后整个程序构建玩才能确定, 所以实现这个特性需要编译器, 连接器的支持</p></li>
+<li><p>主模板定义</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// primary template</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Box;
+
+<span class="co">// non-primary template</span>
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Box&lt;T&gt;;</code></pre></div>
+<ul>
+<li><p>模板参数分为: 类型参数, 非类型参数(non-type parameters), 模板参数</p></li>
+<li><p>非类型参数包括整形/枚举, 指针, 引用</p></li>
+<li><p>模板参中的默认值可以在模板定义内使用, 但是模板显式实例化时模板类参数的参数个数(kind)必须与形参声明一样</p></li>
+<li>模板实参
+<ul>
+<li>只有模板类声明时可以有默认参数</li>
+<li>template-id: 显式模板参数T&lt;P1, P2, P3&gt;</li>
+<li>模板类定义作用域之内, 对类名的引用相当于tempate-id</li>
+<li>默认模板参数可省略, 但是“&lt;&gt;”仍然是必要的</li>
+<li>模板函数参数类型推导</li>
+</ul></li>
+<li><p>substitution-failure-is-not-an-error (SFINAE)</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+RT1 test(<span class="kw">typename</span> T::X <span class="at">const</span>*);
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+RT2 test(...);
+
+<span class="kw">typedef</span> <span class="dt">char</span> RT1;
+<span class="kw">typedef</span> <span class="kw">struct</span> { <span class="dt">char</span> a[<span class="dv">2</span>]; } RT2;
+
+<span class="pp">#define type_has_member_type_X(T) (sizeof(test&lt;T&gt;(0)) == 1)</span></code></pre></div>
+<p>对没有定义成员X的类来说, 第一个模板函数定义应该产生编译错误, 但是因为SFINAE原则编译器选择继续从下一个模板定义来实例化test这个函数的调用</p>
+<p>SFINAE只能处理产生非法类型的错误, 别的错误(除零错误等)则不适用.</p>
+<ul>
+<li><p>局部类定义不能用作模板参数, 无名类型/枚举也不行(除非用typedef指定一个名字)</p></li>
+<li><p>成员函数模板的实例化不重载虚函数</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span>
+
+<span class="kw">class</span> A
+{
+<span class="kw">public</span>:
+  <span class="kw">virtual</span> <span class="dt">void</span> fun(<span class="dt">int</span> a)
+  {
+    <span class="bu">std::</span>cout &lt;&lt; <span class="st">&quot;A &quot;</span> &lt;&lt; a &lt;&lt; <span class="bu">std::</span>endl;
+  }
+
+  <span class="kw">virtual</span> ~A() {}
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> B: <span class="kw">public</span> A
+{
+<span class="kw">public</span>:
+  <span class="kw">template</span> &lt;<span class="kw">typename</span> T2&gt;
+  <span class="dt">void</span> fun(T2 a)
+  {
+    <span class="bu">std::</span>cout &lt;&lt; <span class="st">&quot;B &quot;</span> &lt;&lt; a &lt;&lt; <span class="bu">std::</span>endl;
+  }
+
+  <span class="kw">virtual</span> ~B() {}
+};
+
+<span class="kw">class</span> C: <span class="kw">public</span> A
+{
+<span class="kw">public</span>:
+  <span class="dt">void</span> fun(<span class="dt">int</span> a)
+  {
+    <span class="bu">std::</span>cout &lt;&lt; <span class="st">&quot;C &quot;</span> &lt;&lt; a &lt;&lt; <span class="bu">std::</span>endl;
+  }
+};
+
+<span class="dt">int</span> main(<span class="dt">int</span> argc, <span class="dt">char</span> *argv[])
+{
+  A *pa = <span class="kw">new</span> B&lt;<span class="dt">int</span>&gt;();
+  pa-&gt;fun(<span class="dv">2</span>);
+  <span class="kw">delete</span> pa;
+
+  B&lt;<span class="dt">int</span>&gt; b;
+  b.fun(<span class="dv">2</span>);
+
+  pa = <span class="kw">new</span> C();
+  pa-&gt;fun(<span class="dv">2</span>);
+  <span class="kw">delete</span> pa;
+
+  <span class="cf">return</span> <span class="dv">0</span>;
+}
+</code></pre></div>
+<p>输出为:</p>
+<pre><code>A 2
+B 2
+C 2</code></pre>
+<ul>
+<li><p>模板友类的声明处必须可见友类本身的定义, 一般类没有这个限制</p></li>
+<li><p>友函数声明可以是定义, 因此如果实例化若干模板类, 会重复定义此函数, 解决办法是让函数依赖于模板参数</p></li>
+<li><p>友模板: 声明一个模板的所有实例化都是友函数/类</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> Manager {
+  <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+    <span class="kw">friend</span> <span class="kw">class</span> Task;
+
+  <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+    <span class="kw">friend</span> <span class="dt">void</span> Schedule&lt;T&gt;::dispatch(Task&lt;T&gt;*);
+
+  <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+    <span class="kw">friend</span> <span class="dt">int</span> ticket() {
+      <span class="cf">return</span> ++Manager::counter;
+    }
+
+  <span class="at">static</span> <span class="dt">int</span> counter;
+};</code></pre></div>
+<ol start="8" style="list-style-type: decimal">
+<li>模板中的命名</li>
+</ol>
+<ul>
+<li>C++语法并不是上下文无关的</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">
+x * y;</code></pre></div>
+<p>以上代码可以是一个乘法表达式, 也可能是一个指针声明. 这要视x的定义而定.</p>
+<ul>
+<li><p>Template-id: 模板与模板参数的组合, 如List<T, int, 0></p></li>
+<li><p>qualifed name的查找, unqualified name的查找(类作用域, 基类作用域, … , 嵌套的外层作用域), 这种查找是最普通的. C++中还有一个规则: Argument dependent lookup, 又称koenig lookup</p></li>
+<li><p>对于一个class, ADL规则会检查类本身, 包含类定义的外层类, 基类这些类声明处的namespace.</p></li>
+<li><p>对于函数调用, 函数参数以及返回值的类型关联的名称空间是ADL的查找范围.</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span>
+
+<span class="kw">namespace</span> X {
+  <span class="kw">template</span>&lt;<span class="kw">typename</span> T&gt; <span class="dt">void</span> f(T);
+}
+
+<span class="kw">namespace</span> N {
+  <span class="kw">using</span> <span class="kw">namespace</span> X; <span class="co">// ADL查找时, 此处没有引入X::f</span>
+  <span class="kw">enum</span> E{ e };
+  <span class="dt">void</span> f(E) {
+    <span class="bu">std::</span>cout &lt;&lt; <span class="st">&quot;N::f&quot;</span> &lt;&lt; <span class="bu">std::</span>endl;
+  }
+}
+
+<span class="dt">void</span> f(<span class="dt">int</span>)
+{
+  <span class="bu">std::</span>cout &lt;&lt; <span class="st">&quot;::f&quot;</span> &lt;&lt; <span class="bu">std::</span>endl;
+}
+
+<span class="dt">int</span> main(<span class="dt">int</span> argc, <span class="dt">char</span> *argv[])
+{
+  ::f(N::e); <span class="co">// ::f</span>
+  f(N::e); <span class="co">// N::f</span>
+}</code></pre></div>
+<ul>
+<li>类定义内可以引用类名本身, 模板类中可以引用模板类名并加上模板参数. 但是如果只用模板类名, 则代表着和当前instantiation相对应的template-id, 而不是一个类模板</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">template</span>&lt;<span class="kw">typename</span>&gt; <span class="kw">class</span> TT&gt;
+<span class="kw">class</span> X
+{
+}
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> C
+{
+  C a; <span class="co">// 代表C&lt;T&gt; a;</span>
+  C&lt;<span class="dt">void</span>&gt; b;
+  X&lt;C&gt; c; <span class="co">// 这里不行, C不代表一个模板类的名称</span>
+  X&lt;::C&gt; d; <span class="co">// &lt;: 是特殊字符序列, 代表 [</span>
+  X&lt; ::C&gt; e; <span class="co">// 总算行了这里</span>
+}</code></pre></div>
+<ul>
+<li><p>为了处理C++这样的上下文相关文法, 编译器有一个符号表记录各种声明. 这样就能区分比如x*究竟是一个声明还是乘法表达式的一部分了. 类似的例子还有X&lt;1&gt;(0)等(视X是否为模板类)</p></li>
+<li><p>Tokenizer也会有类似问题, 最常见的问题是模板实例作为模板参数: List&lt;List&lt;int&gt;&gt;, 这里&gt;&gt;会被解释为一个右移运算符. 有的编译器为这个问题作了特殊处理, 并給予警告.</p></li>
+<li><p>Dependent names: 模板定义中对另外一个模板类定义的名称引用是不合适的, 因为很可能显示模板化会改变这个名称的定义</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Trap {
+<span class="kw">public</span>:
+  <span class="kw">enum</span> {x};
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Victim {
+<span class="kw">public</span>:
+  <span class="dt">int</span> y;
+  <span class="dt">void</span> poof() {
+    Trap&lt;T&gt;::x * y; <span class="co">// 这里是声明还是乘法表达式?</span>
+  }
+};
+
+<span class="kw">template</span> &lt;&gt;
+<span class="kw">class</span> Trap&lt;<span class="dt">void</span>&gt; {
+<span class="kw">public</span>:
+  <span class="kw">typedef</span> <span class="dt">int</span> x;
+}
+
+<span class="dt">void</span> <span class="dt">bool</span>(Victim&lt;<span class="dt">void</span>&gt;&amp; bomb) <span class="co">// 书上这里是Trap&lt;void&gt;&amp;</span>
+{
+  bomb.poof()
+}</code></pre></div>
+<p>如果在Victim模板定义内部查找x的定义, 则认为x是一个enum值, 但是后面Trap对void的显示化却对覆盖了x的定义.</p>
+<p>C++的解决方法是: 默认情况下不认为一个dependent name是一个type, 除非用typename作声明.</p>
+<p>当一个名称 1. 出现在模板定义内 2. 是被限定的(qualified) 3. 不作为基类声明/成员初始化列表中作为类型 4. 依赖于模板参数</p>
+<p>则必须对之进行typename修饰. 看到这里感觉要吐了, 的确C++的template是非常的复杂, 需要知道的细节太多.</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">struct</span> S: <span class="kw">typename</span> X&lt;T&gt;::Base {
+  S(): <span class="kw">typename</span> X&lt;T&gt;::Base(<span class="kw">typename</span> X&lt;T&gt;::Base(<span class="dv">0</span>)) {}
+  <span class="kw">typename</span> X&lt;T&gt; f() {
+    <span class="kw">typename</span> X&lt;T&gt;::C * p; <span class="co">// 声明</span>
+    X&lt;T&gt;::D * q; <span class="co">// 乘法表达式</span>
+  }
+  <span class="kw">typename</span> X&lt;<span class="dt">int</span>&gt;::C * s;
+};
+
+<span class="kw">struct</span> U {
+  <span class="kw">typename</span> X&lt;<span class="dt">int</span>&gt;::C * pc;
+};</code></pre></div>
+<pre><code>* 这个例子当中typename X&lt;T&gt;::Base中的typename是多余的, 因为他们不满足第3条规则.
+* 但是紧接着的typename X&lt;T&gt;::Base(0)中typename是必须的, 因为这里构造了一个对象.
+* 下面的typename X&lt;T&gt;中typename又是多余的, 这里没有限定名称(qualified name).
+* typename X&lt;T&gt;::C * p中typename是必须的, 否则就如下一行编译器认为其是一个乘法表达式.
+* 最后的typename X&lt;int&gt;::C * s说明了即使不满足第4条规则, 依然可以加上typename修饰, 反过来说, 前三条对typename的使用也是必要的.</code></pre>
+<ul>
+<li>类似的, 如果一个template定义也是有依赖的, 则必须告诉编译器.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Shell {
+<span class="kw">public</span>:
+  <span class="kw">template</span> &lt;<span class="dt">int</span> N&gt;
+  <span class="kw">class</span> In {
+  <span class="kw">public</span>:
+    <span class="kw">template</span> &lt;<span class="dt">int</span> M&gt;
+    <span class="kw">class</span> Deep {
+    <span class="kw">public</span>:
+      <span class="kw">virtual</span> <span class="dt">void</span> f();
+    };
+  };
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T, <span class="dt">int</span> N&gt;
+<span class="kw">class</span> Weird {
+<span class="kw">public</span>:
+  <span class="dt">void</span> case1(Shell&lt;T&gt;::<span class="kw">template</span> In&lt;N&gt;::<span class="kw">template</span> Deep&lt;N&gt; * p) {
+    p-&gt;<span class="kw">template</span> Deep&lt;N&gt;::f();
+  }
+  <span class="dt">void</span> case2(Shell&lt;T&gt;::<span class="kw">template</span> In&lt;T&gt;::<span class="kw">template</span> Deep&lt;T&gt;&amp; p) {
+    p.<span class="kw">template</span> Deep&lt;N&gt;::f();
+  }
+};</code></pre></div>
+<ol start="14" style="list-style-type: decimal">
+<li>模板多态</li>
+</ol>
+<ul>
+<li><p>C++中的多态不单单指OO的virtual function, 模板也是实现多态的一种手段(一种表达, 多种行为)</p></li>
+<li><p>virtual function的多态处理比如异构(heterogeneous)集合中元素的多态行为比较适合. 模板有更好的类型安全性.</p></li>
+<li><p>模板是非侵入式的. 就是说OO的多态行为通常需要一个类继承一个基类, 而模板没有这样的要求. 只要类实现了对应的方法即可, 并且如果有些方法如果实例化过程中没有用到, 则不必实现.</p></li>
+<li><p>模板的多态运行时开销小很多, 但是可能生成的代码更大, 编译更久.</p></li>
+<li><p>C++的标准库中的iterator就是一个很好的模板设计. 容器通过定义各自的iterator来实现与generic算法的交互.</p></li>
+<li><p>同样的也可以用OO来实现类似iterator的功能, 但是性能较低(内存开销, 运行时效率). 并且对于内置类型需要wrapper class. (OO侵入式的后遗症). 然而模板多态与OO多态也是能共存的.</p></li>
+</ul>
+<ol start="15" style="list-style-type: decimal">
+<li>Traits, Policy Classes</li>
+</ol>
+<ul>
+<li><p>Traits是一种模板类, 它将类型和类型相关的信息联系起来, 比如int类型的范围, 最大最小值等等. 常用的方法是对要修饰的类型进行特例化.</p></li>
+<li><p>Traits中定义类型相关的类型比较容易(typedef), 定义相关常量值时可能遇到非整形量的常量而不能inline定义在类中. 这种情况通常将常量改为返回这个常量的函数.</p></li>
+<li><p>Traits模板也可以作为一个模板参数, 使得模板使用者能够重载一些Traits.</p></li>
+<li><p>Policy classes: 书上这里举了一个Accumulate的例子:</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt; <span class="kw">typename</span> T,
+           <span class="kw">typename</span> Policy = SumPolicy,
+           <span class="kw">typename</span> AT = AccumuationTraits&lt;T&gt; &gt;
+<span class="kw">class</span> Accum {
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> <span class="kw">typename</span> Traits::AccT Acct;
+    <span class="at">static</span> AccT accum(T <span class="at">const</span>* beg, T <span class="at">const</span>* end) {
+      AccT total = Traits::zero();
+      <span class="cf">while</span> (beg != end) {
+        Policy::accumulate(total, *beg);
+        ++beg;
+      }
+      <span class="cf">return</span> total;
+    }
+};
+
+<span class="kw">class</span> SumPolicy {
+  <span class="kw">public</span>:
+    <span class="kw">template</span>&lt;<span class="kw">typename</span> T1, <span class="kw">typename</span> T2&gt;
+    <span class="at">static</span> <span class="dt">void</span> accumulate(T1&amp; total, T2 <span class="at">const</span>&amp; value) {
+      total += value;
+    }
+};</code></pre></div>
+<p>当然, 这里为了能够让乘法的例子产生正确的结果, 必须将zero()的定义放入Policy class中. (<a href="http://www.haskell.org/ghc/docs/latest/html/libraries/base/Data-Monoid.html">Monoid</a> 中的identity)</p>
+<ul>
+<li><p>Traits可以实现sizeof类似的功能(type function), 这个想想好像是类型系统中很强大的功能.</p></li>
+<li><p>一个用到了SFINAE的判断一个类型是否是class的traits class例子:</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> IsClassT {
+  <span class="kw">private</span>:
+    <span class="kw">typedef</span> <span class="dt">char</span> One;
+    <span class="kw">typedef</span> <span class="kw">struct</span> { <span class="dt">char</span> a[<span class="dv">2</span>]; } Two;
+    <span class="kw">template</span> &lt;<span class="kw">typename</span> C&gt; <span class="at">static</span> One test(<span class="dt">int</span> C::*);
+    <span class="kw">template</span> &lt;<span class="kw">typename</span> C&gt; <span class="at">static</span> Two test(...);
+  <span class="kw">public</span>:
+    <span class="kw">enum</span> { Yes = <span class="kw">sizeof</span>(IsClass&lt;T&gt;::test&lt;T&gt;(<span class="dv">0</span>)) == <span class="dv">1</span> };
+    <span class="kw">enum</span> { No = !Yes };
+};</code></pre></div>
+<p>这里用到了class类型可以有pointer to member function的事实来判断一个类型是不是class类型.</p>
+<ul>
+<li>利用Traits的partial specialisation可以对类型的const, reference进行剥离. (15.2.3)</li>
+</ul>
+<p>在以下例子中, 实现了一个apply函数的模板. 但是在处理引用的时候, 却会发生将T &amp;&amp;类型传给函数的情况</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> apply(T&amp; arg, <span class="dt">void</span> (*func)(T))
+{
+  func(arg);
+}
+
+<span class="dt">void</span> incr(<span class="dt">int</span>&amp; a)
+{
+  ++a;
+}
+
+<span class="dt">int</span> main(<span class="dt">int</span> argc, <span class="dt">char</span> *argv[])
+{
+  <span class="dt">int</span> x = <span class="dv">1</span>;
+  apply(x, incr);
+}</code></pre></div>
+<p>当然, C++标准中允许将模板参数T&amp;中的T替换为int&amp;时处理为int&amp;, 同样的, 在T const中如果T是int const, 将可以替换为int const.</p>
+<p>但是这里的解决方法是, 利用对traits class的partial specialisation进行const以及reference的“剥离”:</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> TypeOp {
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> T ArgT;
+    <span class="kw">typedef</span> T BareT;
+    <span class="kw">typedef</span> T <span class="at">const</span> ConstT;
+    <span class="kw">typedef</span> T &amp; RefT;
+    <span class="kw">typedef</span> T &amp; RefBareT;
+    <span class="kw">typedef</span> T <span class="at">const</span> &amp; RefConstT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> TypeOp &lt;T <span class="at">const</span>&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> T <span class="at">const</span> ArgT;
+    <span class="kw">typedef</span> T BareT;
+    <span class="kw">typedef</span> T <span class="at">const</span> ConstT;
+    <span class="kw">typedef</span> T <span class="at">const</span> &amp; RefT;
+    <span class="kw">typedef</span> T &amp; RefBareT;
+    <span class="kw">typedef</span> T <span class="at">const</span> &amp; RefConstT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> TypeOp &lt;T&amp;&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> T &amp; ArgT;
+    <span class="kw">typedef</span> <span class="kw">typename</span> TypeOp&lt;T&gt;::BareT BareT; <span class="co">//递归调用</span>
+    <span class="kw">typedef</span> T <span class="at">const</span> ConstT;
+    <span class="kw">typedef</span> T &amp; RefT;
+    <span class="kw">typedef</span> <span class="kw">typename</span> TypeOp&lt;T&gt;::BareT &amp; RefBareT;
+    <span class="kw">typedef</span> T <span class="at">const</span> &amp; RefConstT;
+};</code></pre></div>
+<p>这样, 前面的apply例子就可以重新写成:</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="dt">void</span> apply(<span class="kw">typename</span> TypeOp&lt;T&gt;::RefT arg, <span class="dt">void</span> (*func)(T))
+{
+  func(arg);
+}</code></pre></div>
+<ul>
+<li>类型提升traits将两种类型提升到更加“强大”的类型, 手段还是specialisation</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// 这里是不是有点像Haskell的declarative定义</span>
+
+<span class="kw">template</span> &lt;<span class="dt">bool</span> C, <span class="kw">typename</span> Ta, <span class="kw">typename</span> Tb&gt;
+<span class="kw">class</span> IfThenElse;
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> Ta, <span class="kw">typename</span> Tb&gt;
+<span class="kw">class</span> IfThenElse &lt;<span class="kw">true</span>, Ta, Tb&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> Ta ResultT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> Ta, <span class="kw">typename</span> Tb&gt;
+<span class="kw">class</span> IfThenElse&lt;<span class="kw">false</span>, Ta, Tb&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> Tb ResultT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T1, <span class="kw">typename</span> T2&gt;
+<span class="kw">class</span> Promotion; <span class="co">//没有默认定义</span>
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T1, <span class="kw">typename</span> T2&gt;
+<span class="kw">class</span> Promotion
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> <span class="kw">typename</span> IfThenElse&lt;(<span class="kw">sizeof</span>(T1) &gt; <span class="kw">sizeof</span>(T2)),
+                                T1,
+                                <span class="kw">typename</span> IfThenElse&lt;(<span class="kw">sizeof</span>(T1) &lt; <span class="kw">sizeof</span>(T2)),
+                                                    T2,
+                                                    <span class="dt">void</span>&gt;::ResultT
+                               &gt;::ResultT;
+};
+
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Promotion &lt;T, T&gt;
+{
+  <span class="kw">public</span>:
+    <span class="kw">typedef</span> T ResultT;
+};</code></pre></div>
+<ol start="16" style="list-style-type: decimal">
+<li>模板以及继承</li>
+</ol>
+<ul>
+<li><p>Empty base class optimisation</p></li>
+<li><p>curiously recurring template pattern: 父类的具体类型是一个模板类对子类的实例化. 可以实现诸如某个类型的对象计数器之类的功能, 重点是从此以后父类可以在实现时知道子类的类型了. 因此可以在父类中实现一个返回子类类型的clone方法. 这个见 <a href="http://en.wikipedia.org/wiki/Curiously_recurring_template_pattern">维基百科上CRTP的解释</a></p></li>
+</ul>
+<ol start="17" style="list-style-type: decimal">
+<li>元编程</li>
+</ol>
+<ul>
+<li><p>C++模板是图灵完备的, 意味着在编译器能够模拟出任何图灵等价的计算.</p></li>
+<li><p>比如计算幂函数</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="dt">int</span> N&gt;
+<span class="kw">class</span> Power2 {
+ <span class="kw">public</span>:
+  <span class="kw">enum</span> { result = <span class="dv">2</span> * Power2&lt;N<span class="dv">-1</span>&gt;::result };
+};
+
+<span class="kw">template</span> &lt;&gt;
+<span class="kw">class</span> Power2 {
+ <span class="kw">public</span>:
+  <span class="kw">enum</span> { result = <span class="dv">1</span> };
+};</code></pre></div>
+<ol start="20" style="list-style-type: decimal">
+<li>智能指针</li>
+</ol>
+<ul>
+<li><p>这里只讨论了模板在实现智能指针时的应用, 并没有深入讨论智能指针的实现细节(同步, 原子操作, 效率..)</p></li>
+<li><p>C++中以对象管理资源, 利用RAII是很常见的idiom.</p></li>
+<li><p>智能指针最少要实现初始化, 释放资源, 重载-&gt;, *操作符.</p></li>
+<li><p>引用计数: 话说虽然不能解决循环引用, 并且也需要同步操作以致降低效率, 这些貌似jvm没有. 但是好的是对资源掌控更加细致, 而jvm这方面反过来讲gc会对系统的延时性产生压力, 即使有很多对gc进行调整的途径和机会..</p></li>
+<li><p>智能指针也是policy based design. 计数器如何分配如何消亡, 资源如何删除 ( delete vs delete [] ) 都作为模板参数传递.</p></li>
+<li><p>智能指针也实现了父类子类转化的特性, 通过模板化的构造函数和conversion operator来实现.</p></li>
+</ul>
+<ol start="21" style="list-style-type: decimal">
+<li>Tuple</li>
+</ol>
+<ul>
+<li>感觉是在编译期用cons cell构建list差不多的性质. 用到了meta programming来实现静态的获取第N个元素的类型和值.</li>
+</ul>
+<ol start="22" style="list-style-type: decimal">
+<li>函数对象</li>
+</ol>
+<ul>
+<li><p>函数调用分为direct call, indirect call. 前者的函数地址是指令的一部分. 后者的函数地址在寄存器或者内存中.</p></li>
+<li><p>通常编译器会试图产生direct call, 对于不同编译单元的函数, 只要知道函数名字, 编译器会预留地址, 等待链接器补全地址. 但是对于函数指针, 则只能产生indirect call.</p></li>
+<li><p>成员函数指针需要记录相对对象的偏移.</p></li>
+<li><p>函数对象的使用, 可以作为模板参数, 也可以作为函数参数传递, 后者可以有状态. 另外一种方式是将两者结合起来:</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> F&gt;
+<span class="dt">void</span> my_sort(..., F cmp = F())
+{
+  <span class="cf">if</span> (cmp(x, y)) {
+  }
+}
+
+my_sort&lt;<span class="bu">std::</span>less&lt;..&gt;&gt;(...);
+my_sort&lt;..., <span class="bu">std::</span>less&lt;..&gt;());
+my_sort(..., mycriterion);</code></pre></div>	
+
+                <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  var disqus_config = function () {
+                  this.discovery.disable_promoted = 'true';
+                  };
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+                <ul class="pager">
+                    
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+        </div>
+        <div id="footer">
+        </div>
+      <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="../rss.xml" data-datatype="json" data-type="GET" data-target="#frame" class="reload" id="clickme">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://twitter.com/fantasticsid" data-datatype="json" data-type="GET" data-target="#frame" class="reload" id="clickme" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://www.facebook.com/lizhenchao" data-datatype="json" data-type="GET" data-target="#frame" class="reload" id="clickme" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                     
+                     
+                    <li>
+                        <a href="https://github.com/fantasticsid" target="_blank">
+                            <span class="fa-stack fa-lg">
+
+                              <i class="fa fa-arrow-circle-o-down"></i>
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://instagram.com/fantasticsid" target="_blank">
+                            <span class="fa-stack fa-lg">
+
+                              <i class="fa fa-arrow-circle-o-down"></i>
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; fantasticsid 2016. <br><br> 
+                </p>
+<div class="col-md-12">
+     <p class="copyright text-muted">
+            Site generated by
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a>. Modified theme inspired by
+      <!-- ICE AND FIRE THEME https://github.com/SpaceG/iceandfire -->
+    <a href="https://github.com/SpaceG/CleanMagicMedium-Jekyll">CleanMagic.</a> </p>
+    </div>
+
+
+    
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/spaceg.stylesheets.min.js"></script> 
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<script src="../static/js/scripts.js"></script>
+
+
+
+    </body>
+</html>
