@@ -7,8 +7,69 @@
         <description><![CDATA[mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music]]></description>
         <atom:link href="http://blog.fantasticsid.com/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sat, 18 Feb 2017 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Thu, 30 Nov 2017 00:00:00 UT</lastBuildDate>
         <item>
+    <title>博客十年</title>
+    <link>http://blog.fantasticsid.com/posts/2017-11-30-ten-years.html</link>
+    <description><![CDATA[<!-- Post Header -->
+<header class="intro-header" style="background-image: url('/static/img/sun.jpg')" alt="" title="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>博客十年</h1>
+                    
+                    <span class="meta">
+		    
+			November 30, 2017
+		    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+			<p>感觉有点厉害.. 虽然一年只写半篇, 而且当年一起写博客的同学们都已经大多不再写了.</p>	
+
+                <hr>
+
+                <div id="disqus_thread"></div>
+                <script>
+                  var disqus_config = function () {
+                  this.discovery.disable_promoted = 'true';
+                  };
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+                <ul class="pager">
+                    
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+]]></description>
+    <pubDate>Thu, 30 Nov 2017 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2017-11-30-ten-years.html</guid>
+    <dc:creator>fantasticsid</dc:creator>
+</item>
+<item>
     <title>polished, focused, and move fast</title>
     <link>http://blog.fantasticsid.com/posts/2017-02-18-notes.html</link>
     <description><![CDATA[<!-- Post Header -->
