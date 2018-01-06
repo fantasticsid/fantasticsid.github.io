@@ -40,21 +40,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -101,21 +101,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -163,21 +163,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -225,21 +225,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -294,21 +294,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -356,21 +356,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -506,21 +506,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -567,21 +567,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -628,21 +628,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -689,21 +689,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -750,21 +750,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -812,21 +812,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -874,21 +874,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -936,21 +936,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -998,21 +998,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -1060,21 +1060,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -1129,21 +1129,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -1195,21 +1195,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -1258,21 +1258,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -1319,21 +1319,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -1380,21 +1380,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -1443,21 +1443,21 @@
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -1803,21 +1803,21 @@ testme x xs <span class="fu">|</span> <span class="dt">Just</span> y <span class
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -1889,21 +1889,21 @@ Topcoder的rating上1500
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -2497,21 +2497,21 @@ async action <span class="fu">=</span> <span class="kw">do</span>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -2585,21 +2585,21 @@ async action <span class="fu">=</span> <span class="kw">do</span>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -3258,21 +3258,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -3375,21 +3375,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -3454,21 +3454,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -3529,21 +3529,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -3597,21 +3597,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -3659,21 +3659,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -3768,21 +3768,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -3852,21 +3852,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -3943,21 +3943,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -4052,21 +4052,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -4132,21 +4132,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -4197,21 +4197,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -4286,21 +4286,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -4368,21 +4368,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -4443,21 +4443,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -4514,21 +4514,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -4600,21 +4600,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -4675,21 +4675,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -4746,21 +4746,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -4820,21 +4820,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -4886,21 +4886,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -4951,21 +4951,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -5013,21 +5013,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -5079,21 +5079,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -5141,21 +5141,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -5204,21 +5204,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -5269,21 +5269,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -5337,21 +5337,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -5409,21 +5409,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -5470,21 +5470,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -5537,21 +5537,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -5600,21 +5600,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -5663,21 +5663,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -5728,21 +5728,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -5803,21 +5803,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -5870,21 +5870,21 @@ my_sort(..., mycriterion);</code></pre></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -5980,21 +5980,21 @@ c</code></pre>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -6044,21 +6044,21 @@ c</code></pre>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -6109,21 +6109,21 @@ c</code></pre>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -6189,21 +6189,21 @@ c</code></pre>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -6276,21 +6276,21 @@ c</code></pre>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -6343,21 +6343,21 @@ c</code></pre>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -6431,21 +6431,21 @@ c</code></pre>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -6534,21 +6534,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -6597,21 +6597,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -6663,21 +6663,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -6727,21 +6727,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -6799,21 +6799,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -6876,21 +6876,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -6952,21 +6952,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -7018,21 +7018,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -7088,21 +7088,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -7155,21 +7155,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -7222,21 +7222,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -7292,21 +7292,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -7359,21 +7359,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -7426,21 +7426,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -7493,21 +7493,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -7568,21 +7568,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -7636,21 +7636,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -7706,21 +7706,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -7767,21 +7767,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -7832,21 +7832,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
@@ -7897,21 +7897,21 @@ qwerty: 220</code></pre></td></tr></table></div>
 
                 <hr>
 
-                <div id="disqus_thread"></div>
-                <script>
-                  var disqus_config = function () {
-                  this.discovery.disable_promoted = 'true';
-                  };
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
 
-                  s.src = '//fantasticsidtheblog.disqus.com/embed.js';
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
 
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
                 <ul class="pager">
                     
