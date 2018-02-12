@@ -7,8 +7,72 @@
         <description><![CDATA[mathematics, computer science, haskell, clojure, scala, erlang, C++, python, music]]></description>
         <atom:link href="http://blog.fantasticsid.com/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Fri, 02 Feb 2018 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Mon, 12 Feb 2018 00:00:00 UT</lastBuildDate>
         <item>
+    <title>标签不是好东西</title>
+    <link>http://blog.fantasticsid.com/posts/2018-02-12-tags.html</link>
+    <description><![CDATA[<!-- Post Header -->
+<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>标签不是好东西</h1>
+                    
+                    <span class="meta">
+		    
+			February 12, 2018
+		    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+			<p>我们用的工具很直接地影响到我们能做什么事情, 能做多好, 甚至是会影响我们能够想像我们自己能做到的事情.</p>
+<p>我们又常常对自己的工具有太多执着, 比如标榜自己是Emacs/Vim党, 自己是Mac/PC粉.</p>
+<p>Paul Graham写过的一篇文章说标签是对自己的一种限制, 那篇文章叫Keep your identity small.</p>
+<p>冷酷无情地淘汰不适合的工具, 拒绝标签, 减少自我.</p>	
+
+                <hr>
+
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script> -->
+                <!--   var disqus_config = function () { -->
+                <!--   this.discovery.disable_promoted = 'true'; -->
+                <!--   }; -->
+                <!--   (function() { // DON'T EDIT BELOW THIS LINE -->
+                <!--   var d = document, s = d.createElement('script'); -->
+
+                <!--   s.src = '//fantasticsidtheblog.disqus.com/embed.js'; -->
+
+                <!--   s.setAttribute('data-timestamp', +new Date()); -->
+                <!--   (d.head || d.body).appendChild(s); -->
+                <!--   })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
+
+                <ul class="pager">
+                    
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+]]></description>
+    <pubDate>Mon, 12 Feb 2018 00:00:00 UT</pubDate>
+    <guid>http://blog.fantasticsid.com/posts/2018-02-12-tags.html</guid>
+    <dc:creator>fantasticsid</dc:creator>
+</item>
+<item>
     <title>为了游戏</title>
     <link>http://blog.fantasticsid.com/posts/2018-02-02-sketching.html</link>
     <description><![CDATA[<!-- Post Header -->
