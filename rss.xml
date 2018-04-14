@@ -35,14 +35,14 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-			<p>目前还没有看&lt;<Paxos Made Simple>&gt;, 但是看了几篇知乎的文章, 感觉懂了一点..</p>
+			<p>目前还没有看&lt;&lt;Paxos Made Simple&gt;&gt;, 但是看了几篇知乎的文章, 感觉懂了一点..</p>
 <p>Leslie Lamport说: 分布式共识这样的难问题, 从需要的性质出发, 逆向推理, 最终就能得出Paxos这样的算法. (滚, 我是推不出的)</p>
 <p>首先, 要在一群节点之间形成一个共识, 我们会进行若干论的提议/投票, 每轮投票试图在所有节点间形成共识. 我们可以分两步走, 或者说, 把分布式共识这个目标分解成以下两个性质:</p>
 <ul>
 <li>每轮投票, 只有一个值被提议.</li>
 <li>一旦一个提议A被接受, 形成共识, 那么轮数更大的投票, 提议的值都将是和A相同.</li>
 </ul>
-<p>其中第二点是比较神奇巧妙的, 也是理解Paxos正确性的关键! 但是我们先来看看第一条.</p>
+<p>其中第二点是比较神奇巧妙的, 也是理解Paxos正确性的关键! 但是我们先来看看第一条~</p>
 <p>要满足第一个条件, 我们只要做到, 只有一个节点进行提议就行. 为了达到这点, 每轮投票首先进行Promise-Prepare阶段. 这个阶段, 每个节点只同意(Promise)有一个Proposer. 如果已经有Promise过相同轮别的节点, 则拒绝Prepare请求. 而进行提议的节点只有在收到半数以上节点的Promise回答, 才可以提议(Propose). 容易看到, 只有最多一个节点会收到半数以上的Promise回应, 于是性质得到证明.</p>
 <p>为了要做到第二点, 我们需要加几个条件:</p>
 <ul>
@@ -51,7 +51,7 @@
 <li>Proposer在Prepare阶段如果有节点回复中包含已经Accept的Proposal, 那么Proposer只能Propose其中轮数最大的那个的值. (3)</li>
 </ul>
 <p>首先我们想想, 一个提议被接受是什么意思: 只有当过半数节点Accept一个提议, 那么Proposer才可以认为提议被接受.</p>
-<p>我们不妨设提议a是接受了的提议中, 轮数最小的, 提议b被超过半数节点Promise了, a &lt; b. (T)</p>
+<p>我们不妨设提议a是接受了的提议中, 轮数最小的, 提议b被超过半数节点Promise了, a &lt; b.</p>
 <p>在a的Propose阶段, Proposer收到了半数节点的Accept答复, 把这些节点的集合记为Ma.</p>
 <p>在b的Prepare阶段, Proposer收到了半数节点的Promise答复, 把这些节点的集合记为Mb.</p>
 <p>Ma, Mb至少有一个共同节点k. 而k一定是先Accept a的Proposal, 然后再Promise b的Prepare. 反证法: 如果先Promise b, 那么因为a &lt; b, 根据(1), 节点k是不会Accept a的.</p>
