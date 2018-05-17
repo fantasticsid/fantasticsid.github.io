@@ -229,7 +229,7 @@ if (window.navigator.appName == "Microsoft Internet Explorer") {
 <p>在a的Propose阶段, Proposer收到了半数节点的Accept答复, 把这些节点的集合记为Ma.</p>
 <p>在b的Prepare阶段, Proposer收到了半数节点的Promise答复, 把这些节点的集合记为Mb.</p>
 <p>Ma, Mb至少有一个共同节点k. 而k一定是先Accept a的Proposal, 然后再Promise b的Prepare. 反证法: 如果先Promise b, 那么因为a &lt; b, 根据(1), 节点k是不会Accept a的.</p>
-<p>根据(2), 在所有节点对b的Promise回复中, 包含的轮数最大值c, 有c &gt;= a, 这是因为k节点的返回结果也至少是a (c不一定是k的返回结果, 不妨设是p的返回结果). 而且既然b得到了节点p的Promise结果, 那么根据(1)必然有b &gt; c.</p>
+<p>根据(2), 在所有节点对b的Promise回复中, 包含的轮数最大值c, 有c &gt;= a, 这是因为k节点的返回结果也至少是a (c不一定是k的返回结果, 不妨设是p的返回结果). 而且既然b得到了节点p的Promise结果, 那么根据(1)必然有b &gt;= c, 然而由于此时b还在Prepare-Promise阶段, 不可能有节点已经accept了b, 所以b != c. 所以b &gt; c.</p>
 <p>由于(3)知道, b轮的Proposal值和c是一样的. 这样我们就把对轮数b的证明规约到了对轮数c的证明, 注意到c是严格小于b的, 所以可以不断类推直到c = a, 此时我们发现Proposer只能提议和a轮相同的值.</p>
 <p>所以我们就证明了, 一旦提议A在a轮被接受, 之后的紧接着的Proposal都会提议A的值.</p>
 <p>好像还蛮难说服自己的..</p>	
