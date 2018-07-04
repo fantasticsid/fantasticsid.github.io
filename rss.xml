@@ -120,7 +120,7 @@
     }
     contentView.layoutSubtreeIfNeeded()
   }</code></pre>
-<p>Basically for the purpose of experiments, we took these buttons out of their view hierarchy, and then added it to the root level content view.</p>
+<p>Basically for the purpose of experiments, we took these buttons out of their view hierarchy, and then added it to the root level content view. (I’m using <a href="http://snapkit.io">Snapkit</a> to manage auto layout constraints here)</p>
 <p>And it worked!</p>
 <div>
 <div class="figure">
