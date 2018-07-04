@@ -346,7 +346,8 @@ Origin (477.0, 15.0), Size (7.0, 243.0)
 Origin (12.0, -4.0), Size (453.0, 7.0)
 
 Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
-<p>My guess, is that the first four of them are used for detecting when mouse is over the 4 corners of the window, so that the NSThemeFrame shows a resize handle. And same for the next four tracking areas, they are used for detecting mouse movement around the 4 edges. And I believe the last one is for detecting mouse movement around the traffic lights, since the size corresponds to a horizontal rectangle. Unfortunately, I could not get Xcode to mutate the tracking areas, since they are getter only properties. Plus, it would be hard to compute an accurate area that would match our new button positions.</p>
+<p>My guess, is that the first four of them are used for detecting when mouse is over the 4 corners of the window, so that the NSThemeFrame shows a resize handle. And same for the next four tracking areas, they are used for detecting mouse movement around the 4 edges. And I believe the last one is for detecting mouse movement around the traffic lights, since the size corresponds to a horizontal rectangle.</p>
+<p>Unfortunately, I could not get Xcode to mutate the tracking areas, since they are getter only properties. Plus, it would be hard to compute an accurate area that would match our new button positions.</p>
 <h3 id="asking-appkit-to-update-tracking-areas">Asking AppKit to update tracking areas</h3>
 <p>So it seems our option now is to look into how resizing a window triggers the tracking area update. I know that to add a tracking area, the [NSView addTrackingArea:] API is used. And it turns out that Xcode let us create symbolic breakpoints! (Debug -&gt; Breakpoints -&gt; Create symbolic breakpoints)</p>
 <div>
