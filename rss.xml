@@ -45,9 +45,9 @@
 <p>Since Mac Yosemite, Mac apps have <a href="https://developer.apple.com/documentation/appkit/nswindow/titlevisibility/hidden">more choices</a> for the look and feel of the toolbar, as well as the option to <a href="https://developer.apple.com/documentation/appkit/nswindow/stylemask/1644646-fullsizecontentview">fully extend content view</a> to the whole Window. A lot of apps have adopted this style to stand out (Bear, Things 3).</p>
 <p>In the app that I have been working on, we relied on setting the toolbar height so that the traffic lights can be shifted down accordingly. Unfortunately that also means we need to reset the toolbar height every time the Window resizes. I wanted to see if there’s a way we can arbitrarily position these buttons, and preferably with auto layout.</p>
 <h3 id="setting-frames-for-traffic-lights">Setting frames for traffic lights</h3>
-<p>In Apple’s documentation, there’re <a href="https://developer.apple.com/documentation/appkit/nswindow/1419491-standardwindowbutton">APIs</a> on NSWindow to get the widget instances of these standard buttons.</p>
+<p>In Apple’s documentation, there’re <a href="https://developer.apple.com/documentation/appkit/nswindow/1419491-standardwindowbutton">APIs</a> on <code>NSWindow</code> to get the widget instances of these standard buttons.</p>
 <pre class="swift"><code>func standardWindowButton(_ b: NSWindow.ButtonType) -&gt; NSButton?</code></pre>
-<p>This is kind of nice as it gives you an NSButton. And indeed by setting the frames of these buttons, I was able to get some interesting results:</p>
+<p>This is kind of nice as it gives you an <code>NSButton</code>. And indeed by setting the frames of these buttons, I was able to get some interesting results:</p>
 <pre class="swift"><code>  override func windowDidLoad() {
     super.windowDidLoad()
 
@@ -143,7 +143,7 @@
 <li>How are they updated when the window is resized?</li>
 </ul>
 <h3 id="attempting-to-update-tracking-areas">Attempting to update tracking areas</h3>
-<p>I know that in a regular cocoa app, you’d use NSTrackingArea to subscribe to mouse move events in a certain area. So let’s see if we can modify the tracking area manually:</p>
+<p>I know that in a regular cocoa app, you’d use <code>NSTrackingArea</code> to subscribe to mouse move events in a certain area. So let’s see if we can modify the tracking area manually:</p>
 <pre class="swift"><code>
     let timer = Timer(timeInterval: 1, target: self, selector: #selector(self.updateTrafficTrackingAreas), userInfo: nil, repeats: true)
 
@@ -160,7 +160,7 @@
 
 </div>
 </div>
-<p>So looks like the NSThemeFrame, which is the top level view in the NSWindow, has 9 tracking areas. Sorting them by size, we get:</p>
+<p>So looks like the <code>NSThemeFrame</code>, which is the top level view in the NSWindow, has 9 tracking areas. Sorting them by size, we get:</p>
 <pre><code>Origin (-4.0, -4.0), Size (16.0, 16.0)
 Origin (-4.0, 258.0), Size (16.0, 16.0)
 Origin (468.0, 258.0), Size (16.0, 16.0)
@@ -172,10 +172,10 @@ Origin (477.0, 15.0), Size (7.0, 243.0)
 Origin (12.0, -4.0), Size (453.0, 7.0)
 
 Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
-<p>My guess, is that the first four of them are used for detecting when mouse is over the 4 corners of the window, so that the NSThemeFrame shows a resize handle. And same for the next four tracking areas, they are used for detecting mouse movement around the 4 edges. And I believe the last one is for detecting mouse movement around the traffic lights, since the size corresponds to a horizontal rectangle.</p>
+<p>My guess, is that the first four of them are used for detecting when mouse is over the 4 corners of the window, so that the <code>NSThemeFrame</code> shows a resize handle. And same for the next four tracking areas, they are used for detecting mouse movement around the 4 edges. And I believe the last one is for detecting mouse movement around the traffic lights, since the size corresponds to a horizontal rectangle.</p>
 <p>Unfortunately, I could not get Xcode to mutate the tracking areas, since they are getter only properties. Plus, it would be hard to compute an accurate area that would match our new button positions.</p>
 <h3 id="asking-appkit-to-update-tracking-areas">Asking AppKit to update tracking areas</h3>
-<p>So it seems our option now is to look into how resizing a window triggers the tracking area update. I know that to add a tracking area, the [NSView addTrackingArea:] API is used. And it turns out that Xcode let us create symbolic breakpoints! (Debug -&gt; Breakpoints -&gt; Create symbolic breakpoints)</p>
+<p>So it seems our option now is to look into how resizing a window triggers the tracking area update. I know that to add a tracking area, the <code>[NSView addTrackingArea:]</code> API is used. And it turns out that Xcode lets us create symbolic breakpoints! (Debug -&gt; Breakpoints -&gt; Create symbolic breakpoints)</p>
 <div>
 <div class="figure">
 <img src="/images/symbolicbreakpoint.png" title="Adding symbolic breakpoints" />
@@ -196,7 +196,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
 
 </div>
 </div>
-<p>That’s really awesome! Looking at the stack trace, the NSThemeFrame is indeed handling the resize event, and it was calling [NSThemeFrame viewDidEndLiveResize] which in turn calls addTrackingArea several levels down. I’m assuming all APIs that starts with an underscore are somewhat private, but viewDidEndLiveResize seems a <a href="https://developer.apple.com/documentation/appkit/nsview/1483543-viewdidendliveresize">legit</a> API that we can call into! All I need to do is:</p>
+<p>That’s really awesome! Looking at the stack trace, the <code>NSThemeFrame</code> is indeed handling the resize event, and it was calling <code>[NSThemeFrame viewDidEndLiveResize]</code> which in turn calls <code>addTrackingArea</code> several levels down. I’m assuming all APIs that starts with an underscore are somewhat private, but <code>viewDidEndLiveResize</code> seems a <a href="https://developer.apple.com/documentation/appkit/nsview/1483543-viewdidendliveresize">legit</a> API that we can call into! All I need to do is:</p>
 <pre class="swift"><code>override func windowDidLoad() {
 ...
     let contentView = self.window!.contentView!
@@ -216,7 +216,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
 <h3 id="conclusion">Conclusion</h3>
 <p>At this point, we have mostly achieved what we wanted to do: We can position the traffic lights any way we like, with the correct tracking areas set up, and we did that without using any private APIs! Moreover, since we are using auto layout within content view, we can achieve fancier effects by setting up constraints between our app specific views and these traffic lights! (I haven’t experimented with this idea yet though)</p>
 <p>I should also say that this definitely is not without downsides. Firstly, I doubt this is how AppKit expects apps to manipulate its traffic lights, as we’ve seen it’s hard to adjust these buttons and work with the constraints the toolbar added. Secondly, we haven’t handled some cases here: exiting from fullscreen puts these buttons back, but that should be easy to fix. Lastly, since we moved the traffic lights into the content view, it’s now our responsibilities to make sure they are always visible and interactive.</p>
-<p>That said, working with Xcode and trying to guess what AppKit is doing at runtime has been a great experience!</p>	
+<p>That said, working with Xcode and trying to guess what AppKit is doing at runtime has been a lot of fun! And now you can trade a bit of added complexity for some really interesting UI designs.</p>	
 
                 <hr>
 
