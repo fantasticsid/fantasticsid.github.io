@@ -390,7 +390,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
 <h3 id="conclusion">Conclusion</h3>
 <p>At this point, we have mostly achieved what we wanted to do: We can position the traffic lights any way we like, with the correct tracking areas set up, and we did that without using any private APIs! Moreover, since we are using auto layout within content view, we can achieve fancier effects by setting up constraints between our app specific views and these traffic lights! (I haven’t experimented with this idea yet though)</p>
 <p>I should also say that this definitely is not without downsides. Firstly, I doubt this is how AppKit expects apps to manipulate its traffic lights, as we’ve seen it’s hard to adjust these buttons and work with the constraints the toolbar added. Secondly, we haven’t handled some cases here: exiting from fullscreen puts these buttons back, but that should be easy to fix. Lastly, since we moved the traffic lights into the content view, it’s now our responsibilities to make sure they are always visible and interactive.</p>
-<p>That said, working with Xcode and trying to guess what AppKit is doing at runtime has been a lot of fun! And now with a bit of complexity you could achieve some really interesting UI designs.</p>	
+<p>That said, working with Xcode and trying to guess what AppKit is doing at runtime has been a lot of fun! And now you can trade a bit of added complexity for some really interesting UI designs.</p>	
 
                 <hr>
 
