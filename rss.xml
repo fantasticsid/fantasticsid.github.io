@@ -12,7 +12,7 @@
     <title>Positioning the traffic lights of your Cocoa App</title>
     <link>http://blog.fantasticsid.com/posts/2018-07-04-positioning-traffic-lights-of-your-cocoa-app.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -254,7 +254,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>Productive, Efficient, Effective</title>
     <link>http://blog.fantasticsid.com/posts/2018-06-29-productive-efficient-effective.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -319,7 +319,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>Everything’s more exciting when it’s a party..</title>
     <link>http://blog.fantasticsid.com/posts/2018-06-11-party.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -381,7 +381,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>总算懂了点Paxos</title>
     <link>http://blog.fantasticsid.com/posts/2018-04-05-paxos.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -465,7 +465,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>标签不是好东西</title>
     <link>http://blog.fantasticsid.com/posts/2018-02-12-tags.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -529,7 +529,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>为了游戏</title>
     <link>http://blog.fantasticsid.com/posts/2018-02-02-sketching.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -597,7 +597,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>博客十年</title>
     <link>http://blog.fantasticsid.com/posts/2017-11-30-ten-years.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -659,7 +659,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>polished, focused, and move fast</title>
     <link>http://blog.fantasticsid.com/posts/2017-02-18-notes.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -720,7 +720,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>老虎棒子鸡虫</title>
     <link>http://blog.fantasticsid.com/posts/2016-04-23-games.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -782,7 +782,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>摇.滚</title>
     <link>http://blog.fantasticsid.com/posts/2016-03-26-dog.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -844,7 +844,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>部分放弃Haskell</title>
     <link>http://blog.fantasticsid.com/posts/2016-03-12-haskell.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -913,7 +913,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>Gradients</title>
     <link>http://blog.fantasticsid.com/posts/2016-02-06-gradients.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -975,7 +975,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>React, Zipper, Incremental</title>
     <link>http://blog.fantasticsid.com/posts/2016-01-31-react-incremental-computation-zipper.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -1125,7 +1125,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>为什么自然界美景如此普遍，美丽的声音却不常"见"？</title>
     <link>http://blog.fantasticsid.com/posts/2016-01-28-q.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -1186,7 +1186,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>所以type family和C++的template class specialization是差不多的意思咯?</title>
     <link>http://blog.fantasticsid.com/posts/2016-01-28-a.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -1247,7 +1247,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>要成为一个牛逼的前端工程师</title>
     <link>http://blog.fantasticsid.com/posts/2016-01-07-a.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -1308,7 +1308,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>限制创造新事物的是不够好的创造工具？</title>
     <link>http://blog.fantasticsid.com/posts/2015-12-28-q.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -1369,7 +1369,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>试下把garage band连到电脑</title>
     <link>http://blog.fantasticsid.com/posts/2015-12-28-improv.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -1431,7 +1431,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>瞎弹第二弹</title>
     <link>http://blog.fantasticsid.com/posts/2015-12-25-improv.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -1493,7 +1493,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>瞎弹</title>
     <link>http://blog.fantasticsid.com/posts/2015-12-23-improv.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -1555,7 +1555,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>一个喜欢的故事</title>
     <link>http://blog.fantasticsid.com/posts/2015-11-21-story.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -1617,7 +1617,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>一个喜欢的故事</title>
     <link>http://blog.fantasticsid.com/posts/2015-11-20-story.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -1679,7 +1679,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>无处安放的手掌..</title>
     <link>http://blog.fantasticsid.com/posts/2015-09-12-keyboard.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -1748,7 +1748,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>Composable Memory Transaction</title>
     <link>http://blog.fantasticsid.com/posts/2015-09-12-composable-memory-transaction.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -1814,7 +1814,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>其他的编辑器(IDE)</title>
     <link>http://blog.fantasticsid.com/posts/2015-09-11-editors.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -1877,7 +1877,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>要个App</title>
     <link>http://blog.fantasticsid.com/posts/2015-09-11-app-idea.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -1938,7 +1938,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>要个App</title>
     <link>http://blog.fantasticsid.com/posts/2015-09-06-app-idea.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -1999,7 +1999,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>2015新年计划</title>
     <link>http://blog.fantasticsid.com/posts/2015-02-19-2015-resolution.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -2062,7 +2062,7 @@ Origin (7.0, 251.0), Size (54.0, 16.0)</code></pre>
     <title>Real World Haskell 笔记</title>
     <link>http://blog.fantasticsid.com/posts/2014-01-31-real-world-haskell.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -2422,7 +2422,7 @@ testme x xs <span class="fu">|</span> <span class="dt">Just</span> y <span class
     <title>2014新年计划</title>
     <link>http://blog.fantasticsid.com/posts/2014-01-01-2014-resolutions.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -2503,7 +2503,7 @@ Topcoder的rating上1500
     <title>Parallel and Concurrent Programming in Haskell 笔记</title>
     <link>http://blog.fantasticsid.com/posts/2013-10-06-parallel-concurrent-haskell.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -3111,7 +3111,7 @@ async action <span class="fu">=</span> <span class="kw">do</span>
     <title>理解Arrows</title>
     <link>http://blog.fantasticsid.com/posts/2013-07-02-arrows.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -3199,7 +3199,7 @@ async action <span class="fu">=</span> <span class="kw">do</span>
     <title>C++ Templates The Complete Guide 笔记</title>
     <link>http://blog.fantasticsid.com/posts/2013-04-05-cpp-template.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -3872,7 +3872,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>2013新年计划</title>
     <link>http://blog.fantasticsid.com/posts/2013-01-01-2013-resolutions.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -3989,7 +3989,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>App idea - Unitask</title>
     <link>http://blog.fantasticsid.com/posts/2012-04-03-unitask.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -4068,7 +4068,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>iPad上的画图软件 paper</title>
     <link>http://blog.fantasticsid.com/posts/2012-04-02-paper-ipad.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -4143,7 +4143,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>App idea - Motivated</title>
     <link>http://blog.fantasticsid.com/posts/2012-02-02-app-idea.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -4211,7 +4211,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>IELTS Quizme</title>
     <link>http://blog.fantasticsid.com/posts/2012-01-08-ielts-quizme.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -4273,7 +4273,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>2012新年计划</title>
     <link>http://blog.fantasticsid.com/posts/2011-12-30-2012-resolutions.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -4382,7 +4382,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>Arrow定理 - 没有合理的选举!</title>
     <link>http://blog.fantasticsid.com/posts/2011-09-04-arrowstheorem.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -4466,7 +4466,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>一点博弈论趣题</title>
     <link>http://blog.fantasticsid.com/posts/2011-08-06-game-theory.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -4557,7 +4557,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>一图胜万言 fibonacci数列的一些结论的有趣证明</title>
     <link>http://blog.fantasticsid.com/posts/2011-07-07-fibonacci.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -4666,7 +4666,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>几道题目活跃下气氛</title>
     <link>http://blog.fantasticsid.com/posts/2011-04-28-puzzles.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -4746,7 +4746,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>Mobius奇遇记</title>
     <link>http://blog.fantasticsid.com/posts/2011-02-13-mobius.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -4811,7 +4811,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>那些你知我知的帽子游戏</title>
     <link>http://blog.fantasticsid.com/posts/2011-01-18-hat-puzzles.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -4900,7 +4900,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>最少要种多少棵菜</title>
     <link>http://blog.fantasticsid.com/posts/2010-12-23-planting-vegetables.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -4982,7 +4982,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>几个类似的概率趣题</title>
     <link>http://blog.fantasticsid.com/posts/2010-12-20-probability-puzzles.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -5057,7 +5057,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>blog还活着</title>
     <link>http://blog.fantasticsid.com/posts/2010-12-20-must-blog-harder.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -5128,7 +5128,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>给格子染色 - 趣题两则</title>
     <link>http://blog.fantasticsid.com/posts/2010-11-11-colouring-puzzles.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -5214,7 +5214,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>有n个1的递增二进制序列 - 一道简单的面试题</title>
     <link>http://blog.fantasticsid.com/posts/2010-09-25-binary-sequence-with-n-ones.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -5289,7 +5289,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>3人打网球--趣题一则</title>
     <link>http://blog.fantasticsid.com/posts/2010-09-21-pow-tennis.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -5360,7 +5360,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>你还会做这道高考题吗?</title>
     <link>http://blog.fantasticsid.com/posts/2010-09-08-gaokao-probability-puzzles.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -5434,7 +5434,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>Gsoc report Pencils down</title>
     <link>http://blog.fantasticsid.com/posts/2010-08-17-gsoc-report-pencils.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -5500,7 +5500,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>P = NP问题最新进展</title>
     <link>http://blog.fantasticsid.com/posts/2010-08-10-npc-proof.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -5565,7 +5565,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>Gsoc report 11th week</title>
     <link>http://blog.fantasticsid.com/posts/2010-08-09-gsoc-report-11th-week.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -5627,7 +5627,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>Gsoc report 10th week</title>
     <link>http://blog.fantasticsid.com/posts/2010-08-02-gsoc-report-10th-week.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -5693,7 +5693,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>Gsoc report 9th week</title>
     <link>http://blog.fantasticsid.com/posts/2010-07-26-gsoc-report-9th-week.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -5755,7 +5755,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>Gsoc report 8th week</title>
     <link>http://blog.fantasticsid.com/posts/2010-07-23-gsoc-report-8th-week.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -5818,7 +5818,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>大自然中的数字</title>
     <link>http://blog.fantasticsid.com/posts/2010-07-17-numbers.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -5883,7 +5883,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>Gsoc report 7th week</title>
     <link>http://blog.fantasticsid.com/posts/2010-07-12-gsoc-report-7th-week.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -5951,7 +5951,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>Gsoc report 6th week</title>
     <link>http://blog.fantasticsid.com/posts/2010-07-05-gsoc-report-6th-week.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -6023,7 +6023,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>Gsoc report 5th week</title>
     <link>http://blog.fantasticsid.com/posts/2010-06-29-gsoc-report-5th-week-2.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -6084,7 +6084,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>Gsoc report 4th week</title>
     <link>http://blog.fantasticsid.com/posts/2010-06-21-gsoc-report-4th-week.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -6151,7 +6151,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>Gsoc report 3rd week</title>
     <link>http://blog.fantasticsid.com/posts/2010-06-14-gsoc-report-3rd-week.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -6214,7 +6214,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>Gsoc report 2nd week</title>
     <link>http://blog.fantasticsid.com/posts/2010-06-07-gsoc-report-2nd-week.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -6277,7 +6277,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>经典重访 找出频繁字符</title>
     <link>http://blog.fantasticsid.com/posts/2010-06-01-frequent-elements.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -6342,7 +6342,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>Gsoc report 1st week</title>
     <link>http://blog.fantasticsid.com/posts/2010-05-30-gsoc-report-1st-week.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -6417,7 +6417,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>Accepted as a gsoc2010 student</title>
     <link>http://blog.fantasticsid.com/posts/2010-04-27-accepted-as-a-gsoc2010-student.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -6484,7 +6484,7 @@ my_sort(..., mycriterion);</code></pre></div>
     <title>经典重访 如何按序生成集合的所有子集</title>
     <link>http://blog.fantasticsid.com/posts/2010-04-14-generating-subsets.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -6594,7 +6594,7 @@ c</code></pre>
     <title>Collatz猜想</title>
     <link>http://blog.fantasticsid.com/posts/2010-03-07-collatz-conjecture.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -6658,7 +6658,7 @@ c</code></pre>
     <title>瞎猜也有道理 信封悖论</title>
     <link>http://blog.fantasticsid.com/posts/2010-02-22-envelopes-paradox.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -6723,7 +6723,7 @@ c</code></pre>
     <title>Kungfu VS Cowboy</title>
     <link>http://blog.fantasticsid.com/posts/2010-02-08-kungfu-vs-cowboy.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -6803,7 +6803,7 @@ c</code></pre>
     <title>一个图与其补图染色数之和的上界</title>
     <link>http://blog.fantasticsid.com/posts/2010-01-26-upper-bound-chromatic-complement-graph.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -6890,7 +6890,7 @@ c</code></pre>
     <title>Doctor Who卡通造型</title>
     <link>http://blog.fantasticsid.com/posts/2009-12-28-doctor-who-cartoon.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -6957,7 +6957,7 @@ c</code></pre>
     <title>Haiku</title>
     <link>http://blog.fantasticsid.com/posts/2009-09-04-haiku.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -7045,7 +7045,7 @@ c</code></pre>
     <title>Dvorak键盘</title>
     <link>http://blog.fantasticsid.com/posts/2009-07-18-dovrak-keyboard.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -7148,7 +7148,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>独立日</title>
     <link>http://blog.fantasticsid.com/posts/2009-04-23-independence-day.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -7211,7 +7211,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>42</title>
     <link>http://blog.fantasticsid.com/posts/2009-04-16-fourty-two.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -7277,7 +7277,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>Khoomei</title>
     <link>http://blog.fantasticsid.com/posts/2009-03-09-khoomei.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -7341,7 +7341,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>1011df/du还好fourfivefire</title>
     <link>http://blog.fantasticsid.com/posts/2007-12-16-1011dfdufourfivefire.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -7413,7 +7413,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>_/</title>
     <link>http://blog.fantasticsid.com/posts/2007-11-04-rant.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -7490,7 +7490,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>ms i c it song</title>
     <link>http://blog.fantasticsid.com/posts/2007-10-21-msicitsong.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -7566,7 +7566,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>HP…MATRIX</title>
     <link>http://blog.fantasticsid.com/posts/2007-09-23-hp-matrix.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -7632,7 +7632,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>夏天走了</title>
     <link>http://blog.fantasticsid.com/posts/2007-08-09-summer-is-yutou.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -7702,7 +7702,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>Yesterday All my troubles seemed so far away…</title>
     <link>http://blog.fantasticsid.com/posts/2007-07-05-yesterday.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -7769,7 +7769,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>果实</title>
     <link>http://blog.fantasticsid.com/posts/2007-06-16-fruit.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -7836,7 +7836,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>李查得.福来兮曼</title>
     <link>http://blog.fantasticsid.com/posts/2007-06-09-play.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -7906,7 +7906,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>right kerfuffle</title>
     <link>http://blog.fantasticsid.com/posts/2007-06-01-right-kerfuffle.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -7973,7 +7973,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>IT’S HAR TO EMARGINE…</title>
     <link>http://blog.fantasticsid.com/posts/2007-05-03-har-to-emargine.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -8040,7 +8040,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>三</title>
     <link>http://blog.fantasticsid.com/posts/2007-02-24-three.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -8107,7 +8107,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>明明有标题</title>
     <link>http://blog.fantasticsid.com/posts/2007-02-03-there-is-a-title.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -8182,7 +8182,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>RECAP</title>
     <link>http://blog.fantasticsid.com/posts/2007-01-23-recap.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -8250,7 +8250,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>在学校, 与阿姨为伴</title>
     <link>http://blog.fantasticsid.com/posts/2006-12-22-atschool.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -8320,7 +8320,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>就这么一写</title>
     <link>http://blog.fantasticsid.com/posts/2006-11-18-randompost.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -8381,7 +8381,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>coldplayism</title>
     <link>http://blog.fantasticsid.com/posts/2006-09-30-coldplayism.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -8446,7 +8446,7 @@ qwerty: 220</code></pre></td></tr></table></div>
     <title>真的要和LIUS告别了</title>
     <link>http://blog.fantasticsid.com/posts/2006-09-16-lius.html</link>
     <description><![CDATA[<!-- Post Header -->
-<header class="intro-header" style="background-image: url('/static/img/tardis.jpg')" alt="" title="">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
